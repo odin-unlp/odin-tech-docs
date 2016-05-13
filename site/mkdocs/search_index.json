@@ -1,0 +1,224 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Conceptos Generales\n\n\nPrincipios\n\n\n1.  Mostly RESTful\n\n\nPara dise\u00f1ar la API de ODIN se ha tomado como referencia la definici\u00f3n de REST especificada en el \ncap\u00edtulo n\u00ba 5\n de la tesis doctoral de Roy Fielding. No obstante, se podr\u00e1 adoptar otro enfoque si en aspectos particulares \u00e9ste resulta m\u00e1s apropiado seg\u00fan las necesidades del caso.\n\n\n2. Simplicidad\n\n\n\n\nS\u00f3lo puede haber una URL para cada recurso.\n\n\nDeben emplearse nombres concretos y autodescriptivos.\n\n\nNo se admitir\u00e1n abreviaturas, excepto aquellas muy ampliamente utilizadas y conocidas (por ejemplo: min, max).\n\n\nSi bien se prevee dar soporte a muchos tipos de formato para las responses, en la primera versi\u00f3n s\u00f3lo se proveer\u00e1n respuestas JSON.\n\n\n\n\n3. Consistencia\n\n\nLas normas aqu\u00ed descriptas deben aplicarse de manera uniforme y exhaustiva al desarrollar la API.\n\n\n4. Abstracci\u00f3n\n\n\nNo necesariamente debe haber un endpoint por cada tabla de la base de datos, ni cada par\u00e1metro debe equivaler a un campo de una tabla, ni mucho menos el resultado de una query a la base de datos ser serializado y despachado sin m\u00e1s. \n\n\nPor un lado es preciso limitar los datos que se env\u00edan en la response, y por otro hay que tener en cuenta los casos de uso y las necesidades de datos de los clientes, por ejemplo proveyendo campos calculados o construidos a partir de otros. Todo ello contribuye a mantener bajo control el tama\u00f1o de las responses, a reforzar la seguridad de la API y a minimizar el n\u00famero de requests.\n\n\nLa API debe ser una capa de abstracci\u00f3n sobre los detalles de implementaci\u00f3n de ODIN, limitando y estandarizando lo que se expone a trav\u00e9s de ella. En otras palabras, la API debe implementar el patr\u00f3n Fa\u00e7ade.\n\n\n5. Autodescriptividad\n\n\nLa API debe poder navegarse sin necesidad de acudir a la documentaci\u00f3n, y a la vez documentarse a s\u00ed misma. Esto es posible a trav\u00e9s de la implementaci\u00f3n de Hypermedia con el m\u00e9todo OPTION, que adem\u00e1s tiene la ventaja de que ya no es necesario tener que versionar la API. Implementar OPTION posibilita incluso la generaci\u00f3n autom\u00e1tica de la UI de los clientes.\n\n\n6. Modularidad\n\n\nEl n\u00facleo de funcionalidad m\u00e1s elemental de la API debe implementarse en una serie de m\u00f3dulos funcional y l\u00f3gicamente distintos, que sea posible desarrollar por separado. Estos m\u00f3dulos no necesariamente ser\u00e1n desacoplables. La funcionalidad restante se desarrollar\u00e1 como plugins, que s\u00ed deben ser desacoplables.\n\n\nUna de las ventajas de la modularidad y el empleo de la estructura core/plugins es que la aplicaci\u00f3n es f\u00e1cilmente actualizable, y en el caso de ODIN esta cualidad es muy deseable.\n\n\n7. Extensibilidad\n\n\nDebe ser posible extender y/o modificar la API mediante plugins. El sistema de plugins debe implementar el patr\u00f3n Inversion of Control, y los plugins no deben poder alterar el c\u00f3digo fuente de la API.\n\n\nConvenciones\n\n\nTBD\n\n\nLicencia\n\n\nLa API de ODIN ser\u00e1 un proyecto de c\u00f3digo abierto y se ofrecer\u00e1 bajo la licencia MIT.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#conceptos-generales", 
+            "text": "", 
+            "title": "Conceptos Generales"
+        }, 
+        {
+            "location": "/#principios", 
+            "text": "", 
+            "title": "Principios"
+        }, 
+        {
+            "location": "/#1-mostly-restful", 
+            "text": "Para dise\u00f1ar la API de ODIN se ha tomado como referencia la definici\u00f3n de REST especificada en el  cap\u00edtulo n\u00ba 5  de la tesis doctoral de Roy Fielding. No obstante, se podr\u00e1 adoptar otro enfoque si en aspectos particulares \u00e9ste resulta m\u00e1s apropiado seg\u00fan las necesidades del caso.", 
+            "title": "1.  Mostly RESTful"
+        }, 
+        {
+            "location": "/#2-simplicidad", 
+            "text": "S\u00f3lo puede haber una URL para cada recurso.  Deben emplearse nombres concretos y autodescriptivos.  No se admitir\u00e1n abreviaturas, excepto aquellas muy ampliamente utilizadas y conocidas (por ejemplo: min, max).  Si bien se prevee dar soporte a muchos tipos de formato para las responses, en la primera versi\u00f3n s\u00f3lo se proveer\u00e1n respuestas JSON.", 
+            "title": "2. Simplicidad"
+        }, 
+        {
+            "location": "/#3-consistencia", 
+            "text": "Las normas aqu\u00ed descriptas deben aplicarse de manera uniforme y exhaustiva al desarrollar la API.", 
+            "title": "3. Consistencia"
+        }, 
+        {
+            "location": "/#4-abstraccion", 
+            "text": "No necesariamente debe haber un endpoint por cada tabla de la base de datos, ni cada par\u00e1metro debe equivaler a un campo de una tabla, ni mucho menos el resultado de una query a la base de datos ser serializado y despachado sin m\u00e1s.   Por un lado es preciso limitar los datos que se env\u00edan en la response, y por otro hay que tener en cuenta los casos de uso y las necesidades de datos de los clientes, por ejemplo proveyendo campos calculados o construidos a partir de otros. Todo ello contribuye a mantener bajo control el tama\u00f1o de las responses, a reforzar la seguridad de la API y a minimizar el n\u00famero de requests.  La API debe ser una capa de abstracci\u00f3n sobre los detalles de implementaci\u00f3n de ODIN, limitando y estandarizando lo que se expone a trav\u00e9s de ella. En otras palabras, la API debe implementar el patr\u00f3n Fa\u00e7ade.", 
+            "title": "4. Abstracci\u00f3n"
+        }, 
+        {
+            "location": "/#5-autodescriptividad", 
+            "text": "La API debe poder navegarse sin necesidad de acudir a la documentaci\u00f3n, y a la vez documentarse a s\u00ed misma. Esto es posible a trav\u00e9s de la implementaci\u00f3n de Hypermedia con el m\u00e9todo OPTION, que adem\u00e1s tiene la ventaja de que ya no es necesario tener que versionar la API. Implementar OPTION posibilita incluso la generaci\u00f3n autom\u00e1tica de la UI de los clientes.", 
+            "title": "5. Autodescriptividad"
+        }, 
+        {
+            "location": "/#6-modularidad", 
+            "text": "El n\u00facleo de funcionalidad m\u00e1s elemental de la API debe implementarse en una serie de m\u00f3dulos funcional y l\u00f3gicamente distintos, que sea posible desarrollar por separado. Estos m\u00f3dulos no necesariamente ser\u00e1n desacoplables. La funcionalidad restante se desarrollar\u00e1 como plugins, que s\u00ed deben ser desacoplables.  Una de las ventajas de la modularidad y el empleo de la estructura core/plugins es que la aplicaci\u00f3n es f\u00e1cilmente actualizable, y en el caso de ODIN esta cualidad es muy deseable.", 
+            "title": "6. Modularidad"
+        }, 
+        {
+            "location": "/#7-extensibilidad", 
+            "text": "Debe ser posible extender y/o modificar la API mediante plugins. El sistema de plugins debe implementar el patr\u00f3n Inversion of Control, y los plugins no deben poder alterar el c\u00f3digo fuente de la API.", 
+            "title": "7. Extensibilidad"
+        }, 
+        {
+            "location": "/#convenciones", 
+            "text": "TBD", 
+            "title": "Convenciones"
+        }, 
+        {
+            "location": "/#licencia", 
+            "text": "La API de ODIN ser\u00e1 un proyecto de c\u00f3digo abierto y se ofrecer\u00e1 bajo la licencia MIT.", 
+            "title": "Licencia"
+        }, 
+        {
+            "location": "/Arquitectura/", 
+            "text": "Arquitectura\n\n\n\n\n\n\nEn la \nbase de datos No SQL\n se deben almacenar los datasets propiamente dichos, que son datos no relacionales.\n\n\nEn la \nbase de datos SQL\n se deben almacenar los datos relacionales del sistema, como ser: usuarios, permisos, roles, organizaciones, metadatos, etc.\n\n\nEl \nalmacenamiento de est\u00e1ticos\n es para almacenar los recursos asociados a los datasets: archivos csv, pdf, shp, etc.\n\n\nEl \nAPI Gateway\n es una aplicaci\u00f3n third party que oficia de proxy entre los clientes y la API, a\u00f1adiendo una capa de administraci\u00f3n extensible con plugins.\n\n\nEl \nAdmin\n es una aplicaci\u00f3n web conectada directamente a ambas bases de datos, en la cual es posible administrar las diferentes entidades que componen ODIN.\n\n\n\n\nStack\n\n\nAPI\n\n\n\n\nSistema operativo:\n Ubuntu 16.04 Xenial Xerus\n\n\nServidor:\n NodeJS 5.11.1\n\n\nLenguaje:\n JavaScript 5\n\n\nFramework:\n Sails 0.12\n\n\nBBDD no relacional:\n DocumentDB con interfaz de MongoDB (Azure Managed)\n\n\nBDD relacional:\n SQLServer (Azure Managed)\n\n\nAlmacenamiento de archivos:\n Azure DataStorage\n\n\n\n\nAPI Gateway\n\n\n\n\nSistema operativo:\n Ubuntu 16.04 Xenial Xerus\n\n\nAplicaci\u00f3n:\n Kong 0.8.2\n\n\nServidor:\n NGINX 1.10.0\n\n\n\n\nFrontends\n\n\n\n\nAdmin:\n interfaz directa sobre ambas bases de datos.\n\n\ndata.buenosaires.gob.ar:\n aplicaci\u00f3n AngularJS 2.0.", 
+            "title": "Arquitectura"
+        }, 
+        {
+            "location": "/Arquitectura/#arquitectura", 
+            "text": "En la  base de datos No SQL  se deben almacenar los datasets propiamente dichos, que son datos no relacionales.  En la  base de datos SQL  se deben almacenar los datos relacionales del sistema, como ser: usuarios, permisos, roles, organizaciones, metadatos, etc.  El  almacenamiento de est\u00e1ticos  es para almacenar los recursos asociados a los datasets: archivos csv, pdf, shp, etc.  El  API Gateway  es una aplicaci\u00f3n third party que oficia de proxy entre los clientes y la API, a\u00f1adiendo una capa de administraci\u00f3n extensible con plugins.  El  Admin  es una aplicaci\u00f3n web conectada directamente a ambas bases de datos, en la cual es posible administrar las diferentes entidades que componen ODIN.", 
+            "title": "Arquitectura"
+        }, 
+        {
+            "location": "/Arquitectura/#stack", 
+            "text": "", 
+            "title": "Stack"
+        }, 
+        {
+            "location": "/Arquitectura/#api", 
+            "text": "Sistema operativo:  Ubuntu 16.04 Xenial Xerus  Servidor:  NodeJS 5.11.1  Lenguaje:  JavaScript 5  Framework:  Sails 0.12  BBDD no relacional:  DocumentDB con interfaz de MongoDB (Azure Managed)  BDD relacional:  SQLServer (Azure Managed)  Almacenamiento de archivos:  Azure DataStorage", 
+            "title": "API"
+        }, 
+        {
+            "location": "/Arquitectura/#api-gateway", 
+            "text": "Sistema operativo:  Ubuntu 16.04 Xenial Xerus  Aplicaci\u00f3n:  Kong 0.8.2  Servidor:  NGINX 1.10.0", 
+            "title": "API Gateway"
+        }, 
+        {
+            "location": "/Arquitectura/#frontends", 
+            "text": "Admin:  interfaz directa sobre ambas bases de datos.  data.buenosaires.gob.ar:  aplicaci\u00f3n AngularJS 2.0.", 
+            "title": "Frontends"
+        }, 
+        {
+            "location": "/Codigo_Fuente/", 
+            "text": "C\u00f3digo Fuente\n\n\nRepositorio\n\n\nEl c\u00f3digo deber\u00e1 alojarse en un repositorio GitHub perteneciente a la organizaci\u00f3n \ngcba-odin\n.\n\n\nBranches\n\n\n\n\n\n\nmaster:\n la rama de producci\u00f3n.\n\n\n\n\n\n\nstaging:\n la rama de pre-producci\u00f3n, donde se pueden revisar y aprobar/rechazar cambios antes de que vayan a producci\u00f3n.\n\n\n\n\n\n\nqa:\n para testeo e integraci\u00f3n continua (ej. con Travis CI).\n\n\n\n\n\n\ndev\n: la rama de desarrollo.\n\n\n\n\n\n\nCommits\n\n\nLos commits deben encapsular cambios relacionados, prefiri\u00e9ndose una multiplicidad de commits at\u00f3micos y claramente diferenciados a unos pocos que sean acumulativos.\n\n\nLos mensajes de los commits deben hacerse en ingl\u00e9s y ser descriptivos de su contenido, breves y concisos.", 
+            "title": "Codigo Fuente"
+        }, 
+        {
+            "location": "/Codigo_Fuente/#codigo-fuente", 
+            "text": "", 
+            "title": "C\u00f3digo Fuente"
+        }, 
+        {
+            "location": "/Codigo_Fuente/#repositorio", 
+            "text": "El c\u00f3digo deber\u00e1 alojarse en un repositorio GitHub perteneciente a la organizaci\u00f3n  gcba-odin .", 
+            "title": "Repositorio"
+        }, 
+        {
+            "location": "/Codigo_Fuente/#branches", 
+            "text": "master:  la rama de producci\u00f3n.    staging:  la rama de pre-producci\u00f3n, donde se pueden revisar y aprobar/rechazar cambios antes de que vayan a producci\u00f3n.    qa:  para testeo e integraci\u00f3n continua (ej. con Travis CI).    dev : la rama de desarrollo.", 
+            "title": "Branches"
+        }, 
+        {
+            "location": "/Codigo_Fuente/#commits", 
+            "text": "Los commits deben encapsular cambios relacionados, prefiri\u00e9ndose una multiplicidad de commits at\u00f3micos y claramente diferenciados a unos pocos que sean acumulativos.  Los mensajes de los commits deben hacerse en ingl\u00e9s y ser descriptivos de su contenido, breves y concisos.", 
+            "title": "Commits"
+        }, 
+        {
+            "location": "/Key_Features/", 
+            "text": "Key Features\n\n\n1. URLs\n\n\nLa API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el cliente, sino que \u00e9ste debe seguir las URLs provistas por la propia API.\n\n\n\n\n\n\nEstructura jer\u00e1rquica:\n de lo universal a lo particular. Se usa la barra \n/\n para indicar una relaci\u00f3n jer\u00e1rquica entre recursos.\n\n\nEjemplo:\n \nGET /datasets/5f86r\n\n\n\n\n\n\nGranularidad media:\n los recursos no deben estar anidados a m\u00e1s de dos niveles de profundidad.\n\n\nMal\n: \nGET /datasets/5f86r/resources/f9e3b\n\n\nBien\n: \nGET /datasets/5f86r/resources\n\n\n\n\n\n\nUso de sustantivos:\n para designar recursos. S\u00f3lo se deben emplear verbos para los endpoints de servicio.\n\n\nMal\n: \nGET /getAllDatasets\n\n\nBien\n: \nGET /datasets\n  \n\n\n\n\n\n\nUso de plurales:\n s\u00f3lo usar la forma singular de los sustantivos cuando no haya posibilidad alguna de que los recursos tengan m\u00faltiples.\n\n\nMal\n: \nGET /dataset\n\n\nBien\n: \nGET /datasets\n  \n\n\n\n\n\n\ncamelCase:\n lowerCamelCase para los par\u00e1metros, tanto en la url como en el body de la request.\n\n\nEjemplo\n: \nGET /datasets?filterBy=name\n\n\n\n\n\n\nOtras consideraciones\n\n\n\n\n\n\nNo se debe incluir una barra \n/\n al final de las URLs. La API no debe admitir URLs que las incluyan, ni incluirlas en los links hypermedia que genere.\n\n\nMal:\n \nGET /datasets/5f86r/\n\n\nBien:\n \nGET /datasets/5f86r\n\n\n\n\n\n\nNo se deben usar guiones bajos en las URLs. En el extremo caso de que no fuera posible o conveniente usar camelCase, usar guiones medios para separar palabras.\n  \u200b\n\n\n\n\n\n\nSe deben usar exclusivamente letras min\u00fasculas para las URLs, exceptuando los par\u00e1metros camelCase en las query strings.\n\n\nMal:\n \nGET /Datasets/5f86r\n\n\nBien:\n \nGET /datasets/5f86r\n\n\n\n\n\n\nNo se deben incluir extensiones de archivo en los endpoints. El tipo de contenido a devolver al cliente estar\u00e1 determinado por el header \nAccepts\n de la request.\n\n\nMal:\n \nGET /datasets/5f86r.json\n\n\n\n\n\n\n2. Verbos HTTP\n\n\n\n\nGET\n\n\nPOST\n\n\nPATCH\n: para las actualizaciones parciales.\n\n\nDELETE\n\n\nOPTION:\n para la navegaci\u00f3n hypermedia.\n\n\nHEAD:\n para otorgar una forma liviana de chequear el estado de un recurso.\n\n\n\n\nMapeo CRUD\n\n\n\n\nCreate \u2014\n POST\n\n\nRead \u2014\n GET\n\n\nUpdate \u2014\n PATCH\n\n\nDelete \u2014\n DELETE\n\n\n\n\n3. Queries\n\n\n\n\n\n\nB\u00fasqueda:\n se har\u00e1 por medio del par\u00e1metro \nsearch\n, con los t\u00e9rminos de b\u00fasqueda separados por \n+\n. Se admitir\u00e1n dos clases de b\u00fasqueda:\n\n\nGlobal:\n  \nGET /search?query=calidad+aire\n \n\n\nBusca en todos los recursos.\n\n\nParticular:\n  \nGET /datasets/search?query=calidad+aire\n \n\n\nBusca en los datasets.\n\n\n\n\n\n\nFitrado:\n a trav\u00e9s de par\u00e1metros.\n\n\nEjemplo\n: \nGET /datasets?state=public\n\n\nDevuelve los datasets p\u00fablicos.\n\n\n\n\n\n\nOrdenado:\n a trav\u00e9s de\u00a0los par\u00e1metros \norderBy\n y \nsort\n. Este \u00faltimo admite ASC o DESC como valores, para ordenar en forma ascendiente o descendiente respectivamente. \n\n\nEjemplo\n: \nGET /datasets?orderBy=name\nsort=DESC\n\n\nDevuelve los datasets ordenados por nombre en forma descendiente.\n\n\n\n\n\n\nLimitado:\n a trav\u00e9s del par\u00e1metro \nlimit\n.\n\n\nEjemplo\n: \nGET /datasets?limit=10\n\n\nDevuelve 10 resultados.\n\n\n\n\n\n\nPaginado:\n por rango, a trav\u00e9s del par\u00e1metro \noffset\n combinado con el par\u00e1metro \nlimit\n. El \noffset\n es el ID del elemento a partir del cual se comienza a contar la cantidad de \u00edtems especificada por limit. Si no se pasara \nlimit\n, se obtendr\u00edan todos los recursos a partir del \noffset\n. \n\n\nDe all\u00ed la necesidad de \ndefinir un l\u00edmite\n para la cantidad de registros que una query puede devolver, especialmente cuando se trata de muchos registros, como un dataset extenso. Igualmente para el caso de en que se piden todos los registros de un recurso, como por ejemplo \nGET /datasets\n.\n\n\nEl paginado debe ser consistente, es decir usar el timestamp de la request como una suerte de versionado a los fines de no incluir duplicados (incluso aunque los objetos involucrados cambien).\n\n\nEjemplo\n: \nGET /datasets?offset=5f86r\nlimit=30\n\n\nDevuelve los 10 resultados que siguen al \u00edtem n\u00famero 20.\n\n\n\n\n\n\nRespuestas parciales:\n permite a los clientes elegir qu\u00e9 informaci\u00f3n necesitan en lugar de obtener la respuesta completa, lo que es especialmente \u00fatil para las aplicaciones m\u00f3viles (por el ancho de banda limitado). Los datos requeridos van en el campo \nfields\n, separados por coma.\n\n\nEjemplo\n: \nGET /datasets?fields=name,description\n\n\n\n\n\n\nPalabras reservadas:\n \nfirst\n, \nlast\n y \ncount\n. Pueden reservarse otras, seg\u00fan el tipo de dato (por ejemplo: \naverage\n, \nmax\n, \nmin\n).\n\n\nFirst:\n  \nGET /datasets/first\n\n\nDevuelve el primer dataset. \n\n\nLast:\n  \nGET /datasets/last\n\n\nDevuelve el \u00faltimo dataset. \n\n\nCount:\n  \nGET /datasets/count\n\n\nDevuelve la cantidad de datasets. \n\n\n\n\n\n\n4. Plugins\n\n\nTBD\n\n\n5. Seguridad\n\n\nAutenticaci\u00f3n\n\n\nLa API de ODIN ser\u00e1 una API privada, es decir que no ser\u00e1 posible usarla sin estar autenticado.\n\n\nSe delegar\u00e1 la autenticaci\u00f3n en \nKong\n, que admite varios tipos de autenticaci\u00f3n por medio de plugins. La instalaci\u00f3n por defecto de ODIN utilizar\u00e1 OAuth2 para la autenticaci\u00f3n, que a su vez requiere el uso de SSL.\n\n\nListas de control de acceso\n\n\nDelegado en \nKong\n.\n\n\nControl de tr\u00e1fico\n\n\nDelegado en \nKong\n.\n\n\nCORS\n\n\nTambi\u00e9n delegado en Kong. El soporte de la cabecera CORS debe estar habilitado por defecto para todos los clientes.\n\n\n5. I18N y L10N\n\n\nEl soporte de internacionalizaci\u00f3n y localizaci\u00f3n se har\u00e1 a nivel de frontend. El lenguaje por defecto en ODIN ser\u00e1 el ingl\u00e9s, tanto para los identificadores en el c\u00f3digo fuente como para los comentarios.\n\n\n6. Testeo\n\n\nTBD", 
+            "title": "Key Features"
+        }, 
+        {
+            "location": "/Key_Features/#key-features", 
+            "text": "", 
+            "title": "Key Features"
+        }, 
+        {
+            "location": "/Key_Features/#1-urls", 
+            "text": "La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el cliente, sino que \u00e9ste debe seguir las URLs provistas por la propia API.    Estructura jer\u00e1rquica:  de lo universal a lo particular. Se usa la barra  /  para indicar una relaci\u00f3n jer\u00e1rquica entre recursos.  Ejemplo:   GET /datasets/5f86r    Granularidad media:  los recursos no deben estar anidados a m\u00e1s de dos niveles de profundidad.  Mal :  GET /datasets/5f86r/resources/f9e3b  Bien :  GET /datasets/5f86r/resources    Uso de sustantivos:  para designar recursos. S\u00f3lo se deben emplear verbos para los endpoints de servicio.  Mal :  GET /getAllDatasets  Bien :  GET /datasets       Uso de plurales:  s\u00f3lo usar la forma singular de los sustantivos cuando no haya posibilidad alguna de que los recursos tengan m\u00faltiples.  Mal :  GET /dataset  Bien :  GET /datasets       camelCase:  lowerCamelCase para los par\u00e1metros, tanto en la url como en el body de la request.  Ejemplo :  GET /datasets?filterBy=name", 
+            "title": "1. URLs"
+        }, 
+        {
+            "location": "/Key_Features/#otras-consideraciones", 
+            "text": "No se debe incluir una barra  /  al final de las URLs. La API no debe admitir URLs que las incluyan, ni incluirlas en los links hypermedia que genere.  Mal:   GET /datasets/5f86r/  Bien:   GET /datasets/5f86r    No se deben usar guiones bajos en las URLs. En el extremo caso de que no fuera posible o conveniente usar camelCase, usar guiones medios para separar palabras.\n  \u200b    Se deben usar exclusivamente letras min\u00fasculas para las URLs, exceptuando los par\u00e1metros camelCase en las query strings.  Mal:   GET /Datasets/5f86r  Bien:   GET /datasets/5f86r    No se deben incluir extensiones de archivo en los endpoints. El tipo de contenido a devolver al cliente estar\u00e1 determinado por el header  Accepts  de la request.  Mal:   GET /datasets/5f86r.json", 
+            "title": "Otras consideraciones"
+        }, 
+        {
+            "location": "/Key_Features/#2-verbos-http", 
+            "text": "GET  POST  PATCH : para las actualizaciones parciales.  DELETE  OPTION:  para la navegaci\u00f3n hypermedia.  HEAD:  para otorgar una forma liviana de chequear el estado de un recurso.", 
+            "title": "2. Verbos HTTP"
+        }, 
+        {
+            "location": "/Key_Features/#mapeo-crud", 
+            "text": "Create \u2014  POST  Read \u2014  GET  Update \u2014  PATCH  Delete \u2014  DELETE", 
+            "title": "Mapeo CRUD"
+        }, 
+        {
+            "location": "/Key_Features/#3-queries", 
+            "text": "B\u00fasqueda:  se har\u00e1 por medio del par\u00e1metro  search , con los t\u00e9rminos de b\u00fasqueda separados por  + . Se admitir\u00e1n dos clases de b\u00fasqueda:  Global:    GET /search?query=calidad+aire    Busca en todos los recursos.  Particular:    GET /datasets/search?query=calidad+aire    Busca en los datasets.    Fitrado:  a trav\u00e9s de par\u00e1metros.  Ejemplo :  GET /datasets?state=public  Devuelve los datasets p\u00fablicos.    Ordenado:  a trav\u00e9s de\u00a0los par\u00e1metros  orderBy  y  sort . Este \u00faltimo admite ASC o DESC como valores, para ordenar en forma ascendiente o descendiente respectivamente.   Ejemplo :  GET /datasets?orderBy=name sort=DESC  Devuelve los datasets ordenados por nombre en forma descendiente.    Limitado:  a trav\u00e9s del par\u00e1metro  limit .  Ejemplo :  GET /datasets?limit=10  Devuelve 10 resultados.    Paginado:  por rango, a trav\u00e9s del par\u00e1metro  offset  combinado con el par\u00e1metro  limit . El  offset  es el ID del elemento a partir del cual se comienza a contar la cantidad de \u00edtems especificada por limit. Si no se pasara  limit , se obtendr\u00edan todos los recursos a partir del  offset .   De all\u00ed la necesidad de  definir un l\u00edmite  para la cantidad de registros que una query puede devolver, especialmente cuando se trata de muchos registros, como un dataset extenso. Igualmente para el caso de en que se piden todos los registros de un recurso, como por ejemplo  GET /datasets .  El paginado debe ser consistente, es decir usar el timestamp de la request como una suerte de versionado a los fines de no incluir duplicados (incluso aunque los objetos involucrados cambien).  Ejemplo :  GET /datasets?offset=5f86r limit=30  Devuelve los 10 resultados que siguen al \u00edtem n\u00famero 20.    Respuestas parciales:  permite a los clientes elegir qu\u00e9 informaci\u00f3n necesitan en lugar de obtener la respuesta completa, lo que es especialmente \u00fatil para las aplicaciones m\u00f3viles (por el ancho de banda limitado). Los datos requeridos van en el campo  fields , separados por coma.  Ejemplo :  GET /datasets?fields=name,description    Palabras reservadas:   first ,  last  y  count . Pueden reservarse otras, seg\u00fan el tipo de dato (por ejemplo:  average ,  max ,  min ).  First:    GET /datasets/first  Devuelve el primer dataset.   Last:    GET /datasets/last  Devuelve el \u00faltimo dataset.   Count:    GET /datasets/count  Devuelve la cantidad de datasets.", 
+            "title": "3. Queries"
+        }, 
+        {
+            "location": "/Key_Features/#4-plugins", 
+            "text": "TBD", 
+            "title": "4. Plugins"
+        }, 
+        {
+            "location": "/Key_Features/#5-seguridad", 
+            "text": "", 
+            "title": "5. Seguridad"
+        }, 
+        {
+            "location": "/Key_Features/#autenticacion", 
+            "text": "La API de ODIN ser\u00e1 una API privada, es decir que no ser\u00e1 posible usarla sin estar autenticado.  Se delegar\u00e1 la autenticaci\u00f3n en  Kong , que admite varios tipos de autenticaci\u00f3n por medio de plugins. La instalaci\u00f3n por defecto de ODIN utilizar\u00e1 OAuth2 para la autenticaci\u00f3n, que a su vez requiere el uso de SSL.", 
+            "title": "Autenticaci\u00f3n"
+        }, 
+        {
+            "location": "/Key_Features/#listas-de-control-de-acceso", 
+            "text": "Delegado en  Kong .", 
+            "title": "Listas de control de acceso"
+        }, 
+        {
+            "location": "/Key_Features/#control-de-trafico", 
+            "text": "Delegado en  Kong .", 
+            "title": "Control de tr\u00e1fico"
+        }, 
+        {
+            "location": "/Key_Features/#cors", 
+            "text": "Tambi\u00e9n delegado en Kong. El soporte de la cabecera CORS debe estar habilitado por defecto para todos los clientes.", 
+            "title": "CORS"
+        }, 
+        {
+            "location": "/Key_Features/#5-i18n-y-l10n", 
+            "text": "El soporte de internacionalizaci\u00f3n y localizaci\u00f3n se har\u00e1 a nivel de frontend. El lenguaje por defecto en ODIN ser\u00e1 el ingl\u00e9s, tanto para los identificadores en el c\u00f3digo fuente como para los comentarios.", 
+            "title": "5. I18N y L10N"
+        }, 
+        {
+            "location": "/Key_Features/#6-testeo", 
+            "text": "TBD", 
+            "title": "6. Testeo"
+        }, 
+        {
+            "location": "/Metodologia/", 
+            "text": "Metodolog\u00eda\n\n\nLa metodolog\u00eda de desarrollo a emplear toma elementos de SCRUM, Incremental Build Model y Spec-Driven Development.\n\n\nSCRUM\n\n\nEl proceso de desarrollo estar\u00e1 dividido en sprints de una semana (5 d\u00edas h\u00e1biles).\n\n\nIncremental Build Model\n\n\nSe desarrollar\u00e1 la API m\u00f3dulo por m\u00f3dulo, cada uno de los cuales puede tomar uno o m\u00e1s sprints. \n\n\nIdealmente cada sprint abarcar\u00e1 el desarrollo de una pieza de funcionalidad peque\u00f1a, pero completa y autocontenida, de acuerdo a la lista de features definida para el release correspondiente.\n\n\nSpec-Driven Development\n\n\nImplica empezar con la descripci\u00f3n y prototipado de la API siguiendo una especificaci\u00f3n (spec) para luego proseguir con su implementaci\u00f3n. El spec no s\u00f3lo sirve como una suerte de contrato para el desarrollo de la API, sino que tambi\u00e9n puede ser usado para generar documentaci\u00f3n, tests, SDKs, entre otras utilidades.\n\n\nBajo esta metodolog\u00eda se dividir\u00e1 el proceso de desarrollo en tres etapas:\n\n\n\n\n\n\nSpec:\n en esta etapa se escribir\u00e1 el spec de la pieza de funcionalidad a desarrollar durante el sprint. El nivel de profundidad/completitud depender\u00e1 de las features definidas para el release correspondiente.\n\n\nEl formato de spec a utlizar ser\u00e1 \nAPI Blueprint\n. Si bien anteriormente se hab\u00eda utilizado \nSwagger\n (porque el framework iba a ser Loopback, y Loopback pod\u00eda importar Swagger), para poder usar la herramienta de testeo autom\u00e1tica \nDredd\n (adem\u00e1s de toda la suite \u0010\nApiary\n) es preciso usar este formato.\n\n\nA medida que se va describiendo la pieza de funcionalidad, se puede testear el dise\u00f1o de la API haciendo uso de un servicio de mocking (como el de Apiary), corrigiendo los errores a medida que vayan surgiendo.\n\n\nPara escribir el spec se puede utilizar el editor de Apiary, o el que cada desarrollador prefiera.\n\n\nNOTA: En caso de que el equipo de desarrollo prefiera usar Swagger, se utilizar\u00e1 Swagger, pero se deber\u00e1 tener en cuenta que ser\u00e1 necesario escribir los tests spec/implementaci\u00f3n manualmente (haciendo uso de otra librer\u00eda) y que no ser\u00e1 posible hacer uso de la suite Apiary. No obstante, n\u00f3tese que tambi\u00e9n es posible \nconvertir de un formato a otro\n.\n\n\nDuraci\u00f3n:\n 1 d\u00eda.\n\n\n\n\n\n\nDesarrollo:\n se implementar\u00e1 lo descripto en el spec en su totalidad, tal cual se encuentra especificado. \n\n\nDuraci\u00f3n:\n 3 d\u00edas.\n\n\n\n\n\n\nTesteo:\n se correr\u00e1 la herramienta de testeo \nDredd\n contra la implementaci\u00f3n (en relaci\u00f3n al spec) y se corregir\u00e1n los errores que surjan. \n\n\nDuraci\u00f3n:\n 1 d\u00eda.", 
+            "title": "Metodologia"
+        }, 
+        {
+            "location": "/Metodologia/#metodologia", 
+            "text": "La metodolog\u00eda de desarrollo a emplear toma elementos de SCRUM, Incremental Build Model y Spec-Driven Development.", 
+            "title": "Metodolog\u00eda"
+        }, 
+        {
+            "location": "/Metodologia/#scrum", 
+            "text": "El proceso de desarrollo estar\u00e1 dividido en sprints de una semana (5 d\u00edas h\u00e1biles).", 
+            "title": "SCRUM"
+        }, 
+        {
+            "location": "/Metodologia/#incremental-build-model", 
+            "text": "Se desarrollar\u00e1 la API m\u00f3dulo por m\u00f3dulo, cada uno de los cuales puede tomar uno o m\u00e1s sprints.   Idealmente cada sprint abarcar\u00e1 el desarrollo de una pieza de funcionalidad peque\u00f1a, pero completa y autocontenida, de acuerdo a la lista de features definida para el release correspondiente.", 
+            "title": "Incremental Build Model"
+        }, 
+        {
+            "location": "/Metodologia/#spec-driven-development", 
+            "text": "Implica empezar con la descripci\u00f3n y prototipado de la API siguiendo una especificaci\u00f3n (spec) para luego proseguir con su implementaci\u00f3n. El spec no s\u00f3lo sirve como una suerte de contrato para el desarrollo de la API, sino que tambi\u00e9n puede ser usado para generar documentaci\u00f3n, tests, SDKs, entre otras utilidades.  Bajo esta metodolog\u00eda se dividir\u00e1 el proceso de desarrollo en tres etapas:    Spec:  en esta etapa se escribir\u00e1 el spec de la pieza de funcionalidad a desarrollar durante el sprint. El nivel de profundidad/completitud depender\u00e1 de las features definidas para el release correspondiente.  El formato de spec a utlizar ser\u00e1  API Blueprint . Si bien anteriormente se hab\u00eda utilizado  Swagger  (porque el framework iba a ser Loopback, y Loopback pod\u00eda importar Swagger), para poder usar la herramienta de testeo autom\u00e1tica  Dredd  (adem\u00e1s de toda la suite \u0010 Apiary ) es preciso usar este formato.  A medida que se va describiendo la pieza de funcionalidad, se puede testear el dise\u00f1o de la API haciendo uso de un servicio de mocking (como el de Apiary), corrigiendo los errores a medida que vayan surgiendo.  Para escribir el spec se puede utilizar el editor de Apiary, o el que cada desarrollador prefiera.  NOTA: En caso de que el equipo de desarrollo prefiera usar Swagger, se utilizar\u00e1 Swagger, pero se deber\u00e1 tener en cuenta que ser\u00e1 necesario escribir los tests spec/implementaci\u00f3n manualmente (haciendo uso de otra librer\u00eda) y que no ser\u00e1 posible hacer uso de la suite Apiary. No obstante, n\u00f3tese que tambi\u00e9n es posible  convertir de un formato a otro .  Duraci\u00f3n:  1 d\u00eda.    Desarrollo:  se implementar\u00e1 lo descripto en el spec en su totalidad, tal cual se encuentra especificado.   Duraci\u00f3n:  3 d\u00edas.    Testeo:  se correr\u00e1 la herramienta de testeo  Dredd  contra la implementaci\u00f3n (en relaci\u00f3n al spec) y se corregir\u00e1n los errores que surjan.   Duraci\u00f3n:  1 d\u00eda.", 
+            "title": "Spec-Driven Development"
+        }, 
+        {
+            "location": "/Sprints/", 
+            "text": "", 
+            "title": "Sprints"
+        }
+    ]
+}

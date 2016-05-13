@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Metodologia - ODIN</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Metodologia";
+    var mkdocs_page_input_path = "Metodologia.md";
+    var mkdocs_page_url = "/Metodologia/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ODIN</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Arquitectura/">Arquitectura</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Codigo_Fuente/">Codigo Fuente</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Key_Features/">Key Features</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Metodologia</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#metodologia">Metodología</a></li>
+                
+                    <li><a class="toctree-l4" href="#scrum">SCRUM</a></li>
+                
+                    <li><a class="toctree-l4" href="#incremental-build-model">Incremental Build Model</a></li>
+                
+                    <li><a class="toctree-l4" href="#spec-driven-development">Spec-Driven Development</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Sprints/">Sprints</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ODIN</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Metodologia</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/gcba-odin/odin-tech-docs" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="metodologia">Metodología</h1>
+<p>La metodología de desarrollo a emplear toma elementos de SCRUM, Incremental Build Model y Spec-Driven Development.</p>
+<h2 id="scrum">SCRUM</h2>
+<p>El proceso de desarrollo estará dividido en sprints de una semana (5 días hábiles).</p>
+<h2 id="incremental-build-model">Incremental Build Model</h2>
+<p>Se desarrollará la API módulo por módulo, cada uno de los cuales puede tomar uno o más sprints. </p>
+<p>Idealmente cada sprint abarcará el desarrollo de una pieza de funcionalidad pequeña, pero completa y autocontenida, de acuerdo a la lista de features definida para el release correspondiente.</p>
+<h2 id="spec-driven-development">Spec-Driven Development</h2>
+<p>Implica empezar con la descripción y prototipado de la API siguiendo una especificación (spec) para luego proseguir con su implementación. El spec no sólo sirve como una suerte de contrato para el desarrollo de la API, sino que también puede ser usado para generar documentación, tests, SDKs, entre otras utilidades.</p>
+<p>Bajo esta metodología se dividirá el proceso de desarrollo en tres etapas:</p>
+<ol>
+<li>
+<p><strong>Spec:</strong> en esta etapa se escribirá el spec de la pieza de funcionalidad a desarrollar durante el sprint. El nivel de profundidad/completitud dependerá de las features definidas para el release correspondiente.</p>
+<p>El formato de spec a utlizar será <a href="https://apiblueprint.org/">API Blueprint</a>. Si bien anteriormente se había utilizado <a href="http://swagger.io/">Swagger</a> (porque el framework iba a ser Loopback, y Loopback podía importar Swagger), para poder usar la herramienta de testeo automática <a href="https://github.com/apiaryio/dredd">Dredd</a> (además de toda la suite <a href="https://apiary.io/">Apiary</a>) es preciso usar este formato.</p>
+<p>A medida que se va describiendo la pieza de funcionalidad, se puede testear el diseño de la API haciendo uso de un servicio de mocking (como el de Apiary), corrigiendo los errores a medida que vayan surgiendo.</p>
+<p>Para escribir el spec se puede utilizar el editor de Apiary, o el que cada desarrollador prefiera.</p>
+<p><em>NOTA: En caso de que el equipo de desarrollo prefiera usar Swagger, se utilizará Swagger, pero se deberá tener en cuenta que será necesario escribir los tests spec/implementación manualmente (haciendo uso de otra librería) y que no será posible hacer uso de la suite Apiary. No obstante, nótese que también es posible <a href="https://apitransformer.com/">convertir de un formato a otro</a>.</em></p>
+<p><em>Duración:</em> 1 día.</p>
+</li>
+<li>
+<p><strong>Desarrollo:</strong> se implementará lo descripto en el spec en su totalidad, tal cual se encuentra especificado. </p>
+<p><em>Duración:</em> 3 días.</p>
+</li>
+<li>
+<p><strong>Testeo:</strong> se correrá la herramienta de testeo <a href="https://github.com/apiaryio/dredd">Dredd</a> contra la implementación (en relación al spec) y se corregirán los errores que surjan. </p>
+<p><em>Duración:</em> 1 día.</p>
+</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Sprints/" class="btn btn-neutral float-right" title="Sprints">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Key_Features/" class="btn btn-neutral" title="Key Features"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/gcba-odin/odin-tech-docs" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Key_Features/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Sprints/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
