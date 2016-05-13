@@ -1,3 +1,4 @@
 site_name: ODIN
 theme: readthedocs
 repo_url: https://github.com/gcba-odin/odin-tech-docs
+site-dir: 
