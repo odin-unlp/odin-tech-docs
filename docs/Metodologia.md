@@ -10,6 +10,8 @@ Se desarrollará la API módulo por módulo, cada uno de los cuales puede tomar 
 
 Idealmente cada sprint abarcará el desarrollo de una pieza de funcionalidad pequeña, pero completa y autocontenida, de acuerdo a la lista de features definida para el release correspondiente.
 
+El desarrollo debe ser full-stack, es decir que se desarollarán el frontend y el admin en forma paralela al desarrollo de la API.
+
 # Spec-Driven Development
 
 Implica empezar con la descripción y prototipado de la API siguiendo una especificación (spec) para luego proseguir con su implementación. El spec no sólo sirve como una suerte de contrato para el desarrollo de la API, sino que también puede ser usado para generar documentación, tests, SDKs, entre otras utilidades.
@@ -23,8 +25,6 @@ Bajo esta metodología se dividirá el proceso de desarrollo en tres etapas:
     A medida que se va describiendo la pieza de funcionalidad, se puede testear el diseño de la API haciendo uso de un servicio de mocking (como el de Apiary), corrigiendo los errores a medida que vayan surgiendo.
 
     Para escribir el spec se puede utilizar el editor de Apiary, o el que cada desarrollador prefiera.
-
-    *NOTA: En caso de que el equipo de desarrollo prefiera usar Swagger, se utilizará Swagger, pero se deberá tener en cuenta que será necesario escribir los tests spec/implementación manualmente (haciendo uso de otra librería) y que no será posible hacer uso de la suite Apiary. No obstante, nótese que también es posible [convertir de un formato a otro](https://apitransformer.com/).*
 
     *Duración:* 1 día.
 
