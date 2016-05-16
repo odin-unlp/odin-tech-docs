@@ -4,23 +4,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2016-05-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>None/Arquitectura/</loc>
-     <lastmod>2016-05-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>None/Codigo_Fuente/</loc>
-     <lastmod>2016-05-13</lastmod>
+     <lastmod>2016-05-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -28,7 +12,23 @@
     
     <url>
      <loc>None/Key_Features/</loc>
-     <lastmod>2016-05-13</lastmod>
+     <lastmod>2016-05-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/Arquitectura/</loc>
+     <lastmod>2016-05-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/Codigo_Fuente/</loc>
+     <lastmod>2016-05-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -36,7 +36,7 @@
     
     <url>
      <loc>None/Metodologia/</loc>
-     <lastmod>2016-05-13</lastmod>
+     <lastmod>2016-05-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -44,7 +44,15 @@
     
     <url>
      <loc>None/Sprints/</loc>
-     <lastmod>2016-05-13</lastmod>
+     <lastmod>2016-05-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/Links/</loc>
+     <lastmod>2016-05-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
