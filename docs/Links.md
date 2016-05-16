@@ -37,13 +37,15 @@
 - [sails-hook-model-extra](https://github.com/lykmapipo/sails-hook-model-extra)
 > Additional model methods for sails.
 > The following methods will be added to all models once hook is installed.
->
-> `countAndFind(criteria, callback)`
-> `countAndSearch(searchTerm, callback)`
-> `first(howMany, callback)`
-> `last(howMany, callback)`
-> `search(searchTerm, callback)`
-> `softDelete(criteria, callback)`
+
+    ```
+    countAndFind(criteria, callback)
+    countAndSearch(searchTerm, callback)
+    first(howMany, callback)
+    last(howMany, callback)
+    search(searchTerm, callback)
+    softDelete(criteria, callback)
+    ```
 
 ### Security
 
