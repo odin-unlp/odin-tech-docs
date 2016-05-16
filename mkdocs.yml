@@ -1,3 +1,11 @@
 site_name: ODIN
 theme: readthedocs
 repo_url: https://github.com/gcba-odin/odin-tech-docs
+pages:
+    - 'index.md'
+    - 'Key_Features.md'
+    - 'Arquitectura.md'
+    - 'Codigo_Fuente.md'
+    - 'Metodologia.md'
+    - 'Sprints.md'
+    - 'Links.md'
