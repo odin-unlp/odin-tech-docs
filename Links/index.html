@@ -102,11 +102,28 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#links">Links</a></li>
+                <li class="toctree-l3"><a href="#backend">Backend</a></li>
                 
-                    <li><a class="toctree-l4" href="#backend">Backend</a></li>
+                    <li><a class="toctree-l4" href="#utils">Utils</a></li>
                 
-                    <li><a class="toctree-l4" href="#frontend">Frontend</a></li>
+                    <li><a class="toctree-l4" href="#api">API</a></li>
+                
+                    <li><a class="toctree-l4" href="#models">Models</a></li>
+                
+                    <li><a class="toctree-l4" href="#security">Security</a></li>
+                
+                    <li><a class="toctree-l4" href="#seeding">Seeding</a></li>
+                
+                    <li><a class="toctree-l4" href="#logging">Logging</a></li>
+                
+                    <li><a class="toctree-l4" href="#plugins">Plugins</a></li>
+                
+                    <li><a class="toctree-l4" href="#analytics">Analytics</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#frontend">Frontend</a></li>
+                
+                    <li><a class="toctree-l4" href="#sdk">SDK</a></li>
                 
             
             </ul>
@@ -150,9 +167,8 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="links">Links</h1>
-<h2 id="backend">Backend</h2>
-<h3 id="utils">Utils</h3>
+                <h1 id="backend">Backend</h1>
+<h2 id="utils">Utils</h2>
 <ul>
 <li><a href="https://github.com/sgress454/sails-hook-autoreload">sails-hook-autoreload</a><blockquote>
 <p>Sails JS hook to autoreload controllers, models, services and locales when changed.
@@ -160,7 +176,7 @@ This hook is to help with situations where you are rapidly prototyping/tinkering
 </blockquote>
 </li>
 </ul>
-<h3 id="api">API</h3>
+<h2 id="api">API</h2>
 <ul>
 <li>
 <p><a href="https://github.com/ghaiklor/generator-sails-rest-api">generator-sails-rest-api</a></p>
@@ -200,7 +216,7 @@ Query builder adds a static method to all models in a sails app that allows crea
 </blockquote>
 </li>
 </ul>
-<h3 id="models">Models</h3>
+<h2 id="models">Models</h2>
 <ul>
 <li>
 <p><a href="https://github.com/lykmapipo/sails-hook-validation">sails-hook-validation</a></p>
@@ -224,22 +240,30 @@ search(searchTerm, callback)
 softDelete(criteria, callback)
 </code></pre>
 
-<h3 id="security">Security</h3>
+<h2 id="security">Security</h2>
 <ul>
-<li><a href="https://github.com/elssar/sails-hook-allowed-hosts">sails-hook-allowed-hosts</a><blockquote>
+<li>
+<p><a href="https://github.com/langateam/sails-permissions">sails-permissions</a></p>
+<blockquote>
+<p>Comprehensive user permissions and entitlements system for sails.js and Waterline. Supports user authentication with passport.js, role-based permissioning, object ownership, and row-level security.</p>
+</blockquote>
+</li>
+<li>
+<p><a href="https://github.com/elssar/sails-hook-allowed-hosts">sails-hook-allowed-hosts</a></p>
+<blockquote>
 <p>Sails hook to ensure requests can only come in from a whitelisted set of hosts.
     Works with both hosts and IP adresses.</p>
 </blockquote>
 </li>
 </ul>
-<h3 id="seeding">Seeding</h3>
+<h2 id="seeding">Seeding</h2>
 <ul>
 <li><a href="https://github.com/arryon/sails-hook-fixtures">sails-hook-fixtures</a><blockquote>
 <p>Installable hook that injects fixtures into your sails ORM at runtime. With associations!</p>
 </blockquote>
 </li>
 </ul>
-<h3 id="logging">Logging</h3>
+<h2 id="logging">Logging</h2>
 <ul>
 <li>
 <p><a href="https://github.com/Dreamscapes/sails-hook-events">sails-hook-events</a></p>
@@ -255,7 +279,7 @@ This hook allows you to use event-driven programming when working with your Wate
 </blockquote>
 </li>
 </ul>
-<h3 id="plugins">Plugins</h3>
+<h2 id="plugins">Plugins</h2>
 <ul>
 <li><a href="https://github.com/tjwebb/marlinspike">marlinspike</a><blockquote>
 <p>Superpowers for your Sails.js Hooks.
@@ -264,15 +288,15 @@ Magically extend Sails apps with additional Model, Controllers, Services.</p>
 </blockquote>
 </li>
 </ul>
-<h3 id="analytics">Analytics</h3>
+<h2 id="analytics">Analytics</h2>
 <ul>
 <li><a href="https://github.com/mikermcneil/sails-hook-apianalytics">sails-hook-apianalytics</a><blockquote>
 <p>A Sails hook for logging detailed request metadata and monitoring your API.</p>
 </blockquote>
 </li>
 </ul>
-<h2 id="frontend">Frontend</h2>
-<h3 id="sdk">SDK</h3>
+<h1 id="frontend">Frontend</h1>
+<h2 id="sdk">SDK</h2>
 <ul>
 <li><a href="https://github.com/balderdashy/sails.io.js">sails.io.js</a><blockquote>
 <p>Browser SDK for communicating w/ Sails via sockets.
