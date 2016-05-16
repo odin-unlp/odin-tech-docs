@@ -222,7 +222,7 @@
         }, 
         {
             "location": "/Links/", 
-            "text": "Links\n\n\nBackend\n\n\nUtils\n\n\n\n\nsails-hook-autoreload\n\n    \n Sails JS hook to autoreload controllers, models, services and locales when changed.\n    \n This hook is to help with situations where you are rapidly prototyping/tinkering with app code and don't want to have to keep quitting/restarting Sails to see your changes. It is not intended to be used in a production environment.\n\n\n\n\nAPI\n\n\n\n\n\n\ngenerator-sails-rest-api\n\n    \n Yeoman generator for scaffolding Sails REST API with predefined features.\n\n\n\n\n\n\nshortid\n\n    \n Short id generator. Url-friendly. Non-predictable. Cluster-compatible.\n\n\n\n\n\n\nsails-hook-pagify\n\n    \n Generate pagination data and metadata for Sails JS projects.\n\n\n\n\n\n\nsails-hook-blueprint-count\n\n    \n Adds blueprint api method to count records in database.\n\n\n\n\n\n\nsails-hook-query-builder\n\n    \n Sails hook for creating waterline queries from request queries.\n    \n Query builder adds a static method to all models in a sails app that allows creates a query which will paginate, search and sort.\n\n\n\n\n\n\nnode-rss\n\n    \n RSS feed generator. Add RSS feeds to any project. Supports enclosures and GeoRSS.\n\n\n\n\n\n\nModels\n\n\n\n\n\n\nsails-hook-validation\n\n    \n Custom validation error messages for sails model with i18n support.\n\n\n\n\n\n\nsails-hook-model-extra\n\n    \n Additional model methods for sails.\n    \n The following methods will be added to all models once hook is installed.\n    \n\n    \n countAndFind(criteria, callback)\n    \n countAndSearch(searchTerm, callback)\n    \n first(howMany, callback)\n    \n last(howMany, callback)\n    \n search(searchTerm, callback)\n    \n softDelete(criteria, callback)\n\n\n\n\n\n\nSecurity\n\n\n\n\nsails-hook-allowed-hosts\n\n    \n Sails hook to ensure requests can only come in from a whitelisted set of hosts.\n    Works with both hosts and IP adresses.\n\n\n\n\nSeeding\n\n\n\n\nsails-hook-fixtures\n\n    \n Installable hook that injects fixtures into your sails ORM at runtime. With associations!\n\n\n\n\nLogging\n\n\n\n\n\n\nsails-hook-events\n\n    \n Use events to manage and observe Waterline models' lifecycle\n    \n This hook allows you to use event-driven programming when working with your Waterline models. It adds new events emitted from your Sails.js instance that you can subscribe to and perform actions when such an event is emitted.\n\n\n\n\n\n\nsails-hook-winston\n\n    \n Integrates winston logging system with your Sails application.\n\n\n\n\n\n\nPlugins\n\n\n\n\nmarlinspike\n\n    \n Superpowers for your Sails.js Hooks.\n    \n Makes it easy to build and maintain Sails Hooks as separate projects.\n    \n Magically extend Sails apps with additional Model, Controllers, Services.\n\n\n\n\nAnalytics\n\n\n\n\nsails-hook-apianalytics\n\n    \n A Sails hook for logging detailed request metadata and monitoring your API.\n\n\n\n\nFrontend\n\n\nSDK\n\n\n\n\nsails.io.js\n\n    \n Browser SDK for communicating w/ Sails via sockets.\n    \n The sails.io.js client comes automatically installed in new Sails projects, but there is nothing project-specific about the client SDK. You can just as easily copy and paste it yourself, get it from Bower, or just link a script tag directly to a hosted CDN.", 
+            "text": "Links\n\n\nBackend\n\n\nUtils\n\n\n\n\nsails-hook-autoreload\n\n\nSails JS hook to autoreload controllers, models, services and locales when changed.\nThis hook is to help with situations where you are rapidly prototyping/tinkering with app code and don't want to have to keep quitting/restarting Sails to see your changes. It is not intended to be used in a production environment.\n\n\n\n\n\n\n\n\nAPI\n\n\n\n\n\n\ngenerator-sails-rest-api\n\n\n\n\nYeoman generator for scaffolding Sails REST API with predefined features.\n\n\n\n\n\n\n\n\nshortid\n\n\n\n\nShort id generator. Url-friendly. Non-predictable. Cluster-compatible.\n\n\n\n\n\n\n\n\nsails-hook-pagify\n\n\n\n\nGenerate pagination data and metadata for Sails JS projects.\n\n\n\n\n\n\n\n\nsails-hook-blueprint-count\n\n\n\n\nAdds blueprint api method to count records in database.\n\n\n\n\n\n\n\n\nsails-hook-query-builder\n\n\n\n\nSails hook for creating waterline queries from request queries.\nQuery builder adds a static method to all models in a sails app that allows creates a query which will paginate, search and sort.\n\n\n\n\n\n\n\n\nnode-rss\n\n\n\n\nRSS feed generator. Add RSS feeds to any project. Supports enclosures and GeoRSS.\n\n\n\n\n\n\n\n\nModels\n\n\n\n\n\n\nsails-hook-validation\n\n\n\n\nCustom validation error messages for sails model with i18n support.\n\n\n\n\n\n\n\n\nsails-hook-model-extra\n\n\n\n\nAdditional model methods for sails.\nThe following methods will be added to all models once hook is installed.\n\n\ncountAndFind(criteria, callback)\n\n\ncountAndSearch(searchTerm, callback)\n\n\nfirst(howMany, callback)\n\n\nlast(howMany, callback)\n\n\nsearch(searchTerm, callback)\n\n\nsoftDelete(criteria, callback)\n\n\n\n\n\n\n\n\nSecurity\n\n\n\n\nsails-hook-allowed-hosts\n\n\nSails hook to ensure requests can only come in from a whitelisted set of hosts.\n    Works with both hosts and IP adresses.\n\n\n\n\n\n\n\n\nSeeding\n\n\n\n\nsails-hook-fixtures\n\n\nInstallable hook that injects fixtures into your sails ORM at runtime. With associations!\n\n\n\n\n\n\n\n\nLogging\n\n\n\n\n\n\nsails-hook-events\n\n\n\n\nUse events to manage and observe Waterline models' lifecycle\nThis hook allows you to use event-driven programming when working with your Waterline models. It adds new events emitted from your Sails.js instance that you can subscribe to and perform actions when such an event is emitted.\n\n\n\n\n\n\n\n\nsails-hook-winston\n\n\n\n\nIntegrates winston logging system with your Sails application.\n\n\n\n\n\n\n\n\nPlugins\n\n\n\n\nmarlinspike\n\n\nSuperpowers for your Sails.js Hooks.\nMakes it easy to build and maintain Sails Hooks as separate projects.\nMagically extend Sails apps with additional Model, Controllers, Services.\n\n\n\n\n\n\n\n\nAnalytics\n\n\n\n\nsails-hook-apianalytics\n\n\nA Sails hook for logging detailed request metadata and monitoring your API.\n\n\n\n\n\n\n\n\nFrontend\n\n\nSDK\n\n\n\n\nsails.io.js\n\n\nBrowser SDK for communicating w/ Sails via sockets.\nThe sails.io.js client comes automatically installed in new Sails projects, but there is nothing project-specific about the client SDK. You can just as easily copy and paste it yourself, get it from Bower, or just link a script tag directly to a hosted CDN.", 
             "title": "Links"
         }, 
         {
@@ -237,42 +237,42 @@
         }, 
         {
             "location": "/Links/#utils", 
-            "text": "sails-hook-autoreload \n      Sails JS hook to autoreload controllers, models, services and locales when changed.\n      This hook is to help with situations where you are rapidly prototyping/tinkering with app code and don't want to have to keep quitting/restarting Sails to see your changes. It is not intended to be used in a production environment.", 
+            "text": "sails-hook-autoreload  Sails JS hook to autoreload controllers, models, services and locales when changed.\nThis hook is to help with situations where you are rapidly prototyping/tinkering with app code and don't want to have to keep quitting/restarting Sails to see your changes. It is not intended to be used in a production environment.", 
             "title": "Utils"
         }, 
         {
             "location": "/Links/#api", 
-            "text": "generator-sails-rest-api \n      Yeoman generator for scaffolding Sails REST API with predefined features.    shortid \n      Short id generator. Url-friendly. Non-predictable. Cluster-compatible.    sails-hook-pagify \n      Generate pagination data and metadata for Sails JS projects.    sails-hook-blueprint-count \n      Adds blueprint api method to count records in database.    sails-hook-query-builder \n      Sails hook for creating waterline queries from request queries.\n      Query builder adds a static method to all models in a sails app that allows creates a query which will paginate, search and sort.    node-rss \n      RSS feed generator. Add RSS feeds to any project. Supports enclosures and GeoRSS.", 
+            "text": "generator-sails-rest-api   Yeoman generator for scaffolding Sails REST API with predefined features.     shortid   Short id generator. Url-friendly. Non-predictable. Cluster-compatible.     sails-hook-pagify   Generate pagination data and metadata for Sails JS projects.     sails-hook-blueprint-count   Adds blueprint api method to count records in database.     sails-hook-query-builder   Sails hook for creating waterline queries from request queries.\nQuery builder adds a static method to all models in a sails app that allows creates a query which will paginate, search and sort.     node-rss   RSS feed generator. Add RSS feeds to any project. Supports enclosures and GeoRSS.", 
             "title": "API"
         }, 
         {
             "location": "/Links/#models", 
-            "text": "sails-hook-validation \n      Custom validation error messages for sails model with i18n support.    sails-hook-model-extra \n      Additional model methods for sails.\n      The following methods will be added to all models once hook is installed.\n     \n      countAndFind(criteria, callback)\n      countAndSearch(searchTerm, callback)\n      first(howMany, callback)\n      last(howMany, callback)\n      search(searchTerm, callback)\n      softDelete(criteria, callback)", 
+            "text": "sails-hook-validation   Custom validation error messages for sails model with i18n support.     sails-hook-model-extra   Additional model methods for sails.\nThe following methods will be added to all models once hook is installed.  countAndFind(criteria, callback)  countAndSearch(searchTerm, callback)  first(howMany, callback)  last(howMany, callback)  search(searchTerm, callback)  softDelete(criteria, callback)", 
             "title": "Models"
         }, 
         {
             "location": "/Links/#security", 
-            "text": "sails-hook-allowed-hosts \n      Sails hook to ensure requests can only come in from a whitelisted set of hosts.\n    Works with both hosts and IP adresses.", 
+            "text": "sails-hook-allowed-hosts  Sails hook to ensure requests can only come in from a whitelisted set of hosts.\n    Works with both hosts and IP adresses.", 
             "title": "Security"
         }, 
         {
             "location": "/Links/#seeding", 
-            "text": "sails-hook-fixtures \n      Installable hook that injects fixtures into your sails ORM at runtime. With associations!", 
+            "text": "sails-hook-fixtures  Installable hook that injects fixtures into your sails ORM at runtime. With associations!", 
             "title": "Seeding"
         }, 
         {
             "location": "/Links/#logging", 
-            "text": "sails-hook-events \n      Use events to manage and observe Waterline models' lifecycle\n      This hook allows you to use event-driven programming when working with your Waterline models. It adds new events emitted from your Sails.js instance that you can subscribe to and perform actions when such an event is emitted.    sails-hook-winston \n      Integrates winston logging system with your Sails application.", 
+            "text": "sails-hook-events   Use events to manage and observe Waterline models' lifecycle\nThis hook allows you to use event-driven programming when working with your Waterline models. It adds new events emitted from your Sails.js instance that you can subscribe to and perform actions when such an event is emitted.     sails-hook-winston   Integrates winston logging system with your Sails application.", 
             "title": "Logging"
         }, 
         {
             "location": "/Links/#plugins", 
-            "text": "marlinspike \n      Superpowers for your Sails.js Hooks.\n      Makes it easy to build and maintain Sails Hooks as separate projects.\n      Magically extend Sails apps with additional Model, Controllers, Services.", 
+            "text": "marlinspike  Superpowers for your Sails.js Hooks.\nMakes it easy to build and maintain Sails Hooks as separate projects.\nMagically extend Sails apps with additional Model, Controllers, Services.", 
             "title": "Plugins"
         }, 
         {
             "location": "/Links/#analytics", 
-            "text": "sails-hook-apianalytics \n      A Sails hook for logging detailed request metadata and monitoring your API.", 
+            "text": "sails-hook-apianalytics  A Sails hook for logging detailed request metadata and monitoring your API.", 
             "title": "Analytics"
         }, 
         {
@@ -282,7 +282,7 @@
         }, 
         {
             "location": "/Links/#sdk", 
-            "text": "sails.io.js \n      Browser SDK for communicating w/ Sails via sockets.\n      The sails.io.js client comes automatically installed in new Sails projects, but there is nothing project-specific about the client SDK. You can just as easily copy and paste it yourself, get it from Bower, or just link a script tag directly to a hosted CDN.", 
+            "text": "sails.io.js  Browser SDK for communicating w/ Sails via sockets.\nThe sails.io.js client comes automatically installed in new Sails projects, but there is nothing project-specific about the client SDK. You can just as easily copy and paste it yourself, get it from Bower, or just link a script tag directly to a hosted CDN.", 
             "title": "SDK"
         }
     ]
