@@ -12,6 +12,9 @@
 
 - [generator-sails-rest-api](https://github.com/ghaiklor/generator-sails-rest-api)
     > Yeoman generator for scaffolding Sails REST API with predefined features.
+    
+- [shortid](https://github.com/dylang/shortid)
+    > Short id generator. Url-friendly. Non-predictable. Cluster-compatible.
 
 - [sails-hook-pagify](https://github.com/colintoh/sails-hook-pagify)
     > Generate pagination data and metadata for Sails JS projects.
