@@ -6,7 +6,7 @@
 - En la **base de datos SQL** se deben almacenar los datos relacionales del sistema, como ser: usuarios, permisos, roles, organizaciones, metadatos, etc.
 - El **almacenamiento de estáticos** es para almacenar los recursos asociados a los datasets: archivos csv, pdf, shp, etc.
 - El **API Gateway** es una aplicación third party que oficia de proxy entre los clientes y la API, añadiendo una capa de administración extensible con plugins.
-- El **Admin** es una aplicación web conectada directamente a ambas bases de datos, en la cual es posible administrar las diferentes entidades que componen ODIN.
+- El **Admin** es una aplicación web (cliente de la API) desde la cual es posible administrar las diferentes entidades que componen ODIN.
 
 
 # Stack
@@ -29,5 +29,5 @@
 
 ## Frontends
 
-- **Admin:** interfaz directa sobre ambas bases de datos.
-- **data.buenosaires.gob.ar:** aplicación AngularJS 2.0.
+- **Admin:** aplicación AngularJS 1.5.
+- **data.buenosaires.gob.ar:** aplicación AngularJS 1.5.
