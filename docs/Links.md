@@ -49,6 +49,9 @@ softDelete(criteria, callback)
 
 ### Security
 
+- [sails-permissions](https://github.com/langateam/sails-permissions)
+> Comprehensive user permissions and entitlements system for sails.js and Waterline. Supports user authentication with passport.js, role-based permissioning, object ownership, and row-level security.
+
 - [sails-hook-allowed-hosts](https://github.com/elssar/sails-hook-allowed-hosts)
 > Sails hook to ensure requests can only come in from a whitelisted set of hosts.
     Works with both hosts and IP adresses.
