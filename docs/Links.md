@@ -38,14 +38,14 @@
 > Additional model methods for sails.
 > The following methods will be added to all models once hook is installed.
 
-    ```
-    countAndFind(criteria, callback)
-    countAndSearch(searchTerm, callback)
-    first(howMany, callback)
-    last(howMany, callback)
-    search(searchTerm, callback)
-    softDelete(criteria, callback)
-    ```
+```javascript
+countAndFind(criteria, callback)
+countAndSearch(searchTerm, callback)
+first(howMany, callback)
+last(howMany, callback)
+search(searchTerm, callback)
+softDelete(criteria, callback)
+```
 
 ### Security
 
