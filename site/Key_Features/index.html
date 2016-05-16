@@ -67,21 +67,37 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#key-features">Key Features</a></li>
+                <li class="toctree-l3"><a href="#1-urls">1. URLs</a></li>
                 
-                    <li><a class="toctree-l4" href="#1-urls">1. URLs</a></li>
+                    <li><a class="toctree-l4" href="#otras-consideraciones">Otras consideraciones</a></li>
                 
-                    <li><a class="toctree-l4" href="#2-verbos-http">2. Verbos HTTP</a></li>
+            
+                <li class="toctree-l3"><a href="#2-verbos-http">2. Verbos HTTP</a></li>
                 
-                    <li><a class="toctree-l4" href="#3-queries">3. Queries</a></li>
+                    <li><a class="toctree-l4" href="#mapeo-crud">Mapeo CRUD</a></li>
                 
-                    <li><a class="toctree-l4" href="#4-plugins">4. Plugins</a></li>
+            
+                <li class="toctree-l3"><a href="#3-queries">3. Queries</a></li>
                 
-                    <li><a class="toctree-l4" href="#5-seguridad">5. Seguridad</a></li>
+            
+                <li class="toctree-l3"><a href="#4-plugins">4. Plugins</a></li>
                 
-                    <li><a class="toctree-l4" href="#5-i18n-y-l10n">5. I18N y L10N</a></li>
+            
+                <li class="toctree-l3"><a href="#5-seguridad">5. Seguridad</a></li>
                 
-                    <li><a class="toctree-l4" href="#6-testeo">6. Testeo</a></li>
+                    <li><a class="toctree-l4" href="#autenticacion">Autenticación</a></li>
+                
+                    <li><a class="toctree-l4" href="#listas-de-control-de-acceso">Listas de control de acceso</a></li>
+                
+                    <li><a class="toctree-l4" href="#control-de-trafico">Control de tráfico</a></li>
+                
+                    <li><a class="toctree-l4" href="#cors">CORS</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#5-i18n-y-l10n">5. I18N y L10N</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#6-testeo">6. Testeo</a></li>
                 
             
             </ul>
@@ -160,8 +176,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="key-features">Key Features</h1>
-<h2 id="1-urls">1. URLs</h2>
+                <h1 id="1-urls">1. URLs</h1>
 <p>La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el cliente, sino que éste debe seguir las URLs provistas por la propia API.</p>
 <ul>
 <li>
@@ -188,7 +203,7 @@
 <p><em>Ejemplo</em>: <code>GET /datasets?filterBy=name</code></p>
 </li>
 </ul>
-<h3 id="otras-consideraciones">Otras consideraciones</h3>
+<h2 id="otras-consideraciones">Otras consideraciones</h2>
 <ul>
 <li>
 <p>No se debe incluir una barra <code>/</code> al final de las URLs. La API no debe admitir URLs que las incluyan, ni incluirlas en los links hypermedia que genere.</p>
@@ -209,7 +224,7 @@
 <p><em>Mal:</em> <code>GET /datasets/5f86r.json</code></p>
 </li>
 </ul>
-<h2 id="2-verbos-http">2. Verbos HTTP</h2>
+<h1 id="2-verbos-http">2. Verbos HTTP</h1>
 <ul>
 <li><strong>GET</strong></li>
 <li><strong>POST</strong></li>
@@ -218,14 +233,14 @@
 <li><strong>OPTION:</strong> para la navegación hypermedia.</li>
 <li><strong>HEAD:</strong> para otorgar una forma liviana de chequear el estado de un recurso.</li>
 </ul>
-<h3 id="mapeo-crud">Mapeo CRUD</h3>
+<h2 id="mapeo-crud">Mapeo CRUD</h2>
 <ul>
 <li>Create —&gt; POST</li>
 <li>Read —&gt; GET</li>
 <li>Update —&gt; PATCH</li>
 <li>Delete —&gt; DELETE</li>
 </ul>
-<h2 id="3-queries">3. Queries</h2>
+<h1 id="3-queries">3. Queries</h1>
 <ul>
 <li>
 <p><strong>Búsqueda:</strong> se hará por medio del parámetro <em>search</em>, con los términos de búsqueda separados por <code>+</code>. Se admitirán dos clases de búsqueda:</p>
@@ -270,21 +285,21 @@
 <p>Devuelve la cantidad de datasets. </p>
 </li>
 </ul>
-<h2 id="4-plugins">4. Plugins</h2>
+<h1 id="4-plugins">4. Plugins</h1>
 <p>TBD</p>
-<h2 id="5-seguridad">5. Seguridad</h2>
-<h3 id="autenticacion">Autenticación</h3>
+<h1 id="5-seguridad">5. Seguridad</h1>
+<h2 id="autenticacion">Autenticación</h2>
 <p>La API de ODIN será una API privada, es decir que no será posible usarla sin estar autenticado.</p>
 <p>Se delegará la autenticación en <a href="https://getkong.org/">Kong</a>, que admite varios tipos de autenticación por medio de plugins. La instalación por defecto de ODIN utilizará OAuth2 para la autenticación, que a su vez requiere el uso de SSL.</p>
-<h3 id="listas-de-control-de-acceso">Listas de control de acceso</h3>
+<h2 id="listas-de-control-de-acceso">Listas de control de acceso</h2>
 <p>Delegado en <a href="https://getkong.org/">Kong</a>.</p>
-<h3 id="control-de-trafico">Control de tráfico</h3>
+<h2 id="control-de-trafico">Control de tráfico</h2>
 <p>Delegado en <a href="https://getkong.org/">Kong</a>.</p>
-<h3 id="cors">CORS</h3>
+<h2 id="cors">CORS</h2>
 <p>También delegado en Kong. El soporte de la cabecera CORS debe estar habilitado por defecto para todos los clientes.</p>
-<h2 id="5-i18n-y-l10n">5. I18N y L10N</h2>
+<h1 id="5-i18n-y-l10n">5. I18N y L10N</h1>
 <p>El soporte de internacionalización y localización se hará a nivel de frontend. El lenguaje por defecto en ODIN será el inglés, tanto para los identificadores en el código fuente como para los comentarios.</p>
-<h2 id="6-testeo">6. Testeo</h2>
+<h1 id="6-testeo">6. Testeo</h1>
 <p>TBD</p>
               
             </div>
