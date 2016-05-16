@@ -158,6 +158,7 @@
 <h1 id="incremental-build-model">Incremental Build Model</h1>
 <p>Se desarrollará la API módulo por módulo, cada uno de los cuales puede tomar uno o más sprints. </p>
 <p>Idealmente cada sprint abarcará el desarrollo de una pieza de funcionalidad pequeña, pero completa y autocontenida, de acuerdo a la lista de features definida para el release correspondiente.</p>
+<p>El desarrollo debe ser full-stack, es decir que se desarollarán el frontend y el admin en forma paralela al desarrollo de la API.</p>
 <h1 id="spec-driven-development">Spec-Driven Development</h1>
 <p>Implica empezar con la descripción y prototipado de la API siguiendo una especificación (spec) para luego proseguir con su implementación. El spec no sólo sirve como una suerte de contrato para el desarrollo de la API, sino que también puede ser usado para generar documentación, tests, SDKs, entre otras utilidades.</p>
 <p>Bajo esta metodología se dividirá el proceso de desarrollo en tres etapas:</p>
@@ -167,7 +168,6 @@
 <p>El formato de spec a utlizar será <a href="https://apiblueprint.org/">API Blueprint</a>. Si bien anteriormente se había utilizado <a href="http://swagger.io/">Swagger</a> (porque el framework iba a ser Loopback, y Loopback podía importar Swagger), para poder usar la herramienta de testeo automática <a href="https://github.com/apiaryio/dredd">Dredd</a> (además de toda la suite <a href="https://apiary.io/">Apiary</a>) es preciso usar este formato.</p>
 <p>A medida que se va describiendo la pieza de funcionalidad, se puede testear el diseño de la API haciendo uso de un servicio de mocking (como el de Apiary), corrigiendo los errores a medida que vayan surgiendo.</p>
 <p>Para escribir el spec se puede utilizar el editor de Apiary, o el que cada desarrollador prefiera.</p>
-<p><em>NOTA: En caso de que el equipo de desarrollo prefiera usar Swagger, se utilizará Swagger, pero se deberá tener en cuenta que será necesario escribir los tests spec/implementación manualmente (haciendo uso de otra librería) y que no será posible hacer uso de la suite Apiary. No obstante, nótese que también es posible <a href="https://apitransformer.com/">convertir de un formato a otro</a>.</em></p>
 <p><em>Duración:</em> 1 día.</p>
 </li>
 <li>
