@@ -2,12 +2,13 @@ site_name: ODIN
 theme: readthedocs
 repo_url: https://github.com/gcba-odin/odin-tech-docs
 pages:
-    - Home: 'index.md'
-    - Key_Features: 'key-features.md'
-    - Arquitectura: 'arquitectura.md'
-    - Codigo_Fuente: 'codigo-fuente.md'
-    - Metodologia: 'metodologia.md'
-    - Sprints: 'sprints.md'
+    - 'Home': 'index.md'
+    - 'Key Features': 'key-features.md'
+    - 'Arquitectura': 'arquitectura.md'
+    - 'Codigo Fuente': 'codigo-fuente.md'
+    - 'Metodología': 'metodologia.md'
+    - Sprints:
+        - 'Sprint 1': 'sprints/sprint1.md'
     - Links:
-        - Backend: 'links/backend.md'
-        - Frontend: 'links/frontend.md'
+        - 'Backend': 'links/backend.md'
+        - 'Frontend': 'links/frontend.md'
