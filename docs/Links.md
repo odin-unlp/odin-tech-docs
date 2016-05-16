@@ -1,14 +1,12 @@
-# Links
+# Backend
 
-## Backend
-
-### Utils
+## Utils
 
 - [sails-hook-autoreload](https://github.com/sgress454/sails-hook-autoreload)
 > Sails JS hook to autoreload controllers, models, services and locales when changed.
 > This hook is to help with situations where you are rapidly prototyping/tinkering with app code and don't want to have to keep quitting/restarting Sails to see your changes. It is not intended to be used in a production environment.
 
-### API
+## API
 
 - [generator-sails-rest-api](https://github.com/ghaiklor/generator-sails-rest-api)
 > Yeoman generator for scaffolding Sails REST API with predefined features.
@@ -29,7 +27,7 @@
 - [node-rss](https://github.com/dylang/node-rss)
 > RSS feed generator. Add RSS feeds to any project. Supports enclosures and GeoRSS.
 
-### Models
+## Models
 
 - [sails-hook-validation](https://github.com/lykmapipo/sails-hook-validation)
 > Custom validation error messages for sails model with i18n support.
@@ -47,7 +45,7 @@ search(searchTerm, callback)
 softDelete(criteria, callback)
 ```
 
-### Security
+## Security
 
 - [sails-permissions](https://github.com/langateam/sails-permissions)
 > Comprehensive user permissions and entitlements system for sails.js and Waterline. Supports user authentication with passport.js, role-based permissioning, object ownership, and row-level security.
@@ -56,12 +54,12 @@ softDelete(criteria, callback)
 > Sails hook to ensure requests can only come in from a whitelisted set of hosts.
     Works with both hosts and IP adresses.
 
-### Seeding
+## Seeding
 
 - [sails-hook-fixtures](https://github.com/arryon/sails-hook-fixtures)
 > Installable hook that injects fixtures into your sails ORM at runtime. With associations!
 
-### Logging
+## Logging
 
 - [sails-hook-events](https://github.com/Dreamscapes/sails-hook-events)
 > Use events to manage and observe Waterline models' lifecycle
@@ -70,20 +68,20 @@ softDelete(criteria, callback)
 - [sails-hook-winston](https://github.com/Kikobeats/sails-hook-winston)
 > Integrates winston logging system with your Sails application.
     
-### Plugins
+## Plugins
 - [marlinspike](https://github.com/tjwebb/marlinspike)
 > Superpowers for your Sails.js Hooks.
 > Makes it easy to build and maintain Sails Hooks as separate projects.
 > Magically extend Sails apps with additional Model, Controllers, Services.
 
-### Analytics
+## Analytics
 
 - [sails-hook-apianalytics](https://github.com/mikermcneil/sails-hook-apianalytics)
 > A Sails hook for logging detailed request metadata and monitoring your API.
     
-## Frontend
+# Frontend
 
-### SDK
+## SDK
 
 - [sails.io.js](https://github.com/balderdashy/sails.io.js)
 > Browser SDK for communicating w/ Sails via sockets.

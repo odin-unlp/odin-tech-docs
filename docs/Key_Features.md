@@ -1,6 +1,4 @@
-# Key Features
-
-## 1. URLs
+# 1. URLs
 
 La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el cliente, sino que éste debe seguir las URLs provistas por la propia API.
 
@@ -31,7 +29,7 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
     *Ejemplo*: `GET /datasets?filterBy=name`
 
 
-### Otras consideraciones
+## Otras consideraciones
 
 - No se debe incluir una barra `/` al final de las URLs. La API no debe admitir URLs que las incluyan, ni incluirlas en los links hypermedia que genere.
 
@@ -55,7 +53,7 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
     *Mal:* `GET /datasets/5f86r.json`
   
 
-## 2. Verbos HTTP
+# 2. Verbos HTTP
 
 - **GET**
 - **POST**
@@ -64,14 +62,14 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
 - **OPTION:** para la navegación hypermedia.
 - **HEAD:** para otorgar una forma liviana de chequear el estado de un recurso.
 
-### Mapeo CRUD
+## Mapeo CRUD
 
 - Create —> POST
 - Read —> GET
 - Update —> PATCH
 - Delete —> DELETE
 
-## 3. Queries
+# 3. Queries
 
 - **Búsqueda:** se hará por medio del parámetro *search*, con los términos de búsqueda separados por `+`. Se admitirán dos clases de búsqueda:
 
@@ -136,34 +134,34 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
     Devuelve la cantidad de datasets. 
     
 
-## 4. Plugins
+# 4. Plugins
 
 TBD
 
-## 5. Seguridad
+# 5. Seguridad
 
-### Autenticación
+## Autenticación
 
 La API de ODIN será una API privada, es decir que no será posible usarla sin estar autenticado.
 
 Se delegará la autenticación en [Kong](https://getkong.org/), que admite varios tipos de autenticación por medio de plugins. La instalación por defecto de ODIN utilizará OAuth2 para la autenticación, que a su vez requiere el uso de SSL.
 
-### Listas de control de acceso
+## Listas de control de acceso
 
 Delegado en [Kong](https://getkong.org/).
 
-### Control de tráfico
+## Control de tráfico
 
 Delegado en [Kong](https://getkong.org/).
 
-### CORS
+## CORS
 
 También delegado en Kong. El soporte de la cabecera CORS debe estar habilitado por defecto para todos los clientes.
 
-## 5. I18N y L10N
+# 5. I18N y L10N
 
 El soporte de internacionalización y localización se hará a nivel de frontend. El lenguaje por defecto en ODIN será el inglés, tanto para los identificadores en el código fuente como para los comentarios.
 
-## 6. Testeo
+# 6. Testeo
 
 TBD

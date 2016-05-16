@@ -1,10 +1,8 @@
-# Código Fuente
-
-## Repositorio
+# Repositorio
 
 El código deberá alojarse en un repositorio GitHub perteneciente a la organización [gcba-odin](https://github.com/gcba-odin).
 
-### Branches
+## Branches
 
 - **master:** la rama de producción.
 
@@ -14,7 +12,7 @@ El código deberá alojarse en un repositorio GitHub perteneciente a la organiza
 
 - **dev**: la rama de desarrollo.
 
-### Commits
+## Commits
 
 Los commits deben encapsular cambios relacionados, prefiriéndose una multiplicidad de commits atómicos y claramente diferenciados a unos pocos que sean acumulativos.
 

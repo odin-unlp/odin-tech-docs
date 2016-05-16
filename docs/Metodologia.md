@@ -1,18 +1,16 @@
-# Metodología
-
 La metodología de desarrollo a emplear toma elementos de SCRUM, Incremental Build Model y Spec-Driven Development.
 
-## SCRUM
+# SCRUM
 
 El proceso de desarrollo estará dividido en sprints de una semana (5 días hábiles).
 
-## Incremental Build Model
+# Incremental Build Model
 
 Se desarrollará la API módulo por módulo, cada uno de los cuales puede tomar uno o más sprints. 
 
 Idealmente cada sprint abarcará el desarrollo de una pieza de funcionalidad pequeña, pero completa y autocontenida, de acuerdo a la lista de features definida para el release correspondiente.
 
-## Spec-Driven Development
+# Spec-Driven Development
 
 Implica empezar con la descripción y prototipado de la API siguiendo una especificación (spec) para luego proseguir con su implementación. El spec no sólo sirve como una suerte de contrato para el desarrollo de la API, sino que también puede ser usado para generar documentación, tests, SDKs, entre otras utilidades.
 
