@@ -93,11 +93,13 @@ image
     
     *Max:* 25 carácteres
     
+    
 - **password**
 
     *Tipo:* string
     
     *Requerido:* sí 
+    
     
 - **email**
 
@@ -109,6 +111,7 @@ image
     
     *Max:* 250 carácteres
     
+    
 - **firstName**
 
     *Tipo:* string
@@ -116,6 +119,7 @@ image
     *Max:* 50 carácteres
     
     *Default:* '' (empty string)
+    
 
 - **lastName**
 
@@ -124,6 +128,7 @@ image
     *Max:* 100 carácteres
     
     *Default:* '' (empty string)
+    
 
 - **avatar**
 
@@ -132,6 +137,7 @@ image
     *Max:* 500 carácteres
     
     *Default:* '' (empty string)
+    
         
 ### Calculados
 
@@ -142,6 +148,7 @@ image
     *Tipo:* string
     
     *Ejemplo:* Juan Pérez
+    
     
 ## Datasets
 
