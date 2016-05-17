@@ -256,8 +256,6 @@ image
     *Tipo:* string
     
     *Max:* 500 carácteres
-    
-    *Default:* '' (empty string)
 
 ---
 
@@ -512,7 +510,320 @@ image
 - Unpublished
 
 
+## Files
+
+- **id**
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Único:* sí
+    
+    *Max:* 15 carácteres
+    
+---
+
+- **name**
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Max:* 150 carácteres
+
+---
+
+- **description**
+
+    *Tipo:* string
+    
+    *Max:* 350 carácteres
+
+---
+
+- **notes**
+
+    *Tipo:* string
+    
+    *Max:* 500 carácteres
+
+---
+
+- **url**
+
+    *Tipo:* string
+    
+    *Max:* 500 carácteres
+
+---
+
+- **visibility**
+
+    *Tipo:* boolean
+
+---
+
+- **publishedAt**
+
+    *Tipo:* datetime
+
+---
+
+- **createdAt**
+
+    *Tipo:* datetime
+    
+    *Default:* fecha y hora actuales
+
+---
+
+- **updatedAt**
+
+    *Tipo:* datetime
+    
+    *Default:* fecha y hora actuales
+
+
+### Claves Foráneas
+
+- **status**
+    
+    El ID del status que posee el archivo.
+    
+    *Requerido:* sí
+    
+    *Max:* 15 carácteres
+
+---
+
+- **organization**
+    
+    El ID de la organización que provee los datos.
+    
+    *Requerido:* sí
+    
+    *Max:* 15 carácteres
+
+---
+
+- **dataset**
+    
+    El ID del dataset al que pertenece.
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Max:* 15 carácteres 
+
+---
+
+- **createdBy**
+    
+    El ID del usuario que creó la categoría.
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Max:* 15 carácteres 
+
+
 ## Datasets
+
+- **id**
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Único:* sí
+    
+    *Max:* 15 carácteres
+    
+---
+
+- **name**
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Max:* 150 carácteres
+
+---
+
+- **description**
+
+    *Tipo:* string
+    
+    *Max:* 350 carácteres
+
+---
+
+- **notes**
+
+    *Tipo:* string
+    
+    *Max:* 500 carácteres
+
+---
+
+- **visibility**
+
+    *Tipo:* boolean
+
+---
+
+- **starred**
+
+    *Tipo:* boolean
+
+---
+
+- **optional1**
+
+    *Tipo:* string
+    
+    *Max:* 500 carácteres
+    
+---
+
+- **optional2**
+
+    *Tipo:* string
+    
+    *Max:* 500 carácteres
+    
+---
+
+- **optional3**
+
+    *Tipo:* string
+    
+    *Max:* 500 carácteres
+    
+---
+
+- **optional4**
+
+    *Tipo:* string
+    
+    *Max:* 500 carácteres
+    
+---
+
+- **optional5**
+
+    *Tipo:* string
+    
+    *Max:* 500 carácteres
+    
+---
+
+- **optional6**
+
+    *Tipo:* string
+    
+    *Max:* 500 carácteres
+    
+---
+
+- **optional7**
+
+    *Tipo:* string
+    
+    *Max:* 500 carácteres
+    
+---
+
+- **optional8**
+
+    *Tipo:* string
+    
+    *Max:* 500 carácteres
+    
+---
+
+- **optional9**
+
+    *Tipo:* string
+    
+    *Max:* 500 carácteres
+    
+---
+
+- **optional10**
+
+    *Tipo:* string
+    
+    *Max:* 500 carácteres
+    
+---
+
+- **publishedAt**
+
+    *Tipo:* datetime
+
+---
+
+- **createdAt**
+
+    *Tipo:* datetime
+    
+    *Default:* fecha y hora actuales
+
+---
+
+- **updatedAt**
+
+    *Tipo:* datetime
+    
+    *Default:* fecha y hora actuales
+
+
+### Claves Foráneas
+
+- **category**
+    
+    El ID de la categoría del dataset.
+    
+    *Requerido:* sí
+    
+    *Max:* 15 carácteres
+
+---
+
+- **status**
+    
+    El ID del status que posee el archivo.
+    
+    *Requerido:* sí
+    
+    *Max:* 15 carácteres
+
+---
+
+- **organization**
+    
+    El ID de la organización que provee los datos.
+    
+    *Requerido:* sí
+    
+    *Max:* 15 carácteres
+
+---
+
+- **createdBy**
+    
+    El ID del usuario que creó la categoría.
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Max:* 15 carácteres 
 
 
 # Repositorios
