@@ -501,6 +501,7 @@ image
     
     *Default:* fecha y hora actuales
     
+---
 
 **Nota:** a los fines del seedeo, los estados por recurso son:
 
