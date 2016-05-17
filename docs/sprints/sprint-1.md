@@ -4,6 +4,10 @@
 
 ![Entidad - Relación](http://i.imgur.com/u7CUz6v.png)
 
+## Objetivo
+
+Hacer el login y CRUD de los usuarios, crear la mayoría de las tablas de la base de datos y dejar prototipada buena parte de la interfaz del admin y una porción del frontend.
+
 ## No Entra
 
 ### Files
@@ -20,9 +24,9 @@
 
 # Repositorios
 
-- **API:** https://github.com/gcba-odin/odin
-- **Admin:** https://github.com/gcba-odin/odin-admin
-- **Frontend:** https://github.com/gcba-odin/odin-frontend
+- **API:** [https://github.com/gcba-odin/odin](https://github.com/gcba-odin/odin)
+- **Admin:** [https://github.com/gcba-odin/odin-admin](https://github.com/gcba-odin/odin-admin)
+- **Frontend:** [https://github.com/gcba-odin/odin-frontend](https://github.com/gcba-odin/odin-frontend)
 
 # Tareas
 
@@ -30,10 +34,13 @@
 
 1. Escribir spec (en Api Blueprint) con los contenidos de este sprint
 2. Crear seed para la base de datos, con 3 - 5 elementos de cada entidad
-3. Desarrollar endpoints
-4. Desarrollar subida de archivos
-5. Desarrollar parseo y guardado de datos en la base de datos no relacional
-6. Instalar y configurar sails-permissions
+3. Desarrollar endpoints.
+    **Nota 1:** en ningún caso los campos id, createdAt y updatedAt deben ser editables a través de la API. Son campos que se crean y actualizan (updatedAt) automáticamente, y en todo otro caso deben ser de sólo lectura.
+    **Nota 2:** la API sólo debe aceptar requests con body en JSON.
+4. Correr tests de Dredd
+5. Desarrollar subida de archivos
+6. Desarrollar parseo y guardado de datos en la base de datos no relacional
+7. Instalar y configurar sails-permissions
 
 ### Input Yeoman
 
@@ -75,20 +82,25 @@ Guardar la secret key generada en Google Drive.
 
 ## Admin
 
-1. Login (funcional)
-2. CRUD de users (funcional)
-3. CRUD de organizations (sólo UI)
-4. CRUD de statuses (sólo UI)
-5. CRUD de filetypes (sólo UI)
-6. CRUD de files (sólo UI)
-7. CRUD de databases (sólo UI)
-8. CRUD de datasets (sólo UI)
+8. Login (funcional)
+9. CRUD de users (funcional)
+10. CRUD de organizations (sólo UI)
+11. CRUD de statuses (sólo UI)
+12. CRUD de filetypes (sólo UI)
+13. CRUD de files (sólo UI)
+14. CRUD de databases (sólo UI)
+15. CRUD de datasets (sólo UI)
 
 ## Frontend
 
-1. Landing page (home, sólo UI)
-2. Listado datasets (sólo UI)
-3. Ver dataset (sólo UI)
+16. Landing page (home, sólo UI)
+17. Listado datasets (sólo UI)
+18. Ver dataset (sólo UI)
+
+# Prioridades
+
+1. Login
+2. CRUD de usuarios
 
 # Endpoints
 
@@ -305,8 +317,36 @@ HEAD    /datasets/:id
 OPTION  /datasets/:id
 ```
 
+# Ejemplos
+
+## Responses
+
+### GET
+
+
+
+### POST
+
+
+
+### PATCH
+
+
+
+### DELETE
+
+
+
+### HEAD
+
+
+
+### OPTION
+
+
+
+
 # Base de datos
-image
 
 ## Users
 
