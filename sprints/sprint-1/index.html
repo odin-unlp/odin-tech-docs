@@ -105,6 +105,9 @@
                     <li><a class="toctree-l4" href="#no-entra">No Entra</a></li>
                 
             
+                <li class="toctree-l3"><a href="#repositorios">Repositorios</a></li>
+                
+            
                 <li class="toctree-l3"><a href="#tareas">Tareas</a></li>
                 
                     <li><a class="toctree-l4" href="#api">API</a></li>
@@ -150,17 +153,6 @@
                     <li><a class="toctree-l4" href="#databases_1">Databases</a></li>
                 
                     <li><a class="toctree-l4" href="#datasets_2">Datasets</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#repositorios">Repositorios</a></li>
-                
-                    <li><a class="toctree-l4" href="#api_1">API</a></li>
-                
-                    <li><a class="toctree-l4" href="#admin_1">Admin</a></li>
-                
-                    <li><a class="toctree-l4" href="#frontend_1">Frontend</a></li>
-                
-                    <li><a class="toctree-l4" href="#yeoman">Yeoman</a></li>
                 
             
             </ul>
@@ -249,6 +241,12 @@
 <li>Etiquetas</li>
 <li>Usuario responsable</li>
 </ul>
+<h1 id="repositorios">Repositorios</h1>
+<ul>
+<li><strong>API:</strong> https://github.com/gcba-odin/odin</li>
+<li><strong>Admin:</strong> https://github.com/gcba-odin/odin-admin</li>
+<li><strong>Frontend:</strong> https://github.com/gcba-odin/odin-frontend</li>
+</ul>
 <h1 id="tareas">Tareas</h1>
 <h2 id="api">API</h2>
 <ol>
@@ -259,8 +257,59 @@
 <li>Desarrollar parseo y guardado de datos en la base de datos no relacional</li>
 <li>Instalar y configurar sails-permissions</li>
 </ol>
+<h3 id="input-yeoman">Input Yeoman</h3>
+<pre><code>Application questions:
+? Application name odin
+
+Configuration questions:
+? Database name odin
+? Enable CORS? Yes
+
+Logger questions:
+? Choose which logger you want to configure Winston
+
+Blueprint questions:
+? Use overridden blueprints? Yes
+
+Controller questions:
+? Choose which predefined controllers you want to copy (Press &lt;space&gt; to select)PingController, SearchController
+
+Hook questions:
+? Choose which predefined hooks you want to copy (Press &lt;space&gt; to select)CountHook, PluralizeHook
+
+Cron questions:
+? Do you need cron? Yes
+
+Swagger questions:
+? Do you need Swagger UI Explorer? No
+
+Authentication questions:
+? Do you need authentication layer? Yes
+
+Service questions:
+? Select which services you want to use CipherService, HashService, MailerService, StorageService
+? Mailer provider direct
+? Storage provider Local
+</code></pre>
+
+<p>Guardar la secret key generada en Google Drive.</p>
 <h2 id="admin">Admin</h2>
+<ol>
+<li>Login (funcional)</li>
+<li>CRUD de users (funcional)</li>
+<li>CRUD de organizations (sólo UI)</li>
+<li>CRUD de statuses (sólo UI)</li>
+<li>CRUD de filetypes (sólo UI)</li>
+<li>CRUD de files (sólo UI)</li>
+<li>CRUD de databases (sólo UI)</li>
+<li>CRUD de datasets (sólo UI)</li>
+</ol>
 <h2 id="frontend">Frontend</h2>
+<ol>
+<li>Landing page (home, sólo UI)</li>
+<li>Listado datasets (sólo UI)</li>
+<li>Ver dataset (sólo UI)</li>
+</ol>
 <h1 id="endpoints">Endpoints</h1>
 <h2 id="users">Users</h2>
 <pre><code>GET     /users
@@ -1177,46 +1226,6 @@ OPTION  /datasets/:id
 <p><em>Max:</em> 15 carácteres </p>
 </li>
 </ul>
-<h1 id="repositorios">Repositorios</h1>
-<h2 id="api_1">API</h2>
-<h2 id="admin_1">Admin</h2>
-<h2 id="frontend_1">Frontend</h2>
-<h2 id="yeoman">Yeoman</h2>
-<pre><code>Application questions:
-? Application name odin
-
-Configuration questions:
-? Database name odin
-? Enable CORS? Yes
-
-Logger questions:
-? Choose which logger you want to configure Winston
-
-Blueprint questions:
-? Use overridden blueprints? Yes
-
-Controller questions:
-? Choose which predefined controllers you want to copy (Press &lt;space&gt; to select)PingController, SearchController
-
-Hook questions:
-? Choose which predefined hooks you want to copy (Press &lt;space&gt; to select)CountHook, PluralizeHook
-
-Cron questions:
-? Do you need cron? Yes
-
-Swagger questions:
-? Do you need Swagger UI Explorer? No
-
-Authentication questions:
-? Do you need authentication layer? Yes
-
-Service questions:
-? Select which services you want to use CipherService, HashService, MailerService, StorageService
-? Mailer provider direct
-? Storage provider Local
-</code></pre>
-
-<p>Guardar la secret key generada en Google Drive</p>
               
             </div>
           </div>
