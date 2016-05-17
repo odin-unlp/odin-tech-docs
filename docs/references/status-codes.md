@@ -1,6 +1,6 @@
- # Éxito
+# Éxito
  
- Success                               |               
+Success                               |               
 -------------------------------------- |--------------------------------------------------------
 **200 OK**                             | Código genérico de éxito.
 **201 Created**                        | Indica que el recurso fue creado exitosamente.     
