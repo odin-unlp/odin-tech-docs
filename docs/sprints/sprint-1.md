@@ -28,6 +28,18 @@ POST    /users
 HEAD    /users
 OPTION  /users
 
+GET     /users/first
+HEAD    /users/first
+OPTION  /users/first
+
+GET     /users/last
+HEAD    /users/last
+OPTION  /users/last
+
+GET     /users/count
+HEAD    /users/count
+OPTION  /users/count
+
 GET     /users/:id
 PATCH   /users/:id
 DELETE  /users/:id
@@ -46,6 +58,18 @@ GET     /datasets
 POST    /datasets
 HEAD    /datasets
 OPTION  /datasets
+
+GET     /datasets/first
+HEAD    /datasets/first
+OPTION  /datasets/first
+
+GET     /datasets/last
+HEAD    /datasets/last
+OPTION  /datasets/last
+
+GET     /datasets/count
+HEAD    /datasets/count
+OPTION  /datasets/count
 
 GET     /datasets/:id
 PATCH   /datasets/:id
