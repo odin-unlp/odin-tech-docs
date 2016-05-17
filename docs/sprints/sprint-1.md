@@ -92,6 +92,8 @@ image
     *Único:* sí
     
     *Max:* 15 carácteres
+    
+---
 
 - **username**
 
@@ -103,6 +105,7 @@ image
     
     *Max:* 25 carácteres
 
+---
 
 - **password**
 
@@ -110,6 +113,7 @@ image
     
     *Requerido:* sí 
 
+---
 
 - **email**
 
@@ -121,6 +125,7 @@ image
     
     *Max:* 250 carácteres
 
+---
 
 - **firstName**
 
@@ -130,6 +135,7 @@ image
     
     *Default:* '' (empty string)
 
+---
 
 - **lastName**
 
@@ -139,6 +145,7 @@ image
     
     *Default:* '' (empty string)
 
+---
 
 - **avatar**
 
@@ -148,6 +155,13 @@ image
     
     *Default:* '' (empty string)
 
+---
+
+- **active**
+
+    *Tipo:* boolean
+
+---
 
 - **createdAt**
 
@@ -155,6 +169,7 @@ image
     
     *Default:* fecha y hora actuales
 
+---
 
 - **updatedAt**
 
@@ -176,6 +191,7 @@ image
     
     *Max:* 15 carácteres
 
+---
 
 - **createdBy**
     
@@ -197,6 +213,90 @@ image
     *Tipo:* string
     
     *Ejemplo:* Juan Pérez
+
+
+## Organizations
+
+- **id**
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Único:* sí
+    
+    *Max:* 15 carácteres
+    
+---
+
+- **name**
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Max:* 150 carácteres
+
+---
+
+- **description**
+
+    *Tipo:* string
+    
+    *Max:* 350 carácteres
+
+---
+
+- **address**
+
+    *Tipo:* string
+    
+    *Max:* 150 carácteres
+
+---
+
+- **active**
+
+    *Tipo:* boolean
+
+---
+
+- **parent**
+    
+    El ID de la organización a que pertenece. En caso de una organización que no depende de alguna otra existente en la base de datos, va NULL.
+
+    *Tipo:* string 
+    
+    *Max:* 15 carácteres
+
+---
+
+- **createdAt**
+
+    *Tipo:* datetime
+    
+    *Default:* fecha y hora actuales
+
+---
+
+- **updatedAt**
+
+    *Tipo:* datetime
+    
+    *Default:* fecha y hora actuales
+
+
+### Claves Foráneas
+
+- **createdBy**
+    
+    El ID del admin que creó la organización.
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Max:* 15 carácteres 
 
 
 ## Datasets
