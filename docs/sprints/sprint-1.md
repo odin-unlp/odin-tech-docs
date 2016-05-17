@@ -297,7 +297,7 @@ image
 
 - **createdBy**
     
-    El ID del admin que creó al usuario. En el caso del Admin (usuario 1), es sí mismo (1).
+    El ID del admin que creó el usuario. En el caso del Admin (usuario 1), es sí mismo (1).
 
     *Tipo:* string 
     
@@ -621,7 +621,7 @@ image
 
 - **createdBy**
     
-    El ID del usuario que creó la categoría.
+    El ID del usuario que creó el archivo.
 
     *Tipo:* string 
     
@@ -817,7 +817,7 @@ image
 
 - **createdBy**
     
-    El ID del usuario que creó la categoría.
+    El ID del usuario que creó el dataset.
 
     *Tipo:* string 
     
