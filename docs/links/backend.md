@@ -9,7 +9,7 @@
 - [API Blueprint](https://apiblueprint.org/)
 > API Blueprint. A powerful high-level API description language for web APIs.
 
-- [Apiary Editor](https://app.apiary.io/grapher/editor)
+- [Apiary Editor](https://apiary.io/)
 > The Apiary Editor is the foundation of your API design. Apiary Editor supports API Blueprint and Swagger API Description languages.
 
 - [generator-sails-rest-api](https://github.com/ghaiklor/generator-sails-rest-api)
