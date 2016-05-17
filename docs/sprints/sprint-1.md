@@ -83,6 +83,16 @@ image
 
 ## Users
 
+- **id**
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Único:* sí
+    
+    *Max:* 15 carácteres
+
 - **username**
 
     *Tipo:* string 
@@ -94,13 +104,11 @@ image
     *Max:* 25 carácteres
 
 
-
 - **password**
 
     *Tipo:* string
     
     *Requerido:* sí 
-
 
 
 - **email**
@@ -114,7 +122,6 @@ image
     *Max:* 250 carácteres
 
 
-
 - **firstName**
 
     *Tipo:* string
@@ -122,7 +129,6 @@ image
     *Max:* 50 carácteres
     
     *Default:* '' (empty string)
-
 
 
 - **lastName**
@@ -143,6 +149,45 @@ image
     *Default:* '' (empty string)
 
 
+- **createdAt**
+
+    *Tipo:* datetime
+    
+    *Default:* fecha y hora actuales
+
+
+- **updatedAt**
+
+    *Tipo:* datetime
+    
+    *Default:* fecha y hora actuales
+
+
+### Claves Foráneas
+
+    
+- **organization**
+    
+    El ID de la organización a que pertenece. En el caso del Admin (usuario 1) por el momento será la primera organización generada por el seedeo de la base de datos (ej. "Organización 1").
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Max:* 15 carácteres
+
+
+- **createdBy**
+    
+    El ID del admin que creó al usuario. En el caso del Admin (usuario 1), es sí mismo (1).
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Max:* 15 carácteres 
+
+
 ### Calculados
 
 - **fullName**
@@ -152,7 +197,6 @@ image
     *Tipo:* string
     
     *Ejemplo:* Juan Pérez
-
 
 
 ## Datasets
