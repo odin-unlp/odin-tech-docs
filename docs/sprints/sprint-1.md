@@ -52,6 +52,110 @@ HEAD    /users/login
 OPTION  /users/login
 ```
 
+## Organizations
+```
+GET     /organizations
+POST    /organizations
+HEAD    /organizations
+OPTION  /organizations
+
+GET     /organizations/first
+HEAD    /organizations/first
+OPTION  /organizations/first
+
+GET     /organizations/last
+HEAD    /organizations/last
+OPTION  /organizations/last
+
+GET     /organizations/count
+HEAD    /organizations/count
+OPTION  /organizations/count
+
+GET     /organizations/:id
+PATCH   /organizations/:id
+DELETE  /organizations/:id
+HEAD    /organizations/:id
+OPTION  /organizations/:id
+```
+
+## Categories
+```
+GET     /categories
+POST    /categories
+HEAD    /categories
+OPTION  /categories
+
+GET     /categories/first
+HEAD    /categories/first
+OPTION  /categories/first
+
+GET     /categories/last
+HEAD    /categories/last
+OPTION  /categories/last
+
+GET     /categories/count
+HEAD    /categories/count
+OPTION  /categories/count
+
+GET     /categories/:id
+PATCH   /categories/:id
+DELETE  /categories/:id
+HEAD    /categories/:id
+OPTION  /categories/:id
+```
+
+## Statuses
+```
+GET     /statuses
+POST    /statuses
+HEAD    /statuses
+OPTION  /statuses
+
+GET     /statuses/first
+HEAD    /statuses/first
+OPTION  /statuses/first
+
+GET     /statuses/last
+HEAD    /statuses/last
+OPTION  /statuses/last
+
+GET     /statuses/count
+HEAD    /statuses/count
+OPTION  /statuses/count
+
+GET     /statuses/:id
+PATCH   /statuses/:id
+DELETE  /statuses/:id
+HEAD    /statuses/:id
+OPTION  /statuses/:id
+```
+
+## Files
+```
+GET     /files
+POST    /files
+HEAD    /files
+OPTION  /files
+
+GET     /files/first
+HEAD    /files/first
+OPTION  /files/first
+
+GET     /files/last
+HEAD    /files/last
+OPTION  /files/last
+
+GET     /files/count
+HEAD    /files/count
+OPTION  /files/count
+
+GET     /files/:id
+PATCH   /files/:id
+DELETE  /files/:id
+HEAD    /files/:id
+OPTION  /files/:id
+```
+
 ## Datasets
 ```
 GET     /datasets
