@@ -33,6 +33,11 @@ PATCH   /users/:id
 DELETE  /users/:id
 HEAD    /users/:id
 OPTION  /users/:id
+
+GET     /users/signin
+POST    /users/signin
+HEAD    /users/signin
+OPTION  /users/signin
 ```
 
 ## Datasets
