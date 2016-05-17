@@ -125,6 +125,10 @@
             
                 <li class="toctree-l3"><a href="#base-de-datos">Base de datos</a></li>
                 
+                    <li><a class="toctree-l4" href="#users_1">Users</a></li>
+                
+                    <li><a class="toctree-l4" href="#datasets_1">Datasets</a></li>
+                
             
                 <li class="toctree-l3"><a href="#repositorios">Repositorios</a></li>
                 
@@ -273,6 +277,46 @@ OPTION  /datasets/:id
 </code></pre>
 
 <h1 id="base-de-datos">Base de datos</h1>
+<p>image</p>
+<h2 id="users_1">Users</h2>
+<pre><code>- **username**
+    *Tipo:* string
+    *Requerido:* sí
+    *Único:* sí
+    *Max:* 25 carácteres
+
+- **password**
+    *Tipo:* string
+    *Requerido:* sí
+
+- **email**
+    *Tipo:* email
+    *Requerido:* sí
+    *Único:* sí
+    *Max:* 250 carácteres
+
+- **firstName**
+    *Tipo:* string
+    *Max:* 50 carácteres
+    *Default:* '' (empty string)
+
+- **lastName**
+    *Tipo:* string
+    *Max:* 100 carácteres
+    *Default:* '' (empty string)
+
+- **avatar**
+    *Tipo:* string
+    *Max:* 500 carácteres
+    *Default:* '' (empty string)
+</code></pre>
+<h3 id="calculados">Calculados</h3>
+<pre><code>- **fullName**
+    Es el resultado de concatenar firstName y lastName, separados por un espacio en blanco.
+    *Tipo:* string
+    *Ejemplo:* Juan Pérez
+</code></pre>
+<h2 id="datasets_1">Datasets</h2>
 <h1 id="repositorios">Repositorios</h1>
 <h2 id="api_1">API</h2>
 <h2 id="admin_1">Admin</h2>
