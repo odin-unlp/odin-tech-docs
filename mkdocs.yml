@@ -8,7 +8,7 @@ pages:
     - 'Codigo Fuente': 'codigo-fuente.md'
     - 'Metodología': 'metodologia.md'
     - Sprints:
-        - 'Sprint 1': 'sprints/sprint1.md'
+        - 'Sprint 1': 'sprints/sprint-1.md'
     - Links:
         - 'Backend': 'links/backend.md'
         - 'Frontend': 'links/frontend.md'
