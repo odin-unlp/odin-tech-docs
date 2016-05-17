@@ -137,6 +137,10 @@
                 
                     <li><a class="toctree-l4" href="#organizations_1">Organizations</a></li>
                 
+                    <li><a class="toctree-l4" href="#categories_1">Categories</a></li>
+                
+                    <li><a class="toctree-l4" href="#statuses_1">Statuses</a></li>
+                
                     <li><a class="toctree-l4" href="#datasets_1">Datasets</a></li>
                 
             
@@ -576,11 +580,108 @@ OPTION  /datasets/:id
 <ul>
 <li>
 <p><strong>createdBy</strong></p>
-<p>El ID del admin que creó la organización.</p>
+<p>El ID del usuario que creó la organización.</p>
 <p><em>Tipo:</em> string </p>
 <p><em>Requerido:</em> sí</p>
 <p><em>Max:</em> 15 carácteres </p>
 </li>
+</ul>
+<h2 id="categories_1">Categories</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>description</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 350 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_2">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>createdBy</strong></p>
+<p>El ID del usuario que creó la categoría.</p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres </p>
+</li>
+</ul>
+<h2 id="statuses_1">Statuses</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<p><strong>Nota:</strong> a los fines del seedeo, los estados por recurso son:</p>
+<ul>
+<li>Draft</li>
+<li>Under review</li>
+<li>Rejected</li>
+<li>Published</li>
+<li>Unpublished</li>
 </ul>
 <h2 id="datasets_1">Datasets</h2>
 <h1 id="repositorios">Repositorios</h1>
