@@ -279,43 +279,54 @@ OPTION  /datasets/:id
 <h1 id="base-de-datos">Base de datos</h1>
 <p>image</p>
 <h2 id="users_1">Users</h2>
-<pre><code>- **username**
-    *Tipo:* string
-    *Requerido:* sí
-    *Único:* sí
-    *Max:* 25 carácteres
-
-- **password**
-    *Tipo:* string
-    *Requerido:* sí
-
-- **email**
-    *Tipo:* email
-    *Requerido:* sí
-    *Único:* sí
-    *Max:* 250 carácteres
-
-- **firstName**
-    *Tipo:* string
-    *Max:* 50 carácteres
-    *Default:* '' (empty string)
-
-- **lastName**
-    *Tipo:* string
-    *Max:* 100 carácteres
-    *Default:* '' (empty string)
-
-- **avatar**
-    *Tipo:* string
-    *Max:* 500 carácteres
-    *Default:* '' (empty string)
-</code></pre>
+<ul>
+<li>
+<p><strong>username</strong></p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 25 carácteres</p>
+</li>
+<li>
+<p><strong>password</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí </p>
+</li>
+<li>
+<p><strong>email</strong></p>
+<p><em>Tipo:</em> email</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 250 carácteres</p>
+</li>
+<li>
+<p><strong>firstName</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 50 carácteres</p>
+<p><em>Default:</em> '' (empty string)</p>
+</li>
+<li>
+<p><strong>lastName</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 100 carácteres</p>
+<p><em>Default:</em> '' (empty string)</p>
+</li>
+<li>
+<p><strong>avatar</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+<p><em>Default:</em> '' (empty string)</p>
+</li>
+</ul>
 <h3 id="calculados">Calculados</h3>
-<pre><code>- **fullName**
-    Es el resultado de concatenar firstName y lastName, separados por un espacio en blanco.
-    *Tipo:* string
-    *Ejemplo:* Juan Pérez
-</code></pre>
+<ul>
+<li>
+<p><strong>fullName</strong></p>
+<p>Es el resultado de concatenar firstName y lastName, separados por un espacio en blanco.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Ejemplo:</em> Juan Pérez</p>
+</li>
+</ul>
 <h2 id="datasets_1">Datasets</h2>
 <h1 id="repositorios">Repositorios</h1>
 <h2 id="api_1">API</h2>
