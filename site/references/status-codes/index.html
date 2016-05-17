@@ -8,7 +8,7 @@
   
   
   
-  <title>Frontend - ODIN</title>
+  <title>HTTP Status Codes - ODIN</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Frontend";
-    var mkdocs_page_input_path = "links/frontend.md";
-    var mkdocs_page_url = "/links/frontend/";
+    var mkdocs_page_name = "HTTP Status Codes";
+    var mkdocs_page_input_path = "references/status-codes.md";
+    var mkdocs_page_url = "/references/status-codes/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -110,8 +110,18 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../../references/status-codes/">HTTP Status Codes</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">HTTP Status Codes</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#error-del-cliente">Error del cliente</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#error-del-servidor">Error del servidor</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -126,21 +136,14 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../backend/">Backend</a>
+        <a class="" href="../../links/backend/">Backend</a>
         
     </li>
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Frontend</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#sdk">SDK</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../../links/frontend/">Frontend</a>
         
     </li>
 
@@ -170,11 +173,11 @@
     
       
         
-          <li>Links &raquo;</li>
+          <li>Referencias &raquo;</li>
         
       
     
-    <li>Frontend</li>
+    <li>HTTP Status Codes</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -188,28 +191,99 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="sdk">SDK</h1>
-<ul>
-<li>
-<p><a href="https://github.com/almasaeed2010/AdminLTE">AdminLTE</a></p>
-<blockquote>
-<p>Free Premium Admin control Panel Theme That Is Based On Bootstrap 3.x.</p>
-</blockquote>
-</li>
-<li>
-<p><a href="https://github.com/ahmadalibaloch/Angular-AdminLTE">Angular-AdminLTE</a></p>
-<blockquote>
-<p>AngularjsApp Implementation on top of renowned Admin-LTE theme.</p>
-</blockquote>
-</li>
-<li>
-<p><a href="https://github.com/balderdashy/sails.io.js">sails.io.js</a></p>
-<blockquote>
-<p>Browser SDK for communicating w/ Sails via sockets.
-The sails.io.js client comes automatically installed in new Sails projects, but there is nothing project-specific about the client SDK. You can just as easily copy and paste it yourself, get it from Bower, or just link a script tag directly to a hosted CDN.</p>
-</blockquote>
-</li>
-</ul>
+                <p># Éxito</p>
+<table>
+<thead>
+<tr>
+<th>Success</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200 OK</strong></td>
+<td>Código genérico de éxito.</td>
+</tr>
+<tr>
+<td><strong>201 Created</strong></td>
+<td>Indica que el recurso fue creado exitosamente.</td>
+</tr>
+<tr>
+<td><strong>202 Accepted</strong></td>
+<td>Se aceptó la request, pero todavía no fue procesada. Útil para requests asíncronas.</td>
+</tr>
+<tr>
+<td><strong>204 No Content</strong></td>
+<td>La request fue procesada con éxito, pero no hay nada que mostrar. Por ejemplo, después de un DELETE exitoso.</td>
+</tr>
+<tr>
+<td><strong>206 Partial Content</strong></td>
+<td>El recurso devuelto está incompleto. Se lo suele usar para contenido que ha sido paginado. Por ejemplo, se devuelve la página 5 de 20.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="error-del-cliente">Error del cliente</h1>
+<table>
+<thead>
+<tr>
+<th>Client Error</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>400 Bad Request</strong></td>
+<td>Error genérico para una request que no puede ser procesada por el servidor.</td>
+</tr>
+<tr>
+<td><strong>401 Unauthorized</strong></td>
+<td>El cliente es desconocido para la API y necesita autenticarse primero.</td>
+</tr>
+<tr>
+<td><strong>403 Forbidden</strong></td>
+<td>Los permisos del cliente no son suficientes para acceder a este recurso. Es decir, el recurso es un recurso protegido (desde la perspectiva del usuario que hizo la request).</td>
+</tr>
+<tr>
+<td><strong>404 Not Found</strong></td>
+<td>No existe el recurso pedido por el cliente.</td>
+</tr>
+<tr>
+<td><strong>405 Method Not Allowed</strong></td>
+<td>El usuario no tiene permiso para usar ese método HTTP en particular.</td>
+</tr>
+<tr>
+<td><strong>406 Not Acceptable</strong></td>
+<td>El contenido no está disponible en la forma específica en que lo pidió el cliente (por medio de las cabeceras "Accept-*"). Por ejemplo, el cliente pidió un recurso en XML pero sólo está disponible en JSON.</td>
+</tr>
+<tr>
+<td><strong>410 Gone</strong></td>
+<td>Indica que el recurso estaba disponible pero ya no más (de manera permanente).</td>
+</tr>
+<tr>
+<td><strong>415 Unsupported Media Type</strong></td>
+<td>La request tiene un media type que no está admitido por el servidor. Por ejemplo, el cliente ha subido una imagen en SVG pero el servidor sólo recibe JPG o PNG.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="error-del-servidor">Error del servidor</h1>
+<table>
+<thead>
+<tr>
+<th>Server Error</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>500 Internal Server Error</strong></td>
+<td>La request parece estar bien, pero hubo un problema en el servidor. El cliente no tiene nada que ver, y tampoco puede hacer nada al respecto.</td>
+</tr>
+<tr>
+<td><strong>501 Not Implemented</strong></td>
+<td>La API no ha implementado el método usado para hacer la request. Por ejemplo, el método PUT.</td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div>
@@ -217,8 +291,10 @@ The sails.io.js client comes automatically installed in new Sails projects, but 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../../links/backend/" class="btn btn-neutral float-right" title="Backend">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../backend/" class="btn btn-neutral" title="Backend"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../../sprints/sprint-1/" class="btn btn-neutral" title="Sprint 1"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -246,8 +322,10 @@ The sails.io.js client comes automatically installed in new Sails projects, but 
           <a href="https://github.com/gcba-odin/odin-tech-docs" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../backend/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../sprints/sprint-1/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../../links/backend/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

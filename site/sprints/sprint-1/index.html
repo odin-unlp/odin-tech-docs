@@ -102,9 +102,12 @@
             
                 <li class="toctree-l3"><a href="#alcance">Alcance</a></li>
                 
-                    <li><a class="toctree-l4" href="#entra">Entra</a></li>
+                    <li><a class="toctree-l4" href="#objetivo">Objetivo</a></li>
                 
                     <li><a class="toctree-l4" href="#no-entra">No Entra</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#repositorios">Repositorios</a></li>
                 
             
                 <li class="toctree-l3"><a href="#tareas">Tareas</a></li>
@@ -114,6 +117,9 @@
                     <li><a class="toctree-l4" href="#admin">Admin</a></li>
                 
                     <li><a class="toctree-l4" href="#frontend">Frontend</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#prioridades">Prioridades</a></li>
                 
             
                 <li class="toctree-l3"><a href="#endpoints">Endpoints</a></li>
@@ -126,9 +132,15 @@
                 
                     <li><a class="toctree-l4" href="#statuses">Statuses</a></li>
                 
-                    <li><a class="toctree-l4" href="#files">Files</a></li>
+                    <li><a class="toctree-l4" href="#filetypes">Filetypes</a></li>
                 
-                    <li><a class="toctree-l4" href="#datasets">Datasets</a></li>
+                    <li><a class="toctree-l4" href="#files_1">Files</a></li>
+                
+                    <li><a class="toctree-l4" href="#databases">Databases</a></li>
+                
+                    <li><a class="toctree-l4" href="#datasets_1">Datasets</a></li>
+                
+                    <li><a class="toctree-l4" href="#estructura-de-las-responses">Estructura de las responses</a></li>
                 
             
                 <li class="toctree-l3"><a href="#base-de-datos">Base de datos</a></li>
@@ -137,21 +149,35 @@
                 
                     <li><a class="toctree-l4" href="#organizations_1">Organizations</a></li>
                 
-                    <li><a class="toctree-l4" href="#datasets_1">Datasets</a></li>
+                    <li><a class="toctree-l4" href="#categories_1">Categories</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#repositorios">Repositorios</a></li>
+                    <li><a class="toctree-l4" href="#statuses_1">Statuses</a></li>
                 
-                    <li><a class="toctree-l4" href="#api_1">API</a></li>
+                    <li><a class="toctree-l4" href="#filetypes_1">Filetypes</a></li>
                 
-                    <li><a class="toctree-l4" href="#admin_1">Admin</a></li>
+                    <li><a class="toctree-l4" href="#files_2">Files</a></li>
                 
-                    <li><a class="toctree-l4" href="#frontend_1">Frontend</a></li>
+                    <li><a class="toctree-l4" href="#databases_1">Databases</a></li>
                 
-                    <li><a class="toctree-l4" href="#yeoman">Yeoman</a></li>
+                    <li><a class="toctree-l4" href="#datasets_2">Datasets</a></li>
                 
             
             </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Referencias</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../references/status-codes/">HTTP Status Codes</a>
         
     </li>
 
@@ -224,12 +250,102 @@
                 <p><strong>Duración:</strong> Miércoles 18/05/16 - Martes 24/05/16</p>
 <h1 id="alcance">Alcance</h1>
 <p><img alt="Entidad - Relación" src="http://i.imgur.com/u7CUz6v.png" /></p>
-<h2 id="entra">Entra</h2>
+<h2 id="objetivo">Objetivo</h2>
+<p>Hacer el login y CRUD de los usuarios, crear la mayoría de las tablas de la base de datos y dejar prototipada buena parte de la interfaz del admin y una porción del frontend.</p>
 <h2 id="no-entra">No Entra</h2>
+<h3 id="files">Files</h3>
+<ul>
+<li>Etiquetas</li>
+<li>Usuario responsable</li>
+<li>Frecuencia de actualización</li>
+<li>Parseo y guardado de datos en la base de datos no relacional (CSVs)</li>
+</ul>
+<h3 id="datasets">Datasets</h3>
+<ul>
+<li>Etiquetas</li>
+<li>Usuario responsable</li>
+</ul>
+<h1 id="repositorios">Repositorios</h1>
+<ul>
+<li><strong>API:</strong> <a href="https://github.com/gcba-odin/odin">https://github.com/gcba-odin/odin</a></li>
+<li><strong>Admin:</strong> <a href="https://github.com/gcba-odin/odin-admin">https://github.com/gcba-odin/odin-admin</a></li>
+<li><strong>Frontend:</strong> <a href="https://github.com/gcba-odin/odin-frontend">https://github.com/gcba-odin/odin-frontend</a></li>
+</ul>
 <h1 id="tareas">Tareas</h1>
 <h2 id="api">API</h2>
+<ol>
+<li>Escribir spec (en Api Blueprint) con los contenidos de este sprint</li>
+<li>Crear seed para la base de datos, con 3 - 5 elementos de cada entidad</li>
+<li>
+<p>Desarrollar endpoints.</p>
+<p><strong>Nota 1:</strong> en ningún caso los campos id, createdAt y updatedAt deben ser editables a través de la API. Son campos que se crean y actualizan (updatedAt) automáticamente, y en todo otro caso deben ser de sólo lectura.</p>
+<p><strong>Nota 2:</strong> la API sólo debe aceptar requests con body en JSON. Por lo tanto las requests con body deben contener la cabecera <code>Content-Type</code> con el valor <code>application/json</code>. Caso contrario, la API debe devolver un error.</p>
+</li>
+<li>
+<p>Correr tests de Dredd</p>
+</li>
+<li>Desarrollar subida de archivos</li>
+<li>Desarrollar parseo y guardado de datos en la base de datos no relacional</li>
+<li>Instalar y configurar sails-permissions</li>
+</ol>
+<h3 id="input-yeoman">Input Yeoman</h3>
+<pre><code>Application questions:
+? Application name odin
+
+Configuration questions:
+? Database name odin
+? Enable CORS? Yes
+
+Logger questions:
+? Choose which logger you want to configure Winston
+
+Blueprint questions:
+? Use overridden blueprints? Yes
+
+Controller questions:
+? Choose which predefined controllers you want to copy (Press &lt;space&gt; to select)PingController, SearchController
+
+Hook questions:
+? Choose which predefined hooks you want to copy (Press &lt;space&gt; to select)CountHook, PluralizeHook
+
+Cron questions:
+? Do you need cron? Yes
+
+Swagger questions:
+? Do you need Swagger UI Explorer? No
+
+Authentication questions:
+? Do you need authentication layer? Yes
+
+Service questions:
+? Select which services you want to use CipherService, HashService, MailerService, StorageService
+? Mailer provider direct
+? Storage provider Local
+</code></pre>
+
+<p>Guardar la secret key generada en Google Drive.</p>
 <h2 id="admin">Admin</h2>
+<ol>
+<li>Login (funcional)</li>
+<li>CRUD de users (funcional)</li>
+<li>CRUD de organizations (sólo UI)</li>
+<li>CRUD de statuses (sólo UI)</li>
+<li>CRUD de filetypes (sólo UI)</li>
+<li>CRUD de files (sólo UI)</li>
+<li>CRUD de databases (sólo UI)</li>
+<li>CRUD de datasets (sólo UI)</li>
+</ol>
 <h2 id="frontend">Frontend</h2>
+<ol>
+<li>Landing page (home, sólo UI)</li>
+<li>Listado datasets (sólo UI)</li>
+<li>Ver dataset (sólo UI)</li>
+</ol>
+<h1 id="prioridades">Prioridades</h1>
+<ol>
+<li>Login</li>
+<li>CRUD de usuarios</li>
+</ol>
 <h1 id="endpoints">Endpoints</h1>
 <h2 id="users">Users</h2>
 <pre><code>GET     /users
@@ -336,7 +452,32 @@ HEAD    /statuses/:id
 OPTION  /statuses/:id
 </code></pre>
 
-<h2 id="files">Files</h2>
+<h2 id="filetypes">Filetypes</h2>
+<pre><code>GET     /filetypes
+POST    /filetypes
+HEAD    /filetypes
+OPTION  /filetypes
+
+GET     /filetypes/first
+HEAD    /filetypes/first
+OPTION  /filetypes/first
+
+GET     /filetypes/last
+HEAD    /filetypes/last
+OPTION  /filetypes/last
+
+GET     /filetypes/count
+HEAD    /filetypes/count
+OPTION  /filetypes/count
+
+GET     /filetypes/:id
+PATCH   /filetypes/:id
+DELETE  /filetypes/:id
+HEAD    /filetypes/:id
+OPTION  /filetypes/:id
+</code></pre>
+
+<h2 id="files_1">Files</h2>
 <pre><code>GET     /files
 POST    /files
 HEAD    /files
@@ -361,7 +502,32 @@ HEAD    /files/:id
 OPTION  /files/:id
 </code></pre>
 
-<h2 id="datasets">Datasets</h2>
+<h2 id="databases">Databases</h2>
+<pre><code>GET     /databases
+POST    /databases
+HEAD    /databases
+OPTION  /databases
+
+GET     /databases/first
+HEAD    /databases/first
+OPTION  /databases/first
+
+GET     /databases/last
+HEAD    /databases/last
+OPTION  /databases/last
+
+GET     /databases/count
+HEAD    /databases/count
+OPTION  /databases/count
+
+GET     /databases/:id
+PATCH   /databases/:id
+DELETE  /databases/:id
+HEAD    /databases/:id
+OPTION  /databases/:id
+</code></pre>
+
+<h2 id="datasets_1">Datasets</h2>
 <pre><code>GET     /datasets
 POST    /datasets
 HEAD    /datasets
@@ -386,8 +552,114 @@ HEAD    /datasets/:id
 OPTION  /datasets/:id
 </code></pre>
 
+<h2 id="estructura-de-las-responses">Estructura de las responses</h2>
+<h3 id="get">GET</h3>
+<p>Si no hay errores. En el caso de que se devuelva un solo registro, en data no va un array, sino ese registro sólo. Y si no hay registros, en data habrá un objeto vacío.</p>
+<pre><code class="json">{
+   &quot;meta&quot;: {
+       &quot;statusCode&quot;: ...,
+       &quot;statusMessage&quot;: ..,
+   },
+   &quot;data&quot;: [
+     {
+         ...
+     }, 
+     {
+         ...
+     }, 
+     {
+         ...
+     }  
+   ],
+   &quot;links&quot;: {
+       ...
+   }
+}
+</code></pre>
+
+<p>Si hay error/es:</p>
+<pre><code class="json">{
+   &quot;meta&quot;: {
+       &quot;statusCode&quot;: ...,
+       &quot;statusMessage&quot;: ..
+   },
+   &quot;error&quot;: 
+     {
+         ...
+     }, 
+   &quot;links&quot;: {
+       ...
+   }
+}
+</code></pre>
+
+<h3 id="post">POST</h3>
+<pre><code class="json">{
+   &quot;meta&quot;: {
+       &quot;statusCode&quot;: ...,
+       &quot;statusMessage&quot;: ..,
+   },
+   &quot;links&quot;: {
+       ...
+   }
+}
+</code></pre>
+
+<h3 id="patch">PATCH</h3>
+<p>Si hubo error/es incluir objeto "error" como en GET.</p>
+<pre><code class="json">{
+    &quot;meta&quot;: {
+       &quot;statusCode&quot;: ...,
+       &quot;statusMessage&quot;: ..,
+   },
+   &quot;links&quot;: {
+       ...
+   }
+}
+</code></pre>
+
+<h3 id="delete">DELETE</h3>
+<p>Si hubo error/es incluir objeto "error" como en GET.</p>
+<pre><code class="json">{
+    &quot;meta&quot;: {
+       &quot;statusCode&quot;: ...,
+       &quot;statusMessage&quot;: ..,
+   },
+   &quot;links&quot;: {
+       ...
+   }
+}
+</code></pre>
+
+<h3 id="head">HEAD</h3>
+<pre><code class="json">Una response a un request HEAD no incluye un body.
+</code></pre>
+
+<h3 id="option">OPTION</h3>
+<p>Si hubo error/es incluir objeto "error" como en GET.</p>
+<pre><code class="json">{
+    &quot;meta&quot;: {
+       &quot;statusCode&quot;: ...,
+       &quot;statusMessage&quot;: ..,
+   },
+   &quot;methods&quot;: {
+       {
+           &quot;url&quot;: ...,
+           &quot;headers&quot;: {
+               ...
+           },
+           &quot;parameters&quot;: {
+               ...
+           }
+       },
+   },
+   &quot;links&quot;: {
+       ...
+   }
+}
+</code></pre>
+
 <h1 id="base-de-datos">Base de datos</h1>
-<p>image</p>
 <h2 id="users_1">Users</h2>
 <ul>
 <li>
@@ -450,7 +722,6 @@ OPTION  /datasets/:id
 <p><strong>avatar</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 500 carácteres</p>
-<p><em>Default:</em> '' (empty string)</p>
 </li>
 </ul>
 <hr />
@@ -490,7 +761,7 @@ OPTION  /datasets/:id
 <ul>
 <li>
 <p><strong>createdBy</strong></p>
-<p>El ID del admin que creó al usuario. En el caso del Admin (usuario 1), es sí mismo (1).</p>
+<p>El ID del admin que creó el usuario. En el caso del Admin (usuario 1), es sí mismo (1).</p>
 <p><em>Tipo:</em> string </p>
 <p><em>Requerido:</em> sí</p>
 <p><em>Max:</em> 15 carácteres </p>
@@ -576,53 +847,527 @@ OPTION  /datasets/:id
 <ul>
 <li>
 <p><strong>createdBy</strong></p>
-<p>El ID del admin que creó la organización.</p>
+<p>El ID del usuario que creó la organización.</p>
 <p><em>Tipo:</em> string </p>
 <p><em>Requerido:</em> sí</p>
 <p><em>Max:</em> 15 carácteres </p>
 </li>
 </ul>
-<h2 id="datasets_1">Datasets</h2>
-<h1 id="repositorios">Repositorios</h1>
-<h2 id="api_1">API</h2>
-<h2 id="admin_1">Admin</h2>
-<h2 id="frontend_1">Frontend</h2>
-<h2 id="yeoman">Yeoman</h2>
-<pre><code>Application questions:
-? Application name odin
-
-Configuration questions:
-? Database name odin
-? Enable CORS? Yes
-
-Logger questions:
-? Choose which logger you want to configure Winston
-
-Blueprint questions:
-? Use overridden blueprints? Yes
-
-Controller questions:
-? Choose which predefined controllers you want to copy (Press &lt;space&gt; to select)PingController, SearchController
-
-Hook questions:
-? Choose which predefined hooks you want to copy (Press &lt;space&gt; to select)CountHook, PluralizeHook
-
-Cron questions:
-? Do you need cron? Yes
-
-Swagger questions:
-? Do you need Swagger UI Explorer? No
-
-Authentication questions:
-? Do you need authentication layer? Yes
-
-Service questions:
-? Select which services you want to use CipherService, HashService, MailerService, StorageService
-? Mailer provider direct
-? Storage provider Local
-</code></pre>
-
-<p>Guardar la secret key generada en Google Drive</p>
+<h2 id="categories_1">Categories</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>description</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 350 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_2">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>createdBy</strong></p>
+<p>El ID del usuario que creó la categoría.</p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres </p>
+</li>
+</ul>
+<h2 id="statuses_1">Statuses</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<p><strong>Nota:</strong> a los fines del seedeo, los estados por recurso son:</p>
+<ul>
+<li>Draft</li>
+<li>Under review</li>
+<li>Rejected</li>
+<li>Published</li>
+<li>Unpublished</li>
+</ul>
+<h2 id="filetypes_1">Filetypes</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<p><strong>Nota:</strong> a los fines del seedeo, los tipos de archivo son:</p>
+<ul>
+<li>csv</li>
+<li>html</li>
+<li>ics</li>
+<li>pdf</li>
+<li>rar</li>
+<li>shp</li>
+<li>xls</li>
+<li>xml</li>
+<li>zip</li>
+</ul>
+<h2 id="files_2">Files</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>description</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 350 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>notes</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>url</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>visibility</strong></p>
+<p><em>Tipo:</em> boolean</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>publishedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_3">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>type</strong></p>
+<p>El ID del tipo de archivo.</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>status</strong></p>
+<p>El ID del status que posee el archivo.</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>organization</strong></p>
+<p>El ID de la organización que provee los datos.</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>dataset</strong></p>
+<p>El ID del dataset al que pertenece.</p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres </p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdBy</strong></p>
+<p>El ID del usuario que creó el archivo.</p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres </p>
+</li>
+</ul>
+<h2 id="databases_1">Databases</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>collection</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>url</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_4">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>createdBy</strong></p>
+<p>El ID del usuario que creó el archivo.</p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres </p>
+</li>
+</ul>
+<h2 id="datasets_2">Datasets</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>description</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 350 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>notes</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>visibility</strong></p>
+<p><em>Tipo:</em> boolean</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>starred</strong></p>
+<p><em>Tipo:</em> boolean</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional1</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional2</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional3</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional4</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional5</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional6</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional7</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional8</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional9</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional10</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>publishedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_5">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>category</strong></p>
+<p>El ID de la categoría del dataset.</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>status</strong></p>
+<p>El ID del status que posee el archivo.</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>organization</strong></p>
+<p>El ID de la organización que provee los datos.</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdBy</strong></p>
+<p>El ID del usuario que creó el dataset.</p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres </p>
+</li>
+</ul>
               
             </div>
           </div>
@@ -630,7 +1375,7 @@ Service questions:
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../links/backend/" class="btn btn-neutral float-right" title="Backend">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../references/status-codes/" class="btn btn-neutral float-right" title="HTTP Status Codes">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../../metodologia/" class="btn btn-neutral" title="Metodología"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -664,7 +1409,7 @@ Service questions:
         <span><a href="../../metodologia/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../links/backend/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../references/status-codes/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
