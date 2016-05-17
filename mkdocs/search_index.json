@@ -196,87 +196,87 @@
             "title": "Spec-Driven Development"
         }, 
         {
-            "location": "/sprints/sprint1/", 
+            "location": "/sprints/sprint-1/", 
             "text": "Duraci\u00f3n:\n Mi\u00e9rcoles 18/05/16 - Martes 24/05/16\n\n\nAlcance\n\n\n\n\nEntra\n\n\nNo Entra\n\n\nTareas\n\n\nAPI\n\n\nAdmin\n\n\nFrontend\n\n\nEndpoints\n\n\nUsers\n\n\nGET     /users\nPOST    /users\nHEAD    /users\nOPTION  /users\n\nGET     /users/:id\nPATCH   /users/:id\nDELETE  /users/:id\nHEAD    /users/:id\nOPTION  /users/:id\n\n\n\n\nDatasets\n\n\nGET     /datasets\nPOST    /datasets\nHEAD    /datasets\nOPTION  /datasets\n\nGET     /datasets/:id\nPATCH   /datasets/:id\nDELETE  /datasets/:id\nHEAD    /datasets/:id\nOPTION  /datasets/:id\n\n\n\n\nBase de datos\n\n\nRepositorios\n\n\nAPI\n\n\nAdmin\n\n\nFrontend\n\n\nYeoman\n\n\nApplication questions:\n? Application name odin\n\nConfiguration questions:\n? Database name odin\n? Enable CORS? Yes\n\nLogger questions:\n? Choose which logger you want to configure Winston\n\nBlueprint questions:\n? Use overridden blueprints? Yes\n\nController questions:\n? Choose which predefined controllers you want to copy (Press \nspace\n to select)PingController, SearchController\n\nHook questions:\n? Choose which predefined hooks you want to copy (Press \nspace\n to select)CountHook, PluralizeHook\n\nCron questions:\n? Do you need cron? Yes\n\nSwagger questions:\n? Do you need Swagger UI Explorer? No\n\nAuthentication questions:\n? Do you need authentication layer? Yes\n\nService questions:\n? Select which services you want to use CipherService, HashService, MailerService, StorageService\n? Mailer provider direct\n? Storage provider Local\n\n\n\n\nGuardar la secret key generada en Google Drive", 
             "title": "Sprint 1"
         }, 
         {
-            "location": "/sprints/sprint1/#alcance", 
+            "location": "/sprints/sprint-1/#alcance", 
             "text": "", 
             "title": "Alcance"
         }, 
         {
-            "location": "/sprints/sprint1/#entra", 
+            "location": "/sprints/sprint-1/#entra", 
             "text": "", 
             "title": "Entra"
         }, 
         {
-            "location": "/sprints/sprint1/#no-entra", 
+            "location": "/sprints/sprint-1/#no-entra", 
             "text": "", 
             "title": "No Entra"
         }, 
         {
-            "location": "/sprints/sprint1/#tareas", 
+            "location": "/sprints/sprint-1/#tareas", 
             "text": "", 
             "title": "Tareas"
         }, 
         {
-            "location": "/sprints/sprint1/#api", 
+            "location": "/sprints/sprint-1/#api", 
             "text": "", 
             "title": "API"
         }, 
         {
-            "location": "/sprints/sprint1/#admin", 
+            "location": "/sprints/sprint-1/#admin", 
             "text": "", 
             "title": "Admin"
         }, 
         {
-            "location": "/sprints/sprint1/#frontend", 
+            "location": "/sprints/sprint-1/#frontend", 
             "text": "", 
             "title": "Frontend"
         }, 
         {
-            "location": "/sprints/sprint1/#endpoints", 
+            "location": "/sprints/sprint-1/#endpoints", 
             "text": "", 
             "title": "Endpoints"
         }, 
         {
-            "location": "/sprints/sprint1/#users", 
+            "location": "/sprints/sprint-1/#users", 
             "text": "GET     /users\nPOST    /users\nHEAD    /users\nOPTION  /users\n\nGET     /users/:id\nPATCH   /users/:id\nDELETE  /users/:id\nHEAD    /users/:id\nOPTION  /users/:id", 
             "title": "Users"
         }, 
         {
-            "location": "/sprints/sprint1/#datasets", 
+            "location": "/sprints/sprint-1/#datasets", 
             "text": "GET     /datasets\nPOST    /datasets\nHEAD    /datasets\nOPTION  /datasets\n\nGET     /datasets/:id\nPATCH   /datasets/:id\nDELETE  /datasets/:id\nHEAD    /datasets/:id\nOPTION  /datasets/:id", 
             "title": "Datasets"
         }, 
         {
-            "location": "/sprints/sprint1/#base-de-datos", 
+            "location": "/sprints/sprint-1/#base-de-datos", 
             "text": "", 
             "title": "Base de datos"
         }, 
         {
-            "location": "/sprints/sprint1/#repositorios", 
+            "location": "/sprints/sprint-1/#repositorios", 
             "text": "", 
             "title": "Repositorios"
         }, 
         {
-            "location": "/sprints/sprint1/#api_1", 
+            "location": "/sprints/sprint-1/#api_1", 
             "text": "", 
             "title": "API"
         }, 
         {
-            "location": "/sprints/sprint1/#admin_1", 
+            "location": "/sprints/sprint-1/#admin_1", 
             "text": "", 
             "title": "Admin"
         }, 
         {
-            "location": "/sprints/sprint1/#frontend_1", 
+            "location": "/sprints/sprint-1/#frontend_1", 
             "text": "", 
             "title": "Frontend"
         }, 
         {
-            "location": "/sprints/sprint1/#yeoman", 
+            "location": "/sprints/sprint-1/#yeoman", 
             "text": "Application questions:\n? Application name odin\n\nConfiguration questions:\n? Database name odin\n? Enable CORS? Yes\n\nLogger questions:\n? Choose which logger you want to configure Winston\n\nBlueprint questions:\n? Use overridden blueprints? Yes\n\nController questions:\n? Choose which predefined controllers you want to copy (Press  space  to select)PingController, SearchController\n\nHook questions:\n? Choose which predefined hooks you want to copy (Press  space  to select)CountHook, PluralizeHook\n\nCron questions:\n? Do you need cron? Yes\n\nSwagger questions:\n? Do you need Swagger UI Explorer? No\n\nAuthentication questions:\n? Do you need authentication layer? Yes\n\nService questions:\n? Select which services you want to use CipherService, HashService, MailerService, StorageService\n? Mailer provider direct\n? Storage provider Local  Guardar la secret key generada en Google Drive", 
             "title": "Yeoman"
         }, 
