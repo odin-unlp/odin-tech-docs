@@ -281,6 +281,13 @@ OPTION  /datasets/:id
 <h2 id="users_1">Users</h2>
 <ul>
 <li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+<li>
 <p><strong>username</strong></p>
 <p><em>Tipo:</em> string </p>
 <p><em>Requerido:</em> sí</p>
@@ -316,6 +323,33 @@ OPTION  /datasets/:id
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 500 carácteres</p>
 <p><em>Default:</em> '' (empty string)</p>
+</li>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>organization</strong></p>
+<p>El ID de la organización a que pertenece. En el caso del Admin (usuario 1) por el momento será la primera organización generada por el seedeo de la base de datos (ej. "Organización 1").</p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+<li>
+<p><strong>createdBy</strong></p>
+<p>El ID del admin que creó al usuario. En el caso del Admin (usuario 1), es sí mismo (1).</p>
+<p><em>Tipo:</em> string </p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres </p>
 </li>
 </ul>
 <h3 id="calculados">Calculados</h3>
