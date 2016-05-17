@@ -197,7 +197,7 @@
         }, 
         {
             "location": "/sprints/sprint1/", 
-            "text": "Duraci\u00f3n:\n 18/05/16 - 14/05/16\n\n\nAlcance\n\n\n\n\n\n\n\n\nTareas", 
+            "text": "Duraci\u00f3n:\n Mi\u00e9rcoles 18/05/16 - Martes 24/05/16\n\n\nAlcance\n\n\n\n\nEntra\n\n\nNo Entra\n\n\nTareas\n\n\nAPI\n\n\nAdmin\n\n\nFrontend\n\n\nEndpoints\n\n\nUsers\n\n\nGET     /users\nPOST    /users\nHEAD    /users\nOPTION  /users\n\nGET     /users/:id\nPATCH   /users/:id\nDELETE  /users/:id\nHEAD    /users/:id\nOPTION  /users/:id\n\n\n\n\nDatasets\n\n\nGET     /datasets\nPOST    /datasets\nHEAD    /datasets\nOPTION  /datasets\n\nGET     /datasets/:id\nPATCH   /datasets/:id\nDELETE  /datasets/:id\nHEAD    /datasets/:id\nOPTION  /datasets/:id\n\n\n\n\nBase de datos\n\n\nRepositorios\n\n\nAPI\n\n\nAdmin\n\n\nFrontend\n\n\nApplication questions:\n? Application name odin\n\nConfiguration questions:\n? Database name odin\n? Enable CORS? Yes\n\nLogger questions:\n? Choose which logger you want to configure Winston\n\nBlueprint questions:\n? Use overridden blueprints? Yes\n\nController questions:\n? Choose which predefined controllers you want to copy (Press \nspace\n to select)PingController, SearchController\n\nHook questions:\n? Choose which predefined hooks you want to copy (Press \nspace\n to select)CountHook, PluralizeHook\n\nCron questions:\n? Do you need cron? Yes\n\nSwagger questions:\n? Do you need Swagger UI Explorer? No\n\nAuthentication questions:\n? Do you need authentication layer? Yes\n\nService questions:\n? Select which services you want to use CipherService, HashService, MailerService, StorageService\n? Mailer provider direct\n? Storage provider Local\n\n\n\n\nGuardar la secret key generada en Google Drive", 
             "title": "Sprint 1"
         }, 
         {
@@ -206,13 +206,78 @@
             "title": "Alcance"
         }, 
         {
+            "location": "/sprints/sprint1/#entra", 
+            "text": "", 
+            "title": "Entra"
+        }, 
+        {
+            "location": "/sprints/sprint1/#no-entra", 
+            "text": "", 
+            "title": "No Entra"
+        }, 
+        {
             "location": "/sprints/sprint1/#tareas", 
             "text": "", 
             "title": "Tareas"
         }, 
         {
+            "location": "/sprints/sprint1/#api", 
+            "text": "", 
+            "title": "API"
+        }, 
+        {
+            "location": "/sprints/sprint1/#admin", 
+            "text": "", 
+            "title": "Admin"
+        }, 
+        {
+            "location": "/sprints/sprint1/#frontend", 
+            "text": "", 
+            "title": "Frontend"
+        }, 
+        {
+            "location": "/sprints/sprint1/#endpoints", 
+            "text": "", 
+            "title": "Endpoints"
+        }, 
+        {
+            "location": "/sprints/sprint1/#users", 
+            "text": "GET     /users\nPOST    /users\nHEAD    /users\nOPTION  /users\n\nGET     /users/:id\nPATCH   /users/:id\nDELETE  /users/:id\nHEAD    /users/:id\nOPTION  /users/:id", 
+            "title": "Users"
+        }, 
+        {
+            "location": "/sprints/sprint1/#datasets", 
+            "text": "GET     /datasets\nPOST    /datasets\nHEAD    /datasets\nOPTION  /datasets\n\nGET     /datasets/:id\nPATCH   /datasets/:id\nDELETE  /datasets/:id\nHEAD    /datasets/:id\nOPTION  /datasets/:id", 
+            "title": "Datasets"
+        }, 
+        {
+            "location": "/sprints/sprint1/#base-de-datos", 
+            "text": "", 
+            "title": "Base de datos"
+        }, 
+        {
+            "location": "/sprints/sprint1/#repositorios", 
+            "text": "", 
+            "title": "Repositorios"
+        }, 
+        {
+            "location": "/sprints/sprint1/#api_1", 
+            "text": "", 
+            "title": "API"
+        }, 
+        {
+            "location": "/sprints/sprint1/#admin_1", 
+            "text": "", 
+            "title": "Admin"
+        }, 
+        {
+            "location": "/sprints/sprint1/#frontend_1", 
+            "text": "Application questions:\n? Application name odin\n\nConfiguration questions:\n? Database name odin\n? Enable CORS? Yes\n\nLogger questions:\n? Choose which logger you want to configure Winston\n\nBlueprint questions:\n? Use overridden blueprints? Yes\n\nController questions:\n? Choose which predefined controllers you want to copy (Press  space  to select)PingController, SearchController\n\nHook questions:\n? Choose which predefined hooks you want to copy (Press  space  to select)CountHook, PluralizeHook\n\nCron questions:\n? Do you need cron? Yes\n\nSwagger questions:\n? Do you need Swagger UI Explorer? No\n\nAuthentication questions:\n? Do you need authentication layer? Yes\n\nService questions:\n? Select which services you want to use CipherService, HashService, MailerService, StorageService\n? Mailer provider direct\n? Storage provider Local  Guardar la secret key generada en Google Drive", 
+            "title": "Frontend"
+        }, 
+        {
             "location": "/links/backend/", 
-            "text": "Utils\n\n\n\n\nsails-hook-autoreload\n\n\nSails JS hook to autoreload controllers, models, services and locales when changed.\nThis hook is to help with situations where you are rapidly prototyping/tinkering with app code and don't want to have to keep quitting/restarting Sails to see your changes. It is not intended to be used in a production environment.\n\n\n\n\n\n\n\n\nAPI\n\n\n\n\n\n\ngenerator-sails-rest-api\n\n\n\n\nYeoman generator for scaffolding Sails REST API with predefined features.\n\n\n\n\n\n\n\n\nshortid\n\n\n\n\nShort id generator. Url-friendly. Non-predictable. Cluster-compatible.\n\n\n\n\n\n\n\n\nsails-hook-pagify\n\n\n\n\nGenerate pagination data and metadata for Sails JS projects.\n\n\n\n\n\n\n\n\nsails-hook-blueprint-count\n\n\n\n\nAdds blueprint api method to count records in database.\n\n\n\n\n\n\n\n\nsails-hook-query-builder\n\n\n\n\nSails hook for creating waterline queries from request queries.\nQuery builder adds a static method to all models in a sails app that allows creates a query which will paginate, search and sort.\n\n\n\n\n\n\n\n\nnode-rss\n\n\n\n\nRSS feed generator. Add RSS feeds to any project. Supports enclosures and GeoRSS.\n\n\n\n\n\n\n\n\nModels\n\n\n\n\n\n\nsails-hook-validation\n\n\n\n\nCustom validation error messages for sails model with i18n support.\n\n\n\n\n\n\n\n\nsails-hook-model-extra\n\n\n\n\nAdditional model methods for sails.\nThe following methods will be added to all models once hook is installed.\n\n\n\n\n\n\n\n\ncountAndFind(criteria, callback)\ncountAndSearch(searchTerm, callback)\nfirst(howMany, callback)\nlast(howMany, callback)\nsearch(searchTerm, callback)\nsoftDelete(criteria, callback)\n\n\n\n\nSecurity\n\n\n\n\n\n\nsails-permissions\n\n\n\n\nComprehensive user permissions and entitlements system for sails.js and Waterline. Supports user authentication with passport.js, role-based permissioning, object ownership, and row-level security.\n\n\n\n\n\n\n\n\nsails-hook-allowed-hosts\n\n\n\n\nSails hook to ensure requests can only come in from a whitelisted set of hosts.\n    Works with both hosts and IP adresses.\n\n\n\n\n\n\n\n\nSeeding\n\n\n\n\nsails-hook-fixtures\n\n\nInstallable hook that injects fixtures into your sails ORM at runtime. With associations!\n\n\n\n\n\n\n\n\nLogging\n\n\n\n\n\n\nsails-hook-events\n\n\n\n\nUse events to manage and observe Waterline models' lifecycle\nThis hook allows you to use event-driven programming when working with your Waterline models. It adds new events emitted from your Sails.js instance that you can subscribe to and perform actions when such an event is emitted.\n\n\n\n\n\n\n\n\nsails-hook-winston\n\n\n\n\nIntegrates winston logging system with your Sails application.\n\n\n\n\n\n\n\n\nPlugins\n\n\n\n\nmarlinspike\n\n\nSuperpowers for your Sails.js Hooks.\nMakes it easy to build and maintain Sails Hooks as separate projects.\nMagically extend Sails apps with additional Model, Controllers, Services.\n\n\n\n\n\n\n\n\nAnalytics\n\n\n\n\nsails-hook-apianalytics\n\n\nA Sails hook for logging detailed request metadata and monitoring your API.", 
+            "text": "Utils\n\n\n\n\nsails-hook-autoreload\n\n\nSails JS hook to autoreload controllers, models, services and locales when changed.\nThis hook is to help with situations where you are rapidly prototyping/tinkering with app code and don't want to have to keep quitting/restarting Sails to see your changes. It is not intended to be used in a production environment.\n\n\n\n\n\n\n\n\nAPI\n\n\n\n\n\n\nAPI Blueprint\n\n\n\n\nAPI Blueprint. A powerful high-level API description language for web APIs.\n\n\n\n\n\n\n\n\nApiary Editor\n\n\n\n\nThe Apiary Editor is the foundation of your API design. Apiary Editor supports API Blueprint and Swagger API Description languages.\n\n\n\n\n\n\n\n\ngenerator-sails-rest-api\n\n\n\n\nYeoman generator for scaffolding Sails REST API with predefined features.\n\n\n\n\n\n\n\n\nshortid\n\n\n\n\nShort id generator. Url-friendly. Non-predictable. Cluster-compatible.\n\n\n\n\n\n\n\n\nsails-hook-pagify\n\n\n\n\nGenerate pagination data and metadata for Sails JS projects.\n\n\n\n\n\n\n\n\nsails-hook-blueprint-count\n\n\n\n\nAdds blueprint api method to count records in database.\n\n\n\n\n\n\n\n\nsails-hook-query-builder\n\n\n\n\nSails hook for creating waterline queries from request queries.\nQuery builder adds a static method to all models in a sails app that allows creates a query which will paginate, search and sort.\n\n\n\n\n\n\n\n\nnode-rss\n\n\n\n\nRSS feed generator. Add RSS feeds to any project. Supports enclosures and GeoRSS.\n\n\n\n\n\n\n\n\nModels\n\n\n\n\n\n\nsails-hook-validation\n\n\n\n\nCustom validation error messages for sails model with i18n support.\n\n\n\n\n\n\n\n\nsails-hook-model-extra\n\n\n\n\nAdditional model methods for sails.\nThe following methods will be added to all models once hook is installed.\n\n\n\n\n\n\n\n\ncountAndFind(criteria, callback)\ncountAndSearch(searchTerm, callback)\nfirst(howMany, callback)\nlast(howMany, callback)\nsearch(searchTerm, callback)\nsoftDelete(criteria, callback)\n\n\n\n\nSecurity\n\n\n\n\n\n\nsails-permissions\n\n\n\n\nComprehensive user permissions and entitlements system for sails.js and Waterline. Supports user authentication with passport.js, role-based permissioning, object ownership, and row-level security.\n\n\n\n\n\n\n\n\nsails-hook-allowed-hosts\n\n\n\n\nSails hook to ensure requests can only come in from a whitelisted set of hosts.\n    Works with both hosts and IP adresses.\n\n\n\n\n\n\n\n\nSeeding\n\n\n\n\nsails-hook-fixtures\n\n\nInstallable hook that injects fixtures into your sails ORM at runtime. With associations!\n\n\n\n\n\n\n\n\nLogging\n\n\n\n\n\n\nsails-hook-events\n\n\n\n\nUse events to manage and observe Waterline models' lifecycle\nThis hook allows you to use event-driven programming when working with your Waterline models. It adds new events emitted from your Sails.js instance that you can subscribe to and perform actions when such an event is emitted.\n\n\n\n\n\n\n\n\nsails-hook-winston\n\n\n\n\nIntegrates winston logging system with your Sails application.\n\n\n\n\n\n\n\n\nPlugins\n\n\n\n\nmarlinspike\n\n\nSuperpowers for your Sails.js Hooks.\nMakes it easy to build and maintain Sails Hooks as separate projects.\nMagically extend Sails apps with additional Model, Controllers, Services.\n\n\n\n\n\n\n\n\nAnalytics\n\n\n\n\nsails-hook-apianalytics\n\n\nA Sails hook for logging detailed request metadata and monitoring your API.", 
             "title": "Backend"
         }, 
         {
@@ -222,7 +287,7 @@
         }, 
         {
             "location": "/links/backend/#api", 
-            "text": "generator-sails-rest-api   Yeoman generator for scaffolding Sails REST API with predefined features.     shortid   Short id generator. Url-friendly. Non-predictable. Cluster-compatible.     sails-hook-pagify   Generate pagination data and metadata for Sails JS projects.     sails-hook-blueprint-count   Adds blueprint api method to count records in database.     sails-hook-query-builder   Sails hook for creating waterline queries from request queries.\nQuery builder adds a static method to all models in a sails app that allows creates a query which will paginate, search and sort.     node-rss   RSS feed generator. Add RSS feeds to any project. Supports enclosures and GeoRSS.", 
+            "text": "API Blueprint   API Blueprint. A powerful high-level API description language for web APIs.     Apiary Editor   The Apiary Editor is the foundation of your API design. Apiary Editor supports API Blueprint and Swagger API Description languages.     generator-sails-rest-api   Yeoman generator for scaffolding Sails REST API with predefined features.     shortid   Short id generator. Url-friendly. Non-predictable. Cluster-compatible.     sails-hook-pagify   Generate pagination data and metadata for Sails JS projects.     sails-hook-blueprint-count   Adds blueprint api method to count records in database.     sails-hook-query-builder   Sails hook for creating waterline queries from request queries.\nQuery builder adds a static method to all models in a sails app that allows creates a query which will paginate, search and sort.     node-rss   RSS feed generator. Add RSS feeds to any project. Supports enclosures and GeoRSS.", 
             "title": "API"
         }, 
         {

@@ -102,8 +102,37 @@
             
                 <li class="toctree-l3"><a href="#alcance">Alcance</a></li>
                 
+                    <li><a class="toctree-l4" href="#entra">Entra</a></li>
+                
+                    <li><a class="toctree-l4" href="#no-entra">No Entra</a></li>
+                
             
                 <li class="toctree-l3"><a href="#tareas">Tareas</a></li>
+                
+                    <li><a class="toctree-l4" href="#api">API</a></li>
+                
+                    <li><a class="toctree-l4" href="#admin">Admin</a></li>
+                
+                    <li><a class="toctree-l4" href="#frontend">Frontend</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#endpoints">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#users">Users</a></li>
+                
+                    <li><a class="toctree-l4" href="#datasets">Datasets</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#base-de-datos">Base de datos</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#repositorios">Repositorios</a></li>
+                
+                    <li><a class="toctree-l4" href="#api_1">API</a></li>
+                
+                    <li><a class="toctree-l4" href="#admin_1">Admin</a></li>
+                
+                    <li><a class="toctree-l4" href="#frontend_1">Frontend</a></li>
                 
             
             </ul>
@@ -176,15 +205,82 @@
           <div role="main">
             <div class="section">
               
-                <p><strong>Duración:</strong> 18/05/16 - 14/05/16</p>
+                <p><strong>Duración:</strong> Miércoles 18/05/16 - Martes 24/05/16</p>
 <h1 id="alcance">Alcance</h1>
-<ul>
-<li></li>
-</ul>
+<p><img alt="Entidad - Relación" src="http://i.imgur.com/u7CUz6v.png" /></p>
+<h2 id="entra">Entra</h2>
+<h2 id="no-entra">No Entra</h2>
 <h1 id="tareas">Tareas</h1>
-<ul>
-<li></li>
-</ul>
+<h2 id="api">API</h2>
+<h2 id="admin">Admin</h2>
+<h2 id="frontend">Frontend</h2>
+<h1 id="endpoints">Endpoints</h1>
+<h2 id="users">Users</h2>
+<pre><code>GET     /users
+POST    /users
+HEAD    /users
+OPTION  /users
+
+GET     /users/:id
+PATCH   /users/:id
+DELETE  /users/:id
+HEAD    /users/:id
+OPTION  /users/:id
+</code></pre>
+
+<h2 id="datasets">Datasets</h2>
+<pre><code>GET     /datasets
+POST    /datasets
+HEAD    /datasets
+OPTION  /datasets
+
+GET     /datasets/:id
+PATCH   /datasets/:id
+DELETE  /datasets/:id
+HEAD    /datasets/:id
+OPTION  /datasets/:id
+</code></pre>
+
+<h1 id="base-de-datos">Base de datos</h1>
+<h1 id="repositorios">Repositorios</h1>
+<h2 id="api_1">API</h2>
+<h2 id="admin_1">Admin</h2>
+<h2 id="frontend_1">Frontend</h2>
+<pre><code>Application questions:
+? Application name odin
+
+Configuration questions:
+? Database name odin
+? Enable CORS? Yes
+
+Logger questions:
+? Choose which logger you want to configure Winston
+
+Blueprint questions:
+? Use overridden blueprints? Yes
+
+Controller questions:
+? Choose which predefined controllers you want to copy (Press &lt;space&gt; to select)PingController, SearchController
+
+Hook questions:
+? Choose which predefined hooks you want to copy (Press &lt;space&gt; to select)CountHook, PluralizeHook
+
+Cron questions:
+? Do you need cron? Yes
+
+Swagger questions:
+? Do you need Swagger UI Explorer? No
+
+Authentication questions:
+? Do you need authentication layer? Yes
+
+Service questions:
+? Select which services you want to use CipherService, HashService, MailerService, StorageService
+? Mailer provider direct
+? Storage provider Local
+</code></pre>
+
+<p>Guardar la secret key generada en Google Drive</p>
               
             </div>
           </div>
