@@ -79,6 +79,47 @@ OPTION  /datasets/:id
 ```
 
 # Base de datos
+image
+## Users
+    - **username**
+        *Tipo:* string
+        *Requerido:* sí
+        *Único:* sí
+        *Max:* 25 carácteres
+        
+    - **password**
+        *Tipo:* string
+        *Requerido:* sí 
+        
+    - **email**
+        *Tipo:* email
+        *Requerido:* sí
+        *Único:* sí
+        *Max:* 250 carácteres
+        
+    - **firstName**
+        *Tipo:* string
+        *Max:* 50 carácteres
+        *Default:* '' (empty string)
+    
+    - **lastName**
+        *Tipo:* string
+        *Max:* 100 carácteres
+        *Default:* '' (empty string)
+    
+    - **avatar**
+        *Tipo:* string
+        *Max:* 500 carácteres
+        *Default:* '' (empty string)
+        
+### Calculados
+    - **fullName**
+        Es el resultado de concatenar firstName y lastName, separados por un espacio en blanco.
+        *Tipo:* string
+        *Ejemplo:* Juan Pérez
+    
+## Datasets
+
 
 # Repositorios
 
