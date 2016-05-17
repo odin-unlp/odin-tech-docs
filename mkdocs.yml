@@ -9,7 +9,7 @@ pages:
     - 'Metodología': 'metodologia.md'
     - Sprints:
         - 'Sprint 1': 'sprints/sprint-1.md'
-    - References:
+    - Referencias:
         - 'HTTP Status Codes': 'references/status-codes.md'
     - Links:
         - 'Backend': 'links/backend.md'
