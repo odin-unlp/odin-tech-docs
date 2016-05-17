@@ -7,18 +7,27 @@
 ## No Entra
 
 ### Files
+
 - Etiquetas
 - Usuario responsable
 - Frecuencia de actualización
 - Parseo y guardado de datos en la base de datos no relacional (CSVs)
 
 ### Datasets
+
 - Etiquetas
 - Usuario responsable
+
+# Repositorios
+
+- **API:** https://github.com/gcba-odin/odin
+- **Admin:** https://github.com/gcba-odin/odin-admin
+- **Frontend:** https://github.com/gcba-odin/odin-frontend
 
 # Tareas
 
 ## API
+
 1. Escribir spec (en Api Blueprint) con los contenidos de este sprint
 2. Crear seed para la base de datos, con 3 - 5 elementos de cada entidad
 3. Desarrollar endpoints
@@ -26,10 +35,60 @@
 5. Desarrollar parseo y guardado de datos en la base de datos no relacional
 6. Instalar y configurar sails-permissions
 
+### Input Yeoman
+
+```
+Application questions:
+? Application name odin
+
+Configuration questions:
+? Database name odin
+? Enable CORS? Yes
+
+Logger questions:
+? Choose which logger you want to configure Winston
+
+Blueprint questions:
+? Use overridden blueprints? Yes
+
+Controller questions:
+? Choose which predefined controllers you want to copy (Press <space> to select)PingController, SearchController
+
+Hook questions:
+? Choose which predefined hooks you want to copy (Press <space> to select)CountHook, PluralizeHook
+
+Cron questions:
+? Do you need cron? Yes
+
+Swagger questions:
+? Do you need Swagger UI Explorer? No
+
+Authentication questions:
+? Do you need authentication layer? Yes
+
+Service questions:
+? Select which services you want to use CipherService, HashService, MailerService, StorageService
+? Mailer provider direct
+? Storage provider Local
+```
+Guardar la secret key generada en Google Drive.
+
 ## Admin
+
+1. Login (funcional)
+2. CRUD de users (funcional)
+3. CRUD de organizations (sólo UI)
+4. CRUD de statuses (sólo UI)
+5. CRUD de filetypes (sólo UI)
+6. CRUD de files (sólo UI)
+7. CRUD de databases (sólo UI)
+8. CRUD de datasets (sólo UI)
 
 ## Frontend
 
+1. Landing page (home, sólo UI)
+2. Listado datasets (sólo UI)
+3. Ver dataset (sólo UI)
 
 # Endpoints
 
@@ -1019,50 +1078,3 @@ image
     *Requerido:* sí
     
     *Max:* 15 carácteres 
-
-
-# Repositorios
-
-## API
-
-## Admin
-
-## Frontend
-
-## Yeoman
-
-```
-Application questions:
-? Application name odin
-
-Configuration questions:
-? Database name odin
-? Enable CORS? Yes
-
-Logger questions:
-? Choose which logger you want to configure Winston
-
-Blueprint questions:
-? Use overridden blueprints? Yes
-
-Controller questions:
-? Choose which predefined controllers you want to copy (Press <space> to select)PingController, SearchController
-
-Hook questions:
-? Choose which predefined hooks you want to copy (Press <space> to select)CountHook, PluralizeHook
-
-Cron questions:
-? Do you need cron? Yes
-
-Swagger questions:
-? Do you need Swagger UI Explorer? No
-
-Authentication questions:
-? Do you need authentication layer? Yes
-
-Service questions:
-? Select which services you want to use CipherService, HashService, MailerService, StorageService
-? Mailer provider direct
-? Storage provider Local
-```
-Guardar la secret key generada en Google Drive
