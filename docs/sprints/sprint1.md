@@ -59,6 +59,8 @@ OPTION  /datasets/:id
 
 ## Frontend
 
+## Yeoman
+
 ```
 Application questions:
 ? Application name odin
