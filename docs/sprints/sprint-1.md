@@ -394,13 +394,121 @@ image
 
 - **createdBy**
     
-    El ID del admin que creó la organización.
+    El ID del usuario que creó la organización.
 
     *Tipo:* string 
     
     *Requerido:* sí
     
     *Max:* 15 carácteres 
+
+
+## Categories
+
+- **id**
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Único:* sí
+    
+    *Max:* 15 carácteres
+    
+---
+
+- **name**
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Max:* 150 carácteres
+
+---
+
+- **description**
+
+    *Tipo:* string
+    
+    *Max:* 350 carácteres
+
+---
+
+- **createdAt**
+
+    *Tipo:* datetime
+    
+    *Default:* fecha y hora actuales
+
+---
+
+- **updatedAt**
+
+    *Tipo:* datetime
+    
+    *Default:* fecha y hora actuales
+
+
+### Claves Foráneas
+
+- **createdBy**
+    
+    El ID del usuario que creó la categoría.
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Max:* 15 carácteres 
+
+
+## Statuses
+
+- **id**
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Único:* sí
+    
+    *Max:* 15 carácteres
+    
+---
+
+- **name**
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Max:* 150 carácteres
+
+---
+
+- **createdAt**
+
+    *Tipo:* datetime
+    
+    *Default:* fecha y hora actuales
+
+---
+
+- **updatedAt**
+
+    *Tipo:* datetime
+    
+    *Default:* fecha y hora actuales
+    
+
+**Nota:** a los fines del seedeo, los estados por recurso son:
+
+- Draft
+- Under review
+- Rejected
+- Published
+- Unpublished
 
 
 ## Datasets
