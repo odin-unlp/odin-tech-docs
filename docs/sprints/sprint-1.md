@@ -4,15 +4,27 @@
 
 ![Entidad - Relación](http://i.imgur.com/u7CUz6v.png)
 
-## Entra
-
 ## No Entra
 
+### Files
+- Etiquetas
+- Usuario responsable
+- Frecuencia de actualización
+- Parseo y guardado de datos en la base de datos no relacional (CSVs)
 
+### Datasets
+- Etiquetas
+- Usuario responsable
 
 # Tareas
 
 ## API
+1. Escribir spec (en Api Blueprint) con los contenidos de este sprint
+2. Crear seed para la base de datos, con 3 - 5 elementos de cada entidad
+3. Desarrollar endpoints
+4. Desarrollar subida de archivos
+5. Desarrollar parseo y guardado de datos en la base de datos no relacional
+6. Instalar y configurar sails-permissions
 
 ## Admin
 
@@ -130,6 +142,32 @@ HEAD    /statuses/:id
 OPTION  /statuses/:id
 ```
 
+## Filetypes
+```
+GET     /filetypes
+POST    /filetypes
+HEAD    /filetypes
+OPTION  /filetypes
+
+GET     /filetypes/first
+HEAD    /filetypes/first
+OPTION  /filetypes/first
+
+GET     /filetypes/last
+HEAD    /filetypes/last
+OPTION  /filetypes/last
+
+GET     /filetypes/count
+HEAD    /filetypes/count
+OPTION  /filetypes/count
+
+GET     /filetypes/:id
+PATCH   /filetypes/:id
+DELETE  /filetypes/:id
+HEAD    /filetypes/:id
+OPTION  /filetypes/:id
+```
+
 ## Files
 ```
 GET     /files
@@ -154,6 +192,32 @@ PATCH   /files/:id
 DELETE  /files/:id
 HEAD    /files/:id
 OPTION  /files/:id
+```
+
+## Databases
+```
+GET     /databases
+POST    /databases
+HEAD    /databases
+OPTION  /databases
+
+GET     /databases/first
+HEAD    /databases/first
+OPTION  /databases/first
+
+GET     /databases/last
+HEAD    /databases/last
+OPTION  /databases/last
+
+GET     /databases/count
+HEAD    /databases/count
+OPTION  /databases/count
+
+GET     /databases/:id
+PATCH   /databases/:id
+DELETE  /databases/:id
+HEAD    /databases/:id
+OPTION  /databases/:id
 ```
 
 ## Datasets
@@ -510,6 +574,59 @@ image
 - Unpublished
 
 
+## Filetypes
+
+- **id**
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Único:* sí
+    
+    *Max:* 15 carácteres
+    
+---
+
+- **name**
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Max:* 150 carácteres
+
+---
+
+- **createdAt**
+
+    *Tipo:* datetime
+    
+    *Default:* fecha y hora actuales
+
+---
+
+- **updatedAt**
+
+    *Tipo:* datetime
+    
+    *Default:* fecha y hora actuales
+    
+---
+
+**Nota:** a los fines del seedeo, los tipos de archivo son:
+
+- csv
+- html
+- ics
+- pdf
+- rar
+- shp
+- xls
+- xml
+- zip
+
+
 ## Files
 
 - **id**
@@ -587,6 +704,16 @@ image
 
 ### Claves Foráneas
 
+- **type**
+    
+    El ID del tipo de archivo.
+    
+    *Requerido:* sí
+    
+    *Max:* 15 carácteres
+
+---
+
 - **status**
     
     El ID del status que posee el archivo.
@@ -629,6 +756,74 @@ image
     
     *Max:* 15 carácteres 
 
+
+## Databases
+
+- **id**
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Único:* sí
+    
+    *Max:* 15 carácteres
+    
+---
+
+- **name**
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Max:* 150 carácteres
+
+---
+
+- **collection**
+
+    *Tipo:* string
+    
+    *Max:* 150 carácteres
+
+---
+
+- **url**
+
+    *Tipo:* string
+    
+    *Max:* 500 carácteres
+
+---
+
+- **createdAt**
+
+    *Tipo:* datetime
+    
+    *Default:* fecha y hora actuales
+
+---
+
+- **updatedAt**
+
+    *Tipo:* datetime
+    
+    *Default:* fecha y hora actuales
+
+
+### Claves Foráneas
+
+- **createdBy**
+    
+    El ID del usuario que creó el archivo.
+
+    *Tipo:* string 
+    
+    *Requerido:* sí
+    
+    *Max:* 15 carácteres 
+    
 
 ## Datasets
 
