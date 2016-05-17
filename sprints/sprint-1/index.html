@@ -102,6 +102,8 @@
             
                 <li class="toctree-l3"><a href="#alcance">Alcance</a></li>
                 
+                    <li><a class="toctree-l4" href="#objetivo">Objetivo</a></li>
+                
                     <li><a class="toctree-l4" href="#no-entra">No Entra</a></li>
                 
             
@@ -115,6 +117,9 @@
                     <li><a class="toctree-l4" href="#admin">Admin</a></li>
                 
                     <li><a class="toctree-l4" href="#frontend">Frontend</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#prioridades">Prioridades</a></li>
                 
             
                 <li class="toctree-l3"><a href="#endpoints">Endpoints</a></li>
@@ -134,6 +139,11 @@
                     <li><a class="toctree-l4" href="#databases">Databases</a></li>
                 
                     <li><a class="toctree-l4" href="#datasets_1">Datasets</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#ejemplos">Ejemplos</a></li>
+                
+                    <li><a class="toctree-l4" href="#responses">Responses</a></li>
                 
             
                 <li class="toctree-l3"><a href="#base-de-datos">Base de datos</a></li>
@@ -228,6 +238,8 @@
                 <p><strong>Duración:</strong> Miércoles 18/05/16 - Martes 24/05/16</p>
 <h1 id="alcance">Alcance</h1>
 <p><img alt="Entidad - Relación" src="http://i.imgur.com/u7CUz6v.png" /></p>
+<h2 id="objetivo">Objetivo</h2>
+<p>Hacer el login y CRUD de los usuarios, crear la mayoría de las tablas de la base de datos y dejar prototipada buena parte de la interfaz del admin y una porción del frontend.</p>
 <h2 id="no-entra">No Entra</h2>
 <h3 id="files">Files</h3>
 <ul>
@@ -243,16 +255,19 @@
 </ul>
 <h1 id="repositorios">Repositorios</h1>
 <ul>
-<li><strong>API:</strong> https://github.com/gcba-odin/odin</li>
-<li><strong>Admin:</strong> https://github.com/gcba-odin/odin-admin</li>
-<li><strong>Frontend:</strong> https://github.com/gcba-odin/odin-frontend</li>
+<li><strong>API:</strong> <a href="https://github.com/gcba-odin/odin">https://github.com/gcba-odin/odin</a></li>
+<li><strong>Admin:</strong> <a href="https://github.com/gcba-odin/odin-admin">https://github.com/gcba-odin/odin-admin</a></li>
+<li><strong>Frontend:</strong> <a href="https://github.com/gcba-odin/odin-frontend">https://github.com/gcba-odin/odin-frontend</a></li>
 </ul>
 <h1 id="tareas">Tareas</h1>
 <h2 id="api">API</h2>
 <ol>
 <li>Escribir spec (en Api Blueprint) con los contenidos de este sprint</li>
 <li>Crear seed para la base de datos, con 3 - 5 elementos de cada entidad</li>
-<li>Desarrollar endpoints</li>
+<li>Desarrollar endpoints.
+    <strong>Nota 1:</strong> en ningún caso los campos id, createdAt y updatedAt deben ser editables a través de la API. Son campos que se crean y actualizan (updatedAt) automáticamente, y en todo otro caso deben ser de sólo lectura.
+    <strong>Nota 2:</strong> la API sólo debe aceptar requests con body en JSON.</li>
+<li>Correr tests de Dredd</li>
 <li>Desarrollar subida de archivos</li>
 <li>Desarrollar parseo y guardado de datos en la base de datos no relacional</li>
 <li>Instalar y configurar sails-permissions</li>
@@ -309,6 +324,11 @@ Service questions:
 <li>Landing page (home, sólo UI)</li>
 <li>Listado datasets (sólo UI)</li>
 <li>Ver dataset (sólo UI)</li>
+</ol>
+<h1 id="prioridades">Prioridades</h1>
+<ol>
+<li>Login</li>
+<li>CRUD de usuarios</li>
 </ol>
 <h1 id="endpoints">Endpoints</h1>
 <h2 id="users">Users</h2>
@@ -516,8 +536,15 @@ HEAD    /datasets/:id
 OPTION  /datasets/:id
 </code></pre>
 
+<h1 id="ejemplos">Ejemplos</h1>
+<h2 id="responses">Responses</h2>
+<h3 id="get">GET</h3>
+<h3 id="post">POST</h3>
+<h3 id="patch">PATCH</h3>
+<h3 id="delete">DELETE</h3>
+<h3 id="head">HEAD</h3>
+<h3 id="option">OPTION</h3>
 <h1 id="base-de-datos">Base de datos</h1>
-<p>image</p>
 <h2 id="users_1">Users</h2>
 <ul>
 <li>
