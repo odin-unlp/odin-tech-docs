@@ -35,8 +35,11 @@ Hacer el login y CRUD de los usuarios, crear la mayoría de las tablas de la bas
 1. Escribir spec (en Api Blueprint) con los contenidos de este sprint
 2. Crear seed para la base de datos, con 3 - 5 elementos de cada entidad
 3. Desarrollar endpoints.
+
     **Nota 1:** en ningún caso los campos id, createdAt y updatedAt deben ser editables a través de la API. Son campos que se crean y actualizan (updatedAt) automáticamente, y en todo otro caso deben ser de sólo lectura.
-    **Nota 2:** la API sólo debe aceptar requests con body en JSON.
+    
+    **Nota 2:** la API sólo debe aceptar requests con body en JSON. Por lo tanto las requests con body deben contener la cabecera `Content-Type` con el valor `application/json`. Caso contrario, la API debe devolver un error.
+    
 4. Correr tests de Dredd
 5. Desarrollar subida de archivos
 6. Desarrollar parseo y guardado de datos en la base de datos no relacional
@@ -317,34 +320,132 @@ HEAD    /datasets/:id
 OPTION  /datasets/:id
 ```
 
-# Ejemplos
 
-## Responses
+## Estructura de las responses
 
 ### GET
 
+Si no hay errores. En el caso de que se devuelva un solo registro, en data no va un array, sino ese registro sólo. Y si no hay registros, en data habrá un objeto vacío.
 
+```json
+{
+   "meta": {
+       "statusCode": ...,
+       "statusMessage": ..,
+   },
+   "data": [
+     {
+         ...
+     }, 
+     {
+         ...
+     }, 
+     {
+         ...
+     }  
+   ],
+   "links": {
+       ...
+   }
+}
+```
+
+Si hay error/es:
+
+
+```json
+{
+   "meta": {
+       "statusCode": ...,
+       "statusMessage": ..
+   },
+   "error": 
+     {
+         ...
+     }, 
+   "links": {
+       ...
+   }
+}
 
 ### POST
 
-
+```json
+{
+   "meta": {
+       "statusCode": ...,
+       "statusMessage": ..,
+   },
+   "links": {
+       ...
+   }
+}
+```
 
 ### PATCH
 
+Si hubo error/es incluir objeto "error" como en GET.
 
+```json
+{
+    "meta": {
+       "statusCode": ...,
+       "statusMessage": ..,
+   },
+   "links": {
+       ...
+   }
+}
+```
 
 ### DELETE
 
+Si hubo error/es incluir objeto "error" como en GET.
 
+```json
+{
+    "meta": {
+       "statusCode": ...,
+       "statusMessage": ..,
+   },
+   "links": {
+       ...
+   }
+}
+```
 
 ### HEAD
 
-
+```json
+Una response a un request HEAD no incluye un body.
+```
 
 ### OPTION
 
+Si hubo error/es incluir objeto "error" como en GET.
 
-
+```json
+{
+    "meta": {
+       "statusCode": ...,
+       "statusMessage": ..,
+   },
+   "methods": {
+       {
+           "url": ...,
+           "headers": {
+               ...
+           },
+           "parameters": {
+               ...
+           }
+       },
+   },
+   "links": {
+       ...
+   }
+}
+```
 
 # Base de datos
 
