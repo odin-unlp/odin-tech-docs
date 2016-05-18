@@ -1180,7 +1180,7 @@ Si hubo error/es incluir objeto "error" como en GET.
 
 - **status**
     
-    El ID del status que posee el archivo.
+    El ID del status que posee el dataset.
     
     *Requerido:* sí
     
