@@ -628,16 +628,6 @@ Si hubo error/es incluir objeto "error" como en GET.
 
 ---
 
-- **parent**
-    
-    El ID de la organización a que pertenece. En caso de una organización que no depende de alguna otra existente en la base de datos, va NULL.
-
-    *Tipo:* string 
-    
-    *Max:* 15 carácteres
-
----
-
 - **createdAt**
 
     *Tipo:* datetime
@@ -654,6 +644,16 @@ Si hubo error/es incluir objeto "error" como en GET.
 
 
 ### Claves Foráneas
+
+- **parent**
+    
+    El ID de la organización a que pertenece. En caso de una organización que no depende de alguna otra existente en la base de datos, va NULL.
+
+    *Tipo:* string 
+    
+    *Max:* 15 carácteres
+
+---
 
 - **createdBy**
     
