@@ -135,9 +135,9 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
 
 - **Recursos relacionados:** posibilita incluir en la response otros recursos que estén relacionados con el recurso que fue requerido. Debe ser posible incluir más de uno separándolos con comas, y también acceder a un atributo en particular (después de un punto).
 
-    *Ejemplo*: `GET /datasets?include=tags,`
+    *Ejemplo*: `GET /datasets?include=tags`
     
-    *Ejemplo*: `GET /datasets?include=tags.name,`
+    *Ejemplo*: `GET /datasets?include=tags.name`
     
     *Ejemplo*: `GET /datasets?include=tags.name,tags.id`
     
