@@ -351,205 +351,205 @@ Service questions:
 <pre><code>GET     /users
 POST    /users
 HEAD    /users
-OPTION  /users
+OPTIONS  /users
 
 GET     /users/first
 HEAD    /users/first
-OPTION  /users/first
+OPTIONS  /users/first
 
 GET     /users/last
 HEAD    /users/last
-OPTION  /users/last
+OPTIONS  /users/last
 
 GET     /users/count
 HEAD    /users/count
-OPTION  /users/count
+OPTIONS  /users/count
 
 GET     /users/:id
 PATCH   /users/:id
 DELETE  /users/:id
 HEAD    /users/:id
-OPTION  /users/:id
+OPTIONS  /users/:id
 
 GET     /users/login
 POST    /users/login
 HEAD    /users/login
-OPTION  /users/login
+OPTIONS  /users/login
 </code></pre>
 
 <h2 id="organizations">Organizations</h2>
 <pre><code>GET     /organizations
 POST    /organizations
 HEAD    /organizations
-OPTION  /organizations
+OPTIONS  /organizations
 
 GET     /organizations/first
 HEAD    /organizations/first
-OPTION  /organizations/first
+OPTIONS  /organizations/first
 
 GET     /organizations/last
 HEAD    /organizations/last
-OPTION  /organizations/last
+OPTIONS  /organizations/last
 
 GET     /organizations/count
 HEAD    /organizations/count
-OPTION  /organizations/count
+OPTIONS  /organizations/count
 
 GET     /organizations/:id
 PATCH   /organizations/:id
 DELETE  /organizations/:id
 HEAD    /organizations/:id
-OPTION  /organizations/:id
+OPTIONS  /organizations/:id
 </code></pre>
 
 <h2 id="categories">Categories</h2>
 <pre><code>GET     /categories
 POST    /categories
 HEAD    /categories
-OPTION  /categories
+OPTIONS  /categories
 
 GET     /categories/first
 HEAD    /categories/first
-OPTION  /categories/first
+OPTIONS  /categories/first
 
 GET     /categories/last
 HEAD    /categories/last
-OPTION  /categories/last
+OPTIONS  /categories/last
 
 GET     /categories/count
 HEAD    /categories/count
-OPTION  /categories/count
+OPTIONS  /categories/count
 
 GET     /categories/:id
 PATCH   /categories/:id
 DELETE  /categories/:id
 HEAD    /categories/:id
-OPTION  /categories/:id
+OPTIONS  /categories/:id
 </code></pre>
 
 <h2 id="statuses">Statuses</h2>
 <pre><code>GET     /statuses
 POST    /statuses
 HEAD    /statuses
-OPTION  /statuses
+OPTIONS  /statuses
 
 GET     /statuses/first
 HEAD    /statuses/first
-OPTION  /statuses/first
+OPTIONS  /statuses/first
 
 GET     /statuses/last
 HEAD    /statuses/last
-OPTION  /statuses/last
+OPTIONS  /statuses/last
 
 GET     /statuses/count
 HEAD    /statuses/count
-OPTION  /statuses/count
+OPTIONS  /statuses/count
 
 GET     /statuses/:id
 PATCH   /statuses/:id
 DELETE  /statuses/:id
 HEAD    /statuses/:id
-OPTION  /statuses/:id
+OPTIONS  /statuses/:id
 </code></pre>
 
 <h2 id="filetypes">Filetypes</h2>
 <pre><code>GET     /filetypes
 POST    /filetypes
 HEAD    /filetypes
-OPTION  /filetypes
+OPTIONS  /filetypes
 
 GET     /filetypes/first
 HEAD    /filetypes/first
-OPTION  /filetypes/first
+OPTIONS  /filetypes/first
 
 GET     /filetypes/last
 HEAD    /filetypes/last
-OPTION  /filetypes/last
+OPTIONS  /filetypes/last
 
 GET     /filetypes/count
 HEAD    /filetypes/count
-OPTION  /filetypes/count
+OPTIONS  /filetypes/count
 
 GET     /filetypes/:id
 PATCH   /filetypes/:id
 DELETE  /filetypes/:id
 HEAD    /filetypes/:id
-OPTION  /filetypes/:id
+OPTIONS  /filetypes/:id
 </code></pre>
 
 <h2 id="files_1">Files</h2>
 <pre><code>GET     /files
 POST    /files
 HEAD    /files
-OPTION  /files
+OPTIONS  /files
 
 GET     /files/first
 HEAD    /files/first
-OPTION  /files/first
+OPTIONS  /files/first
 
 GET     /files/last
 HEAD    /files/last
-OPTION  /files/last
+OPTIONS  /files/last
 
 GET     /files/count
 HEAD    /files/count
-OPTION  /files/count
+OPTIONS  /files/count
 
 GET     /files/:id
 PATCH   /files/:id
 DELETE  /files/:id
 HEAD    /files/:id
-OPTION  /files/:id
+OPTIONS  /files/:id
 </code></pre>
 
 <h2 id="databases">Databases</h2>
 <pre><code>GET     /databases
 POST    /databases
 HEAD    /databases
-OPTION  /databases
+OPTIONS  /databases
 
 GET     /databases/first
 HEAD    /databases/first
-OPTION  /databases/first
+OPTIONS  /databases/first
 
 GET     /databases/last
 HEAD    /databases/last
-OPTION  /databases/last
+OPTIONS  /databases/last
 
 GET     /databases/count
 HEAD    /databases/count
-OPTION  /databases/count
+OPTIONS  /databases/count
 
 GET     /databases/:id
 PATCH   /databases/:id
 DELETE  /databases/:id
 HEAD    /databases/:id
-OPTION  /databases/:id
+OPTIONS  /databases/:id
 </code></pre>
 
 <h2 id="datasets_1">Datasets</h2>
 <pre><code>GET     /datasets
 POST    /datasets
 HEAD    /datasets
-OPTION  /datasets
+OPTIONS  /datasets
 
 GET     /datasets/first
 HEAD    /datasets/first
-OPTION  /datasets/first
+OPTIONS  /datasets/first
 
 GET     /datasets/last
 HEAD    /datasets/last
-OPTION  /datasets/last
+OPTIONS  /datasets/last
 
 GET     /datasets/count
 HEAD    /datasets/count
-OPTION  /datasets/count
+OPTIONS  /datasets/count
 
 GET     /datasets/:id
 PATCH   /datasets/:id
 DELETE  /datasets/:id
 HEAD    /datasets/:id
-OPTION  /datasets/:id
+OPTIONS  /datasets/:id
 </code></pre>
 
 <h2 id="estructura-de-las-responses">Estructura de las responses</h2>
@@ -632,10 +632,10 @@ OPTION  /datasets/:id
 </code></pre>
 
 <h3 id="head">HEAD</h3>
-<pre><code class="json">Una response a un request HEAD no incluye un body.
+<pre><code class="json">Una response a una request HEAD no incluye un body.
 </code></pre>
 
-<h3 id="option">OPTION</h3>
+<h3 id="options">OPTIONS</h3>
 <p>Si hubo error/es incluir objeto "error" como en GET.</p>
 <pre><code class="json">{
     &quot;meta&quot;: {
@@ -1231,7 +1231,7 @@ OPTION  /datasets/:id
 <hr />
 <ul>
 <li>
-<p><strong>optional1</strong></p>
+<p><strong>OPTIONSal1</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 500 carácteres</p>
 </li>
@@ -1239,7 +1239,7 @@ OPTION  /datasets/:id
 <hr />
 <ul>
 <li>
-<p><strong>optional2</strong></p>
+<p><strong>OPTIONSal2</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 500 carácteres</p>
 </li>
@@ -1247,7 +1247,7 @@ OPTION  /datasets/:id
 <hr />
 <ul>
 <li>
-<p><strong>optional3</strong></p>
+<p><strong>OPTIONSal3</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 500 carácteres</p>
 </li>
@@ -1255,7 +1255,7 @@ OPTION  /datasets/:id
 <hr />
 <ul>
 <li>
-<p><strong>optional4</strong></p>
+<p><strong>OPTIONSal4</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 500 carácteres</p>
 </li>
@@ -1263,7 +1263,7 @@ OPTION  /datasets/:id
 <hr />
 <ul>
 <li>
-<p><strong>optional5</strong></p>
+<p><strong>OPTIONSal5</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 500 carácteres</p>
 </li>
@@ -1271,7 +1271,7 @@ OPTION  /datasets/:id
 <hr />
 <ul>
 <li>
-<p><strong>optional6</strong></p>
+<p><strong>OPTIONSal6</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 500 carácteres</p>
 </li>
@@ -1279,7 +1279,7 @@ OPTION  /datasets/:id
 <hr />
 <ul>
 <li>
-<p><strong>optional7</strong></p>
+<p><strong>OPTIONSal7</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 500 carácteres</p>
 </li>
@@ -1287,7 +1287,7 @@ OPTION  /datasets/:id
 <hr />
 <ul>
 <li>
-<p><strong>optional8</strong></p>
+<p><strong>OPTIONSal8</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 500 carácteres</p>
 </li>
@@ -1295,7 +1295,7 @@ OPTION  /datasets/:id
 <hr />
 <ul>
 <li>
-<p><strong>optional9</strong></p>
+<p><strong>OPTIONSal9</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 500 carácteres</p>
 </li>
@@ -1303,7 +1303,7 @@ OPTION  /datasets/:id
 <hr />
 <ul>
 <li>
-<p><strong>optional10</strong></p>
+<p><strong>OPTIONSal10</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 500 carácteres</p>
 </li>
