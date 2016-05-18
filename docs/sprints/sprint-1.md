@@ -112,30 +112,30 @@ Guardar la secret key generada en Google Drive.
 GET     /users
 POST    /users
 HEAD    /users
-OPTION  /users
+OPTIONS  /users
 
 GET     /users/first
 HEAD    /users/first
-OPTION  /users/first
+OPTIONS  /users/first
 
 GET     /users/last
 HEAD    /users/last
-OPTION  /users/last
+OPTIONS  /users/last
 
 GET     /users/count
 HEAD    /users/count
-OPTION  /users/count
+OPTIONS  /users/count
 
 GET     /users/:id
 PATCH   /users/:id
 DELETE  /users/:id
 HEAD    /users/:id
-OPTION  /users/:id
+OPTIONS  /users/:id
 
 GET     /users/login
 POST    /users/login
 HEAD    /users/login
-OPTION  /users/login
+OPTIONS  /users/login
 ```
 
 ## Organizations
@@ -143,25 +143,25 @@ OPTION  /users/login
 GET     /organizations
 POST    /organizations
 HEAD    /organizations
-OPTION  /organizations
+OPTIONS  /organizations
 
 GET     /organizations/first
 HEAD    /organizations/first
-OPTION  /organizations/first
+OPTIONS  /organizations/first
 
 GET     /organizations/last
 HEAD    /organizations/last
-OPTION  /organizations/last
+OPTIONS  /organizations/last
 
 GET     /organizations/count
 HEAD    /organizations/count
-OPTION  /organizations/count
+OPTIONS  /organizations/count
 
 GET     /organizations/:id
 PATCH   /organizations/:id
 DELETE  /organizations/:id
 HEAD    /organizations/:id
-OPTION  /organizations/:id
+OPTIONS  /organizations/:id
 ```
 
 ## Categories
@@ -169,25 +169,25 @@ OPTION  /organizations/:id
 GET     /categories
 POST    /categories
 HEAD    /categories
-OPTION  /categories
+OPTIONS  /categories
 
 GET     /categories/first
 HEAD    /categories/first
-OPTION  /categories/first
+OPTIONS  /categories/first
 
 GET     /categories/last
 HEAD    /categories/last
-OPTION  /categories/last
+OPTIONS  /categories/last
 
 GET     /categories/count
 HEAD    /categories/count
-OPTION  /categories/count
+OPTIONS  /categories/count
 
 GET     /categories/:id
 PATCH   /categories/:id
 DELETE  /categories/:id
 HEAD    /categories/:id
-OPTION  /categories/:id
+OPTIONS  /categories/:id
 ```
 
 ## Statuses
@@ -195,25 +195,25 @@ OPTION  /categories/:id
 GET     /statuses
 POST    /statuses
 HEAD    /statuses
-OPTION  /statuses
+OPTIONS  /statuses
 
 GET     /statuses/first
 HEAD    /statuses/first
-OPTION  /statuses/first
+OPTIONS  /statuses/first
 
 GET     /statuses/last
 HEAD    /statuses/last
-OPTION  /statuses/last
+OPTIONS  /statuses/last
 
 GET     /statuses/count
 HEAD    /statuses/count
-OPTION  /statuses/count
+OPTIONS  /statuses/count
 
 GET     /statuses/:id
 PATCH   /statuses/:id
 DELETE  /statuses/:id
 HEAD    /statuses/:id
-OPTION  /statuses/:id
+OPTIONS  /statuses/:id
 ```
 
 ## Filetypes
@@ -221,25 +221,25 @@ OPTION  /statuses/:id
 GET     /filetypes
 POST    /filetypes
 HEAD    /filetypes
-OPTION  /filetypes
+OPTIONS  /filetypes
 
 GET     /filetypes/first
 HEAD    /filetypes/first
-OPTION  /filetypes/first
+OPTIONS  /filetypes/first
 
 GET     /filetypes/last
 HEAD    /filetypes/last
-OPTION  /filetypes/last
+OPTIONS  /filetypes/last
 
 GET     /filetypes/count
 HEAD    /filetypes/count
-OPTION  /filetypes/count
+OPTIONS  /filetypes/count
 
 GET     /filetypes/:id
 PATCH   /filetypes/:id
 DELETE  /filetypes/:id
 HEAD    /filetypes/:id
-OPTION  /filetypes/:id
+OPTIONS  /filetypes/:id
 ```
 
 ## Files
@@ -247,25 +247,25 @@ OPTION  /filetypes/:id
 GET     /files
 POST    /files
 HEAD    /files
-OPTION  /files
+OPTIONS  /files
 
 GET     /files/first
 HEAD    /files/first
-OPTION  /files/first
+OPTIONS  /files/first
 
 GET     /files/last
 HEAD    /files/last
-OPTION  /files/last
+OPTIONS  /files/last
 
 GET     /files/count
 HEAD    /files/count
-OPTION  /files/count
+OPTIONS  /files/count
 
 GET     /files/:id
 PATCH   /files/:id
 DELETE  /files/:id
 HEAD    /files/:id
-OPTION  /files/:id
+OPTIONS  /files/:id
 ```
 
 ## Databases
@@ -273,25 +273,25 @@ OPTION  /files/:id
 GET     /databases
 POST    /databases
 HEAD    /databases
-OPTION  /databases
+OPTIONS  /databases
 
 GET     /databases/first
 HEAD    /databases/first
-OPTION  /databases/first
+OPTIONS  /databases/first
 
 GET     /databases/last
 HEAD    /databases/last
-OPTION  /databases/last
+OPTIONS  /databases/last
 
 GET     /databases/count
 HEAD    /databases/count
-OPTION  /databases/count
+OPTIONS  /databases/count
 
 GET     /databases/:id
 PATCH   /databases/:id
 DELETE  /databases/:id
 HEAD    /databases/:id
-OPTION  /databases/:id
+OPTIONS  /databases/:id
 ```
 
 ## Datasets
@@ -299,25 +299,25 @@ OPTION  /databases/:id
 GET     /datasets
 POST    /datasets
 HEAD    /datasets
-OPTION  /datasets
+OPTIONS  /datasets
 
 GET     /datasets/first
 HEAD    /datasets/first
-OPTION  /datasets/first
+OPTIONS  /datasets/first
 
 GET     /datasets/last
 HEAD    /datasets/last
-OPTION  /datasets/last
+OPTIONS  /datasets/last
 
 GET     /datasets/count
 HEAD    /datasets/count
-OPTION  /datasets/count
+OPTIONS  /datasets/count
 
 GET     /datasets/:id
 PATCH   /datasets/:id
 DELETE  /datasets/:id
 HEAD    /datasets/:id
-OPTION  /datasets/:id
+OPTIONS  /datasets/:id
 ```
 
 
@@ -421,7 +421,7 @@ Si hubo error/es incluir objeto "error" como en GET.
 Una response a un request HEAD no incluye un body.
 ```
 
-### OPTION
+### OPTIONS
 
 Si hubo error/es incluir objeto "error" como en GET.
 
@@ -1078,7 +1078,7 @@ Si hubo error/es incluir objeto "error" como en GET.
 
 ---
 
-- **optional1**
+- **OPTIONSal1**
 
     *Tipo:* string
     
@@ -1086,7 +1086,7 @@ Si hubo error/es incluir objeto "error" como en GET.
     
 ---
 
-- **optional2**
+- **OPTIONSal2**
 
     *Tipo:* string
     
@@ -1094,7 +1094,7 @@ Si hubo error/es incluir objeto "error" como en GET.
     
 ---
 
-- **optional3**
+- **OPTIONSal3**
 
     *Tipo:* string
     
@@ -1102,7 +1102,7 @@ Si hubo error/es incluir objeto "error" como en GET.
     
 ---
 
-- **optional4**
+- **OPTIONSal4**
 
     *Tipo:* string
     
@@ -1110,7 +1110,7 @@ Si hubo error/es incluir objeto "error" como en GET.
     
 ---
 
-- **optional5**
+- **OPTIONSal5**
 
     *Tipo:* string
     
@@ -1118,7 +1118,7 @@ Si hubo error/es incluir objeto "error" como en GET.
     
 ---
 
-- **optional6**
+- **OPTIONSal6**
 
     *Tipo:* string
     
@@ -1126,7 +1126,7 @@ Si hubo error/es incluir objeto "error" como en GET.
     
 ---
 
-- **optional7**
+- **OPTIONSal7**
 
     *Tipo:* string
     
@@ -1134,7 +1134,7 @@ Si hubo error/es incluir objeto "error" como en GET.
     
 ---
 
-- **optional8**
+- **OPTIONSal8**
 
     *Tipo:* string
     
@@ -1142,7 +1142,7 @@ Si hubo error/es incluir objeto "error" como en GET.
     
 ---
 
-- **optional9**
+- **OPTIONSal9**
 
     *Tipo:* string
     
@@ -1150,7 +1150,7 @@ Si hubo error/es incluir objeto "error" como en GET.
     
 ---
 
-- **optional10**
+- **OPTIONSal10**
 
     *Tipo:* string
     

@@ -59,7 +59,7 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
 - **POST**
 - **PATCH**: para las actualizaciones parciales.
 - **DELETE**
-- **OPTION:** para la navegación hypermedia.
+- **OPTIONS:** para la navegación hypermedia.
 - **HEAD:** para otorgar una forma liviana de chequear el estado de un recurso.
 
 ## Mapeo CRUD
