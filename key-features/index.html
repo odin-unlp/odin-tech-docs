@@ -322,6 +322,12 @@
 <p><em>Count:</em>  <code>GET /datasets/count</code></p>
 <p>Devuelve la cantidad de datasets. </p>
 </li>
+<li>
+<p><strong>Recursos relacionados:</strong> posibilita incluir en la response otros recursos que estén relacionados con el recurso que fue requerido. Debe ser posible incluir más de uno separándolos con comas, y también acceder a un atributo en particular (después de un punto).</p>
+<p><em>Ejemplo</em>: <code>GET /datasets?include=tags,</code></p>
+<p><em>Ejemplo</em>: <code>GET /datasets?include=tags.name,</code></p>
+<p><em>Ejemplo</em>: <code>GET /datasets?include=tags.name,tags.id</code></p>
+</li>
 </ul>
 <h1 id="4-plugins">4. Plugins</h1>
 <p>TBD</p>
