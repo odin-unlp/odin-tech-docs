@@ -418,7 +418,7 @@ Si hubo error/es incluir objeto "error" como en GET.
 ### HEAD
 
 ```json
-Una response a un request HEAD no incluye un body.
+Una response a una request HEAD no incluye un body.
 ```
 
 ### OPTIONS
