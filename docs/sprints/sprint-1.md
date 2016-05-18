@@ -1013,19 +1013,6 @@ Si hubo error/es incluir objeto "error" como en GET.
     *Default:* fecha y hora actuales
 
 
-### Claves Foráneas
-
-- **createdBy**
-    
-    El ID del usuario que creó el archivo.
-
-    *Tipo:* string 
-    
-    *Requerido:* sí
-    
-    *Max:* 15 carácteres 
-    
-
 ## Datasets
 
 - **id**
