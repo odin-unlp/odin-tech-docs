@@ -1065,7 +1065,7 @@ Si hubo error/es incluir objeto "error" como en GET.
 
 ---
 
-- **Optional1**
+- **optional1**
 
     *Tipo:* string
     
@@ -1073,7 +1073,7 @@ Si hubo error/es incluir objeto "error" como en GET.
     
 ---
 
-- **Optional2**
+- **optional2**
 
     *Tipo:* string
     
@@ -1081,7 +1081,7 @@ Si hubo error/es incluir objeto "error" como en GET.
     
 ---
 
-- **Optional3**
+- **optional3**
 
     *Tipo:* string
     
@@ -1089,7 +1089,7 @@ Si hubo error/es incluir objeto "error" como en GET.
     
 ---
 
-- **Optional4**
+- **optional4**
 
     *Tipo:* string
     
@@ -1097,7 +1097,7 @@ Si hubo error/es incluir objeto "error" como en GET.
     
 ---
 
-- **Optional5**
+- **optional5**
 
     *Tipo:* string
     
@@ -1105,7 +1105,7 @@ Si hubo error/es incluir objeto "error" como en GET.
     
 ---
 
-- **Optional6**
+- **optional6**
 
     *Tipo:* string
     
@@ -1113,7 +1113,7 @@ Si hubo error/es incluir objeto "error" como en GET.
     
 ---
 
-- **Optional7**
+- **optional7**
 
     *Tipo:* string
     
@@ -1121,7 +1121,7 @@ Si hubo error/es incluir objeto "error" como en GET.
     
 ---
 
-- **Optional8**
+- **optional8**
 
     *Tipo:* string
     
@@ -1129,7 +1129,7 @@ Si hubo error/es incluir objeto "error" como en GET.
     
 ---
 
-- **Optional9**
+- **optional9**
 
     *Tipo:* string
     
@@ -1137,7 +1137,7 @@ Si hubo error/es incluir objeto "error" como en GET.
     
 ---
 
-- **Optional10**
+- **optional10**
 
     *Tipo:* string
     
