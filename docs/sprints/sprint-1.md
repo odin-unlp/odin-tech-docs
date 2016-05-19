@@ -1191,16 +1191,6 @@ Si hubo error/es incluir objeto "error" como en GET.
 
 ---
 
-- **organization**
-
-    El ID de la organización que provee los datos.
-
-    *Requerido:* sí
-
-    *Max:* 15 carácteres
-
----
-
 - **createdBy**
 
     El ID del usuario que creó el dataset.
