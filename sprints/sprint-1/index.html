@@ -285,7 +285,6 @@
 <p>Correr tests de Dredd</p>
 </li>
 <li>Desarrollar subida de archivos</li>
-<li>Desarrollar parseo y guardado de datos en la base de datos no relacional</li>
 <li>Instalar y configurar sails-permissions</li>
 </ol>
 <h3 id="input-yeoman">Input Yeoman</h3>
@@ -350,19 +349,15 @@ Service questions:
 <h2 id="users">Users</h2>
 <pre><code>GET      /users
 POST     /users
-HEAD     /users
 OPTIONS  /users
 
 GET      /users/first
-HEAD     /users/first
 OPTIONS  /users/first
 
 GET      /users/last
-HEAD     /users/last
 OPTIONS  /users/last
 
 GET      /users/count
-HEAD     /users/count
 OPTIONS  /users/count
 
 GET      /users/:id
@@ -372,30 +367,24 @@ HEAD     /users/:id
 OPTIONS  /users/:id
 
 GET      /users/refreshToken/:id
-HEAD     /users/refreshToken/:id
 OPTIONS  /users/refreshToken/:id
 
 POST     /users/login
-HEAD     /users/login
 OPTIONS  /users/login
 </code></pre>
 
 <h2 id="organizations">Organizations</h2>
 <pre><code>GET      /organizations
 POST     /organizations
-HEAD     /organizations
 OPTIONS  /organizations
 
 GET      /organizations/first
-HEAD     /organizations/first
 OPTIONS  /organizations/first
 
 GET      /organizations/last
-HEAD     /organizations/last
 OPTIONS  /organizations/last
 
 GET      /organizations/count
-HEAD     /organizations/count
 OPTIONS  /organizations/count
 
 GET      /organizations/:id
@@ -408,19 +397,15 @@ OPTIONS  /organizations/:id
 <h2 id="categories">Categories</h2>
 <pre><code>GET      /categories
 POST     /categories
-HEAD     /categories
 OPTIONS  /categories
 
 GET      /categories/first
-HEAD     /categories/first
 OPTIONS  /categories/first
 
 GET      /categories/last
-HEAD     /categories/last
 OPTIONS  /categories/last
 
 GET      /categories/count
-HEAD     /categories/count
 OPTIONS  /categories/count
 
 GET      /categories/:id
@@ -433,19 +418,15 @@ OPTIONS  /categories/:id
 <h2 id="statuses">Statuses</h2>
 <pre><code>GET      /statuses
 POST     /statuses
-HEAD     /statuses
 OPTIONS  /statuses
 
 GET      /statuses/first
-HEAD     /statuses/first
 OPTIONS  /statuses/first
 
 GET      /statuses/last
-HEAD     /statuses/last
 OPTIONS  /statuses/last
 
 GET      /statuses/count
-HEAD     /statuses/count
 OPTIONS  /statuses/count
 
 GET      /statuses/:id
@@ -458,19 +439,15 @@ OPTIONS  /statuses/:id
 <h2 id="filetypes">Filetypes</h2>
 <pre><code>GET      /filetypes
 POST     /filetypes
-HEAD     /filetypes
 OPTIONS  /filetypes
 
 GET      /filetypes/first
-HEAD     /filetypes/first
 OPTIONS  /filetypes/first
 
 GET      /filetypes/last
-HEAD     /filetypes/last
 OPTIONS  /filetypes/last
 
 GET      /filetypes/count
-HEAD     /filetypes/count
 OPTIONS  /filetypes/count
 
 GET      /filetypes/:id
@@ -483,19 +460,15 @@ OPTIONS  /filetypes/:id
 <h2 id="files_1">Files</h2>
 <pre><code>GET      /files
 POST     /files
-HEAD     /files
 OPTIONS  /files
 
 GET      /files/first
-HEAD     /files/first
 OPTIONS  /files/first
 
 GET      /files/last
-HEAD     /files/last
 OPTIONS  /files/last
 
 GET      /files/count
-HEAD     /files/count
 OPTIONS  /files/count
 
 GET      /files/:id
@@ -508,19 +481,15 @@ OPTIONS  /files/:id
 <h2 id="databases">Databases</h2>
 <pre><code>GET      /databases
 POST     /databases
-HEAD     /databases
 OPTIONS  /databases
 
 GET      /databases/first
-HEAD     /databases/first
 OPTIONS  /databases/first
 
 GET      /databases/last
-HEAD     /databases/last
 OPTIONS  /databases/last
 
 GET      /databases/count
-HEAD     /databases/count
 OPTIONS  /databases/count
 
 GET      /databases/:id
@@ -533,19 +502,15 @@ OPTIONS  /databases/:id
 <h2 id="datasets_1">Datasets</h2>
 <pre><code>GET      /datasets
 POST     /datasets
-HEAD     /datasets
 OPTIONS  /datasets
 
 GET      /datasets/first
-HEAD     /datasets/first
 OPTIONS  /datasets/first
 
 GET      /datasets/last
-HEAD     /datasets/last
 OPTIONS  /datasets/last
 
 GET      /datasets/count
-HEAD     /datasets/count
 OPTIONS  /datasets/count
 
 GET      /datasets/:id
@@ -645,8 +610,9 @@ OPTIONS  /datasets/:id
        &quot;statusCode&quot;: ...,
        &quot;statusMessage&quot;: ..,
    },
-   &quot;methods&quot;: {
+   &quot;methods&quot;: [
        {
+           &quot;verb&quot;: ...,
            &quot;url&quot;: ...,
            &quot;headers&quot;: {
                ...
@@ -655,7 +621,7 @@ OPTIONS  /datasets/:id
                ...
            }
        },
-   },
+   ],
    &quot;links&quot;: {
        ...
    }
