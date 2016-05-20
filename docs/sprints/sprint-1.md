@@ -42,8 +42,7 @@ Hacer el login y CRUD de los usuarios, crear la mayoría de las tablas de la bas
 
 4. Correr tests de Dredd
 5. Desarrollar subida de archivos
-6. Desarrollar parseo y guardado de datos en la base de datos no relacional
-7. Instalar y configurar sails-permissions
+6. Instalar y configurar sails-permissions
 
 ### Input Yeoman
 
@@ -111,19 +110,15 @@ Guardar la secret key generada en Google Drive.
 ```
 GET      /users
 POST     /users
-HEAD     /users
 OPTIONS  /users
 
 GET      /users/first
-HEAD     /users/first
 OPTIONS  /users/first
 
 GET      /users/last
-HEAD     /users/last
 OPTIONS  /users/last
 
 GET      /users/count
-HEAD     /users/count
 OPTIONS  /users/count
 
 GET      /users/:id
@@ -133,11 +128,9 @@ HEAD     /users/:id
 OPTIONS  /users/:id
 
 GET      /users/refreshToken/:id
-HEAD     /users/refreshToken/:id
 OPTIONS  /users/refreshToken/:id
 
 POST     /users/login
-HEAD     /users/login
 OPTIONS  /users/login
 ```
 
@@ -145,19 +138,15 @@ OPTIONS  /users/login
 ```
 GET      /organizations
 POST     /organizations
-HEAD     /organizations
 OPTIONS  /organizations
 
 GET      /organizations/first
-HEAD     /organizations/first
 OPTIONS  /organizations/first
 
 GET      /organizations/last
-HEAD     /organizations/last
 OPTIONS  /organizations/last
 
 GET      /organizations/count
-HEAD     /organizations/count
 OPTIONS  /organizations/count
 
 GET      /organizations/:id
@@ -171,19 +160,15 @@ OPTIONS  /organizations/:id
 ```
 GET      /categories
 POST     /categories
-HEAD     /categories
 OPTIONS  /categories
 
 GET      /categories/first
-HEAD     /categories/first
 OPTIONS  /categories/first
 
 GET      /categories/last
-HEAD     /categories/last
 OPTIONS  /categories/last
 
 GET      /categories/count
-HEAD     /categories/count
 OPTIONS  /categories/count
 
 GET      /categories/:id
@@ -197,19 +182,15 @@ OPTIONS  /categories/:id
 ```
 GET      /statuses
 POST     /statuses
-HEAD     /statuses
 OPTIONS  /statuses
 
 GET      /statuses/first
-HEAD     /statuses/first
 OPTIONS  /statuses/first
 
 GET      /statuses/last
-HEAD     /statuses/last
 OPTIONS  /statuses/last
 
 GET      /statuses/count
-HEAD     /statuses/count
 OPTIONS  /statuses/count
 
 GET      /statuses/:id
@@ -223,19 +204,15 @@ OPTIONS  /statuses/:id
 ```
 GET      /filetypes
 POST     /filetypes
-HEAD     /filetypes
 OPTIONS  /filetypes
 
 GET      /filetypes/first
-HEAD     /filetypes/first
 OPTIONS  /filetypes/first
 
 GET      /filetypes/last
-HEAD     /filetypes/last
 OPTIONS  /filetypes/last
 
 GET      /filetypes/count
-HEAD     /filetypes/count
 OPTIONS  /filetypes/count
 
 GET      /filetypes/:id
@@ -249,19 +226,15 @@ OPTIONS  /filetypes/:id
 ```
 GET      /files
 POST     /files
-HEAD     /files
 OPTIONS  /files
 
 GET      /files/first
-HEAD     /files/first
 OPTIONS  /files/first
 
 GET      /files/last
-HEAD     /files/last
 OPTIONS  /files/last
 
 GET      /files/count
-HEAD     /files/count
 OPTIONS  /files/count
 
 GET      /files/:id
@@ -275,19 +248,15 @@ OPTIONS  /files/:id
 ```
 GET      /databases
 POST     /databases
-HEAD     /databases
 OPTIONS  /databases
 
 GET      /databases/first
-HEAD     /databases/first
 OPTIONS  /databases/first
 
 GET      /databases/last
-HEAD     /databases/last
 OPTIONS  /databases/last
 
 GET      /databases/count
-HEAD     /databases/count
 OPTIONS  /databases/count
 
 GET      /databases/:id
@@ -301,19 +270,15 @@ OPTIONS  /databases/:id
 ```
 GET      /datasets
 POST     /datasets
-HEAD     /datasets
 OPTIONS  /datasets
 
 GET      /datasets/first
-HEAD     /datasets/first
 OPTIONS  /datasets/first
 
 GET      /datasets/last
-HEAD     /datasets/last
 OPTIONS  /datasets/last
 
 GET      /datasets/count
-HEAD     /datasets/count
 OPTIONS  /datasets/count
 
 GET      /datasets/:id
@@ -322,7 +287,6 @@ DELETE   /datasets/:id
 HEAD     /datasets/:id
 OPTIONS  /datasets/:id
 ```
-
 
 ## Estructura de las responses
 
@@ -434,8 +398,9 @@ Si hubo error/es incluir objeto "error" como en GET.
        "statusCode": ...,
        "statusMessage": ..,
    },
-   "methods": {
+   "methods": [
        {
+           "verb": ...,
            "url": ...,
            "headers": {
                ...
@@ -444,7 +409,7 @@ Si hubo error/es incluir objeto "error" como en GET.
                ...
            }
        },
-   },
+   ],
    "links": {
        ...
    }
@@ -549,7 +514,6 @@ Si hubo error/es incluir objeto "error" como en GET.
 
 
 ### Claves Foráneas
-
 
 - **organization**
 
