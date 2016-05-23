@@ -297,8 +297,7 @@ Si no hay errores. En el caso de que se devuelva un solo registro, en data no va
 ```json
 {
    "meta": {
-       "statusCode": ...,
-       "statusMessage": ..,
+       ...
    },
    "data": [
      {
@@ -323,8 +322,7 @@ Si hay error/es:
 ```json
 {
    "meta": {
-       "statusCode": ...,
-       "statusMessage": ..
+       ...
    },
    "error":
      {
@@ -341,8 +339,7 @@ Si hay error/es:
 ```json
 {
    "meta": {
-       "statusCode": ...,
-       "statusMessage": ..,
+       ...
    },
    "links": {
        ...
@@ -356,9 +353,8 @@ Si hubo error/es incluir objeto "error" como en GET.
 
 ```json
 {
-    "meta": {
-       "statusCode": ...,
-       "statusMessage": ..,
+   "meta": {
+       ...
    },
    "links": {
        ...
@@ -372,9 +368,8 @@ Si hubo error/es incluir objeto "error" como en GET.
 
 ```json
 {
-    "meta": {
-       "statusCode": ...,
-       "statusMessage": ..,
+   "meta": {
+       ...
    },
    "links": {
        ...
@@ -394,9 +389,8 @@ Si hubo error/es incluir objeto "error" como en GET.
 
 ```json
 {
-    "meta": {
-       "statusCode": ...,
-       "statusMessage": ..,
+   "meta": {
+       ...
    },
    "methods": [
        {
