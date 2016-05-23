@@ -525,8 +525,7 @@ OPTIONS  /datasets/:id
 <p>Si no hay errores. En el caso de que se devuelva un solo registro, en data no va un array, sino ese registro sólo. Y si no hay registros, en data habrá un objeto vacío.</p>
 <pre><code class="json">{
    &quot;meta&quot;: {
-       &quot;statusCode&quot;: ...,
-       &quot;statusMessage&quot;: ..,
+       ...
    },
    &quot;data&quot;: [
      {
@@ -548,8 +547,7 @@ OPTIONS  /datasets/:id
 <p>Si hay error/es:</p>
 <pre><code class="json">{
    &quot;meta&quot;: {
-       &quot;statusCode&quot;: ...,
-       &quot;statusMessage&quot;: ..
+       ...
    },
    &quot;error&quot;:
      {
@@ -564,8 +562,7 @@ OPTIONS  /datasets/:id
 <h3 id="post">POST</h3>
 <pre><code class="json">{
    &quot;meta&quot;: {
-       &quot;statusCode&quot;: ...,
-       &quot;statusMessage&quot;: ..,
+       ...
    },
    &quot;links&quot;: {
        ...
@@ -576,9 +573,8 @@ OPTIONS  /datasets/:id
 <h3 id="patch">PATCH</h3>
 <p>Si hubo error/es incluir objeto "error" como en GET.</p>
 <pre><code class="json">{
-    &quot;meta&quot;: {
-       &quot;statusCode&quot;: ...,
-       &quot;statusMessage&quot;: ..,
+   &quot;meta&quot;: {
+       ...
    },
    &quot;links&quot;: {
        ...
@@ -589,9 +585,8 @@ OPTIONS  /datasets/:id
 <h3 id="delete">DELETE</h3>
 <p>Si hubo error/es incluir objeto "error" como en GET.</p>
 <pre><code class="json">{
-    &quot;meta&quot;: {
-       &quot;statusCode&quot;: ...,
-       &quot;statusMessage&quot;: ..,
+   &quot;meta&quot;: {
+       ...
    },
    &quot;links&quot;: {
        ...
@@ -606,9 +601,8 @@ OPTIONS  /datasets/:id
 <h3 id="options">OPTIONS</h3>
 <p>Si hubo error/es incluir objeto "error" como en GET.</p>
 <pre><code class="json">{
-    &quot;meta&quot;: {
-       &quot;statusCode&quot;: ...,
-       &quot;statusMessage&quot;: ..,
+   &quot;meta&quot;: {
+       ...
    },
    &quot;methods&quot;: [
        {
