@@ -2,7 +2,7 @@
 
 # Alcance
 
-![Alcance](http://i.imgur.com/Fwwob3I.png)
+![Alcance](http://i.imgur.com/X2qos0b.png)
 
 ## Objetivo
 Hacer la lógica de la subida de archivos, avanzar con los modelos faltantes y la UI del Admin, y hacer funcional gran parte de lo ya prototipado.
