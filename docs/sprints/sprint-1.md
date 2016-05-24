@@ -403,10 +403,7 @@ Si hubo error/es incluir objeto "error" como en GET.
                ...
            }
        },
-   ],
-   "links": {
-       ...
-   }
+   ]
 }
 ```
 
