@@ -124,22 +124,31 @@
                 <li class="toctree-l3"><a href="#prioridades">Prioridades</a></li>
                 
             
+                <li class="toctree-l3"><a href="#endpoints">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#tags">Tags</a></li>
+                
+                    <li><a class="toctree-l4" href="#updatefrequencies">UpdateFrequencies</a></li>
+                
+                    <li><a class="toctree-l4" href="#configs">Configs</a></li>
+                
+            
                 <li class="toctree-l3"><a href="#campos-faltantes">Campos Faltantes</a></li>
                 
-                    <li><a class="toctree-l4" href="#category">Category</a></li>
+                    <li><a class="toctree-l4" href="#categories">Categories</a></li>
                 
-                    <li><a class="toctree-l4" href="#file">File</a></li>
+                    <li><a class="toctree-l4" href="#files">Files</a></li>
                 
-                    <li><a class="toctree-l4" href="#dataset">Dataset</a></li>
+                    <li><a class="toctree-l4" href="#datasets">Datasets</a></li>
                 
             
                 <li class="toctree-l3"><a href="#modelos">Modelos</a></li>
                 
-                    <li><a class="toctree-l4" href="#tags_1">Tags</a></li>
+                    <li><a class="toctree-l4" href="#tags_2">Tags</a></li>
                 
-                    <li><a class="toctree-l4" href="#updatefrequency">UpdateFrequency</a></li>
+                    <li><a class="toctree-l4" href="#updatefrequencies_1">UpdateFrequencies</a></li>
                 
-                    <li><a class="toctree-l4" href="#config">Config</a></li>
+                    <li><a class="toctree-l4" href="#configs_1">Configs</a></li>
                 
             
             </ul>
@@ -244,23 +253,23 @@
 <li>Corregir spec de Users y Datasets</li>
 <li>Desarrollar subida de archivos</li>
 <li>Desarrollar método OPTIONS</li>
-<li>Crear modelo y rutas de Tags, UpdateFrequency y Config</li>
-<li>Crear seeds de Tags, Update Frequency y Config</li>
-<li>Agregar los campos faltantes a los modelos File, Dataset y Category:<ul>
-<li>Owner (usuario responsable) a File y Dataset.</li>
-<li>Update Frequency a File.</li>
-<li>Tags a Dataset.</li>
-<li>Active a Category.</li>
+<li>Crear modelo y rutas de Tags, UpdateFrequencies y Configs</li>
+<li>Crear seeds de Tags, UpdateFrequencies y Configs</li>
+<li>Agregar los campos faltantes a los modelos Files, Datasets y Categories:<ul>
+<li>Owner (usuario responsable) a Files y Datasets.</li>
+<li>UpdateFrequencies a Files.</li>
+<li>Tags a Datasets.</li>
+<li>Active a Categories.</li>
 </ul>
 </li>
 <li>Agregar validaciones a los campos de los modelos</li>
-<li>Configurar sails-permissions</li>
+<li>Configsurar sails-permissions</li>
 <li>Correr tests de Dredd</li>
 </ol>
 <h2 id="admin">Admin</h2>
 <ol>
 <li>CRUD de Categories (funcional):<ul>
-<li>Agregando el campo fantante Active</li>
+<li>Agregando el campo faltante Active</li>
 <li>Con posiblidad de activar y desactivar categorías (ver documento funcional para una descripción detallada del behavior)</li>
 </ul>
 </li>
@@ -268,10 +277,10 @@
 <li>CRUD de Databases (funcional)</li>
 <li>CRUD de Statuses (funcional)</li>
 <li>CRUD de Filetypes (funcional)</li>
-<li>Agregar los campos faltantes a la UI del CRUD de File y Dataset</li>
-<li>UI de CRUD de UpdateFrequency</li>
+<li>Agregar los campos faltantes a la UI del CRUD de Files y Datasets</li>
+<li>UI de CRUD de UpdateFrequencies</li>
 <li>UI de CRUD de Tags</li>
-<li>UI de Config</li>
+<li>UI de Configs</li>
 </ol>
 <h1 id="prioridades">Prioridades</h1>
 <ol>
@@ -279,8 +288,72 @@
 <li>CRUD de Categories y Organizations</li>
 <li>Método OPTIONS</li>
 </ol>
+<h1 id="endpoints">Endpoints</h1>
+<h2 id="tags">Tags</h2>
+<pre><code>GET      /tags
+POST     /tags
+OPTIONS  /tags
+
+GET      /tags/first
+OPTIONS  /tags/first
+
+GET      /tags/last
+OPTIONS  /tags/last
+
+GET      /tags/count
+OPTIONS  /tags/count
+
+GET      /tags/:id
+PATCH    /tags/:id
+DELETE   /tags/:id
+HEAD     /tags/:id
+OPTIONS  /tags/:id
+</code></pre>
+
+<h2 id="updatefrequencies">UpdateFrequencies</h2>
+<pre><code>GET      /updatefrequencies
+POST     /updatefrequencies
+OPTIONS  /updatefrequencies
+
+GET      /updatefrequencies/first
+OPTIONS  /updatefrequencies/first
+
+GET      /updatefrequencies/last
+OPTIONS  /updatefrequencies/last
+
+GET      /updatefrequencies/count
+OPTIONS  /updatefrequencies/count
+
+GET      /updatefrequencies/:id
+PATCH    /updatefrequencies/:id
+DELETE   /updatefrequencies/:id
+HEAD     /updatefrequencies/:id
+OPTIONS  /updatefrequencies/:id
+</code></pre>
+
+<h2 id="configs">Configs</h2>
+<pre><code>GET      /configs
+POST     /configs
+OPTIONS  /configs
+
+GET      /configs/first
+OPTIONS  /configs/first
+
+GET      /configs/last
+OPTIONS  /configs/last
+
+GET      /configs/count
+OPTIONS  /configs/count
+
+GET      /configs/:id
+PATCH    /configs/:id
+DELETE   /configs/:id
+HEAD     /configs/:id
+OPTIONS  /configs/:id
+</code></pre>
+
 <h1 id="campos-faltantes">Campos Faltantes</h1>
-<h2 id="category">Category</h2>
+<h2 id="categories">Categories</h2>
 <ul>
 <li>
 <p><strong>active:</strong></p>
@@ -290,7 +363,7 @@
 <p><em>Default:</em> false</p>
 </li>
 </ul>
-<h2 id="file">File</h2>
+<h2 id="files">Files</h2>
 <ul>
 <li>
 <p><strong>owner:</strong></p>
@@ -303,14 +376,14 @@
 <hr />
 <ul>
 <li>
-<p><strong>updateFrequency:</strong></p>
+<p><strong>UpdateFrequencies:</strong></p>
 <p>La frecuencia en que se debe actualizar el archivo. Es una clave foránea.</p>
 <p><em>Tipo:</em> string</p>
 <p><em>Requerido:</em> sí</p>
 <p><em>Max:</em> 15 carácteres</p>
 </li>
 </ul>
-<h2 id="dataset">Dataset</h2>
+<h2 id="datasets">Datasets</h2>
 <ul>
 <li>
 <p><strong>owner:</strong></p>
@@ -320,10 +393,10 @@
 <p><em>Max:</em> 15 carácteres</p>
 </li>
 </ul>
-<h3 id="tags">Tags</h3>
+<h3 id="tags_1">Tags</h3>
 <p>Es una relación muchos a muchos, por lo que se necesitará una tabla intermedia (creada automáticamente por Waterline).</p>
 <h1 id="modelos">Modelos</h1>
-<h2 id="tags_1">Tags</h2>
+<h2 id="tags_2">Tags</h2>
 <ul>
 <li>
 <p><strong>id</strong></p>
@@ -342,7 +415,7 @@
 <p><em>Max:</em> 100 carácteres</p>
 </li>
 </ul>
-<h2 id="updatefrequency">UpdateFrequency</h2>
+<h2 id="updatefrequencies_1">UpdateFrequencies</h2>
 <ul>
 <li>
 <p><strong>id</strong></p>
@@ -361,7 +434,7 @@
 <p><em>Max:</em> 100 carácteres</p>
 </li>
 </ul>
-<h2 id="config">Config</h2>
+<h2 id="configs_1">Configs</h2>
 <ul>
 <li>
 <p><strong>id</strong></p>
