@@ -20,29 +20,29 @@ Hacer la lógica de la subida de archivos, avanzar con los modelos faltantes y l
 2. Corregir spec de Users y Datasets
 3. Desarrollar subida de archivos
 4. Desarrollar método OPTIONS
-5. Crear modelo y rutas de Tags, UpdateFrequency y Config
-6. Crear seeds de Tags, Update Frequency y Config
-7. Agregar los campos faltantes a los modelos File, Dataset y Category:
-    - Owner (usuario responsable) a File y Dataset.
-    - Update Frequency a File.
-    - Tags a Dataset.
-    - Active a Category.
+5. Crear modelo y rutas de Tags, UpdateFrequencies y Configs
+6. Crear seeds de Tags, UpdateFrequencies y Configs
+7. Agregar los campos faltantes a los modelos Files, Datasets y Categories:
+    - Owner (usuario responsable) a Files y Datasets.
+    - UpdateFrequencies a Files.
+    - Tags a Datasets.
+    - Active a Categories.
 8. Agregar validaciones a los campos de los modelos
-9. Configurar sails-permissions
+9. Configsurar sails-permissions
 10. Correr tests de Dredd
 
 ## Admin
 1. CRUD de Categories (funcional):
-    - Agregando el campo fantante Active
+    - Agregando el campo faltante Active
     - Con posiblidad de activar y desactivar categorías (ver documento funcional para una descripción detallada del behavior)
 2. CRUD de Organizations (funcional)
 3. CRUD de Databases (funcional)
 4. CRUD de Statuses (funcional)
 5. CRUD de Filetypes (funcional)
-5. Agregar los campos faltantes a la UI del CRUD de File y Dataset
-6. UI de CRUD de UpdateFrequency
+5. Agregar los campos faltantes a la UI del CRUD de Files y Datasets
+6. UI de CRUD de UpdateFrequencies
 7. UI de CRUD de Tags
-8. UI de Config
+8. UI de Configs
 
 # Prioridades
 1. Subida de archivos
@@ -50,9 +50,77 @@ Hacer la lógica de la subida de archivos, avanzar con los modelos faltantes y l
 3. Método OPTIONS
 
 
+# Endpoints
+
+## Tags
+```
+GET      /tags
+POST     /tags
+OPTIONS  /tags
+
+GET      /tags/first
+OPTIONS  /tags/first
+
+GET      /tags/last
+OPTIONS  /tags/last
+
+GET      /tags/count
+OPTIONS  /tags/count
+
+GET      /tags/:id
+PATCH    /tags/:id
+DELETE   /tags/:id
+HEAD     /tags/:id
+OPTIONS  /tags/:id
+```
+
+## UpdateFrequencies
+```
+GET      /updatefrequencies
+POST     /updatefrequencies
+OPTIONS  /updatefrequencies
+
+GET      /updatefrequencies/first
+OPTIONS  /updatefrequencies/first
+
+GET      /updatefrequencies/last
+OPTIONS  /updatefrequencies/last
+
+GET      /updatefrequencies/count
+OPTIONS  /updatefrequencies/count
+
+GET      /updatefrequencies/:id
+PATCH    /updatefrequencies/:id
+DELETE   /updatefrequencies/:id
+HEAD     /updatefrequencies/:id
+OPTIONS  /updatefrequencies/:id
+```
+
+## Configs
+```
+GET      /configs
+POST     /configs
+OPTIONS  /configs
+
+GET      /configs/first
+OPTIONS  /configs/first
+
+GET      /configs/last
+OPTIONS  /configs/last
+
+GET      /configs/count
+OPTIONS  /configs/count
+
+GET      /configs/:id
+PATCH    /configs/:id
+DELETE   /configs/:id
+HEAD     /configs/:id
+OPTIONS  /configs/:id
+```
+
 # Campos Faltantes
 
-## Category
+## Categories
 
 - **active:**
 
@@ -65,7 +133,7 @@ Hacer la lógica de la subida de archivos, avanzar con los modelos faltantes y l
     *Default:* false
 
 
-## File
+## Files
 
 - **owner:**
 
@@ -79,7 +147,7 @@ Hacer la lógica de la subida de archivos, avanzar con los modelos faltantes y l
 
 ---
 
-- **updateFrequency:**
+- **UpdateFrequencies:**
 
     La frecuencia en que se debe actualizar el archivo. Es una clave foránea.
 
@@ -90,7 +158,7 @@ Hacer la lógica de la subida de archivos, avanzar con los modelos faltantes y l
     *Max:* 15 carácteres
 
 
-## Dataset
+## Datasets
 
 - **owner:**
 
@@ -133,7 +201,7 @@ Es una relación muchos a muchos, por lo que se necesitará una tabla intermedia
     *Max:* 100 carácteres
 
 
-## UpdateFrequency
+## UpdateFrequencies
 
 - **id**
 
@@ -156,7 +224,7 @@ Es una relación muchos a muchos, por lo que se necesitará una tabla intermedia
     *Max:* 100 carácteres
 
 
-## Config
+## Configs
 
 - **id**
 
