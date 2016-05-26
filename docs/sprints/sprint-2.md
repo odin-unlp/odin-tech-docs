@@ -292,7 +292,7 @@ Es una relación muchos a muchos, por lo que se necesitará una tabla intermedia
 
 - **updatedBy**
 
-    El ID del usuario que actualizó la configuración.
+    El ID del usuario que actualizó por última vez el `value` de la configuración.
 
     *Tipo:* string
 
