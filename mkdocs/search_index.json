@@ -587,12 +587,12 @@
         }, 
         {
             "location": "/links/frontend/", 
-            "text": "SDK\n\n\n\n\n\n\nAdminLTE\n\n\n\n\nFree Premium Admin control Panel Theme That Is Based On Bootstrap 3.x.\n\n\n\n\n\n\n\n\nAngular-AdminLTE\n\n\n\n\nAngularjsApp Implementation on top of renowned Admin-LTE theme.\n\n\n\n\n\n\n\n\nsails.io.js\n\n\n\n\nBrowser SDK for communicating w/ Sails via sockets.\nThe sails.io.js client comes automatically installed in new Sails projects, but there is nothing project-specific about the client SDK. You can just as easily copy and paste it yourself, get it from Bower, or just link a script tag directly to a hosted CDN.", 
+            "text": "SDK\n\n\n\n\n\n\nAdminLTE\n\n\n\n\nFree Premium Admin control Panel Theme That Is Based On Bootstrap 3.x.\n\n\n\n\n\n\n\n\nAngular-AdminLTE\n\n\n\n\nAngularjsApp Implementation on top of renowned Admin-LTE theme.\n\n\n\n\n\n\n\n\nsails.io.js\n\n\n\n\nBrowser SDK for communicating w/ Sails via sockets.\nThe sails.io.js client comes automatically installed in new Sails projects, but there is nothing project-specific about the client SDK. You can just as easily copy and paste it yourself, get it from Bower, or just link a script tag directly to a hosted CDN.\n\n\n\n\n\n\n\n\nangular-resource-sails\n\n\n\n\nAngular service for managing Sails socket.io connections", 
             "title": "Frontend"
         }, 
         {
             "location": "/links/frontend/#sdk", 
-            "text": "AdminLTE   Free Premium Admin control Panel Theme That Is Based On Bootstrap 3.x.     Angular-AdminLTE   AngularjsApp Implementation on top of renowned Admin-LTE theme.     sails.io.js   Browser SDK for communicating w/ Sails via sockets.\nThe sails.io.js client comes automatically installed in new Sails projects, but there is nothing project-specific about the client SDK. You can just as easily copy and paste it yourself, get it from Bower, or just link a script tag directly to a hosted CDN.", 
+            "text": "AdminLTE   Free Premium Admin control Panel Theme That Is Based On Bootstrap 3.x.     Angular-AdminLTE   AngularjsApp Implementation on top of renowned Admin-LTE theme.     sails.io.js   Browser SDK for communicating w/ Sails via sockets.\nThe sails.io.js client comes automatically installed in new Sails projects, but there is nothing project-specific about the client SDK. You can just as easily copy and paste it yourself, get it from Bower, or just link a script tag directly to a hosted CDN.     angular-resource-sails   Angular service for managing Sails socket.io connections", 
             "title": "SDK"
         }
     ]
