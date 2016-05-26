@@ -1011,7 +1011,7 @@ Si hubo error/es incluir objeto "error" como en GET.
 
 ---
 
-- **visibility**
+- **visible**
 
     *Tipo:* boolean
 
