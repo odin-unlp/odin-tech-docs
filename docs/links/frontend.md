@@ -9,3 +9,6 @@
 - [sails.io.js](https://github.com/balderdashy/sails.io.js)
 > Browser SDK for communicating w/ Sails via sockets.
 > The sails.io.js client comes automatically installed in new Sails projects, but there is nothing project-specific about the client SDK. You can just as easily copy and paste it yourself, get it from Bower, or just link a script tag directly to a hosted CDN.
+
+- [angular-resource-sails](https://github.com/angular-resource-sails/angular-resource-sails)
+> Angular service for managing Sails socket.io connections
