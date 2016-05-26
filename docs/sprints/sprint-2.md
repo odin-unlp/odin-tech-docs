@@ -147,7 +147,7 @@ OPTIONS  /configs/:id
 
 ---
 
-- **UpdateFrequencies:**
+- **updateFrequency:**
 
     La frecuencia en que se debe actualizar el archivo. Es una clave foránea.
 
