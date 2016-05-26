@@ -28,7 +28,7 @@ Hacer la lógica de la subida de archivos, avanzar con los modelos faltantes y l
     - Tags a Datasets.
     - Active a Categories.
 8. Agregar validaciones a los campos de los modelos
-9. Configsurar sails-permissions
+9. Configurar sails-permissions
 10. Correr tests de Dredd
 
 ## Admin
