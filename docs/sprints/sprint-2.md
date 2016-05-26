@@ -200,7 +200,8 @@ Es una relación muchos a muchos, por lo que se necesitará una tabla intermedia
 
     *Max:* 100 carácteres
 
----
+
+### Claves Foráneas
 
 - **createdBy**
 
@@ -286,14 +287,13 @@ Es una relación muchos a muchos, por lo que se necesitará una tabla intermedia
 
     *Max:* 250 carácteres
 
----
+
+### Claves Foráneas
 
 - **updatedBy**
 
     El ID del usuario que creó la etiqueta.
 
     *Tipo:* string
-
-    *Requerido:* sí
 
     *Max:* 15 carácteres
