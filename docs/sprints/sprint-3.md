@@ -19,7 +19,7 @@ Hacer la lógica del parseo y guardado de datos y terminar los CRUD que entran e
 4. Desarrollar el parseo y guardado de datos en la BBDD no relacional
 5. Desarrollar el listado de response codes y sus messages
 6. Desarrollar el empaquetado y endpoint para la descarga de datasets:
-    debe incluirse la URL de descarga dentro de la sección Links de la response a `GET /datasets`, y dentro de la response a `OPTIONS /datasets`.
+    debe incluirse la URL de descarga dentro de la sección `links` de la response a `GET /datasets`, y dentro de la response a `OPTIONS /datasets`.
 
 
 ## Admin
