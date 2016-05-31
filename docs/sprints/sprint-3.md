@@ -26,7 +26,6 @@ Hacer la lógica del parseo y guardado de datos y terminar los CRUD que entran e
 
 1. UI de subida de archivos (funcional):
     Debe chequear el mimetype (no la extensión) del archivo que se sube, y sólo permitir la subida de los siguientes tipos de archivos:
-    ```
     - csv
     - html
     - ics
@@ -37,7 +36,6 @@ Hacer la lógica del parseo y guardado de datos y terminar los CRUD que entran e
     - xls
     - xml
     - zip
-    ```
 2. CRUD de UpdateFrequencies (funcional)
 3. CRUD de Tags (funcional)
 4. CRUD de Filetypes (funcional)
