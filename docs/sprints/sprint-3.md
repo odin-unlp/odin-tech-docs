@@ -31,7 +31,6 @@ Hacer la lógica del parseo y guardado de datos y terminar los CRUD que entran e
     - ics
     - pdf
     - rar
-    - rss
     - shp
     - xls
     - xml
