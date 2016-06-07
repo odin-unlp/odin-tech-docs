@@ -46,6 +46,7 @@ Hacer el log de acciones, refactorear el código y arreglar los errores y detall
 2. Borrados lógicos
 3. Includes parciales
 4. Resolución de problemas de UI
+5. Adecuar CRUD de Archivos
 
 
 # Endpoints
