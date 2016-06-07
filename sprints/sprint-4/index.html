@@ -8,7 +8,7 @@
   
   
   
-  <title>Sprint 3 - ODIN</title>
+  <title>Sprint 4 - ODIN</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Sprint 3";
-    var mkdocs_page_input_path = "sprints/sprint-3.md";
-    var mkdocs_page_url = "/sprints/sprint-3/";
+    var mkdocs_page_name = "Sprint 4";
+    var mkdocs_page_input_path = "sprints/sprint-4.md";
+    var mkdocs_page_url = "/sprints/sprint-4/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -109,8 +109,15 @@
 
         
             
+    <li class="toctree-l1 ">
+        <a class="" href="../sprint-3/">Sprint 3</a>
+        
+    </li>
+
+        
+            
     <li class="toctree-l1 current">
-        <a class="current" href="./">Sprint 3</a>
+        <a class="current" href="./">Sprint 4</a>
         
             <ul>
             
@@ -125,25 +132,21 @@
                 
                     <li><a class="toctree-l4" href="#admin">Admin</a></li>
                 
-                    <li><a class="toctree-l4" href="#frontend">Frontend</a></li>
-                
             
                 <li class="toctree-l3"><a href="#prioridades">Prioridades</a></li>
                 
             
                 <li class="toctree-l3"><a href="#endpoints">Endpoints</a></li>
                 
-                    <li><a class="toctree-l4" href="#datasets">Datasets</a></li>
+                    <li><a class="toctree-l4" href="#logs">Logs</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#modelos">Modelos</a></li>
+                
+                    <li><a class="toctree-l4" href="#logs_1">Logs</a></li>
                 
             
             </ul>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../sprint-4/">Sprint 4</a>
         
     </li>
 
@@ -214,7 +217,7 @@
         
       
     
-    <li>Sprint 3</li>
+    <li>Sprint 4</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -228,60 +231,117 @@
           <div role="main">
             <div class="section">
               
-                <p><strong>Duración:</strong> Miercoles 01/06/16 - Martes 07/06/16</p>
+                <p><strong>Duración:</strong> Miercoles 8/06/16 - Martes 14/06/16</p>
 <h1 id="alcance">Alcance</h1>
-<p><img alt="Alcance" src="http://i.imgur.com/6jhR8my.png" /></p>
+<p>Sprint de refactoring + cleanup + polishing.</p>
 <h2 id="objetivo">Objetivo</h2>
-<p>Hacer la lógica del parseo y guardado de datos y terminar los CRUD que entran en la release Alpha.</p>
+<p>Hacer el log de acciones, refactorear el código y arreglar los errores y detalles de la UI.</p>
 <h1 id="tareas">Tareas</h1>
 <h2 id="api">API</h2>
 <ol>
-<li>Escribir spec de Datasets</li>
-<li>Desarrollar el ordenamiento de los archivos subidos en carpetas (por dataset)</li>
-<li>Desarrollar la validación de los archivos subidos</li>
-<li>Desarrollar la codificación por defecto de los archivos de texto</li>
-<li>Desarrollar el parseo y guardado de datos en la BBDD no relacional</li>
-<li>Desarrollar el listado de response codes y sus messages</li>
-<li>Desarrollar el empaquetado y endpoint para la descarga de datasets:
-    debe incluirse la URL de descarga dentro de la sección <code>links</code> de la response a <code>GET /datasets</code>, y dentro de la response a <code>OPTIONS /datasets</code>.</li>
+<li>Hacer el modelo, seeds y controller del log de acciones.</li>
+<li>Hacer async la creación del zip de descarga de dataset.</li>
+<li>Hacer los borrados lógicos.</li>
+<li>Desarrollar includes granulares (ej. include=tags.name).</li>
+<li>Refactorear <code>.negotiate</code> para dar soporte a todos los tipos de error definidos en <code>config/errors.js</code>, y cambiarlo a <code>.error</code>.</li>
+<li>Implementar la recepción de múltiples valores para un parámetro, separados por coma:
+    siempre y cuando se el modelo lo admita (es decir, haya una relacion de uno a muchos o de muchos a muchos).</li>
+<li>Extractar a un servicio y comentar la lógica de la subida de archivos.</li>
+<li>Separar la lógica del constructor de <code>ResponseGET</code> en métodos y comentarlos.</li>
+<li>Refactorear la búsqueda para que no busque en todos los campos por defecto, sino sólo los que estén en una whitelist.</li>
+<li>Poner el campo fullName en la response de <code>GET /users</code> y <code>GET /users/:id</code>.</li>
+<li>En las responses GET de un ítem en particular, agregar en <code>links</code> las relaciones de primer grado:
+    por ejemplo, <code>/datasets/ag56fdf/tags</code>.</li>
+<li>Separar las responses correctas (2xx) definidas en <code>config/errors.js</code> a otro archivo.</li>
+<li>Refactorear <code>appUrl</code>.</li>
+<li>Implementar <code>206 Partial Content</code> para el contenido paginado.</li>
+<li>Implementar <code>204 No Content</code> para las responses sin contenido.</li>
+<li>Implementar un chequeo más robusto de objetos vacíos.</li>
 </ol>
 <h2 id="admin">Admin</h2>
 <ol>
-<li>UI de subida de archivos (funcional):
-    debe chequear el mimetype (no la extensión) del archivo que se sube, y sólo permitir la subida de los siguientes tipos de archivos:<ul>
-<li>csv</li>
-<li>html</li>
-<li>ics</li>
-<li>pdf</li>
-<li>rar</li>
-<li>shp</li>
-<li>xls</li>
-<li>xml</li>
-<li>zip</li>
-</ul>
-</li>
-<li>CRUD de UpdateFrequencies (funcional)</li>
-<li>CRUD de Tags (funcional)</li>
-<li>CRUD de Filetypes (funcional)</li>
-</ol>
-<h2 id="frontend">Frontend</h2>
-<ol>
-<li>Landing page (funcional)</li>
-<li>Listado datasets (funcional)</li>
-<li>Ver dataset (funcional)</li>
-<li>Ver recursos asociados (UI + funcional)</li>
+<li>Solucionar los ítems marcados como "Crítico" en el Trello de testing.</li>
+<li>Solucionar los ítems marcados como "Error" en el Trello de testing.</li>
+<li>Solucionar los ítems marcados como "Mejora" en el Trello de testing.</li>
+<li>Agregar al dashboard el contenido del log de acciones, las más recientes primero (funcional):
+    mostrar las últimas 500 acciones, paginadas de a 20.</li>
+<li>Quitar el CRUD de databases del Admin (no es necesario que esté expuesto en el Admin).</li>
 </ol>
 <h1 id="prioridades">Prioridades</h1>
 <ol>
-<li>Parseo y guardado de datos</li>
-<li>UI de subida de archivos (funcional)</li>
-<li>Validación de archivos subidos</li>
-<li>Listado de response codes y messages</li>
+<li>Async zips</li>
+<li>Borrados lógicos</li>
+<li>Includes parciales</li>
+<li>Resolución de problemas de UI</li>
 </ol>
 <h1 id="endpoints">Endpoints</h1>
-<h2 id="datasets">Datasets</h2>
-<pre><code>GET  /datasets/:id/download
+<h2 id="logs">Logs</h2>
+<pre><code>GET      /logs
+POST     /logs
+OPTIONS  /logs
+
+GET      /logs/first
+OPTIONS  /logs/first
+
+GET      /logs/last
+OPTIONS  /logs/last
+
+GET      /logs/count
+OPTIONS  /logs/count
+
+GET      /logs/:id
+PATCH    /logs/:id
+DELETE   /logs/:id
+HEAD     /logs/:id
+OPTIONS  /logs/:id
 </code></pre>
+
+<h1 id="modelos">Modelos</h1>
+<h2 id="logs_1">Logs</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>action</strong></p>
+<p><em>Tipo:</em> enum</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Valores posibles:</em> 'create', 'update', 'delete'</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p>*<em>target</em></p>
+<p><em>Tipo:</em> enum</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Valores posibles:</em> 'category', 'dataset', 'fileType', 'file', 'organization', 'status', 'tag', 'updateFrequency', 'user'</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>user</strong></p>
+<p>El ID del usuario que actualizó realizó la acción.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
               
             </div>
           </div>
@@ -289,10 +349,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../sprint-4/" class="btn btn-neutral float-right" title="Sprint 4">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../references/status-codes/" class="btn btn-neutral float-right" title="HTTP Status Codes">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../sprint-2/" class="btn btn-neutral" title="Sprint 2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sprint-3/" class="btn btn-neutral" title="Sprint 3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -320,10 +380,10 @@
           <a href="https://github.com/gcba-odin/odin-tech-docs" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../sprint-2/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../sprint-3/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../sprint-4/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../references/status-codes/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
