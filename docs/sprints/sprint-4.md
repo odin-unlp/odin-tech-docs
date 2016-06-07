@@ -34,9 +34,10 @@ Hacer el log de acciones, refactorear el código y arreglar los errores y detall
 1. Solucionar los ítems marcados como "Crítico" en el Trello de testing.
 2. Solucionar los ítems marcados como "Error" en el Trello de testing.
 3. Solucionar los ítems marcados como "Mejora" en el Trello de testing.
-4. Agregar al dashboard el contenido del log de acciones, las más recientes primero (funcional):
+4. Adecuar la interfaz del CRUD de Archivos a lo especificado por los documentos funcionales.
+5. Agregar al dashboard el contenido del log de acciones, las más recientes primero (funcional):
     mostrar las últimas 500 acciones, paginadas de a 20.
-5. Quitar el CRUD de databases del Admin (no es necesario que esté expuesto en el Admin).
+6. Quitar el CRUD de databases del Admin (no es necesario que esté expuesto en el Admin).
 
 
 # Prioridades
