@@ -99,7 +99,7 @@ OPTIONS  /logs/:id
 
 ---
 
-- **target*
+- **target**
 
     *Tipo:* enum
 
