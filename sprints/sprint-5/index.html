@@ -8,7 +8,7 @@
   
   
   
-  <title>Sprint 2 - ODIN</title>
+  <title>Sprint 5 - ODIN</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Sprint 2";
-    var mkdocs_page_input_path = "sprints/sprint-2.md";
-    var mkdocs_page_url = "/sprints/sprint-2/";
+    var mkdocs_page_name = "Sprint 5";
+    var mkdocs_page_input_path = "sprints/sprint-5.md";
+    var mkdocs_page_url = "/sprints/sprint-5/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -102,56 +102,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Sprint 2</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#alcance">Alcance</a></li>
-                
-                    <li><a class="toctree-l4" href="#objetivo">Objetivo</a></li>
-                
-                    <li><a class="toctree-l4" href="#no-entra">No Entra</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#tareas">Tareas</a></li>
-                
-                    <li><a class="toctree-l4" href="#api">API</a></li>
-                
-                    <li><a class="toctree-l4" href="#admin">Admin</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#prioridades">Prioridades</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#endpoints">Endpoints</a></li>
-                
-                    <li><a class="toctree-l4" href="#tags">Tags</a></li>
-                
-                    <li><a class="toctree-l4" href="#updatefrequencies">UpdateFrequencies</a></li>
-                
-                    <li><a class="toctree-l4" href="#configs">Configs</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#campos-faltantes">Campos Faltantes</a></li>
-                
-                    <li><a class="toctree-l4" href="#categories">Categories</a></li>
-                
-                    <li><a class="toctree-l4" href="#files">Files</a></li>
-                
-                    <li><a class="toctree-l4" href="#datasets">Datasets</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#modelos">Modelos</a></li>
-                
-                    <li><a class="toctree-l4" href="#tags_2">Tags</a></li>
-                
-                    <li><a class="toctree-l4" href="#updatefrequencies_1">UpdateFrequencies</a></li>
-                
-                    <li><a class="toctree-l4" href="#configs_1">Configs</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../sprint-2/">Sprint 2</a>
         
     </li>
 
@@ -171,8 +123,39 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../sprint-5/">Sprint 5</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Sprint 5</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#alcance">Alcance</a></li>
+                
+                    <li><a class="toctree-l4" href="#objetivo">Objetivo</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#tareas">Tareas</a></li>
+                
+                    <li><a class="toctree-l4" href="#api">API</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#prioridades">Prioridades</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#endpoints">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#charts">Charts</a></li>
+                
+                    <li><a class="toctree-l4" href="#maps">Maps</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#modelos">Modelos</a></li>
+                
+                    <li><a class="toctree-l4" href="#charts_1">Charts</a></li>
+                
+                    <li><a class="toctree-l4" href="#maps_1">Maps</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -243,7 +226,7 @@
         
       
     
-    <li>Sprint 2</li>
+    <li>Sprint 5</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -257,167 +240,71 @@
           <div role="main">
             <div class="section">
               
-                <p><strong>Duración:</strong> Jueves 26/05/16 - Martes 31/05/16</p>
+                <p><strong>Duración:</strong> Miercoles 21/06/16 - Martes 28/06/16</p>
 <h1 id="alcance">Alcance</h1>
-<p><img alt="Alcance" src="http://i.imgur.com/X2qos0b.png" /></p>
+<p>Sprint de visualizaciones.</p>
 <h2 id="objetivo">Objetivo</h2>
-<p>Hacer la lógica de la subida de archivos, avanzar con los modelos faltantes y la UI del Admin, y hacer funcional gran parte de lo ya prototipado.</p>
-<p><em>Nota:</em> Este sprint contará con un día menos a causa del feriado del 25 de mayo.</p>
-<h2 id="no-entra">No Entra</h2>
-<ul>
-<li>UI de subida de archivos</li>
-</ul>
+<p>Hacer el CRUD de gráficos y mapas.</p>
 <h1 id="tareas">Tareas</h1>
 <h2 id="api">API</h2>
 <ol>
-<li>Escribir spec de Categories</li>
-<li>Corregir spec de Users y Datasets</li>
-<li>Desarrollar subida de archivos</li>
-<li>Desarrollar método OPTIONS</li>
-<li>Crear modelo y rutas de Tags, UpdateFrequencies y Configs</li>
-<li>Crear seeds de Tags, UpdateFrequencies y Configs</li>
-<li>Agregar los campos faltantes a los modelos Files, Datasets y Categories:<ul>
-<li>Owner (usuario responsable) a Files y Datasets.</li>
-<li>UpdateFrequencies a Files.</li>
-<li>Tags a Datasets.</li>
-<li>Active a Categories.</li>
-</ul>
-</li>
-<li>Agregar validaciones a los campos de los modelos</li>
-<li>Configurar sails-permissions</li>
-<li>Correr tests de Dredd</li>
-</ol>
-<h2 id="admin">Admin</h2>
-<ol>
-<li>CRUD de Categories (funcional):<ul>
-<li>Agregando el campo faltante Active</li>
-<li>Con posiblidad de activar y desactivar categorías (ver documento funcional para una descripción detallada del behavior)</li>
-</ul>
-</li>
-<li>CRUD de Organizations (funcional)</li>
-<li>CRUD de Databases (funcional)</li>
-<li>CRUD de Statuses (funcional)</li>
-<li>CRUD de Filetypes (funcional)</li>
-<li>Agregar los campos faltantes a la UI del CRUD de Files y Datasets</li>
-<li>UI de CRUD de UpdateFrequencies</li>
-<li>UI de CRUD de Tags</li>
-<li>UI de Configs</li>
+<li>Hacer el spec, modelo, seeds, routes y controller de gráficos (charts).</li>
+<li>Hacer el spec, modelo, seeds, routes y controller de mapas (maps).</li>
+<li>Exponer el contenido de los archivos subidos (CSVs) mediante la API</li>
+<li>Implementar filtrados condicionales</li>
+<li>Implementar respuestas parciales granulares</li>
+<li>Crear servicio de feeds RSS</li>
 </ol>
 <h1 id="prioridades">Prioridades</h1>
 <ol>
-<li>Subida de archivos</li>
-<li>CRUD de Categories y Organizations</li>
-<li>Método OPTIONS</li>
+<li>Modelos y seeds</li>
+<li>Exponer el contenido de los archivos subidos (CSVs) mediante la API</li>
 </ol>
 <h1 id="endpoints">Endpoints</h1>
-<h2 id="tags">Tags</h2>
-<pre><code>GET      /tags
-POST     /tags
-OPTIONS  /tags
+<h2 id="charts">Charts</h2>
+<pre><code>GET      /charts
+POST     /charts
+OPTIONS  /charts
 
-GET      /tags/first
-OPTIONS  /tags/first
+GET      /charts/first
+OPTIONS  /charts/first
 
-GET      /tags/last
-OPTIONS  /tags/last
+GET      /charts/last
+OPTIONS  /charts/last
 
-GET      /tags/count
-OPTIONS  /tags/count
+GET      /charts/count
+OPTIONS  /charts/count
 
-GET      /tags/:id
-PATCH    /tags/:id
-DELETE   /tags/:id
-HEAD     /tags/:id
-OPTIONS  /tags/:id
+GET      /charts/:id
+PATCH    /charts/:id
+DELETE   /charts/:id
+HEAD     /charts/:id
+OPTIONS  /charts/:id
 </code></pre>
 
-<h2 id="updatefrequencies">UpdateFrequencies</h2>
-<pre><code>GET      /updatefrequencies
-POST     /updatefrequencies
-OPTIONS  /updatefrequencies
+<h2 id="maps">Maps</h2>
+<pre><code>GET      /maps
+POST     /maps
+OPTIONS  /maps
 
-GET      /updatefrequencies/first
-OPTIONS  /updatefrequencies/first
+GET      /maps/first
+OPTIONS  /maps/first
 
-GET      /updatefrequencies/last
-OPTIONS  /updatefrequencies/last
+GET      /maps/last
+OPTIONS  /maps/last
 
-GET      /updatefrequencies/count
-OPTIONS  /updatefrequencies/count
+GET      /maps/count
+OPTIONS  /maps/count
 
-GET      /updatefrequencies/:id
-PATCH    /updatefrequencies/:id
-DELETE   /updatefrequencies/:id
-HEAD     /updatefrequencies/:id
-OPTIONS  /updatefrequencies/:id
+GET      /maps/:id
+PATCH    /maps/:id
+DELETE   /maps/:id
+HEAD     /maps/:id
+OPTIONS  /maps/:id
 </code></pre>
 
-<h2 id="configs">Configs</h2>
-<pre><code>GET      /configs
-POST     /configs
-OPTIONS  /configs
-
-GET      /configs/first
-OPTIONS  /configs/first
-
-GET      /configs/last
-OPTIONS  /configs/last
-
-GET      /configs/count
-OPTIONS  /configs/count
-
-GET      /configs/:id
-PATCH    /configs/:id
-DELETE   /configs/:id
-HEAD     /configs/:id
-OPTIONS  /configs/:id
-</code></pre>
-
-<h1 id="campos-faltantes">Campos Faltantes</h1>
-<h2 id="categories">Categories</h2>
-<ul>
-<li>
-<p><strong>active:</strong></p>
-<p>Si la categoría está activa o no.</p>
-<p><em>Tipo:</em> boolean</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Default:</em> false</p>
-</li>
-</ul>
-<h2 id="files">Files</h2>
-<ul>
-<li>
-<p><strong>owner:</strong></p>
-<p>Es el usuario responsable del archivo. Es una clave foránea.</p>
-<p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Max:</em> 15 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>updateFrequency:</strong></p>
-<p>La frecuencia en que se debe actualizar el archivo. Es una clave foránea.</p>
-<p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Max:</em> 15 carácteres</p>
-</li>
-</ul>
-<h2 id="datasets">Datasets</h2>
-<ul>
-<li>
-<p><strong>owner:</strong></p>
-<p>Es el usuario responsable del archivo. Es una clave foránea.</p>
-<p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Max:</em> 15 carácteres</p>
-</li>
-</ul>
-<h3 id="tags_1">Tags</h3>
-<p>Es una relación muchos a muchos, por lo que se necesitará una tabla intermedia (creada automáticamente por Waterline).</p>
 <h1 id="modelos">Modelos</h1>
-<h2 id="tags_2">Tags</h2>
+<h2 id="charts_1">Charts</h2>
 <ul>
 <li>
 <p><strong>id</strong></p>
@@ -433,46 +320,7 @@ OPTIONS  /configs/:id
 <p><strong>name</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Requerido:</em> sí</p>
-<p><em>Max:</em> 100 carácteres</p>
-</li>
-</ul>
-<h3 id="claves-foraneas">Claves Foráneas</h3>
-<ul>
-<li>
-<p><strong>createdBy</strong></p>
-<p>El ID del usuario que creó la etiqueta.</p>
-<p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Max:</em> 15 carácteres</p>
-</li>
-</ul>
-<h2 id="updatefrequencies_1">UpdateFrequencies</h2>
-<ul>
-<li>
-<p><strong>id</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Único:</em> sí</p>
-<p><em>Max:</em> 15 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>name</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Max:</em> 100 carácteres</p>
-</li>
-</ul>
-<h2 id="configs_1">Configs</h2>
-<ul>
-<li>
-<p><strong>id</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Único:</em> sí</p>
-<p><em>Max:</em> 15 carácteres</p>
+<p><em>Max:</em> 150 carácteres</p>
 </li>
 </ul>
 <hr />
@@ -480,42 +328,110 @@ OPTIONS  /configs/:id
 <li>
 <p><strong>description</strong></p>
 <p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Max:</em> 250 carácteres</p>
+<p><em>Max:</em> 350 carácteres</p>
 </li>
 </ul>
 <hr />
 <ul>
 <li>
-<p><strong>type</strong></p>
+<p><strong>notes</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>url</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>createdBy</strong></p>
+<p>El ID del usuario que creó el gráfico.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<h2 id="maps_1">Maps</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>description</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 350 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>notes</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>basemap</strong></p>
 <p><em>Tipo:</em> enum</p>
 <p><em>Requerido:</em> sí</p>
-<p><em>Valores posibles:</em> 'bool', 'string', 'int', 'float'</p>
+<p><em>Valores posibles:</em> 'roadmap', 'satellite', 'hybrid', 'terrain'</p>
 </li>
 </ul>
 <hr />
 <ul>
 <li>
-<p><strong>key</strong></p>
+<p><strong>url</strong></p>
 <p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Max:</em> 100 carácteres</p>
+<p><em>Max:</em> 500 carácteres</p>
 </li>
 </ul>
 <hr />
 <ul>
 <li>
-<p><strong>value</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 250 carácteres</p>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
 </li>
 </ul>
 <h3 id="claves-foraneas_1">Claves Foráneas</h3>
 <ul>
 <li>
-<p><strong>updatedBy</strong></p>
-<p>El ID del usuario que actualizó por última vez el <code>value</code> de la configuración.</p>
+<p><strong>createdBy</strong></p>
+<p>El ID del usuario que creó el map.</p>
 <p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
 <p><em>Max:</em> 15 carácteres</p>
 </li>
 </ul>
@@ -526,10 +442,10 @@ OPTIONS  /configs/:id
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../sprint-3/" class="btn btn-neutral float-right" title="Sprint 3">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../references/status-codes/" class="btn btn-neutral float-right" title="HTTP Status Codes">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../sprint-1/" class="btn btn-neutral" title="Sprint 1"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sprint-4/" class="btn btn-neutral" title="Sprint 4"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -557,10 +473,10 @@ OPTIONS  /configs/:id
           <a href="https://github.com/gcba-odin/odin-tech-docs" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../sprint-1/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../sprint-4/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../sprint-3/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../references/status-codes/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
