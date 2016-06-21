@@ -641,6 +641,76 @@
             "title": "Claves For\u00e1neas"
         }, 
         {
+            "location": "/sprints/sprint-5/", 
+            "text": "Duraci\u00f3n:\n Miercoles 21/06/16 - Martes 28/06/16\n\n\nAlcance\n\n\nSprint de visualizaciones.\n\n\nObjetivo\n\n\nHacer el CRUD de gr\u00e1ficos y mapas.\n\n\nTareas\n\n\nAPI\n\n\n\n\nHacer el spec, modelo, seeds, routes y controller de gr\u00e1ficos (charts).\n\n\nHacer el spec, modelo, seeds, routes y controller de mapas (maps).\n\n\nExponer el contenido de los archivos subidos (CSVs) mediante la API\n\n\nImplementar filtrados condicionales\n\n\nImplementar respuestas parciales granulares\n\n\nCrear servicio de feeds RSS\n\n\n\n\nPrioridades\n\n\n\n\nModelos y seeds\n\n\nExponer el contenido de los archivos subidos (CSVs) mediante la API\n\n\n\n\nEndpoints\n\n\nCharts\n\n\nGET      /charts\nPOST     /charts\nOPTIONS  /charts\n\nGET      /charts/first\nOPTIONS  /charts/first\n\nGET      /charts/last\nOPTIONS  /charts/last\n\nGET      /charts/count\nOPTIONS  /charts/count\n\nGET      /charts/:id\nPATCH    /charts/:id\nDELETE   /charts/:id\nHEAD     /charts/:id\nOPTIONS  /charts/:id\n\n\n\n\nMaps\n\n\nGET      /maps\nPOST     /maps\nOPTIONS  /maps\n\nGET      /maps/first\nOPTIONS  /maps/first\n\nGET      /maps/last\nOPTIONS  /maps/last\n\nGET      /maps/count\nOPTIONS  /maps/count\n\nGET      /maps/:id\nPATCH    /maps/:id\nDELETE   /maps/:id\nHEAD     /maps/:id\nOPTIONS  /maps/:id\n\n\n\n\nModelos\n\n\nCharts\n\n\n\n\n\n\nid\n\n\nTipo:\n string\n\n\nRequerido:\n s\u00ed\n\n\n\u00danico:\n s\u00ed\n\n\nMax:\n 15 car\u00e1cteres\n\n\n\n\n\n\n\n\n\n\n\n\nname\n\n\nTipo:\n string\n\n\nRequerido:\n s\u00ed\n\n\nMax:\n 150 car\u00e1cteres\n\n\n\n\n\n\n\n\n\n\n\n\ndescription\n\n\nTipo:\n string\n\n\nMax:\n 350 car\u00e1cteres\n\n\n\n\n\n\n\n\n\n\n\n\nnotes\n\n\nTipo:\n string\n\n\nMax:\n 500 car\u00e1cteres\n\n\n\n\n\n\n\n\n\n\n\n\nurl\n\n\nTipo:\n string\n\n\nMax:\n 500 car\u00e1cteres\n\n\n\n\n\n\n\n\n\n\n\n\ncreatedAt\n\n\nTipo:\n datetime\n\n\nDefault:\n fecha y hora actuales\n\n\n\n\n\n\nClaves For\u00e1neas\n\n\n\n\n\n\ncreatedBy\n\n\nEl ID del usuario que cre\u00f3 el gr\u00e1fico.\n\n\nTipo:\n string\n\n\nRequerido:\n s\u00ed\n\n\nMax:\n 15 car\u00e1cteres\n\n\n\n\n\n\nMaps\n\n\n\n\n\n\nid\n\n\nTipo:\n string\n\n\nRequerido:\n s\u00ed\n\n\n\u00danico:\n s\u00ed\n\n\nMax:\n 15 car\u00e1cteres\n\n\n\n\n\n\n\n\n\n\n\n\nname\n\n\nTipo:\n string\n\n\nRequerido:\n s\u00ed\n\n\nMax:\n 150 car\u00e1cteres\n\n\n\n\n\n\n\n\n\n\n\n\ndescription\n\n\nTipo:\n string\n\n\nMax:\n 350 car\u00e1cteres\n\n\n\n\n\n\n\n\n\n\n\n\nnotes\n\n\nTipo:\n string\n\n\nMax:\n 500 car\u00e1cteres\n\n\n\n\n\n\n\n\n\n\n\n\nbasemap\n\n\nTipo:\n enum\n\n\nRequerido:\n s\u00ed\n\n\nValores posibles:\n 'roadmap', 'satellite', 'hybrid', 'terrain'\n\n\n\n\n\n\n\n\n\n\n\n\nurl\n\n\nTipo:\n string\n\n\nMax:\n 500 car\u00e1cteres\n\n\n\n\n\n\n\n\n\n\n\n\ncreatedAt\n\n\nTipo:\n datetime\n\n\nDefault:\n fecha y hora actuales\n\n\n\n\n\n\nClaves For\u00e1neas\n\n\n\n\n\n\ncreatedBy\n\n\nEl ID del usuario que cre\u00f3 el map.\n\n\nTipo:\n string\n\n\nRequerido:\n s\u00ed\n\n\nMax:\n 15 car\u00e1cteres", 
+            "title": "Sprint 5"
+        }, 
+        {
+            "location": "/sprints/sprint-5/#alcance", 
+            "text": "Sprint de visualizaciones.", 
+            "title": "Alcance"
+        }, 
+        {
+            "location": "/sprints/sprint-5/#objetivo", 
+            "text": "Hacer el CRUD de gr\u00e1ficos y mapas.", 
+            "title": "Objetivo"
+        }, 
+        {
+            "location": "/sprints/sprint-5/#tareas", 
+            "text": "", 
+            "title": "Tareas"
+        }, 
+        {
+            "location": "/sprints/sprint-5/#api", 
+            "text": "Hacer el spec, modelo, seeds, routes y controller de gr\u00e1ficos (charts).  Hacer el spec, modelo, seeds, routes y controller de mapas (maps).  Exponer el contenido de los archivos subidos (CSVs) mediante la API  Implementar filtrados condicionales  Implementar respuestas parciales granulares  Crear servicio de feeds RSS", 
+            "title": "API"
+        }, 
+        {
+            "location": "/sprints/sprint-5/#prioridades", 
+            "text": "Modelos y seeds  Exponer el contenido de los archivos subidos (CSVs) mediante la API", 
+            "title": "Prioridades"
+        }, 
+        {
+            "location": "/sprints/sprint-5/#endpoints", 
+            "text": "", 
+            "title": "Endpoints"
+        }, 
+        {
+            "location": "/sprints/sprint-5/#charts", 
+            "text": "GET      /charts\nPOST     /charts\nOPTIONS  /charts\n\nGET      /charts/first\nOPTIONS  /charts/first\n\nGET      /charts/last\nOPTIONS  /charts/last\n\nGET      /charts/count\nOPTIONS  /charts/count\n\nGET      /charts/:id\nPATCH    /charts/:id\nDELETE   /charts/:id\nHEAD     /charts/:id\nOPTIONS  /charts/:id", 
+            "title": "Charts"
+        }, 
+        {
+            "location": "/sprints/sprint-5/#maps", 
+            "text": "GET      /maps\nPOST     /maps\nOPTIONS  /maps\n\nGET      /maps/first\nOPTIONS  /maps/first\n\nGET      /maps/last\nOPTIONS  /maps/last\n\nGET      /maps/count\nOPTIONS  /maps/count\n\nGET      /maps/:id\nPATCH    /maps/:id\nDELETE   /maps/:id\nHEAD     /maps/:id\nOPTIONS  /maps/:id", 
+            "title": "Maps"
+        }, 
+        {
+            "location": "/sprints/sprint-5/#modelos", 
+            "text": "", 
+            "title": "Modelos"
+        }, 
+        {
+            "location": "/sprints/sprint-5/#charts_1", 
+            "text": "id  Tipo:  string  Requerido:  s\u00ed  \u00danico:  s\u00ed  Max:  15 car\u00e1cteres       name  Tipo:  string  Requerido:  s\u00ed  Max:  150 car\u00e1cteres       description  Tipo:  string  Max:  350 car\u00e1cteres       notes  Tipo:  string  Max:  500 car\u00e1cteres       url  Tipo:  string  Max:  500 car\u00e1cteres       createdAt  Tipo:  datetime  Default:  fecha y hora actuales", 
+            "title": "Charts"
+        }, 
+        {
+            "location": "/sprints/sprint-5/#claves-foraneas", 
+            "text": "createdBy  El ID del usuario que cre\u00f3 el gr\u00e1fico.  Tipo:  string  Requerido:  s\u00ed  Max:  15 car\u00e1cteres", 
+            "title": "Claves For\u00e1neas"
+        }, 
+        {
+            "location": "/sprints/sprint-5/#maps_1", 
+            "text": "id  Tipo:  string  Requerido:  s\u00ed  \u00danico:  s\u00ed  Max:  15 car\u00e1cteres       name  Tipo:  string  Requerido:  s\u00ed  Max:  150 car\u00e1cteres       description  Tipo:  string  Max:  350 car\u00e1cteres       notes  Tipo:  string  Max:  500 car\u00e1cteres       basemap  Tipo:  enum  Requerido:  s\u00ed  Valores posibles:  'roadmap', 'satellite', 'hybrid', 'terrain'       url  Tipo:  string  Max:  500 car\u00e1cteres       createdAt  Tipo:  datetime  Default:  fecha y hora actuales", 
+            "title": "Maps"
+        }, 
+        {
+            "location": "/sprints/sprint-5/#claves-foraneas_1", 
+            "text": "createdBy  El ID del usuario que cre\u00f3 el map.  Tipo:  string  Requerido:  s\u00ed  Max:  15 car\u00e1cteres", 
+            "title": "Claves For\u00e1neas"
+        }, 
+        {
             "location": "/references/status-codes/", 
             "text": "\u00c9xito\n\n\n\n\n\n\n\n\nSuccess\n\n\n\n\n\n\n\n\n\n\n\n\n200 OK\n\n\nC\u00f3digo gen\u00e9rico de \u00e9xito.\n\n\n\n\n\n\n201 Created\n\n\nIndica que el recurso fue creado exitosamente.\n\n\n\n\n\n\n202 Accepted\n\n\nSe acept\u00f3 la request, pero todav\u00eda no fue procesada. \u00datil para requests as\u00edncronas.\n\n\n\n\n\n\n204 No Content\n\n\nLa request fue procesada con \u00e9xito, pero no hay nada que mostrar. Por ejemplo, despu\u00e9s de un DELETE exitoso.\n\n\n\n\n\n\n206 Partial Content\n\n\nEl recurso devuelto est\u00e1 incompleto. Se lo suele usar para contenido que ha sido paginado. Por ejemplo, se devuelve la p\u00e1gina 5 de 20.\n\n\n\n\n\n\n\n\nError del cliente\n\n\n\n\n\n\n\n\nClient Error\n\n\n\n\n\n\n\n\n\n\n\n\n400 Bad Request\n\n\nError gen\u00e9rico para una request que no puede ser procesada por el servidor.\n\n\n\n\n\n\n401 Unauthorized\n\n\nEl cliente es desconocido para la API y necesita autenticarse primero.\n\n\n\n\n\n\n403 Forbidden\n\n\nLos permisos del cliente no son suficientes para acceder a este recurso. Es decir, el recurso es un recurso protegido (desde la perspectiva del usuario que hizo la request).\n\n\n\n\n\n\n404 Not Found\n\n\nNo existe el recurso pedido por el cliente.\n\n\n\n\n\n\n405 Method Not Allowed\n\n\nEl usuario no tiene permiso para usar ese m\u00e9todo HTTP en particular.\n\n\n\n\n\n\n406 Not Acceptable\n\n\nEl contenido no est\u00e1 disponible en la forma espec\u00edfica en que lo pidi\u00f3 el cliente (por medio de las cabeceras \"Accept-*\"). Por ejemplo, el cliente pidi\u00f3 un recurso en XML pero s\u00f3lo est\u00e1 disponible en JSON.\n\n\n\n\n\n\n410 Gone\n\n\nIndica que el recurso estaba disponible pero ya no m\u00e1s (de manera permanente).\n\n\n\n\n\n\n415 Unsupported Media Type\n\n\nLa request tiene un media type que no est\u00e1 admitido por el servidor. Por ejemplo, el cliente ha subido una imagen en SVG pero el servidor s\u00f3lo recibe JPG o PNG.\n\n\n\n\n\n\n\n\nError del servidor\n\n\n\n\n\n\n\n\nServer Error\n\n\n\n\n\n\n\n\n\n\n\n\n500 Internal Server Error\n\n\nLa request parece estar bien, pero hubo un problema en el servidor. El cliente no tiene nada que ver, y tampoco puede hacer nada al respecto.\n\n\n\n\n\n\n501 Not Implemented\n\n\nLa API no ha implementado el m\u00e9todo usado para hacer la request. Por ejemplo, el m\u00e9todo PUT.", 
             "title": "HTTP Status Codes"
