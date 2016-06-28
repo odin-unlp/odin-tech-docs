@@ -16,7 +16,7 @@ Hacer el CRUD de las vistas.
 3. Desarrollar la generación de geoJSON
 4. Loguear a un archivo las actividades CRUD de la API
 
-    Se usará el logger Winston. El archivo tendrá el nombre del environment actual (ej. `development.log`) y se creará automáticamente si no existe, al igual que el directorio donde estará (logs). Se creará también una configuración extra en `config/odin.js` para determinar el nivel de logging a utilizar, de entre los definidos en npm: `silly`, `verbose`, `info`, `http`, `warn`, `error`, `silent`. Los eventos que se loguearán son:
+    Se usará el logger [Winston](https://github.com/winstonjs/winston). El archivo tendrá el nombre del environment actual (ej. `development.log`) y se creará automáticamente si no existe, al igual que el directorio donde estará (logs). Se creará también una configuración extra en `config/odin.js` para determinar el nivel de logging a utilizar, de entre los definidos en npm: `silly`, `verbose`, `info`, `http`, `warn`, `error`, `silent`. Los eventos que se loguearán son:
 
     - Cuando la aplicación se ha terminado de levantar y está completamente operativa. Nivel: `info`
     - Creación de cada recurso (Categories, Datasets, Organization, etc). Nivel: `info`
@@ -29,6 +29,7 @@ Hacer el CRUD de las vistas.
     - Las headers y body de cada response generada. Nivel: `silly`
 
     El log debe incluir: evento, IP (si corresponde), fecha y hora.
+
 5. Desarrollar conversión a JSON y guardado en la BBDD no relacional de los archivos XLS y XLSX
 6. Escribir los tests unitarios faltantes
 
