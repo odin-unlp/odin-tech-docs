@@ -8,7 +8,7 @@
   
   
   
-  <title>Sprint 4 - ODIN</title>
+  <title>Sprint 6 - ODIN</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Sprint 4";
-    var mkdocs_page_input_path = "sprints/sprint-4.md";
-    var mkdocs_page_url = "/sprints/sprint-4/";
+    var mkdocs_page_name = "Sprint 6";
+    var mkdocs_page_input_path = "sprints/sprint-6.md";
+    var mkdocs_page_url = "/sprints/sprint-6/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -116,37 +116,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Sprint 4</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#alcance">Alcance</a></li>
-                
-                    <li><a class="toctree-l4" href="#objetivo">Objetivo</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#tareas">Tareas</a></li>
-                
-                    <li><a class="toctree-l4" href="#api">API</a></li>
-                
-                    <li><a class="toctree-l4" href="#admin">Admin</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#prioridades">Prioridades</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#endpoints">Endpoints</a></li>
-                
-                    <li><a class="toctree-l4" href="#logs">Logs</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#modelos">Modelos</a></li>
-                
-                    <li><a class="toctree-l4" href="#logs_1">Logs</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../sprint-4/">Sprint 4</a>
         
     </li>
 
@@ -159,8 +130,42 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../sprint-6/">Sprint 6</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Sprint 6</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#alcance">Alcance</a></li>
+                
+                    <li><a class="toctree-l4" href="#objetivo">Objetivo</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#tareas">Tareas</a></li>
+                
+                    <li><a class="toctree-l4" href="#api">API</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#prioridades">Prioridades</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#endpoints">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#views">Views</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#modelos">Modelos</a></li>
+                
+                    <li><a class="toctree-l4" href="#views_1">Views</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#campos">Campos</a></li>
+                
+                    <li><a class="toctree-l4" href="#maps">Maps</a></li>
+                
+                    <li><a class="toctree-l4" href="#maps-y-charts">Maps y Charts</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -231,7 +236,7 @@
         
       
     
-    <li>Sprint 4</li>
+    <li>Sprint 6</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -245,75 +250,78 @@
           <div role="main">
             <div class="section">
               
-                <p><strong>Duración:</strong> Miercoles 8/06/16 - Martes 14/06/16</p>
+                <p><strong>Duración:</strong> Miercoles 29/06/16 - Martes 05/07/16</p>
 <h1 id="alcance">Alcance</h1>
-<p>Sprint de refactoring + cleanup + polishing.</p>
+<p>Sprint de vistas.</p>
 <h2 id="objetivo">Objetivo</h2>
-<p>Hacer el log de acciones, refactorear el código y arreglar los errores y detalles de la UI.</p>
+<p>Hacer el CRUD de las vistas.</p>
 <h1 id="tareas">Tareas</h1>
 <h2 id="api">API</h2>
 <ol>
-<li>Hacer el modelo, seeds y controller del log de acciones.</li>
-<li>Hacer async la creación del zip de descarga de dataset.</li>
-<li>Hacer los borrados lógicos.</li>
-<li>Desarrollar includes granulares (ej. include=tags.name).</li>
-<li>Refactorear <code>.negotiate</code> para dar soporte a todos los tipos de error definidos en <code>config/errors.js</code>, y cambiarlo a <code>.error</code>.</li>
-<li>Implementar la recepción de múltiples valores para un parámetro, separados por coma:
-    siempre y cuando se el modelo lo admita (es decir, haya una relacion de uno a muchos o de muchos a muchos).</li>
-<li>Extractar a un servicio y comentar la lógica de la subida de archivos.</li>
-<li>Separar la lógica del constructor de <code>ResponseGET</code> en métodos y comentarlos.</li>
-<li>Refactorear la búsqueda para que no busque en todos los campos por defecto, sino sólo los que estén en una whitelist.</li>
-<li>Poner el campo fullName en la response de <code>GET /users</code> y <code>GET /users/:id</code>.</li>
-<li>En las responses GET de un ítem en particular, agregar en <code>links</code> las relaciones de primer grado:
-    por ejemplo, <code>/datasets/ag56fdf/tags</code>.</li>
-<li>Separar las responses correctas (2xx) definidas en <code>config/errors.js</code> a otro archivo.</li>
-<li>Refactorear <code>appUrl</code>.</li>
-<li>Implementar <code>206 Partial Content</code> para el contenido paginado.</li>
-<li>Implementar <code>204 No Content</code> para las responses sin contenido.</li>
-<li>Implementar un chequeo más robusto de objetos vacíos.</li>
-</ol>
-<h2 id="admin">Admin</h2>
-<ol>
-<li>Solucionar los ítems marcados como "Crítico" en el Trello de testing.</li>
-<li>Solucionar los ítems marcados como "Error" en el Trello de testing.</li>
-<li>Solucionar los ítems marcados como "Mejora" en el Trello de testing.</li>
-<li>Adecuar la interfaz del CRUD de Archivos a lo especificado por los documentos funcionales.</li>
-<li>Agregar al dashboard el contenido del log de acciones, las más recientes primero (funcional):
-    mostrar las últimas 500 acciones, paginadas de a 20.</li>
-<li>Quitar el CRUD de Databases del Admin (no es necesario que esté expuesto en el Admin).</li>
+<li>Hacer el spec, modelo, seeds, routes y controller de las vistas (views)</li>
+<li>Añadir el campo <code>geojson</code> a Maps, y <code>embedCode</code> a Charts y Maps</li>
+<li>Desarrollar la generación de geoJSON</li>
+<li>
+<p>Loguear a un archivo las actividades CRUD de la API</p>
+<p>Se usará el logger Winston. El archivo tendrá el nombre del environment actual (ej. <code>development.log</code>) y se creará automáticamente si no existe, al igual que el directorio donde estará (logs). Se creará también una configuración extra en <code>config/odin.js</code> para determinar el nivel de logging a utilizar, de entre los definidos en npm: <code>silly</code>, <code>verbose</code>, <code>info</code>, <code>http</code>, <code>warn</code>, <code>error</code>, <code>silent</code>. Los eventos que se loguearán son:</p>
+<ul>
+<li>Cuando la aplicación se ha terminado de levantar y está completamente operativa. Nivel: <code>info</code></li>
+<li>Creación de cada recurso (Categories, Datasets, Organization, etc). Nivel: <code>info</code></li>
+<li>Edición de cada recurso. Nivel: <code>info</code></li>
+<li>Borrado de cada recurso. Nivel: <code>info</code></li>
+<li>Errores en cada uno de los anteriores. Nivel: <code>error</code></li>
+<li>La descarga de un archivo. Nivel: <code>verbose</code></li>
+<li>El code y message de cada response generada. Nivel: <code>verbose</code></li>
+<li>Las headers, parámetros (si corresponde) y body de cada request recibida. Nivel: <code>silly</code></li>
+<li>Las headers y body de cada response generada. Nivel: <code>silly</code></li>
+</ul>
+<p>El log debe incluir: evento, IP (si corresponde), fecha y hora.
+5. Desarrollar conversión a JSON y guardado en la BBDD no relacional de los archivos XLS y XLSX
+6. Escribir los tests unitarios faltantes</p>
+<p>Para los siguientes casos:</p>
+<ul>
+<li>Subida de un archivo</li>
+<li>Codificación correcta de los archivos de texto</li>
+<li>Accesibilidad vía API del contenido de los archivos CSV, XLS y XLSX</li>
+<li>Ciclo completo de un mismo recurso: creación, edición y borrado</li>
+<li>Generación de feed RSS</li>
+<li>Descarga de archivos</li>
+<li>Paginado</li>
+<li>Populate y filtrado</li>
+<li>Búsqueda</li>
+</ul>
+</li>
 </ol>
 <h1 id="prioridades">Prioridades</h1>
 <ol>
-<li>Async zips</li>
-<li>Borrados lógicos</li>
-<li>Includes parciales</li>
-<li>Resolución de problemas de UI</li>
-<li>Adecuar CRUD de Archivos</li>
+<li>Modelos y seeds</li>
+<li>GeoJSON</li>
+<li>Tests unitarios</li>
 </ol>
 <h1 id="endpoints">Endpoints</h1>
-<h2 id="logs">Logs</h2>
-<pre><code>GET      /logs
-POST     /logs
-OPTIONS  /logs
+<h2 id="views">Views</h2>
+<pre><code>GET      /views
+POST     /views
+OPTIONS  /views
 
-GET      /logs/first
-OPTIONS  /logs/first
+GET      /views/first
+OPTIONS  /views/first
 
-GET      /logs/last
-OPTIONS  /logs/last
+GET      /views/last
+OPTIONS  /views/last
 
-GET      /logs/count
-OPTIONS  /logs/count
+GET      /views/count
+OPTIONS  /views/count
 
-GET      /logs/:id
-PATCH    /logs/:id
-DELETE   /logs/:id
-HEAD     /logs/:id
-OPTIONS  /logs/:id
+GET      /views/:id
+PATCH    /views/:id
+DELETE   /views/:id
+HEAD     /views/:id
+OPTIONS  /views/:id
 </code></pre>
 
 <h1 id="modelos">Modelos</h1>
-<h2 id="logs_1">Logs</h2>
+<h2 id="views_1">Views</h2>
 <ul>
 <li>
 <p><strong>id</strong></p>
@@ -326,19 +334,34 @@ OPTIONS  /logs/:id
 <hr />
 <ul>
 <li>
-<p><strong>action</strong></p>
-<p><em>Tipo:</em> enum</p>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string</p>
 <p><em>Requerido:</em> sí</p>
-<p><em>Valores posibles:</em> 'create', 'update', 'delete'</p>
+<p><em>Max:</em> 150 carácteres</p>
 </li>
 </ul>
 <hr />
 <ul>
 <li>
-<p><strong>target</strong></p>
-<p><em>Tipo:</em> enum</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Valores posibles:</em> 'category', 'dataset', 'fileType', 'file', 'organization', 'status', 'tag', 'updateFrequency', 'user'</p>
+<p><strong>description</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 350 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>notes</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>tags</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
 </li>
 </ul>
 <hr />
@@ -352,10 +375,35 @@ OPTIONS  /logs/:id
 <h3 id="claves-foraneas">Claves Foráneas</h3>
 <ul>
 <li>
-<p><strong>user</strong></p>
-<p>El ID del usuario que actualizó realizó la acción.</p>
+<p><strong>tags</strong></p>
+<p>Referencia a la relación muchos a muchos tags-views.</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdBy</strong></p>
+<p>El ID del usuario que creó el gráfico.</p>
 <p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
 <p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<h1 id="campos">Campos</h1>
+<h2 id="maps">Maps</h2>
+<ul>
+<li>
+<p><strong>geojson</strong></p>
+<p><em>Tipo:</em> json</p>
+<p><em>Max:</em> 5000 carácteres</p>
+</li>
+</ul>
+<h2 id="maps-y-charts">Maps y Charts</h2>
+<ul>
+<li>
+<p><strong>embedCode</strong></p>
+<p><em>Tipo:</em> text</p>
+<p><em>Max:</em> 500 carácteres</p>
 </li>
 </ul>
               
@@ -365,10 +413,10 @@ OPTIONS  /logs/:id
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../sprint-5/" class="btn btn-neutral float-right" title="Sprint 5">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../references/status-codes/" class="btn btn-neutral float-right" title="HTTP Status Codes">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../sprint-3/" class="btn btn-neutral" title="Sprint 3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sprint-5/" class="btn btn-neutral" title="Sprint 5"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -396,10 +444,10 @@ OPTIONS  /logs/:id
           <a href="https://github.com/gcba-odin/odin-tech-docs" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../sprint-3/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../sprint-5/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../sprint-5/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../references/status-codes/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
