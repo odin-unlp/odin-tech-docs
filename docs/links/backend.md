@@ -14,19 +14,12 @@
 
 - [generator-sails-rest-api](https://github.com/ghaiklor/generator-sails-rest-api)
 > Yeoman generator for scaffolding Sails REST API with predefined features.
-    
+
 - [shortid](https://github.com/dylang/shortid)
 > Short id generator. Url-friendly. Non-predictable. Cluster-compatible.
 
-- [sails-hook-pagify](https://github.com/colintoh/sails-hook-pagify)
-> Generate pagination data and metadata for Sails JS projects.
-
 - [sails-hook-blueprint-count](https://github.com/kristian-ackar/sails-hook-blueprint-count)
 > Adds blueprint api method to count records in database.
-
-- [sails-hook-query-builder](https://github.com/caljrimmer/sails-hook-query-builder)
-> Sails hook for creating waterline queries from request queries.
-> Query builder adds a static method to all models in a sails app that allows creates a query which will paginate, search and sort.
 
 - [node-rss](https://github.com/dylang/node-rss)
 > RSS feed generator. Add RSS feeds to any project. Supports enclosures and GeoRSS.
@@ -69,9 +62,12 @@ softDelete(criteria, callback)
 > Use events to manage and observe Waterline models' lifecycle
 > This hook allows you to use event-driven programming when working with your Waterline models. It adds new events emitted from your Sails.js instance that you can subscribe to and perform actions when such an event is emitted.
 
+- [winston](https://github.com/winstonjs/winston)
+> A multi-transport async logging library for node.js.
+
 - [sails-hook-winston](https://github.com/Kikobeats/sails-hook-winston)
 > Integrates winston logging system with your Sails application.
-    
+
 # Plugins
 - [marlinspike](https://github.com/tjwebb/marlinspike)
 > Superpowers for your Sails.js Hooks.
