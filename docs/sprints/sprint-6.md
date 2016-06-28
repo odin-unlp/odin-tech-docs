@@ -46,6 +46,11 @@ Hacer el CRUD de las vistas.
     - Populate y filtrado
     - Búsqueda
 
+
+7. Agregar al log el usuario actual cuando se opera desde el Admin (en vez de noUser)
+
+    Se puede utilizar un evento de [esta librería](https://github.com/Dreamscapes/sails-hook-events) en los blueprints para poder tener acceso al objeto `req`.
+
 # Prioridades
 
 1. Modelos y seeds
