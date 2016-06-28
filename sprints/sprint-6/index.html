@@ -263,7 +263,7 @@
 <li>Desarrollar la generación de geoJSON</li>
 <li>
 <p>Loguear a un archivo las actividades CRUD de la API</p>
-<p>Se usará el logger Winston. El archivo tendrá el nombre del environment actual (ej. <code>development.log</code>) y se creará automáticamente si no existe, al igual que el directorio donde estará (logs). Se creará también una configuración extra en <code>config/odin.js</code> para determinar el nivel de logging a utilizar, de entre los definidos en npm: <code>silly</code>, <code>verbose</code>, <code>info</code>, <code>http</code>, <code>warn</code>, <code>error</code>, <code>silent</code>. Los eventos que se loguearán son:</p>
+<p>Se usará el logger <a href="https://github.com/winstonjs/winston">Winston</a>. El archivo tendrá el nombre del environment actual (ej. <code>development.log</code>) y se creará automáticamente si no existe, al igual que el directorio donde estará (logs). Se creará también una configuración extra en <code>config/odin.js</code> para determinar el nivel de logging a utilizar, de entre los definidos en npm: <code>silly</code>, <code>verbose</code>, <code>info</code>, <code>http</code>, <code>warn</code>, <code>error</code>, <code>silent</code>. Los eventos que se loguearán son:</p>
 <ul>
 <li>Cuando la aplicación se ha terminado de levantar y está completamente operativa. Nivel: <code>info</code></li>
 <li>Creación de cada recurso (Categories, Datasets, Organization, etc). Nivel: <code>info</code></li>
@@ -275,9 +275,13 @@
 <li>Las headers, parámetros (si corresponde) y body de cada request recibida. Nivel: <code>silly</code></li>
 <li>Las headers y body de cada response generada. Nivel: <code>silly</code></li>
 </ul>
-<p>El log debe incluir: evento, IP (si corresponde), fecha y hora.
-5. Desarrollar conversión a JSON y guardado en la BBDD no relacional de los archivos XLS y XLSX
-6. Escribir los tests unitarios faltantes</p>
+<p>El log debe incluir: evento, IP (si corresponde), fecha y hora.</p>
+</li>
+<li>
+<p>Desarrollar conversión a JSON y guardado en la BBDD no relacional de los archivos XLS y XLSX</p>
+</li>
+<li>
+<p>Escribir los tests unitarios faltantes</p>
 <p>Para los siguientes casos:</p>
 <ul>
 <li>Subida de un archivo</li>
