@@ -13,6 +13,7 @@ pages:
         - 'Sprint 3': 'sprints/sprint-3.md'
         - 'Sprint 4': 'sprints/sprint-4.md'
         - 'Sprint 5': 'sprints/sprint-5.md'
+        - 'Sprint 6': 'sprints/sprint-6.md'
     - Referencias:
         - 'HTTP Status Codes': 'references/status-codes.md'
     - Links:
