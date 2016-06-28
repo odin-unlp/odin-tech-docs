@@ -265,15 +265,15 @@
 <p>Loguear a un archivo las actividades CRUD de la API</p>
 <p>Se usará el logger <a href="https://github.com/winstonjs/winston">Winston</a>. El archivo tendrá el nombre del environment actual (ej. <code>development.log</code>) y se creará automáticamente si no existe, al igual que el directorio donde estará (logs). Se creará también una configuración extra en <code>config/odin.js</code> para determinar el nivel de logging a utilizar, de entre los definidos en npm: <code>silly</code>, <code>verbose</code>, <code>info</code>, <code>http</code>, <code>warn</code>, <code>error</code>, <code>silent</code>. Los eventos que se loguearán son:</p>
 <ul>
-<li>Cuando la aplicación se ha terminado de levantar y está completamente operativa. Nivel: <code>info</code></li>
-<li>Creación de cada recurso (Categories, Datasets, Organization, etc). Nivel: <code>info</code></li>
-<li>Edición de cada recurso. Nivel: <code>info</code></li>
-<li>Borrado de cada recurso. Nivel: <code>info</code></li>
-<li>Errores en cada uno de los anteriores. Nivel: <code>error</code></li>
-<li>La descarga de un archivo. Nivel: <code>verbose</code></li>
-<li>El code y message de cada response generada. Nivel: <code>verbose</code></li>
-<li>Las headers, parámetros (si corresponde) y body de cada request recibida. Nivel: <code>silly</code></li>
-<li>Las headers y body de cada response generada. Nivel: <code>silly</code></li>
+<li>Cuando la aplicación se ha terminado de levantar y está completamente operativa. Nivel: info</li>
+<li>Creación de cada recurso (Categories, Datasets, Organization, etc). Nivel: info</li>
+<li>Edición de cada recurso. Nivel: info</li>
+<li>Borrado de cada recurso. Nivel: info</li>
+<li>Errores en cada uno de los anteriores. Nivel: error</li>
+<li>La descarga de un archivo. Nivel: verbose</li>
+<li>El code y message de cada response generada. Nivel: verbose</li>
+<li>Las headers, parámetros (si corresponde) y body de cada request recibida. Nivel: silly</li>
+<li>Las headers y body de cada response generada. Nivel: silly</li>
 </ul>
 <p>El log debe incluir: evento, IP (si corresponde), fecha y hora.</p>
 </li>
