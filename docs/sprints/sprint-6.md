@@ -13,7 +13,7 @@ Hacer el CRUD de las vistas.
 
 1. Hacer el spec, modelo, seeds, routes y controller de las vistas (views)
 2. Añadir el campo `geojson` a Maps, y `embedCode` a Charts y Maps
-3. Desarrollar la generación de geojson
+3. Desarrollar la generación de geoJSON
 4. Loguear a un archivo las actividades CRUD de la API
 
     Se usará el logger Winston. El archivo tendrá el nombre del environment actual (ej. `development.log`) y se creará automáticamente si no existe, al igual que el directorio donde estará (logs). Se creará también una configuración extra en `config/odin.js` para determinar el nivel de logging a utilizar, de entre los definidos en npm: `silly`, `verbose`, `info`, `http`, `warn`, `error`, `silent`. Los eventos que se loguearán son:
