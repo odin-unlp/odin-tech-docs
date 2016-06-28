@@ -69,6 +69,7 @@ softDelete(criteria, callback)
 > Integrates winston logging system with your Sails application.
 
 # Plugins
+
 - [marlinspike](https://github.com/tjwebb/marlinspike)
 > Superpowers for your Sails.js Hooks.
 > Makes it easy to build and maintain Sails Hooks as separate projects.
