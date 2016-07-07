@@ -8,7 +8,7 @@ El código deberá alojarse en un repositorio GitHub perteneciente a la organiza
 
 - **staging:** la rama de pre-producción, donde se pueden revisar y aprobar/rechazar cambios antes de que vayan a producción.
 
-- **qa:** para testeo e integración continua (ej. con Travis CI).
+- **testing:** para testeo e integración continua (ej. con Travis CI).
 
 - **dev**: la rama de desarrollo.
 

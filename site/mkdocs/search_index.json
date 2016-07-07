@@ -781,8 +781,58 @@
             "title": "Maps y Charts"
         }, 
         {
+            "location": "/sprints/sprint-7/", 
+            "text": "Duraci\u00f3n:\n Lunes 11/07/16 - Martes 19/07/16\n\n\nAlcance\n\n\nSprint de refactorizaci\u00f3n y testeo.\n\n\nObjetivo\n\n\nSolucionar los errores de los tests y poner algunas configuraciones en la base de datos.\n\n\nTareas\n\n\nAPI\n\n\n\n\nSolucionar los errores de los tests de mocha (\nTravis\n debe dar \nbuild passing\n)\n\n\nSacar logWhiteList de \n/config/odin.js\n y ponerlo en la base de datos (como un seed de Config)\n\n\nAgregar el campo \nmimetype\n a File y poner en los seeds de FileType su mimetype (sacarlos de \n/config/odin.js\n)\n\n\nSolucionar las issues encontradas por \nCodacy\n (las que sea posible resolver)\n\n\n\n\nImplementar el error 522 Unprocessable Entity para los siguientes casos:\n\n\n\n\nSe env\u00eda el par\u00e1metro \nsort\n con un valor que no sea \nASC\n o \nDESC\n\n\nSe env\u00eda el par\u00e1metro \ncondition\n con un valor que no sea \nAND\n\n\nSe env\u00eda el par\u00e1metro \nmatch\n con un valor que no sea \nBEGINS\n, \nCONTAINS\n o \nENDS\n\n\n\n\n\n\n\n\nImplementar la despublicaci\u00f3n autom\u00e1tica de una View cuando se despublica su File\n\n\n\n\nImplementar la despublicaci\u00f3n autom\u00e1tica de un Chart cuando se despublica su File\n\n\nImplementar la despublicaci\u00f3n autom\u00e1tica de un Map cuando se despublica su File\n\n\n\n\nPrioridades\n\n\n\n\nSolucionar los errores de los tests\n\n\nError 522\n\n\nDespublicaci\u00f3nes autom\u00e1ticas\n\n\n\n\nEndpoints\n\n\nViews\n\n\nGET      /views\nPOST     /views\nOPTIONS  /views\n\nGET      /views/first\nOPTIONS  /views/first\n\nGET      /views/last\nOPTIONS  /views/last\n\nGET      /views/count\nOPTIONS  /views/count\n\nGET      /views/:id\nPATCH    /views/:id\nDELETE   /views/:id\nHEAD     /views/:id\nOPTIONS  /views/:id\n\n\n\n\nCampos\n\n\nFileType\n\n\n\n\n\n\nmimetype\n\n\nTipo:\n string\n\n\nMax:\n 200 car\u00e1cteres", 
+            "title": "Sprint 7"
+        }, 
+        {
+            "location": "/sprints/sprint-7/#alcance", 
+            "text": "Sprint de refactorizaci\u00f3n y testeo.", 
+            "title": "Alcance"
+        }, 
+        {
+            "location": "/sprints/sprint-7/#objetivo", 
+            "text": "Solucionar los errores de los tests y poner algunas configuraciones en la base de datos.", 
+            "title": "Objetivo"
+        }, 
+        {
+            "location": "/sprints/sprint-7/#tareas", 
+            "text": "", 
+            "title": "Tareas"
+        }, 
+        {
+            "location": "/sprints/sprint-7/#api", 
+            "text": "Solucionar los errores de los tests de mocha ( Travis  debe dar  build passing )  Sacar logWhiteList de  /config/odin.js  y ponerlo en la base de datos (como un seed de Config)  Agregar el campo  mimetype  a File y poner en los seeds de FileType su mimetype (sacarlos de  /config/odin.js )  Solucionar las issues encontradas por  Codacy  (las que sea posible resolver)   Implementar el error 522 Unprocessable Entity para los siguientes casos:   Se env\u00eda el par\u00e1metro  sort  con un valor que no sea  ASC  o  DESC  Se env\u00eda el par\u00e1metro  condition  con un valor que no sea  AND  Se env\u00eda el par\u00e1metro  match  con un valor que no sea  BEGINS ,  CONTAINS  o  ENDS     Implementar la despublicaci\u00f3n autom\u00e1tica de una View cuando se despublica su File   Implementar la despublicaci\u00f3n autom\u00e1tica de un Chart cuando se despublica su File  Implementar la despublicaci\u00f3n autom\u00e1tica de un Map cuando se despublica su File", 
+            "title": "API"
+        }, 
+        {
+            "location": "/sprints/sprint-7/#prioridades", 
+            "text": "Solucionar los errores de los tests  Error 522  Despublicaci\u00f3nes autom\u00e1ticas", 
+            "title": "Prioridades"
+        }, 
+        {
+            "location": "/sprints/sprint-7/#endpoints", 
+            "text": "", 
+            "title": "Endpoints"
+        }, 
+        {
+            "location": "/sprints/sprint-7/#views", 
+            "text": "GET      /views\nPOST     /views\nOPTIONS  /views\n\nGET      /views/first\nOPTIONS  /views/first\n\nGET      /views/last\nOPTIONS  /views/last\n\nGET      /views/count\nOPTIONS  /views/count\n\nGET      /views/:id\nPATCH    /views/:id\nDELETE   /views/:id\nHEAD     /views/:id\nOPTIONS  /views/:id", 
+            "title": "Views"
+        }, 
+        {
+            "location": "/sprints/sprint-7/#campos", 
+            "text": "", 
+            "title": "Campos"
+        }, 
+        {
+            "location": "/sprints/sprint-7/#filetype", 
+            "text": "mimetype  Tipo:  string  Max:  200 car\u00e1cteres", 
+            "title": "FileType"
+        }, 
+        {
             "location": "/references/status-codes/", 
-            "text": "\u00c9xito\n\n\n\n\n\n\n\n\nSuccess\n\n\n\n\n\n\n\n\n\n\n\n\n200 OK\n\n\nC\u00f3digo gen\u00e9rico de \u00e9xito.\n\n\n\n\n\n\n201 Created\n\n\nIndica que el recurso fue creado exitosamente.\n\n\n\n\n\n\n202 Accepted\n\n\nSe acept\u00f3 la request, pero todav\u00eda no fue procesada. \u00datil para requests as\u00edncronas.\n\n\n\n\n\n\n204 No Content\n\n\nLa request fue procesada con \u00e9xito, pero no hay nada que mostrar. Por ejemplo, despu\u00e9s de un DELETE exitoso.\n\n\n\n\n\n\n206 Partial Content\n\n\nEl recurso devuelto est\u00e1 incompleto. Se lo suele usar para contenido que ha sido paginado. Por ejemplo, se devuelve la p\u00e1gina 5 de 20.\n\n\n\n\n\n\n\n\nError del cliente\n\n\n\n\n\n\n\n\nClient Error\n\n\n\n\n\n\n\n\n\n\n\n\n400 Bad Request\n\n\nError gen\u00e9rico para una request que no puede ser procesada por el servidor.\n\n\n\n\n\n\n401 Unauthorized\n\n\nEl cliente es desconocido para la API y necesita autenticarse primero.\n\n\n\n\n\n\n403 Forbidden\n\n\nLos permisos del cliente no son suficientes para acceder a este recurso. Es decir, el recurso es un recurso protegido (desde la perspectiva del usuario que hizo la request).\n\n\n\n\n\n\n404 Not Found\n\n\nNo existe el recurso pedido por el cliente.\n\n\n\n\n\n\n405 Method Not Allowed\n\n\nEl usuario no tiene permiso para usar ese m\u00e9todo HTTP en particular.\n\n\n\n\n\n\n406 Not Acceptable\n\n\nEl contenido no est\u00e1 disponible en la forma espec\u00edfica en que lo pidi\u00f3 el cliente (por medio de las cabeceras \"Accept-*\"). Por ejemplo, el cliente pidi\u00f3 un recurso en XML pero s\u00f3lo est\u00e1 disponible en JSON.\n\n\n\n\n\n\n410 Gone\n\n\nIndica que el recurso estaba disponible pero ya no m\u00e1s (de manera permanente).\n\n\n\n\n\n\n415 Unsupported Media Type\n\n\nLa request tiene un media type que no est\u00e1 admitido por el servidor. Por ejemplo, el cliente ha subido una imagen en SVG pero el servidor s\u00f3lo recibe JPG o PNG.\n\n\n\n\n\n\n\n\nError del servidor\n\n\n\n\n\n\n\n\nServer Error\n\n\n\n\n\n\n\n\n\n\n\n\n500 Internal Server Error\n\n\nLa request parece estar bien, pero hubo un problema en el servidor. El cliente no tiene nada que ver, y tampoco puede hacer nada al respecto.\n\n\n\n\n\n\n501 Not Implemented\n\n\nLa API no ha implementado el m\u00e9todo usado para hacer la request. Por ejemplo, el m\u00e9todo PUT.", 
+            "text": "\u00c9xito\n\n\n\n\n\n\n\n\nSuccess\n\n\n\n\n\n\n\n\n\n\n\n\n200 OK\n\n\nC\u00f3digo gen\u00e9rico de \u00e9xito.\n\n\n\n\n\n\n201 Created\n\n\nIndica que el recurso fue creado exitosamente.\n\n\n\n\n\n\n202 Accepted\n\n\nSe acept\u00f3 la request, pero todav\u00eda no fue procesada. \u00datil para requests as\u00edncronas.\n\n\n\n\n\n\n204 No Content\n\n\nLa request fue procesada con \u00e9xito, pero no hay nada que mostrar. Por ejemplo, despu\u00e9s de un DELETE exitoso.\n\n\n\n\n\n\n206 Partial Content\n\n\nEl recurso devuelto est\u00e1 incompleto. Se lo suele usar para contenido que ha sido paginado. Por ejemplo, se devuelve la p\u00e1gina 5 de 20.\n\n\n\n\n\n\n\n\nError del cliente\n\n\n\n\n\n\n\n\nClient Error\n\n\n\n\n\n\n\n\n\n\n\n\n400 Bad Request\n\n\nError gen\u00e9rico para una request que no puede ser procesada por el servidor.\n\n\n\n\n\n\n401 Unauthorized\n\n\nEl cliente es desconocido para la API y necesita autenticarse primero.\n\n\n\n\n\n\n403 Forbidden\n\n\nLos permisos del cliente no son suficientes para acceder a este recurso. Es decir, el recurso es un recurso protegido (desde la perspectiva del usuario que hizo la request).\n\n\n\n\n\n\n404 Not Found\n\n\nNo existe el recurso pedido por el cliente.\n\n\n\n\n\n\n405 Method Not Allowed\n\n\nEl usuario no tiene permiso para usar ese m\u00e9todo HTTP en particular.\n\n\n\n\n\n\n406 Not Acceptable\n\n\nEl contenido no est\u00e1 disponible en la forma espec\u00edfica en que lo pidi\u00f3 el cliente (por medio de las cabeceras \"Accept-*\"). Por ejemplo, el cliente pidi\u00f3 un recurso en XML pero s\u00f3lo est\u00e1 disponible en JSON.\n\n\n\n\n\n\n410 Gone\n\n\nIndica que el recurso estaba disponible pero ya no m\u00e1s (de manera permanente).\n\n\n\n\n\n\n415 Unsupported Media Type\n\n\nLa request tiene un media type que no est\u00e1 admitido por el servidor. Por ejemplo, el cliente ha subido una imagen en SVG pero el servidor s\u00f3lo recibe JPG o PNG.\n\n\n\n\n\n\n422 Unprocessable Entity\n\n\nLa request en s\u00ed es v\u00e1lida, pero alguno de los par\u00e1metros enviados no es correcto.\n\n\n\n\n\n\n\n\nError del servidor\n\n\n\n\n\n\n\n\nServer Error\n\n\n\n\n\n\n\n\n\n\n\n\n500 Internal Server Error\n\n\nLa request parece estar bien, pero hubo un problema en el servidor. El cliente no tiene nada que ver, y tampoco puede hacer nada al respecto.\n\n\n\n\n\n\n501 Not Implemented\n\n\nLa API no ha implementado el m\u00e9todo usado para hacer la request. Por ejemplo, el m\u00e9todo PUT.", 
             "title": "HTTP Status Codes"
         }, 
         {
@@ -792,7 +842,7 @@
         }, 
         {
             "location": "/references/status-codes/#error-del-cliente", 
-            "text": "Client Error       400 Bad Request  Error gen\u00e9rico para una request que no puede ser procesada por el servidor.    401 Unauthorized  El cliente es desconocido para la API y necesita autenticarse primero.    403 Forbidden  Los permisos del cliente no son suficientes para acceder a este recurso. Es decir, el recurso es un recurso protegido (desde la perspectiva del usuario que hizo la request).    404 Not Found  No existe el recurso pedido por el cliente.    405 Method Not Allowed  El usuario no tiene permiso para usar ese m\u00e9todo HTTP en particular.    406 Not Acceptable  El contenido no est\u00e1 disponible en la forma espec\u00edfica en que lo pidi\u00f3 el cliente (por medio de las cabeceras \"Accept-*\"). Por ejemplo, el cliente pidi\u00f3 un recurso en XML pero s\u00f3lo est\u00e1 disponible en JSON.    410 Gone  Indica que el recurso estaba disponible pero ya no m\u00e1s (de manera permanente).    415 Unsupported Media Type  La request tiene un media type que no est\u00e1 admitido por el servidor. Por ejemplo, el cliente ha subido una imagen en SVG pero el servidor s\u00f3lo recibe JPG o PNG.", 
+            "text": "Client Error       400 Bad Request  Error gen\u00e9rico para una request que no puede ser procesada por el servidor.    401 Unauthorized  El cliente es desconocido para la API y necesita autenticarse primero.    403 Forbidden  Los permisos del cliente no son suficientes para acceder a este recurso. Es decir, el recurso es un recurso protegido (desde la perspectiva del usuario que hizo la request).    404 Not Found  No existe el recurso pedido por el cliente.    405 Method Not Allowed  El usuario no tiene permiso para usar ese m\u00e9todo HTTP en particular.    406 Not Acceptable  El contenido no est\u00e1 disponible en la forma espec\u00edfica en que lo pidi\u00f3 el cliente (por medio de las cabeceras \"Accept-*\"). Por ejemplo, el cliente pidi\u00f3 un recurso en XML pero s\u00f3lo est\u00e1 disponible en JSON.    410 Gone  Indica que el recurso estaba disponible pero ya no m\u00e1s (de manera permanente).    415 Unsupported Media Type  La request tiene un media type que no est\u00e1 admitido por el servidor. Por ejemplo, el cliente ha subido una imagen en SVG pero el servidor s\u00f3lo recibe JPG o PNG.    422 Unprocessable Entity  La request en s\u00ed es v\u00e1lida, pero alguno de los par\u00e1metros enviados no es correcto.", 
             "title": "Error del cliente"
         }, 
         {

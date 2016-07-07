@@ -8,7 +8,7 @@
   
   
   
-  <title>Sprint 5 - ODIN</title>
+  <title>Sprint 7 - ODIN</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Sprint 5";
-    var mkdocs_page_input_path = "sprints/sprint-5.md";
-    var mkdocs_page_url = "/sprints/sprint-5/";
+    var mkdocs_page_name = "Sprint 7";
+    var mkdocs_page_input_path = "sprints/sprint-7.md";
+    var mkdocs_page_url = "/sprints/sprint-7/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -123,8 +123,22 @@
 
         
             
+    <li class="toctree-l1 ">
+        <a class="" href="../sprint-5/">Sprint 5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sprint-6/">Sprint 6</a>
+        
+    </li>
+
+        
+            
     <li class="toctree-l1 current">
-        <a class="current" href="./">Sprint 5</a>
+        <a class="current" href="./">Sprint 7</a>
         
             <ul>
             
@@ -143,33 +157,15 @@
             
                 <li class="toctree-l3"><a href="#endpoints">Endpoints</a></li>
                 
-                    <li><a class="toctree-l4" href="#charts">Charts</a></li>
-                
-                    <li><a class="toctree-l4" href="#maps">Maps</a></li>
+                    <li><a class="toctree-l4" href="#views">Views</a></li>
                 
             
-                <li class="toctree-l3"><a href="#modelos">Modelos</a></li>
+                <li class="toctree-l3"><a href="#campos">Campos</a></li>
                 
-                    <li><a class="toctree-l4" href="#charts_1">Charts</a></li>
-                
-                    <li><a class="toctree-l4" href="#maps_1">Maps</a></li>
+                    <li><a class="toctree-l4" href="#filetype">FileType</a></li>
                 
             
             </ul>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../sprint-6/">Sprint 6</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../sprint-7/">Sprint 7</a>
         
     </li>
 
@@ -240,7 +236,7 @@
         
       
     
-    <li>Sprint 5</li>
+    <li>Sprint 7</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -254,199 +250,67 @@
           <div role="main">
             <div class="section">
               
-                <p><strong>Duración:</strong> Miercoles 21/06/16 - Martes 28/06/16</p>
+                <p><strong>Duración:</strong> Lunes 11/07/16 - Martes 19/07/16</p>
 <h1 id="alcance">Alcance</h1>
-<p>Sprint de visualizaciones.</p>
+<p>Sprint de refactorización y testeo.</p>
 <h2 id="objetivo">Objetivo</h2>
-<p>Hacer el CRUD de gráficos y mapas.</p>
+<p>Solucionar los errores de los tests y poner algunas configuraciones en la base de datos.</p>
 <h1 id="tareas">Tareas</h1>
 <h2 id="api">API</h2>
 <ol>
-<li>Hacer el spec, modelo, seeds, routes y controller de gráficos (charts).</li>
-<li>Hacer el spec, modelo, seeds, routes y controller de mapas (maps).</li>
-<li>Exponer el contenido de los archivos subidos (CSVs) mediante la API</li>
-<li>Implementar filtrados condicionales</li>
-<li>Implementar respuestas parciales granulares</li>
-<li>Crear servicio de feeds RSS</li>
+<li>Solucionar los errores de los tests de mocha (<a href="https://travis-ci.org/gcba-odin/odin">Travis</a> debe dar <strong>build passing</strong>)</li>
+<li>Sacar logWhiteList de <code>/config/odin.js</code> y ponerlo en la base de datos (como un seed de Config)</li>
+<li>Agregar el campo <strong>mimetype</strong> a File y poner en los seeds de FileType su mimetype (sacarlos de <code>/config/odin.js</code>)</li>
+<li>Solucionar las issues encontradas por <a href="https://www.codacy.com/app/ODIN/odin/issues">Codacy</a> (las que sea posible resolver)</li>
+<li>
+<p>Implementar el error 522 Unprocessable Entity para los siguientes casos:</p>
+<ul>
+<li>Se envía el parámetro <strong>sort</strong> con un valor que no sea <code>ASC</code> o <code>DESC</code></li>
+<li>Se envía el parámetro <strong>condition</strong> con un valor que no sea <code>AND</code></li>
+<li>Se envía el parámetro <strong>match</strong> con un valor que no sea <code>BEGINS</code>, <code>CONTAINS</code> o <code>ENDS</code></li>
+</ul>
+</li>
+<li>
+<p>Implementar la despublicación automática de una View cuando se despublica su File</p>
+</li>
+<li>Implementar la despublicación automática de un Chart cuando se despublica su File</li>
+<li>Implementar la despublicación automática de un Map cuando se despublica su File</li>
 </ol>
 <h1 id="prioridades">Prioridades</h1>
 <ol>
-<li>Modelos y seeds</li>
-<li>Exponer el contenido de los archivos subidos (CSVs) mediante la API</li>
+<li>Solucionar los errores de los tests</li>
+<li>Error 522</li>
+<li>Despublicaciónes automáticas</li>
 </ol>
 <h1 id="endpoints">Endpoints</h1>
-<h2 id="charts">Charts</h2>
-<pre><code>GET      /charts
-POST     /charts
-OPTIONS  /charts
+<h2 id="views">Views</h2>
+<pre><code>GET      /views
+POST     /views
+OPTIONS  /views
 
-GET      /charts/first
-OPTIONS  /charts/first
+GET      /views/first
+OPTIONS  /views/first
 
-GET      /charts/last
-OPTIONS  /charts/last
+GET      /views/last
+OPTIONS  /views/last
 
-GET      /charts/count
-OPTIONS  /charts/count
+GET      /views/count
+OPTIONS  /views/count
 
-GET      /charts/:id
-PATCH    /charts/:id
-DELETE   /charts/:id
-HEAD     /charts/:id
-OPTIONS  /charts/:id
+GET      /views/:id
+PATCH    /views/:id
+DELETE   /views/:id
+HEAD     /views/:id
+OPTIONS  /views/:id
 </code></pre>
 
-<h2 id="maps">Maps</h2>
-<pre><code>GET      /maps
-POST     /maps
-OPTIONS  /maps
-
-GET      /maps/first
-OPTIONS  /maps/first
-
-GET      /maps/last
-OPTIONS  /maps/last
-
-GET      /maps/count
-OPTIONS  /maps/count
-
-GET      /maps/:id
-PATCH    /maps/:id
-DELETE   /maps/:id
-HEAD     /maps/:id
-OPTIONS  /maps/:id
-</code></pre>
-
-<h1 id="modelos">Modelos</h1>
-<h2 id="charts_1">Charts</h2>
+<h1 id="campos">Campos</h1>
+<h2 id="filetype">FileType</h2>
 <ul>
 <li>
-<p><strong>id</strong></p>
+<p><strong>mimetype</strong></p>
 <p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Único:</em> sí</p>
-<p><em>Max:</em> 15 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>name</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Max:</em> 150 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>description</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 350 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>notes</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 500 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>url</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 500 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>createdAt</strong></p>
-<p><em>Tipo:</em> datetime</p>
-<p><em>Default:</em> fecha y hora actuales</p>
-</li>
-</ul>
-<h3 id="claves-foraneas">Claves Foráneas</h3>
-<ul>
-<li>
-<p><strong>createdBy</strong></p>
-<p>El ID del usuario que creó el gráfico.</p>
-<p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Max:</em> 15 carácteres</p>
-</li>
-</ul>
-<h2 id="maps_1">Maps</h2>
-<ul>
-<li>
-<p><strong>id</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Único:</em> sí</p>
-<p><em>Max:</em> 15 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>name</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Max:</em> 150 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>description</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 350 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>notes</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 500 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>basemap</strong></p>
-<p><em>Tipo:</em> enum</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Valores posibles:</em> 'roadmap', 'satellite', 'hybrid', 'terrain'</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>url</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 500 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>createdAt</strong></p>
-<p><em>Tipo:</em> datetime</p>
-<p><em>Default:</em> fecha y hora actuales</p>
-</li>
-</ul>
-<h3 id="claves-foraneas_1">Claves Foráneas</h3>
-<ul>
-<li>
-<p><strong>createdBy</strong></p>
-<p>El ID del usuario que creó el map.</p>
-<p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Max:</em> 15 carácteres</p>
+<p><em>Max:</em> 200 carácteres</p>
 </li>
 </ul>
               
@@ -456,10 +320,10 @@ OPTIONS  /maps/:id
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../sprint-6/" class="btn btn-neutral float-right" title="Sprint 6">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../references/status-codes/" class="btn btn-neutral float-right" title="HTTP Status Codes">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../sprint-4/" class="btn btn-neutral" title="Sprint 4"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sprint-6/" class="btn btn-neutral" title="Sprint 6"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -487,10 +351,10 @@ OPTIONS  /maps/:id
           <a href="https://github.com/gcba-odin/odin-tech-docs" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../sprint-4/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../sprint-6/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../sprint-6/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../references/status-codes/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

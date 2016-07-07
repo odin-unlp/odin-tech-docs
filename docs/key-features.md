@@ -5,7 +5,7 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
 - **Estructura jerárquica:** de lo universal a lo particular. Se usa la barra `/` para indicar una relación jerárquica entre recursos.
 
     *Ejemplo:* `GET /datasets/5f86r`
-    
+
 - **Granularidad media:** los recursos no deben estar anidados a más de dos niveles de profundidad.
 
     *Mal*: `GET /datasets/5f86r/resources/f9e3b`
@@ -16,13 +16,13 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
 
     *Mal*: `GET /getAllDatasets`
 
-    *Bien*: `GET /datasets`  
+    *Bien*: `GET /datasets`
 
 - **Uso de plurales:** sólo usar la forma singular de los sustantivos cuando no haya posibilidad alguna de que los recursos tengan múltiples.
 
     *Mal*: `GET /dataset`
 
-    *Bien*: `GET /datasets`  
+    *Bien*: `GET /datasets`
 
 - **camelCase:** lowerCamelCase para los parámetros, tanto en la url como en el body de la request.
 
@@ -36,7 +36,7 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
     *Mal:* `GET /datasets/5f86r/`
 
     *Bien:* `GET /datasets/5f86r`
-    
+
 
 - No se deben usar guiones bajos en las URLs. En el extremo caso de que no fuera posible o conveniente usar camelCase, usar guiones medios para separar palabras.
   ​
@@ -46,12 +46,12 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
     *Mal:* `GET /Datasets/5f86r`
 
     *Bien:* `GET /datasets/5f86r`
-    
+
 
 - No se deben incluir extensiones de archivo en los endpoints. El tipo de contenido a devolver al cliente estará determinado por el header `Accepts` de la request.
 
     *Mal:* `GET /datasets/5f86r.json`
-  
+
 
 # 2. Verbos HTTP
 
@@ -71,30 +71,49 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
 
 # 3. Queries
 
-- **Búsqueda:** se hará por medio del parámetro *search*, con los términos de búsqueda separados por `+`. Se admitirán dos clases de búsqueda:
+- **Búsqueda:** se hará por medio del endpoint *search*, con el parámetro *query*. Se admitirán dos clases de búsqueda:
 
-    *Global:*  `GET /search?query=calidad+aire` 
+    *Global:*  `GET /search?query=calidad aire`
 
     Busca en todos los recursos.
 
-    *Particular:*  `GET /datasets/search?query=calidad+aire` 
+    *Particular:*  `GET /datasets/search?query=calidad aire`
 
     Busca en los datasets.
+
+    Es posible controlar cómo se hace la búsqueda mediante los parámetros *condition* y *match*. *condition* permite que, dado más de un término de búsqueda, determinar si todos ellos deben estar presentes o cualquiera indistintamente:
+
+    *Todos*: datasets/search?query=1,2,3 (por defecto)
+    *Indistinto*: datasets/search?query=1,2,3&condition=AND
+
+    Los términos deben ir separados por coma. *match* permite determinar en qué parte debe estar presente el término de búsqueda:
+
+    *En cualquier lado*: datasets/search?query=1,2,3 (por defecto)
+    *Al comienzo*: datasets/search?query=1,2,3&match=BEGINS
+    *Al final*: datasets/search?query=1,2,3&match=ENDS
+
+    *condition* y *match* puden combinarse:
+
+    *Ejemplo*: datasets/search?query=1,2,3&condition=AND&match=ENDS
 
 
 - **Fitrado:** a través de parámetros.
 
-    *Ejemplo*: `GET /datasets?state=public`
+    *Ejemplo*: `GET /datasets?name=Dataset 1`
+
+    Devuelve el dataset llamado Dataset 1.
+
+    *Ejemplo*: `GET /datasets?status.name=Public`
 
     Devuelve los datasets públicos.
 
 
-- **Ordenado:** a través de los parámetros *orderBy* y *sort*. Este último admite ASC o DESC como valores, para ordenar en forma ascendiente o descendiente respectivamente. 
+- **Ordenado:** a través de los parámetros *orderBy* y *sort*. Este último admite ASC o DESC como valores, para ordenar en forma ascendiente o descendiente respectivamente.
 
     *Ejemplo*: `GET /datasets?orderBy=name&sort=DESC`
 
     Devuelve los datasets ordenados por nombre en forma descendiente.
-    
+
 
 - **Limitado:** a través del parámetro *limit*.
 
@@ -103,44 +122,44 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
     Devuelve 10 resultados.
 
 
-- **Paginado:** por rango, a través del parámetro *offset* combinado con el parámetro *limit*. El *offset* es el ID del elemento a partir del cual se comienza a contar la cantidad de ítems especificada por limit. Si no se pasara *limit*, se obtendrían todos los recursos a partir del *offset*. 
+- **Paginado:** por rango, a través del parámetro *skip* combinado con el parámetro *limit*. El *skip* es el número de elementos a partir de los cuales se comienza a contar la cantidad de ítems especificada por *limit.* El valor por defecto de *limit* es 20.
 
-    De allí la necesidad de **definir un límite** para la cantidad de registros que una query puede devolver, especialmente cuando se trata de muchos registros, como un dataset extenso. Igualmente para el caso de en que se piden todos los registros de un recurso, como por ejemplo `GET /datasets`.
+    El paginado debe usar el timestamp de la request como una suerte de versionado a los fines de no incluir duplicados (incluso aunque los objetos involucrados cambien).
 
-    El paginado debe ser consistente, es decir usar el timestamp de la request como una suerte de versionado a los fines de no incluir duplicados (incluso aunque los objetos involucrados cambien).
+    *Ejemplo*: `GET /datasets?skip=5&limit=30`
 
-    *Ejemplo*: `GET /datasets?offset=5f86r&limit=30`
+    Devuelve los 10 resultados que siguen a los primeros 5 ítems.
 
-    Devuelve los 10 resultados que siguen al ítem número 20.
-    
 
-- **Respuestas parciales:** permite a los clientes elegir qué información necesitan en lugar de obtener la respuesta completa, lo que es especialmente útil para las aplicaciones móviles (por el ancho de banda limitado). Los datos requeridos van en el campo *fields*, separados por coma.
+- **Respuestas parciales:** permite a los clientes elegir qué información necesitan en lugar de obtener la respuesta completa, lo que es especialmente útil para las aplicaciones móviles (por el ancho de banda limitado). Los datos requeridos van en el campo *fields*, separados por coma para campos completos, y por puntos para atributos en particular.
 
+    *Ejemplo*: `GET /datasets?fields=name`
     *Ejemplo*: `GET /datasets?fields=name,description`
+    *Ejemplo*: `GET /datasets?fields=name,description,category.name`
 
 
 - **Palabras reservadas:** *first*, *last* y *count*. Pueden reservarse otras, según el tipo de dato (por ejemplo: *average*, *max*, *min*).
 
     *First:*  `GET /datasets/first`
 
-    Devuelve el primer dataset. 
+    Devuelve el primer dataset.
 
     *Last:*  `GET /datasets/last`
 
-    Devuelve el último dataset. 
+    Devuelve el último dataset.
 
     *Count:*  `GET /datasets/count`
 
-    Devuelve la cantidad de datasets. 
+    Devuelve la cantidad de datasets.
 
 - **Recursos relacionados:** posibilita incluir en la response otros recursos que estén relacionados con el recurso que fue requerido. Debe ser posible incluir más de uno separándolos con comas, y también acceder a un atributo en particular (después de un punto).
 
     *Ejemplo*: `GET /datasets?include=tags`
-    
+
     *Ejemplo*: `GET /datasets?include=tags.name`
-    
+
     *Ejemplo*: `GET /datasets?include=tags.name,tags.id`
-    
+
 # 4. Plugins
 
 TBD

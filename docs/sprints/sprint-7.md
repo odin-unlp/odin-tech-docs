@@ -18,7 +18,7 @@ Solucionar los errores de los tests y poner algunas configuraciones en la base d
 5. Implementar el error 522 Unprocessable Entity para los siguientes casos:
 
     - Se envía el parámetro **sort** con un valor que no sea `ASC` o `DESC`
-    - Se envía el parámetro **condition** con un valor que no sea `AND`
+    - Se envía el parámetro **condition** con un valor que no sea `AND` o `OR`
     - Se envía el parámetro **match** con un valor que no sea `BEGINS`, `CONTAINS` o `ENDS`
 
 6. Implementar la despublicación automática de una View cuando se despublica su File
