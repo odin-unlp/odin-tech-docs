@@ -271,12 +271,12 @@
 <li>
 <p><strong>Uso de sustantivos:</strong> para designar recursos. Sólo se deben emplear verbos para los endpoints de servicio.</p>
 <p><em>Mal</em>: <code>GET /getAllDatasets</code></p>
-<p><em>Bien</em>: <code>GET /datasets</code>  </p>
+<p><em>Bien</em>: <code>GET /datasets</code></p>
 </li>
 <li>
 <p><strong>Uso de plurales:</strong> sólo usar la forma singular de los sustantivos cuando no haya posibilidad alguna de que los recursos tengan múltiples.</p>
 <p><em>Mal</em>: <code>GET /dataset</code></p>
-<p><em>Bien</em>: <code>GET /datasets</code>  </p>
+<p><em>Bien</em>: <code>GET /datasets</code></p>
 </li>
 <li>
 <p><strong>camelCase:</strong> lowerCamelCase para los parámetros, tanto en la url como en el body de la request.</p>
@@ -323,19 +323,30 @@
 <h1 id="3-queries">3. Queries</h1>
 <ul>
 <li>
-<p><strong>Búsqueda:</strong> se hará por medio del parámetro <em>search</em>, con los términos de búsqueda separados por <code>+</code>. Se admitirán dos clases de búsqueda:</p>
-<p><em>Global:</em>  <code>GET /search?query=calidad+aire</code> </p>
+<p><strong>Búsqueda:</strong> se hará por medio del endpoint <em>search</em>, con el parámetro <em>query</em>. Se admitirán dos clases de búsqueda:</p>
+<p><em>Global:</em>  <code>GET /search?query=calidad aire</code></p>
 <p>Busca en todos los recursos.</p>
-<p><em>Particular:</em>  <code>GET /datasets/search?query=calidad+aire</code> </p>
+<p><em>Particular:</em>  <code>GET /datasets/search?query=calidad aire</code></p>
 <p>Busca en los datasets.</p>
+<p>Es posible controlar cómo se hace la búsqueda mediante los parámetros <em>condition</em> y <em>match</em>. <em>condition</em> permite que, dado más de un término de búsqueda, determinar si todos ellos deben estar presentes o cualquiera indistintamente:</p>
+<p><em>Todos</em>: datasets/search?query=1,2,3 (por defecto)
+<em>Indistinto</em>: datasets/search?query=1,2,3&amp;condition=AND</p>
+<p>Los términos deben ir separados por coma. <em>match</em> permite determinar en qué parte debe estar presente el término de búsqueda:</p>
+<p><em>En cualquier lado</em>: datasets/search?query=1,2,3 (por defecto)
+<em>Al comienzo</em>: datasets/search?query=1,2,3&amp;match=BEGINS
+<em>Al final</em>: datasets/search?query=1,2,3&amp;match=ENDS</p>
+<p><em>condition</em> y <em>match</em> puden combinarse:</p>
+<p><em>Ejemplo</em>: datasets/search?query=1,2,3&amp;condition=AND&amp;match=ENDS</p>
 </li>
 <li>
 <p><strong>Fitrado:</strong> a través de parámetros.</p>
-<p><em>Ejemplo</em>: <code>GET /datasets?state=public</code></p>
+<p><em>Ejemplo</em>: <code>GET /datasets?name=Dataset 1</code></p>
+<p>Devuelve el dataset llamado Dataset 1.</p>
+<p><em>Ejemplo</em>: <code>GET /datasets?status.name=Public</code></p>
 <p>Devuelve los datasets públicos.</p>
 </li>
 <li>
-<p><strong>Ordenado:</strong> a través de los parámetros <em>orderBy</em> y <em>sort</em>. Este último admite ASC o DESC como valores, para ordenar en forma ascendiente o descendiente respectivamente. </p>
+<p><strong>Ordenado:</strong> a través de los parámetros <em>orderBy</em> y <em>sort</em>. Este último admite ASC o DESC como valores, para ordenar en forma ascendiente o descendiente respectivamente.</p>
 <p><em>Ejemplo</em>: <code>GET /datasets?orderBy=name&amp;sort=DESC</code></p>
 <p>Devuelve los datasets ordenados por nombre en forma descendiente.</p>
 </li>
@@ -345,24 +356,25 @@
 <p>Devuelve 10 resultados.</p>
 </li>
 <li>
-<p><strong>Paginado:</strong> por rango, a través del parámetro <em>offset</em> combinado con el parámetro <em>limit</em>. El <em>offset</em> es el ID del elemento a partir del cual se comienza a contar la cantidad de ítems especificada por limit. Si no se pasara <em>limit</em>, se obtendrían todos los recursos a partir del <em>offset</em>. </p>
-<p>De allí la necesidad de <strong>definir un límite</strong> para la cantidad de registros que una query puede devolver, especialmente cuando se trata de muchos registros, como un dataset extenso. Igualmente para el caso de en que se piden todos los registros de un recurso, como por ejemplo <code>GET /datasets</code>.</p>
-<p>El paginado debe ser consistente, es decir usar el timestamp de la request como una suerte de versionado a los fines de no incluir duplicados (incluso aunque los objetos involucrados cambien).</p>
-<p><em>Ejemplo</em>: <code>GET /datasets?offset=5f86r&amp;limit=30</code></p>
-<p>Devuelve los 10 resultados que siguen al ítem número 20.</p>
+<p><strong>Paginado:</strong> por rango, a través del parámetro <em>skip</em> combinado con el parámetro <em>limit</em>. El <em>skip</em> es el número de elementos a partir de los cuales se comienza a contar la cantidad de ítems especificada por <em>limit.</em> El valor por defecto de <em>limit</em> es 20.</p>
+<p>El paginado debe usar el timestamp de la request como una suerte de versionado a los fines de no incluir duplicados (incluso aunque los objetos involucrados cambien).</p>
+<p><em>Ejemplo</em>: <code>GET /datasets?skip=5&amp;limit=30</code></p>
+<p>Devuelve los 10 resultados que siguen a los primeros 5 ítems.</p>
 </li>
 <li>
-<p><strong>Respuestas parciales:</strong> permite a los clientes elegir qué información necesitan en lugar de obtener la respuesta completa, lo que es especialmente útil para las aplicaciones móviles (por el ancho de banda limitado). Los datos requeridos van en el campo <em>fields</em>, separados por coma.</p>
-<p><em>Ejemplo</em>: <code>GET /datasets?fields=name,description</code></p>
+<p><strong>Respuestas parciales:</strong> permite a los clientes elegir qué información necesitan en lugar de obtener la respuesta completa, lo que es especialmente útil para las aplicaciones móviles (por el ancho de banda limitado). Los datos requeridos van en el campo <em>fields</em>, separados por coma para campos completos, y por puntos para atributos en particular.</p>
+<p><em>Ejemplo</em>: <code>GET /datasets?fields=name</code>
+<em>Ejemplo</em>: <code>GET /datasets?fields=name,description</code>
+<em>Ejemplo</em>: <code>GET /datasets?fields=name,description,category.name</code></p>
 </li>
 <li>
 <p><strong>Palabras reservadas:</strong> <em>first</em>, <em>last</em> y <em>count</em>. Pueden reservarse otras, según el tipo de dato (por ejemplo: <em>average</em>, <em>max</em>, <em>min</em>).</p>
 <p><em>First:</em>  <code>GET /datasets/first</code></p>
-<p>Devuelve el primer dataset. </p>
+<p>Devuelve el primer dataset.</p>
 <p><em>Last:</em>  <code>GET /datasets/last</code></p>
-<p>Devuelve el último dataset. </p>
+<p>Devuelve el último dataset.</p>
 <p><em>Count:</em>  <code>GET /datasets/count</code></p>
-<p>Devuelve la cantidad de datasets. </p>
+<p>Devuelve la cantidad de datasets.</p>
 </li>
 <li>
 <p><strong>Recursos relacionados:</strong> posibilita incluir en la response otros recursos que estén relacionados con el recurso que fue requerido. Debe ser posible incluir más de uno separándolos con comas, y también acceder a un atributo en particular (después de un punto).</p>
