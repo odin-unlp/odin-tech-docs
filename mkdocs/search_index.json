@@ -782,7 +782,7 @@
         }, 
         {
             "location": "/sprints/sprint-7/", 
-            "text": "Duraci\u00f3n:\n Lunes 11/07/16 - Martes 19/07/16\n\n\nAlcance\n\n\nSprint de refactorizaci\u00f3n y testeo.\n\n\nObjetivo\n\n\nSolucionar los errores de los tests y poner algunas configuraciones en la base de datos.\n\n\nTareas\n\n\nAPI\n\n\n\n\nSolucionar los errores de los tests de mocha (\nTravis\n debe dar \nbuild passing\n)\n\n\nSacar logWhiteList de \n/config/odin.js\n y ponerlo en la base de datos (como un seed de Config)\n\n\nAgregar el campo \nmimetype\n a File y poner en los seeds de FileType su mimetype (sacarlos de \n/config/odin.js\n)\n\n\nSolucionar las issues encontradas por \nCodacy\n (las que sea posible resolver)\n\n\n\n\nImplementar el error 522 Unprocessable Entity para los siguientes casos:\n\n\n\n\nSe env\u00eda el par\u00e1metro \nsort\n con un valor que no sea \nASC\n o \nDESC\n\n\nSe env\u00eda el par\u00e1metro \ncondition\n con un valor que no sea \nAND\n\n\nSe env\u00eda el par\u00e1metro \nmatch\n con un valor que no sea \nBEGINS\n o \nENDS\n\n\n\n\n\n\n\n\nImplementar la despublicaci\u00f3n autom\u00e1tica de una View cuando se despublica su File\n\n\n\n\nImplementar la despublicaci\u00f3n autom\u00e1tica de un Chart cuando se despublica su File\n\n\nImplementar la despublicaci\u00f3n autom\u00e1tica de un Map cuando se despublica su File\n\n\n\n\nPrioridades\n\n\n\n\nSolucionar los errores de los tests\n\n\nError 522\n\n\nDespublicaci\u00f3nes autom\u00e1ticas\n\n\n\n\nEndpoints\n\n\nViews\n\n\nGET      /views\nPOST     /views\nOPTIONS  /views\n\nGET      /views/first\nOPTIONS  /views/first\n\nGET      /views/last\nOPTIONS  /views/last\n\nGET      /views/count\nOPTIONS  /views/count\n\nGET      /views/:id\nPATCH    /views/:id\nDELETE   /views/:id\nHEAD     /views/:id\nOPTIONS  /views/:id\n\n\n\n\nCampos\n\n\nFileType\n\n\n\n\n\n\nmimetype\n\n\nTipo:\n string\n\n\nMax:\n 200 car\u00e1cteres", 
+            "text": "Duraci\u00f3n:\n Lunes 11/07/16 - Martes 19/07/16\n\n\nAlcance\n\n\nSprint de refactorizaci\u00f3n y testeo.\n\n\nObjetivo\n\n\nSolucionar los errores de los tests y poner algunas configuraciones en la base de datos.\n\n\nTareas\n\n\nAPI\n\n\n\n\nSolucionar los errores de los tests de mocha (\nTravis\n debe dar \nbuild passing\n)\n\n\nSacar logWhiteList de \n/config/odin.js\n y ponerlo en la base de datos (como un seed de Config)\n\n\nAgregar el campo \nmimetype\n a File y poner en los seeds de FileType su mimetype (sacarlos de \n/config/odin.js\n)\n\n\nSolucionar las issues encontradas por \nCodacy\n (las que sea posible resolver)\n\n\n\n\nImplementar el error 522 Unprocessable Entity para los siguientes casos:\n\n\n\n\nSe env\u00eda el par\u00e1metro \nsort\n con un valor que no sea \nASC\n o \nDESC\n\n\nSe env\u00eda el par\u00e1metro \ncondition\n con un valor que no sea \nAND\n\n\nSe env\u00eda el par\u00e1metro \nmatch\n con un valor que no sea \nBEGINS\n o \nENDS\n\n\n\n\n\n\n\n\nImplementar la despublicaci\u00f3n autom\u00e1tica de una View cuando se despublica su File\n\n\n\n\nImplementar la despublicaci\u00f3n autom\u00e1tica de un Chart cuando se despublica su File\n\n\nImplementar la despublicaci\u00f3n autom\u00e1tica de un Map cuando se despublica su File\n\n\n\n\nPrioridades\n\n\n\n\nSolucionar los errores de los tests\n\n\nError 522\n\n\nDespublicaci\u00f3nes autom\u00e1ticas\n\n\n\n\nCampos\n\n\nFileType\n\n\n\n\n\n\nmimetype\n\n\nTipo:\n string\n\n\nMax:\n 200 car\u00e1cteres", 
             "title": "Sprint 7"
         }, 
         {
@@ -809,16 +809,6 @@
             "location": "/sprints/sprint-7/#prioridades", 
             "text": "Solucionar los errores de los tests  Error 522  Despublicaci\u00f3nes autom\u00e1ticas", 
             "title": "Prioridades"
-        }, 
-        {
-            "location": "/sprints/sprint-7/#endpoints", 
-            "text": "", 
-            "title": "Endpoints"
-        }, 
-        {
-            "location": "/sprints/sprint-7/#views", 
-            "text": "GET      /views\nPOST     /views\nOPTIONS  /views\n\nGET      /views/first\nOPTIONS  /views/first\n\nGET      /views/last\nOPTIONS  /views/last\n\nGET      /views/count\nOPTIONS  /views/count\n\nGET      /views/:id\nPATCH    /views/:id\nDELETE   /views/:id\nHEAD     /views/:id\nOPTIONS  /views/:id", 
-            "title": "Views"
         }, 
         {
             "location": "/sprints/sprint-7/#campos", 
