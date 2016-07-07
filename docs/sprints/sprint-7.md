@@ -33,30 +33,6 @@ Solucionar los errores de los tests y poner algunas configuraciones en la base d
 3. Despublicaciónes automáticas
 
 
-# Endpoints
-
-## Views
-```
-GET      /views
-POST     /views
-OPTIONS  /views
-
-GET      /views/first
-OPTIONS  /views/first
-
-GET      /views/last
-OPTIONS  /views/last
-
-GET      /views/count
-OPTIONS  /views/count
-
-GET      /views/:id
-PATCH    /views/:id
-DELETE   /views/:id
-HEAD     /views/:id
-OPTIONS  /views/:id
-```
-
 # Campos
 
 ## FileType
