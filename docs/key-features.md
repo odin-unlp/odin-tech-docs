@@ -107,6 +107,21 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
 
     Devuelve los datasets públicos.
 
+    Es posible controlar cómo se hace el filtrado mediante los parámetros *condition* y *match*. *condition* permite que, dado más de un valor de filtrado, determinar si todos ellos deben estar presentes o cualquiera indistintamente:
+
+    *Todos*: datasets?name=1,2,3 (por defecto)
+    *Indistinto*: datasets?name=1,2,3&condition=AND
+
+    Los valores deben ir separados por coma. *match* permite determinar en qué parte debe estar presente el valor de filtrado:
+
+    *En cualquier lado*: datasets?name=1,2,3 (por defecto)
+    *Al comienzo*: datasets?name=1,2,3&match=BEGINS
+    *Al final*: datasets?name=1,2,3&match=ENDS
+
+    *condition* y *match* puden combinarse:
+
+    *Ejemplo*:datasets?name=1,2,3&condition=AND&match=ENDS
+
 
 - **Ordenado:** a través de los parámetros *orderBy* y *sort*. Este último admite ASC o DESC como valores, para ordenar en forma ascendiente o descendiente respectivamente.
 
