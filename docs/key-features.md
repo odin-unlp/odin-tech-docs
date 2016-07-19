@@ -190,4 +190,4 @@ El soporte de internacionalización y localización se hará a nivel de frontend
 
 # 6. Testeo
 
-TBD
+Se escribirán suites de tests usando [Mocha](https://mochajs.org/) para cubrir los casos CRUD de cada modelo a través de la API.
