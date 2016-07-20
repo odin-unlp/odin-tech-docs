@@ -1073,6 +1073,14 @@ OPTIONS  /charts/:id
 
 ---
 
+- **embedCode**
+
+    *Tipo:* text
+
+    *Max:* 500 carácteres
+
+---
+
 - **createdAt**
 
     *Tipo:* datetime
@@ -1172,12 +1180,27 @@ OPTIONS  /maps/:id
 
 ---
 
+- **embedCode**
+
+    *Tipo:* text
+
+    *Max:* 500 carácteres
+
+---
+
+- **geojson**
+
+    *Tipo:* json
+
+    *Max:* 5000 carácteres
+
+---
+
 - **createdAt**
 
     *Tipo:* datetime
 
     *Default:* fecha y hora actuales
-
 
 ### Claves Foráneas
 
@@ -1285,26 +1308,6 @@ OPTIONS  /views/:id
     *Requerido:* sí
 
     *Max:* 15 carácteres
-
-
-# Campos
-
-## Maps
-
-- **geojson**
-
-    *Tipo:* json
-
-    *Max:* 5000 carácteres
-
-
-## Maps y Charts
-
-- **embedCode**
-
-    *Tipo:* text
-
-    *Max:* 500 carácteres
 
 # 13. Config
 ## Endpoints
