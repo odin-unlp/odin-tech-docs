@@ -997,13 +997,191 @@ OPTIONS  /files/:id
 
 # 10. Chart
 ## Endpoints
+```
+GET      /charts
+POST     /charts
+OPTIONS  /charts
+
+GET      /charts/first
+OPTIONS  /charts/first
+
+GET      /charts/last
+OPTIONS  /charts/last
+
+GET      /charts/count
+OPTIONS  /charts/count
+
+GET      /charts/:id
+PATCH    /charts/:id
+DELETE   /charts/:id
+HEAD     /charts/:id
+OPTIONS  /charts/:id
+```
 
 ## Campos
+- **id**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Único:* sí
+
+    *Max:* 15 carácteres
+
+---
+
+- **name**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 150 carácteres
+
+---
+
+- **description**
+
+    *Tipo:* string
+
+    *Max:* 350 carácteres
+
+---
+
+- **notes**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+---
+
+- **url**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+---
+
+- **createdAt**
+
+    *Tipo:* datetime
+
+    *Default:* fecha y hora actuales
+
+
+### Claves Foráneas
+
+- **createdBy**
+
+    El ID del usuario que creó el gráfico.
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 15 carácteres
 
 # 11. Map
 ## Endpoints
+```
+GET      /maps
+POST     /maps
+OPTIONS  /maps
+
+GET      /maps/first
+OPTIONS  /maps/first
+
+GET      /maps/last
+OPTIONS  /maps/last
+
+GET      /maps/count
+OPTIONS  /maps/count
+
+GET      /maps/:id
+PATCH    /maps/:id
+DELETE   /maps/:id
+HEAD     /maps/:id
+OPTIONS  /maps/:id
+```
 
 ## Campos
+- **id**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Único:* sí
+
+    *Max:* 15 carácteres
+
+---
+
+- **name**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 150 carácteres
+
+---
+
+- **description**
+
+    *Tipo:* string
+
+    *Max:* 350 carácteres
+
+---
+
+- **notes**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+---
+
+- **basemap**
+
+    *Tipo:* enum
+
+    *Requerido:* sí
+
+    *Valores posibles:* 'roadmap', 'satellite', 'hybrid', 'terrain'
+
+---
+
+- **url**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+---
+
+- **createdAt**
+
+    *Tipo:* datetime
+
+    *Default:* fecha y hora actuales
+
+
+### Claves Foráneas
+
+- **createdBy**
+
+    El ID del usuario que creó el map.
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 15 carácteres
 
 # 12. View
 ## Endpoints
