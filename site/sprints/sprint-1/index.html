@@ -571,7 +571,7 @@ OPTIONS  /datasets/:id
 
 <h2 id="estructura-de-las-responses">Estructura de las responses</h2>
 <h3 id="get">GET</h3>
-<p>Si no hay errores. En el caso de que se devuelva un solo registro, en data no va un array, sino ese registro sólo. Y si no hay registros, en data habrá un objeto vacío.</p>
+<p>En el caso de que se devuelva un solo registro, en data no va un array, sino ese registro sólo. Y si no hay registros, en data habrá un objeto vacío.</p>
 <pre><code class="json">{
    &quot;meta&quot;: {
        ...
@@ -593,21 +593,6 @@ OPTIONS  /datasets/:id
 }
 </code></pre>
 
-<p>Si hay error/es:</p>
-<pre><code class="json">{
-   &quot;meta&quot;: {
-       ...
-   },
-   &quot;error&quot;:
-     {
-         ...
-     },
-   &quot;links&quot;: {
-       ...
-   }
-}
-</code></pre>
-
 <h3 id="post">POST</h3>
 <pre><code class="json">{
    &quot;meta&quot;: {
@@ -620,7 +605,6 @@ OPTIONS  /datasets/:id
 </code></pre>
 
 <h3 id="patch">PATCH</h3>
-<p>Si hubo error/es incluir objeto "error" como en GET.</p>
 <pre><code class="json">{
    &quot;meta&quot;: {
        ...
@@ -632,7 +616,6 @@ OPTIONS  /datasets/:id
 </code></pre>
 
 <h3 id="delete">DELETE</h3>
-<p>Si hubo error/es incluir objeto "error" como en GET.</p>
 <pre><code class="json">{
    &quot;meta&quot;: {
        ...
@@ -648,7 +631,6 @@ OPTIONS  /datasets/:id
 </code></pre>
 
 <h3 id="options">OPTIONS</h3>
-<p>Si hubo error/es incluir objeto "error" como en GET.</p>
 <pre><code class="json">{
    &quot;meta&quot;: {
        ...
