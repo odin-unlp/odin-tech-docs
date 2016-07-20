@@ -620,6 +620,8 @@ PATCH    /datasets/:id
 DELETE   /datasets/:id
 HEAD     /datasets/:id
 OPTIONS  /datasets/:id
+
+GET  /datasets/:id/download
 ```
 
 ## Campos
