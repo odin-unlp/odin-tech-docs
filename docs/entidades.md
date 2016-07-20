@@ -849,6 +849,8 @@ PATCH    /files/:id
 DELETE   /files/:id
 HEAD     /files/:id
 OPTIONS  /files/:id
+
+GET      /files/:id/resources
 ```
 
 ## Campos
