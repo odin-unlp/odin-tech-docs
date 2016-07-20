@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Entidades - ODIN</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Entidades";
+    var mkdocs_page_input_path = "entidades.md";
+    var mkdocs_page_url = "/entidades/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ODIN</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../key-features/">Key Features</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../arquitectura/">Arquitectura</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../codigo-fuente/">Codigo Fuente</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../metodologia/">Metodología</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Entidades</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#1-organization">1. Organization</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#campos">Campos</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#2-user">2. User</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints_1">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#campos_1">Campos</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#3-category">3. Category</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints_2">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#campos_2">Campos</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#4-status">4. Status</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints_3">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#campos_3">Campos</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#5-filetype">5. FileType</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints_4">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#campos_4">Campos</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#6-updatefrequency">6. UpdateFrequency</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints_5">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#campos_5">Campos</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#7-tag">7. Tag</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints_6">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#campos_6">Campos</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#8-dataset">8. Dataset</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints_7">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#campos_7">Campos</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#9-file">9. File</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints_8">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#campos_8">Campos</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#10-chart">10. Chart</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints_9">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#campos_9">Campos</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#11-map">11. Map</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints_10">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#campos_10">Campos</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#12-view">12. View</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints_11">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#campos_11">Campos</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#13-config">13. Config</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints_12">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#campos_12">Campos</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#14-log">14. Log</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints_13">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#campos_13">Campos</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Sprints</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sprints/sprint-1/">Sprint 1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sprints/sprint-2/">Sprint 2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sprints/sprint-3/">Sprint 3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sprints/sprint-4/">Sprint 4</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sprints/sprint-5/">Sprint 5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sprints/sprint-6/">Sprint 6</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sprints/sprint-7/">Sprint 7</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Referencias</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../references/status-codes/">HTTP Status Codes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Links</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../links/backend/">Backend</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../links/frontend/">Frontend</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ODIN</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Entidades</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/gcba-odin/odin-tech-docs" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="1-organization">1. Organization</h1>
+<h2 id="endpoints">Endpoints</h2>
+<pre><code>GET      /organizations
+POST     /organizations
+OPTIONS  /organizations
+
+GET      /organizations/first
+OPTIONS  /organizations/first
+
+GET      /organizations/last
+OPTIONS  /organizations/last
+
+GET      /organizations/count
+OPTIONS  /organizations/count
+
+GET      /organizations/:id
+PATCH    /organizations/:id
+DELETE   /organizations/:id
+HEAD     /organizations/:id
+OPTIONS  /organizations/:id
+</code></pre>
+
+<h2 id="campos">Campos</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>description</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 350 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>address</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>active</strong></p>
+<p><em>Tipo:</em> boolean</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>parent</strong></p>
+<p>El ID de la organización a que pertenece. En caso de una organización que no depende de alguna otra existente en la base de datos, va NULL.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdBy</strong></p>
+<p>El ID del usuario que creó la organización.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<h1 id="2-user">2. User</h1>
+<h2 id="endpoints_1">Endpoints</h2>
+<pre><code>GET      /users
+POST     /users
+OPTIONS  /users
+
+GET      /users/first
+OPTIONS  /users/first
+
+GET      /users/last
+OPTIONS  /users/last
+
+GET      /users/count
+OPTIONS  /users/count
+
+GET      /users/:id
+PATCH    /users/:id
+DELETE   /users/:id
+HEAD     /users/:id
+OPTIONS  /users/:id
+
+GET      /users/refreshToken/:id
+OPTIONS  /users/refreshToken/:id
+
+POST     /users/login
+OPTIONS  /users/login
+</code></pre>
+
+<h2 id="campos_1">Campos</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>username</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 25 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>password</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>email</strong></p>
+<p><em>Tipo:</em> email</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 250 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>firstName</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 50 carácteres</p>
+<p><em>Default:</em> '' (empty string)</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>lastName</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 100 carácteres</p>
+<p><em>Default:</em> '' (empty string)</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>avatar</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>active</strong></p>
+<p><em>Tipo:</em> boolean</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_1">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>organization</strong></p>
+<p>El ID de la organización a que pertenece. En el caso del Admin (usuario 1) por el momento será la primera organización generada por el seedeo de la base de datos (ej. "Organización 1").</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdBy</strong></p>
+<p>El ID del admin que creó el usuario. En el caso del Admin (usuario 1), es sí mismo (1).</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<h3 id="calculados">Calculados</h3>
+<ul>
+<li>
+<p><strong>fullName</strong></p>
+<p>Es el resultado de concatenar firstName y lastName, separados por un espacio en blanco.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Ejemplo:</em> Juan Pérez</p>
+</li>
+</ul>
+<h1 id="3-category">3. Category</h1>
+<h2 id="endpoints_2">Endpoints</h2>
+<pre><code>GET      /categories
+POST     /categories
+OPTIONS  /categories
+
+GET      /categories/first
+OPTIONS  /categories/first
+
+GET      /categories/last
+OPTIONS  /categories/last
+
+GET      /categories/count
+OPTIONS  /categories/count
+
+GET      /categories/:id
+PATCH    /categories/:id
+DELETE   /categories/:id
+HEAD     /categories/:id
+OPTIONS  /categories/:id
+</code></pre>
+
+<h2 id="campos_2">Campos</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>description</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 350 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>active:</strong></p>
+<p>Si la categoría está activa o no.</p>
+<p><em>Tipo:</em> boolean</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Default:</em> false</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_2">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>createdBy</strong></p>
+<p>El ID del usuario que creó la categoría.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<h1 id="4-status">4. Status</h1>
+<h2 id="endpoints_3">Endpoints</h2>
+<pre><code>GET      /statuses
+POST     /statuses
+OPTIONS  /statuses
+
+GET      /statuses/first
+OPTIONS  /statuses/first
+
+GET      /statuses/last
+OPTIONS  /statuses/last
+
+GET      /statuses/count
+OPTIONS  /statuses/count
+
+GET      /statuses/:id
+PATCH    /statuses/:id
+DELETE   /statuses/:id
+HEAD     /statuses/:id
+OPTIONS  /statuses/:id
+</code></pre>
+
+<h2 id="campos_3">Campos</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<p><strong>Nota:</strong> a los fines del seedeo, los estados por recurso son:</p>
+<ul>
+<li>Draft</li>
+<li>Under Review</li>
+<li>Rejected</li>
+<li>Published</li>
+<li>Unpublished</li>
+</ul>
+<h1 id="5-filetype">5. FileType</h1>
+<h2 id="endpoints_4">Endpoints</h2>
+<pre><code>GET      /filetypes
+POST     /filetypes
+OPTIONS  /filetypes
+
+GET      /filetypes/first
+OPTIONS  /filetypes/first
+
+GET      /filetypes/last
+OPTIONS  /filetypes/last
+
+GET      /filetypes/count
+OPTIONS  /filetypes/count
+
+GET      /filetypes/:id
+PATCH    /filetypes/:id
+DELETE   /filetypes/:id
+HEAD     /filetypes/:id
+OPTIONS  /filetypes/:id
+</code></pre>
+
+<h2 id="campos_4">Campos</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>mimetype</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 200 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<p><strong>Nota:</strong> a los fines del seedeo, los tipos de archivo son:</p>
+<ul>
+<li>csv</li>
+<li>html</li>
+<li>ics</li>
+<li>pdf</li>
+<li>rar</li>
+<li>shp</li>
+<li>xls</li>
+<li>xml</li>
+<li>xlsx</li>
+<li>zip</li>
+</ul>
+<h1 id="6-updatefrequency">6. UpdateFrequency</h1>
+<h2 id="endpoints_5">Endpoints</h2>
+<pre><code>GET      /updatefrequencies
+POST     /updatefrequencies
+OPTIONS  /updatefrequencies
+
+GET      /updatefrequencies/first
+OPTIONS  /updatefrequencies/first
+
+GET      /updatefrequencies/last
+OPTIONS  /updatefrequencies/last
+
+GET      /updatefrequencies/count
+OPTIONS  /updatefrequencies/count
+
+GET      /updatefrequencies/:id
+PATCH    /updatefrequencies/:id
+DELETE   /updatefrequencies/:id
+HEAD     /updatefrequencies/:id
+OPTIONS  /updatefrequencies/:id
+</code></pre>
+
+<h2 id="campos_5">Campos</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 100 carácteres</p>
+</li>
+</ul>
+<h1 id="7-tag">7. Tag</h1>
+<h2 id="endpoints_6">Endpoints</h2>
+<pre><code>GET      /tags
+POST     /tags
+OPTIONS  /tags
+
+GET      /tags/first
+OPTIONS  /tags/first
+
+GET      /tags/last
+OPTIONS  /tags/last
+
+GET      /tags/count
+OPTIONS  /tags/count
+
+GET      /tags/:id
+PATCH    /tags/:id
+DELETE   /tags/:id
+HEAD     /tags/:id
+OPTIONS  /tags/:id
+</code></pre>
+
+<h2 id="campos_6">Campos</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 100 carácteres</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_3">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>createdBy</strong></p>
+<p>El ID del usuario que creó la etiqueta.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<h1 id="8-dataset">8. Dataset</h1>
+<h2 id="endpoints_7">Endpoints</h2>
+<pre><code>GET      /datasets
+POST     /datasets
+OPTIONS  /datasets
+
+GET      /datasets/first
+OPTIONS  /datasets/first
+
+GET      /datasets/last
+OPTIONS  /datasets/last
+
+GET      /datasets/count
+OPTIONS  /datasets/count
+
+GET      /datasets/:id
+PATCH    /datasets/:id
+DELETE   /datasets/:id
+HEAD     /datasets/:id
+OPTIONS  /datasets/:id
+
+GET  /datasets/:id/download
+</code></pre>
+
+<h2 id="campos_7">Campos</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>description</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 350 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>notes</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>visible</strong></p>
+<p><em>Tipo:</em> boolean</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>starred</strong></p>
+<p><em>Tipo:</em> boolean</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional1</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional2</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional3</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional4</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional5</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional6</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional7</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional8</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional9</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optional10</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>publishedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_4">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>category</strong></p>
+<p>El ID de la categoría del dataset.</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>status</strong></p>
+<p>El ID del status que posee el dataset.</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>owner:</strong></p>
+<p>Es el usuario responsable del archivo. Es una clave foránea.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdBy</strong></p>
+<p>El ID del usuario que creó el dataset.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<h1 id="9-file">9. File</h1>
+<h2 id="endpoints_8">Endpoints</h2>
+<pre><code>GET      /files
+POST     /files
+OPTIONS  /files
+
+GET      /files/first
+OPTIONS  /files/first
+
+GET      /files/last
+OPTIONS  /files/last
+
+GET      /files/count
+OPTIONS  /files/count
+
+GET      /files/:id
+PATCH    /files/:id
+DELETE   /files/:id
+HEAD     /files/:id
+OPTIONS  /files/:id
+</code></pre>
+
+<h2 id="campos_8">Campos</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>description</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 350 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>notes</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>url</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>visibility</strong></p>
+<p><em>Tipo:</em> boolean</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>publishedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_5">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>type</strong></p>
+<p>El ID del tipo de archivo.</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>status</strong></p>
+<p>El ID del status que posee el archivo.</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>organization</strong></p>
+<p>El ID de la organización que provee los datos.</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>dataset</strong></p>
+<p>El ID del dataset al que pertenece.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>owner:</strong></p>
+<p>Es el usuario responsable del archivo. Es una clave foránea.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updateFrequency:</strong></p>
+<p>La frecuencia en que se debe actualizar el archivo. Es una clave foránea.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdBy</strong></p>
+<p>El ID del usuario que creó el archivo.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<h1 id="10-chart">10. Chart</h1>
+<h2 id="endpoints_9">Endpoints</h2>
+<pre><code>GET      /charts
+POST     /charts
+OPTIONS  /charts
+
+GET      /charts/first
+OPTIONS  /charts/first
+
+GET      /charts/last
+OPTIONS  /charts/last
+
+GET      /charts/count
+OPTIONS  /charts/count
+
+GET      /charts/:id
+PATCH    /charts/:id
+DELETE   /charts/:id
+HEAD     /charts/:id
+OPTIONS  /charts/:id
+</code></pre>
+
+<h2 id="campos_9">Campos</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>description</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 350 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>notes</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>url</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>embedCode</strong></p>
+<p><em>Tipo:</em> text</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_6">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>createdBy</strong></p>
+<p>El ID del usuario que creó el gráfico.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<h1 id="11-map">11. Map</h1>
+<h2 id="endpoints_10">Endpoints</h2>
+<pre><code>GET      /maps
+POST     /maps
+OPTIONS  /maps
+
+GET      /maps/first
+OPTIONS  /maps/first
+
+GET      /maps/last
+OPTIONS  /maps/last
+
+GET      /maps/count
+OPTIONS  /maps/count
+
+GET      /maps/:id
+PATCH    /maps/:id
+DELETE   /maps/:id
+HEAD     /maps/:id
+OPTIONS  /maps/:id
+</code></pre>
+
+<h2 id="campos_10">Campos</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>description</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 350 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>notes</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>basemap</strong></p>
+<p><em>Tipo:</em> enum</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Valores posibles:</em> 'roadmap', 'satellite', 'hybrid', 'terrain'</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>url</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>embedCode</strong></p>
+<p><em>Tipo:</em> text</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>geojson</strong></p>
+<p><em>Tipo:</em> json</p>
+<p><em>Max:</em> 5000 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_7">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>createdBy</strong></p>
+<p>El ID del usuario que creó el map.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<h1 id="12-view">12. View</h1>
+<h2 id="endpoints_11">Endpoints</h2>
+<pre><code>GET      /views
+POST     /views
+OPTIONS  /views
+
+GET      /views/first
+OPTIONS  /views/first
+
+GET      /views/last
+OPTIONS  /views/last
+
+GET      /views/count
+OPTIONS  /views/count
+
+GET      /views/:id
+PATCH    /views/:id
+DELETE   /views/:id
+HEAD     /views/:id
+OPTIONS  /views/:id
+</code></pre>
+
+<h2 id="campos_11">Campos</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>description</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 350 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>notes</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>tags</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_8">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>tags</strong></p>
+<p>Referencia a la relación muchos a muchos tags-views.</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdBy</strong></p>
+<p>El ID del usuario que creó el gráfico.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<h1 id="13-config">13. Config</h1>
+<h2 id="endpoints_12">Endpoints</h2>
+<pre><code>GET      /configs
+POST     /configs
+OPTIONS  /configs
+
+GET      /configs/first
+OPTIONS  /configs/first
+
+GET      /configs/last
+OPTIONS  /configs/last
+
+GET      /configs/count
+OPTIONS  /configs/count
+
+GET      /configs/:id
+PATCH    /configs/:id
+DELETE   /configs/:id
+HEAD     /configs/:id
+OPTIONS  /configs/:id
+</code></pre>
+
+<h2 id="campos_12">Campos</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>description</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 250 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>type</strong></p>
+<p><em>Tipo:</em> enum</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Valores posibles:</em> 'bool', 'string', 'int', 'float'</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>key</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 100 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>value</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 250 carácteres</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_9">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>updatedBy</strong></p>
+<p>El ID del usuario que actualizó por última vez el <code>value</code> de la configuración.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<h1 id="14-log">14. Log</h1>
+<h2 id="endpoints_13">Endpoints</h2>
+<pre><code>GET      /logs
+POST     /logs
+OPTIONS  /logs
+
+GET      /logs/first
+OPTIONS  /logs/first
+
+GET      /logs/last
+OPTIONS  /logs/last
+
+GET      /logs/count
+OPTIONS  /logs/count
+
+GET      /logs/:id
+PATCH    /logs/:id
+DELETE   /logs/:id
+HEAD     /logs/:id
+OPTIONS  /logs/:id
+</code></pre>
+
+<h2 id="campos_13">Campos</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>action</strong></p>
+<p><em>Tipo:</em> enum</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Valores posibles:</em> 'create', 'update', 'delete'</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>target</strong></p>
+<p><em>Tipo:</em> enum</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Valores posibles:</em> 'category', 'dataset', 'fileType', 'file', 'organization', 'status', 'tag', 'updateFrequency', 'user'</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_10">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>user</strong></p>
+<p>El ID del usuario que actualizó realizó la acción.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../sprints/sprint-1/" class="btn btn-neutral float-right" title="Sprint 1">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../metodologia/" class="btn btn-neutral" title="Metodología"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/gcba-odin/odin-tech-docs" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../metodologia/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../sprints/sprint-1/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
