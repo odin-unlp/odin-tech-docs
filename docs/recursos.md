@@ -314,6 +314,18 @@ OPTIONS  /categories/:id
 
 ---
 
+- **active:**
+
+    Si la categoría está activa o no.
+
+    *Tipo:* boolean
+
+    *Requerido:* sí
+
+    *Default:* false
+
+---
+
 - **createdAt**
 
     *Tipo:* datetime
@@ -488,13 +500,104 @@ OPTIONS  /filetypes/:id
 
 # 6. UpdateFrequency
 ## Endpoints
+```
+GET      /updatefrequencies
+POST     /updatefrequencies
+OPTIONS  /updatefrequencies
+
+GET      /updatefrequencies/first
+OPTIONS  /updatefrequencies/first
+
+GET      /updatefrequencies/last
+OPTIONS  /updatefrequencies/last
+
+GET      /updatefrequencies/count
+OPTIONS  /updatefrequencies/count
+
+GET      /updatefrequencies/:id
+PATCH    /updatefrequencies/:id
+DELETE   /updatefrequencies/:id
+HEAD     /updatefrequencies/:id
+OPTIONS  /updatefrequencies/:id
+```
 
 ## Campos
+- **id**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Único:* sí
+
+    *Max:* 15 carácteres
+
+---
+
+- **name**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 100 carácteres
 
 # 7. Tag
 ## Endpoints
+```
+GET      /tags
+POST     /tags
+OPTIONS  /tags
+
+GET      /tags/first
+OPTIONS  /tags/first
+
+GET      /tags/last
+OPTIONS  /tags/last
+
+GET      /tags/count
+OPTIONS  /tags/count
+
+GET      /tags/:id
+PATCH    /tags/:id
+DELETE   /tags/:id
+HEAD     /tags/:id
+OPTIONS  /tags/:id
+```
 
 ## Campos
+- **id**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Único:* sí
+
+    *Max:* 15 carácteres
+
+---
+
+- **name**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 100 carácteres
+
+
+### Claves Foráneas
+
+- **createdBy**
+
+    El ID del usuario que creó la etiqueta.
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 15 carácteres
 
 # 8. Dataset
 ## Endpoints
@@ -693,6 +796,18 @@ OPTIONS  /datasets/:id
 
 ---
 
+- **owner:**
+
+    Es el usuario responsable del archivo. Es una clave foránea.
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 15 carácteres
+
+---
+
 - **createdBy**
 
     El ID del usuario que creó el dataset.
@@ -844,6 +959,30 @@ OPTIONS  /files/:id
 
 ---
 
+- **owner:**
+
+    Es el usuario responsable del archivo. Es una clave foránea.
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 15 carácteres
+
+---
+
+- **updateFrequency:**
+
+    La frecuencia en que se debe actualizar el archivo. Es una clave foránea.
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 15 carácteres
+
+---
+
 - **createdBy**
 
     El ID del usuario que creó el archivo.
@@ -871,8 +1010,86 @@ OPTIONS  /files/:id
 
 # 13. Config
 ## Endpoints
+```
+GET      /configs
+POST     /configs
+OPTIONS  /configs
+
+GET      /configs/first
+OPTIONS  /configs/first
+
+GET      /configs/last
+OPTIONS  /configs/last
+
+GET      /configs/count
+OPTIONS  /configs/count
+
+GET      /configs/:id
+PATCH    /configs/:id
+DELETE   /configs/:id
+HEAD     /configs/:id
+OPTIONS  /configs/:id
+```
 
 ## Campos
+- **id**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Único:* sí
+
+    *Max:* 15 carácteres
+
+---
+
+- **description**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 250 carácteres
+
+---
+
+- **type**
+
+    *Tipo:* enum
+
+    *Requerido:* sí
+
+    *Valores posibles:* 'bool', 'string', 'int', 'float'
+
+---
+
+- **key**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 100 carácteres
+
+---
+
+- **value**
+
+    *Tipo:* string
+
+    *Max:* 250 carácteres
+
+
+### Claves Foráneas
+
+- **updatedBy**
+
+    El ID del usuario que actualizó por última vez el `value` de la configuración.
+
+    *Tipo:* string
+
+    *Max:* 15 carácteres
 
 # 14. Log
 ## Endpoints
