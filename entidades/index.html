@@ -179,25 +179,18 @@
                     <li><a class="toctree-l4" href="#campos_11">Campos</a></li>
                 
             
-                <li class="toctree-l3"><a href="#campos_12">Campos</a></li>
-                
-                    <li><a class="toctree-l4" href="#maps">Maps</a></li>
-                
-                    <li><a class="toctree-l4" href="#maps-y-charts">Maps y Charts</a></li>
-                
-            
                 <li class="toctree-l3"><a href="#13-config">13. Config</a></li>
                 
                     <li><a class="toctree-l4" href="#endpoints_12">Endpoints</a></li>
                 
-                    <li><a class="toctree-l4" href="#campos_13">Campos</a></li>
+                    <li><a class="toctree-l4" href="#campos_12">Campos</a></li>
                 
             
                 <li class="toctree-l3"><a href="#14-log">14. Log</a></li>
                 
                     <li><a class="toctree-l4" href="#endpoints_13">Endpoints</a></li>
                 
-                    <li><a class="toctree-l4" href="#campos_14">Campos</a></li>
+                    <li><a class="toctree-l4" href="#campos_13">Campos</a></li>
                 
             
             </ul>
@@ -1344,6 +1337,14 @@ OPTIONS  /charts/:id
 <hr />
 <ul>
 <li>
+<p><strong>embedCode</strong></p>
+<p><em>Tipo:</em> text</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
 <p><strong>createdAt</strong></p>
 <p><em>Tipo:</em> datetime</p>
 <p><em>Default:</em> fecha y hora actuales</p>
@@ -1431,6 +1432,22 @@ OPTIONS  /maps/:id
 <p><strong>url</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>embedCode</strong></p>
+<p><em>Tipo:</em> text</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>geojson</strong></p>
+<p><em>Tipo:</em> json</p>
+<p><em>Max:</em> 5000 carácteres</p>
 </li>
 </ul>
 <hr />
@@ -1541,23 +1558,6 @@ OPTIONS  /views/:id
 <p><em>Max:</em> 15 carácteres</p>
 </li>
 </ul>
-<h1 id="campos_12">Campos</h1>
-<h2 id="maps">Maps</h2>
-<ul>
-<li>
-<p><strong>geojson</strong></p>
-<p><em>Tipo:</em> json</p>
-<p><em>Max:</em> 5000 carácteres</p>
-</li>
-</ul>
-<h2 id="maps-y-charts">Maps y Charts</h2>
-<ul>
-<li>
-<p><strong>embedCode</strong></p>
-<p><em>Tipo:</em> text</p>
-<p><em>Max:</em> 500 carácteres</p>
-</li>
-</ul>
 <h1 id="13-config">13. Config</h1>
 <h2 id="endpoints_12">Endpoints</h2>
 <pre><code>GET      /configs
@@ -1580,7 +1580,7 @@ HEAD     /configs/:id
 OPTIONS  /configs/:id
 </code></pre>
 
-<h2 id="campos_13">Campos</h2>
+<h2 id="campos_12">Campos</h2>
 <ul>
 <li>
 <p><strong>id</strong></p>
@@ -1656,7 +1656,7 @@ HEAD     /logs/:id
 OPTIONS  /logs/:id
 </code></pre>
 
-<h2 id="campos_14">Campos</h2>
+<h2 id="campos_13">Campos</h2>
 <ul>
 <li>
 <p><strong>id</strong></p>
