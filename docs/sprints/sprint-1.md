@@ -727,7 +727,7 @@ Si hubo error/es incluir objeto "error" como en GET.
 **Nota:** a los fines del seedeo, los estados por recurso son:
 
 - Draft
-- Under review
+- Under Review
 - Rejected
 - Published
 - Unpublished
@@ -783,6 +783,7 @@ Si hubo error/es incluir objeto "error" como en GET.
 - shp
 - xls
 - xml
+- xlsx
 - zip
 
 
