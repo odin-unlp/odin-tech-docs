@@ -30,7 +30,7 @@ Solucionar los errores de los tests y poner algunas configuraciones en la base d
 
 1. Solucionar los errores de los tests
 2. Error 522
-3. Despublicaciónes automáticas
+3. Despublicaciones automáticas
 
 
 # Campos

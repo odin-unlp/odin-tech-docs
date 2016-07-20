@@ -469,6 +469,14 @@ OPTIONS  /filetypes/:id
 
 ---
 
+- **mimetype**
+
+    *Tipo:* string
+
+    *Max:* 200 carácteres
+
+---
+
 - **createdAt**
 
     *Tipo:* datetime
