@@ -292,7 +292,7 @@ OPTIONS  /datasets/:id
 
 ### GET
 
-Si no hay errores. En el caso de que se devuelva un solo registro, en data no va un array, sino ese registro sólo. Y si no hay registros, en data habrá un objeto vacío.
+En el caso de que se devuelva un solo registro, en data no va un array, sino ese registro sólo. Y si no hay registros, en data habrá un objeto vacío.
 
 ```json
 {
@@ -316,24 +316,6 @@ Si no hay errores. En el caso de que se devuelva un solo registro, en data no va
 }
 ```
 
-Si hay error/es:
-
-
-```json
-{
-   "meta": {
-       ...
-   },
-   "error":
-     {
-         ...
-     },
-   "links": {
-       ...
-   }
-}
-```
-
 ### POST
 
 ```json
@@ -349,8 +331,6 @@ Si hay error/es:
 
 ### PATCH
 
-Si hubo error/es incluir objeto "error" como en GET.
-
 ```json
 {
    "meta": {
@@ -363,8 +343,6 @@ Si hubo error/es incluir objeto "error" como en GET.
 ```
 
 ### DELETE
-
-Si hubo error/es incluir objeto "error" como en GET.
 
 ```json
 {
@@ -384,8 +362,6 @@ Una response a una request HEAD no incluye un body.
 ```
 
 ### OPTIONS
-
-Si hubo error/es incluir objeto "error" como en GET.
 
 ```json
 {

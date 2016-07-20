@@ -201,7 +201,7 @@ También delegado en Kong. El soporte de la cabecera CORS debe estar habilitado 
 
 # 5. I18N y L10N
 
-El soporte de internacionalización y localización se hará a nivel de frontend. El lenguaje por defecto en ODIN será el inglés, tanto para los identificadores en el código fuente como para los comentarios.
+El soporte de internacionalización y localización se hará a nivel del cliente. El lenguaje por defecto en ODIN será el inglés, tanto para los identificadores en el código fuente como para los comentarios.
 
 # 6. Testeo
 
