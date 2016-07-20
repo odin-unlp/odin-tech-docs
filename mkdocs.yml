@@ -8,6 +8,7 @@ pages:
     - 'Codigo Fuente': 'codigo-fuente.md'
     - 'Metodología': 'metodologia.md'
     - 'Entidades': 'entidades.md'
+    - 'Responses': 'responses.md'
     - Sprints:
         - 'Sprint 1': 'sprints/sprint-1.md'
         - 'Sprint 2': 'sprints/sprint-2.md'
