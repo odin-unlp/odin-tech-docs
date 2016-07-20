@@ -1185,8 +1185,118 @@ OPTIONS  /maps/:id
 
 # 12. View
 ## Endpoints
+```
+GET      /views
+POST     /views
+OPTIONS  /views
+
+GET      /views/first
+OPTIONS  /views/first
+
+GET      /views/last
+OPTIONS  /views/last
+
+GET      /views/count
+OPTIONS  /views/count
+
+GET      /views/:id
+PATCH    /views/:id
+DELETE   /views/:id
+HEAD     /views/:id
+OPTIONS  /views/:id
+```
 
 ## Campos
+- **id**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Único:* sí
+
+    *Max:* 15 carácteres
+
+---
+
+- **name**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 150 carácteres
+
+---
+
+- **description**
+
+    *Tipo:* string
+
+    *Max:* 350 carácteres
+
+---
+
+- **notes**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+---
+
+- **tags**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+---
+
+- **createdAt**
+
+    *Tipo:* datetime
+
+    *Default:* fecha y hora actuales
+
+
+### Claves Foráneas
+
+- **tags**
+
+    Referencia a la relación muchos a muchos tags-views.
+
+---
+
+- **createdBy**
+
+    El ID del usuario que creó el gráfico.
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 15 carácteres
+
+
+# Campos
+
+## Maps
+
+- **geojson**
+
+    *Tipo:* json
+
+    *Max:* 5000 carácteres
+
+
+## Maps y Charts
+
+- **embedCode**
+
+    *Tipo:* text
+
+    *Max:* 500 carácteres
 
 # 13. Config
 ## Endpoints
