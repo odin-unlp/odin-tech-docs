@@ -1095,5 +1095,73 @@ OPTIONS  /configs/:id
 
 # 14. Log
 ## Endpoints
+```
+GET      /logs
+POST     /logs
+OPTIONS  /logs
+
+GET      /logs/first
+OPTIONS  /logs/first
+
+GET      /logs/last
+OPTIONS  /logs/last
+
+GET      /logs/count
+OPTIONS  /logs/count
+
+GET      /logs/:id
+PATCH    /logs/:id
+DELETE   /logs/:id
+HEAD     /logs/:id
+OPTIONS  /logs/:id
+```
 
 ## Campos
+- **id**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Único:* sí
+
+    *Max:* 15 carácteres
+
+---
+
+- **action**
+
+    *Tipo:* enum
+
+    *Requerido:* sí
+
+    *Valores posibles:* 'create', 'update', 'delete'
+
+---
+
+- **target**
+
+    *Tipo:* enum
+
+    *Requerido:* sí
+
+    *Valores posibles:* 'category', 'dataset', 'fileType', 'file', 'organization', 'status', 'tag', 'updateFrequency', 'user'
+
+---
+
+- **createdAt**
+
+    *Tipo:* datetime
+
+    *Default:* fecha y hora actuales
+
+
+### Claves Foráneas
+
+- **user**
+
+    El ID del usuario que actualizó realizó la acción.
+
+    *Tipo:* string
+
+    *Max:* 15 carácteres
