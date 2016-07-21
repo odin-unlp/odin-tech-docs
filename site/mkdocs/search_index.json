@@ -1156,6 +1156,71 @@
             "title": "FileType"
         }, 
         {
+            "location": "/sprints/sprint-8/", 
+            "text": "Duraci\u00f3n:\n Lunes 18/07/16 - Viernes 22/07/16\n\n\nAlcance\n\n\nSprint de Admin y statistics.\n\n\nObjetivo\n\n\nContinuar desarrollando y corregir errores del Admin, desarrollar el m\u00f3dulo de stats de la API y agregar color e image a las categor\u00edas.\n\n\nTareas\n\n\nAPI\n\n\n\n\nDesarrollar la pertenencia a m\u00e1s de una categor\u00eda\n\n\nDesarrollar el m\u00f3dulo de analytics\n\n\nDesarrollar la subida de im\u00e1genes para las categor\u00edas\n\n\nAgregar los campos color e image a Category\n\n\nAgregar seeds de color e image a Category\n\n\nAgregar un job para desocupar la tabla de Stats 1 vez al mes\n\n\nSolucionar las issues de Codacy\n\n\nAgregar tests de Organization\n\n\nAgregar tests de Statistic\n\n\n\n\nAdmin\n\n\n\n\nSolucionar los tickets de errores (del Trello de Testing)\n\n\nCompletar las tareas pendientes de sprints anteriores\n\n\nIncluir la pertenencia a m\u00e1s de una categor\u00eda en el CRUD de Datasets\n\n\nAgregar color e image al CRUD de Category\n\n\n\n\nOtros\n\n\n\n\nInstalar y configurar Kong en el entorno de integraci\u00f3n y en el de testeo\n\n\nEscribir el README\n\n\nEscribir el CHANGELOG\n\n\nConsolidar la documentaci\u00f3n t\u00e9cnica\n\n\n\n\nPrioridades\n\n\n\n\nSolucionar los tickets de errores (del Trello de Testing)\n\n\nCompletar las tareas pendientes de sprints anteriores\n\n\nDesarrollar la pertenencia a m\u00e1s de una categor\u00eda\n\n\nDesarrollar el m\u00f3dulo de analytics\n\n\nDesarrollar la subida de im\u00e1genes para las categor\u00edas\n\n\nAgregar los campos color e image a Category\n\n\n\n\nEndpoints\n\n\nStatistics\n\n\nGET      /statistics\nPOST     /statistics\nOPTIONS  /statistics\n\nGET      /statistics/first\nOPTIONS  /statistics/first\n\nGET      /statistics/last\nOPTIONS  /statistics/last\n\nGET      /statistics/count\nOPTIONS  /statistics/count\n\nGET      /statistics/:id\nPATCH    /statistics/:id\nDELETE   /statistics/:id\nHEAD     /statistics/:id\nOPTIONS  /statistics/:id\n\n\n\n\nCampos\n\n\nStatistics\n\n\n\n\n\n\nid\n\n\nTipo:\n string\n\n\nRequerido:\n s\u00ed\n\n\n\u00danico:\n s\u00ed\n\n\nMax:\n 15 car\u00e1cteres\n\n\n\n\n\n\n\n\n\n\n\n\nresource\n\n\nTipo:\n string\n\n\nRequerido:\n s\u00ed\n\n\nMax:\n 50 car\u00e1cteres\n\n\n\n\n\n\n\n\n\n\n\n\nendpoint\n\n\nTipo:\n string\n\n\nRequerido:\n s\u00ed\n\n\nMax:\n 300 car\u00e1cteres\n\n\n\n\n\n\n\n\n\n\n\n\nquerystring\n\n\nTipo:\n string\n\n\nMax:\n 1000 car\u00e1cteres\n\n\n\n\n\n\n\n\n\n\n\n\nmethod\n\n\nTipo:\n enum\n\n\nRequerido:\n s\u00ed\n\n\nValores posibles:\n 'GET', 'POST', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'\n\n\n\n\n\n\n\n\n\n\n\n\nclient\n\n\nTipo:\n string\n\n\nRequerido:\n s\u00ed\n\n\nMax:\n 100 car\u00e1cteres\n\n\n\n\n\n\n\n\n\n\n\n\nuseragent\n\n\nTipo:\n string\n\n\nRequerido:\n s\u00ed\n\n\nMax:\n 1000 car\u00e1cteres\n\n\n\n\n\n\n\n\n\n\n\n\nip\n\n\nTipo:\n string\n\n\nRequerido:\n s\u00ed\n\n\nMax:\n 46 car\u00e1cteres\n\n\n\n\n\n\nCategories\n\n\n\n\n\n\ncolor\n\n\nTipo:\n string\n\n\nRequerido:\n s\u00ed\n\n\nMax:\n 6 car\u00e1cteres\n\n\n\n\n\n\n\n\n\n\n\n\nimage\n\n\nTipo:\n string\n\n\nMax:\n 500 car\u00e1cteres", 
+            "title": "Sprint 8"
+        }, 
+        {
+            "location": "/sprints/sprint-8/#alcance", 
+            "text": "Sprint de Admin y statistics.", 
+            "title": "Alcance"
+        }, 
+        {
+            "location": "/sprints/sprint-8/#objetivo", 
+            "text": "Continuar desarrollando y corregir errores del Admin, desarrollar el m\u00f3dulo de stats de la API y agregar color e image a las categor\u00edas.", 
+            "title": "Objetivo"
+        }, 
+        {
+            "location": "/sprints/sprint-8/#tareas", 
+            "text": "", 
+            "title": "Tareas"
+        }, 
+        {
+            "location": "/sprints/sprint-8/#api", 
+            "text": "Desarrollar la pertenencia a m\u00e1s de una categor\u00eda  Desarrollar el m\u00f3dulo de analytics  Desarrollar la subida de im\u00e1genes para las categor\u00edas  Agregar los campos color e image a Category  Agregar seeds de color e image a Category  Agregar un job para desocupar la tabla de Stats 1 vez al mes  Solucionar las issues de Codacy  Agregar tests de Organization  Agregar tests de Statistic", 
+            "title": "API"
+        }, 
+        {
+            "location": "/sprints/sprint-8/#admin", 
+            "text": "Solucionar los tickets de errores (del Trello de Testing)  Completar las tareas pendientes de sprints anteriores  Incluir la pertenencia a m\u00e1s de una categor\u00eda en el CRUD de Datasets  Agregar color e image al CRUD de Category", 
+            "title": "Admin"
+        }, 
+        {
+            "location": "/sprints/sprint-8/#otros", 
+            "text": "Instalar y configurar Kong en el entorno de integraci\u00f3n y en el de testeo  Escribir el README  Escribir el CHANGELOG  Consolidar la documentaci\u00f3n t\u00e9cnica", 
+            "title": "Otros"
+        }, 
+        {
+            "location": "/sprints/sprint-8/#prioridades", 
+            "text": "Solucionar los tickets de errores (del Trello de Testing)  Completar las tareas pendientes de sprints anteriores  Desarrollar la pertenencia a m\u00e1s de una categor\u00eda  Desarrollar el m\u00f3dulo de analytics  Desarrollar la subida de im\u00e1genes para las categor\u00edas  Agregar los campos color e image a Category", 
+            "title": "Prioridades"
+        }, 
+        {
+            "location": "/sprints/sprint-8/#endpoints", 
+            "text": "", 
+            "title": "Endpoints"
+        }, 
+        {
+            "location": "/sprints/sprint-8/#statistics", 
+            "text": "GET      /statistics\nPOST     /statistics\nOPTIONS  /statistics\n\nGET      /statistics/first\nOPTIONS  /statistics/first\n\nGET      /statistics/last\nOPTIONS  /statistics/last\n\nGET      /statistics/count\nOPTIONS  /statistics/count\n\nGET      /statistics/:id\nPATCH    /statistics/:id\nDELETE   /statistics/:id\nHEAD     /statistics/:id\nOPTIONS  /statistics/:id", 
+            "title": "Statistics"
+        }, 
+        {
+            "location": "/sprints/sprint-8/#campos", 
+            "text": "", 
+            "title": "Campos"
+        }, 
+        {
+            "location": "/sprints/sprint-8/#statistics_1", 
+            "text": "id  Tipo:  string  Requerido:  s\u00ed  \u00danico:  s\u00ed  Max:  15 car\u00e1cteres       resource  Tipo:  string  Requerido:  s\u00ed  Max:  50 car\u00e1cteres       endpoint  Tipo:  string  Requerido:  s\u00ed  Max:  300 car\u00e1cteres       querystring  Tipo:  string  Max:  1000 car\u00e1cteres       method  Tipo:  enum  Requerido:  s\u00ed  Valores posibles:  'GET', 'POST', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'       client  Tipo:  string  Requerido:  s\u00ed  Max:  100 car\u00e1cteres       useragent  Tipo:  string  Requerido:  s\u00ed  Max:  1000 car\u00e1cteres       ip  Tipo:  string  Requerido:  s\u00ed  Max:  46 car\u00e1cteres", 
+            "title": "Statistics"
+        }, 
+        {
+            "location": "/sprints/sprint-8/#categories", 
+            "text": "color  Tipo:  string  Requerido:  s\u00ed  Max:  6 car\u00e1cteres       image  Tipo:  string  Max:  500 car\u00e1cteres", 
+            "title": "Categories"
+        }, 
+        {
             "location": "/references/status-codes/", 
             "text": "\u00c9xito\n\n\n\n\n\n\n\n\nSuccess\n\n\n\n\n\n\n\n\n\n\n\n\n200 OK\n\n\nC\u00f3digo gen\u00e9rico de \u00e9xito.\n\n\n\n\n\n\n201 Created\n\n\nIndica que el recurso fue creado exitosamente.\n\n\n\n\n\n\n202 Accepted\n\n\nSe acept\u00f3 la request, pero todav\u00eda no fue procesada. \u00datil para requests as\u00edncronas.\n\n\n\n\n\n\n204 No Content\n\n\nLa request fue procesada con \u00e9xito, pero no hay nada que mostrar. Por ejemplo, despu\u00e9s de un DELETE exitoso.\n\n\n\n\n\n\n206 Partial Content\n\n\nEl recurso devuelto est\u00e1 incompleto. Se lo suele usar para contenido que ha sido paginado. Por ejemplo, se devuelve la p\u00e1gina 5 de 20.\n\n\n\n\n\n\n\n\nError del cliente\n\n\n\n\n\n\n\n\nClient Error\n\n\n\n\n\n\n\n\n\n\n\n\n400 Bad Request\n\n\nError gen\u00e9rico para una request que no puede ser procesada por el servidor.\n\n\n\n\n\n\n401 Unauthorized\n\n\nEl cliente es desconocido para la API y necesita autenticarse primero.\n\n\n\n\n\n\n403 Forbidden\n\n\nLos permisos del cliente no son suficientes para acceder a este recurso. Es decir, el recurso es un recurso protegido (desde la perspectiva del usuario que hizo la request).\n\n\n\n\n\n\n404 Not Found\n\n\nNo existe el recurso pedido por el cliente.\n\n\n\n\n\n\n405 Method Not Allowed\n\n\nEl usuario no tiene permiso para usar ese m\u00e9todo HTTP en particular.\n\n\n\n\n\n\n406 Not Acceptable\n\n\nEl contenido no est\u00e1 disponible en la forma espec\u00edfica en que lo pidi\u00f3 el cliente (por medio de las cabeceras \"Accept-*\"). Por ejemplo, el cliente pidi\u00f3 un recurso en XML pero s\u00f3lo est\u00e1 disponible en JSON.\n\n\n\n\n\n\n410 Gone\n\n\nIndica que el recurso estaba disponible pero ya no m\u00e1s (de manera permanente).\n\n\n\n\n\n\n415 Unsupported Media Type\n\n\nLa request tiene un media type que no est\u00e1 admitido por el servidor. Por ejemplo, el cliente ha subido una imagen en SVG pero el servidor s\u00f3lo recibe JPG o PNG.\n\n\n\n\n\n\n422 Unprocessable Entity\n\n\nLa request en s\u00ed es v\u00e1lida, pero alguno de los par\u00e1metros enviados no es correcto.\n\n\n\n\n\n\n\n\nError del servidor\n\n\n\n\n\n\n\n\nServer Error\n\n\n\n\n\n\n\n\n\n\n\n\n500 Internal Server Error\n\n\nLa request parece estar bien, pero hubo un problema en el servidor. El cliente no tiene nada que ver, y tampoco puede hacer nada al respecto.\n\n\n\n\n\n\n501 Not Implemented\n\n\nLa API no ha implementado el m\u00e9todo usado para hacer la request. Por ejemplo, el m\u00e9todo PUT.", 
             "title": "HTTP Status Codes"
