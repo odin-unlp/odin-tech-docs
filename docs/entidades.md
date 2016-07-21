@@ -316,6 +316,24 @@ GET      /categories/:id/image
 
 ---
 
+- **color**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 6 carácteres
+
+---
+
+- **image**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+---
+
 - **active:**
 
     Si la categoría está activa o no.
@@ -1468,3 +1486,105 @@ OPTIONS  /logs/:id
     *Tipo:* string
 
     *Max:* 15 carácteres
+
+# 15. Statistic
+## Endpoints
+```
+GET      /statistics
+POST     /statistics
+OPTIONS  /statistics
+
+GET      /statistics/first
+OPTIONS  /statistics/first
+
+GET      /statistics/last
+OPTIONS  /statistics/last
+
+GET      /statistics/count
+OPTIONS  /statistics/count
+
+GET      /statistics/:id
+PATCH    /statistics/:id
+DELETE   /statistics/:id
+HEAD     /statistics/:id
+OPTIONS  /statistics/:id
+```
+
+# Campos
+- **id**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Único:* sí
+
+    *Max:* 15 carácteres
+
+---
+
+- **resource**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 50 carácteres
+
+---
+
+- **endpoint**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 300 carácteres
+
+---
+
+- **querystring**
+
+    *Tipo:* string
+
+    *Max:* 1000 carácteres
+
+---
+
+- **method**
+
+    *Tipo:* enum
+
+    *Requerido:* sí
+
+    *Valores posibles:* 'GET', 'POST', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'
+
+---
+
+- **client**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 100 carácteres
+
+---
+
+- **useragent**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 1000 carácteres
+
+---
+
+- **ip**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 46 carácteres
