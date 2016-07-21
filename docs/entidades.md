@@ -281,6 +281,8 @@ PATCH    /categories/:id
 DELETE   /categories/:id
 HEAD     /categories/:id
 OPTIONS  /categories/:id
+
+GET      /categories/:id/image
 ```
 
 ## Campos
