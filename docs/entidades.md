@@ -1488,6 +1488,24 @@ OPTIONS  /logs/:id
     *Max:* 15 carácteres
 
 # 15. Statistic
+## Endpoints
+```
+GET      /statistics
+OPTIONS  /statistics
+
+GET      /statistics/first
+OPTIONS  /statistics/first
+
+GET      /statistics/last
+OPTIONS  /statistics/last
+
+GET      /statistics/count
+OPTIONS  /statistics/count
+
+GET      /statistics/:id
+OPTIONS  /statistics/:id
+```
+
 # Campos
 - **id**
 

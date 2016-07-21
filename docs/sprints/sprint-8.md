@@ -47,7 +47,6 @@ Continuar desarrollando y corregir errores del Admin, desarrollar el módulo de 
 ## Statistics
 ```
 GET      /statistics
-POST     /statistics
 OPTIONS  /statistics
 
 GET      /statistics/first
@@ -60,11 +59,10 @@ GET      /statistics/count
 OPTIONS  /statistics/count
 
 GET      /statistics/:id
-PATCH    /statistics/:id
-DELETE   /statistics/:id
-HEAD     /statistics/:id
 OPTIONS  /statistics/:id
 ```
+
+# Endpoints
 
 # Campos
 
