@@ -193,6 +193,14 @@
                     <li><a class="toctree-l4" href="#campos_13">Campos</a></li>
                 
             
+                <li class="toctree-l3"><a href="#15-statistic">15. Statistic</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints_14">Endpoints</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#campos_14">Campos</a></li>
+                
+            
             </ul>
         
     </li>
@@ -627,6 +635,23 @@ GET      /categories/:id/image
 <p><strong>description</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 350 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>color</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 6 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>image</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
 </li>
 </ul>
 <hr />
@@ -1710,6 +1735,100 @@ OPTIONS  /logs/:id
 <p>El ID del usuario que actualizó realizó la acción.</p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<h1 id="15-statistic">15. Statistic</h1>
+<h2 id="endpoints_14">Endpoints</h2>
+<pre><code>GET      /statistics
+POST     /statistics
+OPTIONS  /statistics
+
+GET      /statistics/first
+OPTIONS  /statistics/first
+
+GET      /statistics/last
+OPTIONS  /statistics/last
+
+GET      /statistics/count
+OPTIONS  /statistics/count
+
+GET      /statistics/:id
+PATCH    /statistics/:id
+DELETE   /statistics/:id
+HEAD     /statistics/:id
+OPTIONS  /statistics/:id
+</code></pre>
+
+<h1 id="campos_14">Campos</h1>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>resource</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 50 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>endpoint</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 300 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>querystring</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 1000 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>method</strong></p>
+<p><em>Tipo:</em> enum</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Valores posibles:</em> 'GET', 'POST', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>client</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 100 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>useragent</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 1000 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>ip</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 46 carácteres</p>
 </li>
 </ul>
               
