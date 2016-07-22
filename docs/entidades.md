@@ -1503,6 +1503,7 @@ GET      /statistics/count
 OPTIONS  /statistics/count
 
 GET      /statistics/:id
+HEAD     /statistics/:id
 OPTIONS  /statistics/:id
 ```
 
