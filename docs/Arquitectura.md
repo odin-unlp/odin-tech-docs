@@ -31,3 +31,17 @@
 
 - **Admin:** aplicación AngularJS 1.5.
 - **data.buenosaires.gob.ar:** aplicación AngularJS 1.5.
+
+# Lógica
+
+## API
+
+Se utilizará el patrón MVC para organizar el código.
+
+## Admin
+
+Se utilizará el patrón MVC para organizar el código.
+
+## Frontend
+
+Se utilizará el patrón MVC para organizar el código.
