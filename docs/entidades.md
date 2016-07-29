@@ -926,6 +926,24 @@ GET      /files/:id/resources
 
 ---
 
+- **gatheringDate**
+
+    *Tipo:* date
+
+---
+
+- **updateDate**
+
+    *Tipo:* timestamp
+
+---
+
+- **update**
+
+    *Tipo:* boolean
+
+    *Requerido:* sí
+
 - **publishedAt**
 
     *Tipo:* datetime
