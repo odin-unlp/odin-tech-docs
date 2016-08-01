@@ -1241,6 +1241,61 @@
             "title": "Categories"
         }, 
         {
+            "location": "/sprints/sprint-9/", 
+            "text": "Duraci\u00f3n:\n Lunes 25/07/16 - Viernes 29/07/16\n\n\nAlcance\n\n\nSprint de Admin y Frontend.\n\n\nObjetivo\n\n\nContinuar desarrollando y corregir errores del Admin y maquetar el home del Frontend.\n\n\nTareas\n\n\nAPI\n\n\n\n\nResolver la cuesti\u00f3n de las carpetas que deben existir para poder levantar la aplicaci\u00f3n\n\n\nSolucionar las stats con IP 127.0.0.1\n\n\nPoner los seeds de UpdateFrequency en espa\u00f1ol\n\n\nAgregar el campo 'active' (boolean) a Category\n\n\nActualizar los seeds de Category incorporando el campo 'active'\n\n\nAgregar los campos 'gatheringDate' (date), 'updateDate' (timestamp) y 'updated' (booleano) a File\n\n\nImplementar la l\u00f3gica de links / geojson en Maps\n\n\nFix upload files en Category y Files\n\n\nResolver creaci\u00f3n de zip de dataset\n\n\n\n\nAdmin\n\n\n\n\nImplementar el CSS del Admin\n\n\nAgregar al CRUD de File los campos 'gatheringDate' y 'updated'\n\n\nAgregar al CRUD de Category el campo 'active'\n\n\nAgregar el bot\u00f3n-dropdown 'Crear recurso asociado' con las opciones 'Gr\u00e1fico' y 'Mapa' (si aplica) en la vista individual de un File y cuando se ha terminado de subirlo\n\n\n\n\nFrontend\n\n\n\n\nMaquetar el home (marca blanca)\n\n\n\n\nPrioridades\n\n\n\n\nMaquetar el home (marca blanca)\n\n\nResolver la cuesti\u00f3n de las carpetas que deben existir para poder levantar la aplicaci\u00f3n\n\n\nFix upload files en Category y Files\n\n\nResolver creaci\u00f3n de zip de dataset\n\n\nImplementar el CSS del Admin\n\n\n\n\nCampos\n\n\nCategories\n\n\n\n\n\n\nactive\n\n\nTipo:\n boolean\n\n\nRequerido:\n s\u00ed\n\n\n\n\n\n\nFile\n\n\n\n\n\n\ngatheringDate\n\n\nTipo:\n date\n\n\n\n\n\n\n\n\n\n\n\n\nupdateDate\n\n\nTipo:\n timestamp\n\n\n\n\n\n\n\n\n\n\n\n\nupdate\n\n\nTipo:\n boolean\n\n\nRequerido:\n s\u00ed", 
+            "title": "Sprint 9"
+        }, 
+        {
+            "location": "/sprints/sprint-9/#alcance", 
+            "text": "Sprint de Admin y Frontend.", 
+            "title": "Alcance"
+        }, 
+        {
+            "location": "/sprints/sprint-9/#objetivo", 
+            "text": "Continuar desarrollando y corregir errores del Admin y maquetar el home del Frontend.", 
+            "title": "Objetivo"
+        }, 
+        {
+            "location": "/sprints/sprint-9/#tareas", 
+            "text": "", 
+            "title": "Tareas"
+        }, 
+        {
+            "location": "/sprints/sprint-9/#api", 
+            "text": "Resolver la cuesti\u00f3n de las carpetas que deben existir para poder levantar la aplicaci\u00f3n  Solucionar las stats con IP 127.0.0.1  Poner los seeds de UpdateFrequency en espa\u00f1ol  Agregar el campo 'active' (boolean) a Category  Actualizar los seeds de Category incorporando el campo 'active'  Agregar los campos 'gatheringDate' (date), 'updateDate' (timestamp) y 'updated' (booleano) a File  Implementar la l\u00f3gica de links / geojson en Maps  Fix upload files en Category y Files  Resolver creaci\u00f3n de zip de dataset", 
+            "title": "API"
+        }, 
+        {
+            "location": "/sprints/sprint-9/#admin", 
+            "text": "Implementar el CSS del Admin  Agregar al CRUD de File los campos 'gatheringDate' y 'updated'  Agregar al CRUD de Category el campo 'active'  Agregar el bot\u00f3n-dropdown 'Crear recurso asociado' con las opciones 'Gr\u00e1fico' y 'Mapa' (si aplica) en la vista individual de un File y cuando se ha terminado de subirlo", 
+            "title": "Admin"
+        }, 
+        {
+            "location": "/sprints/sprint-9/#frontend", 
+            "text": "Maquetar el home (marca blanca)", 
+            "title": "Frontend"
+        }, 
+        {
+            "location": "/sprints/sprint-9/#prioridades", 
+            "text": "Maquetar el home (marca blanca)  Resolver la cuesti\u00f3n de las carpetas que deben existir para poder levantar la aplicaci\u00f3n  Fix upload files en Category y Files  Resolver creaci\u00f3n de zip de dataset  Implementar el CSS del Admin", 
+            "title": "Prioridades"
+        }, 
+        {
+            "location": "/sprints/sprint-9/#campos", 
+            "text": "", 
+            "title": "Campos"
+        }, 
+        {
+            "location": "/sprints/sprint-9/#categories", 
+            "text": "active  Tipo:  boolean  Requerido:  s\u00ed", 
+            "title": "Categories"
+        }, 
+        {
+            "location": "/sprints/sprint-9/#file", 
+            "text": "gatheringDate  Tipo:  date       updateDate  Tipo:  timestamp       update  Tipo:  boolean  Requerido:  s\u00ed", 
+            "title": "File"
+        }, 
+        {
             "location": "/references/status-codes/", 
             "text": "\u00c9xito\n\n\n\n\n\n\n\n\nSuccess\n\n\n\n\n\n\n\n\n\n\n\n\n200 OK\n\n\nC\u00f3digo gen\u00e9rico de \u00e9xito.\n\n\n\n\n\n\n201 Created\n\n\nIndica que el recurso fue creado exitosamente.\n\n\n\n\n\n\n202 Accepted\n\n\nSe acept\u00f3 la request, pero todav\u00eda no fue procesada. \u00datil para requests as\u00edncronas.\n\n\n\n\n\n\n204 No Content\n\n\nLa request fue procesada con \u00e9xito, pero no hay nada que mostrar. Por ejemplo, despu\u00e9s de un DELETE exitoso.\n\n\n\n\n\n\n206 Partial Content\n\n\nEl recurso devuelto est\u00e1 incompleto. Se lo suele usar para contenido que ha sido paginado. Por ejemplo, se devuelve la p\u00e1gina 5 de 20.\n\n\n\n\n\n\n\n\nError del cliente\n\n\n\n\n\n\n\n\nClient Error\n\n\n\n\n\n\n\n\n\n\n\n\n400 Bad Request\n\n\nError gen\u00e9rico para una request que no puede ser procesada por el servidor.\n\n\n\n\n\n\n401 Unauthorized\n\n\nEl cliente es desconocido para la API y necesita autenticarse primero.\n\n\n\n\n\n\n403 Forbidden\n\n\nLos permisos del cliente no son suficientes para acceder a este recurso. Es decir, el recurso es un recurso protegido (desde la perspectiva del usuario que hizo la request).\n\n\n\n\n\n\n404 Not Found\n\n\nNo existe el recurso pedido por el cliente.\n\n\n\n\n\n\n405 Method Not Allowed\n\n\nEl usuario no tiene permiso para usar ese m\u00e9todo HTTP en particular.\n\n\n\n\n\n\n406 Not Acceptable\n\n\nEl contenido no est\u00e1 disponible en la forma espec\u00edfica en que lo pidi\u00f3 el cliente (por medio de las cabeceras \"Accept-*\"). Por ejemplo, el cliente pidi\u00f3 un recurso en XML pero s\u00f3lo est\u00e1 disponible en JSON.\n\n\n\n\n\n\n410 Gone\n\n\nIndica que el recurso estaba disponible pero ya no m\u00e1s (de manera permanente).\n\n\n\n\n\n\n415 Unsupported Media Type\n\n\nLa request tiene un media type que no est\u00e1 admitido por el servidor. Por ejemplo, el cliente ha subido una imagen en SVG pero el servidor s\u00f3lo recibe JPG o PNG.\n\n\n\n\n\n\n422 Unprocessable Entity\n\n\nLa request en s\u00ed es v\u00e1lida, pero alguno de los par\u00e1metros enviados no es correcto.\n\n\n\n\n\n\n\n\nError del servidor\n\n\n\n\n\n\n\n\nServer Error\n\n\n\n\n\n\n\n\n\n\n\n\n500 Internal Server Error\n\n\nLa request parece estar bien, pero hubo un problema en el servidor. El cliente no tiene nada que ver, y tampoco puede hacer nada al respecto.\n\n\n\n\n\n\n501 Not Implemented\n\n\nLa API no ha implementado el m\u00e9todo usado para hacer la request. Por ejemplo, el m\u00e9todo PUT.", 
             "title": "HTTP Status Codes"
