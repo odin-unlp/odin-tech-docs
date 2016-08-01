@@ -8,7 +8,7 @@
   
   
   
-  <title>Sprint 3 - ODIN</title>
+  <title>Sprint 9 - ODIN</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Sprint 3";
-    var mkdocs_page_input_path = "sprints/sprint-3.md";
-    var mkdocs_page_url = "/sprints/sprint-3/";
+    var mkdocs_page_name = "Sprint 9";
+    var mkdocs_page_input_path = "sprints/sprint-9.md";
+    var mkdocs_page_url = "/sprints/sprint-9/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -123,34 +123,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Sprint 3</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#alcance">Alcance</a></li>
-                
-                    <li><a class="toctree-l4" href="#objetivo">Objetivo</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#tareas">Tareas</a></li>
-                
-                    <li><a class="toctree-l4" href="#api">API</a></li>
-                
-                    <li><a class="toctree-l4" href="#admin">Admin</a></li>
-                
-                    <li><a class="toctree-l4" href="#frontend">Frontend</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#prioridades">Prioridades</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#endpoints">Endpoints</a></li>
-                
-                    <li><a class="toctree-l4" href="#datasets">Datasets</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../sprint-3/">Sprint 3</a>
         
     </li>
 
@@ -191,8 +165,36 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../sprint-9/">Sprint 9</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Sprint 9</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#alcance">Alcance</a></li>
+                
+                    <li><a class="toctree-l4" href="#objetivo">Objetivo</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#tareas">Tareas</a></li>
+                
+                    <li><a class="toctree-l4" href="#api">API</a></li>
+                
+                    <li><a class="toctree-l4" href="#admin">Admin</a></li>
+                
+                    <li><a class="toctree-l4" href="#frontend">Frontend</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#prioridades">Prioridades</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#campos">Campos</a></li>
+                
+                    <li><a class="toctree-l4" href="#categories">Categories</a></li>
+                
+                    <li><a class="toctree-l4" href="#file">File</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -263,7 +265,7 @@
         
       
     
-    <li>Sprint 3</li>
+    <li>Sprint 9</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -277,61 +279,74 @@
           <div role="main">
             <div class="section">
               
-                <p><strong>Duración:</strong> Miercoles 01/06/16 - Martes 07/06/16</p>
+                <p><strong>Duración:</strong> Lunes 25/07/16 - Viernes 29/07/16</p>
 <h1 id="alcance">Alcance</h1>
-<p><img alt="Alcance" src="http://i.imgur.com/6jhR8my.png" /></p>
+<p>Sprint de Admin y Frontend.</p>
 <h2 id="objetivo">Objetivo</h2>
-<p>Hacer la lógica del parseo y guardado de datos y terminar los CRUD que entran en la release Alpha.</p>
+<p>Continuar desarrollando y corregir errores del Admin y maquetar el home del Frontend.</p>
 <h1 id="tareas">Tareas</h1>
 <h2 id="api">API</h2>
 <ol>
-<li>Escribir spec de Datasets</li>
-<li>Desarrollar el ordenamiento de los archivos subidos en carpetas (por dataset)</li>
-<li>Desarrollar la validación de los archivos subidos</li>
-<li>Desarrollar la codificación por defecto de los archivos de texto</li>
-<li>Desarrollar el parseo y guardado de datos en la BBDD no relacional</li>
-<li>Desarrollar el listado de response codes y sus messages</li>
-<li>Desarrollar el empaquetado y endpoint para la descarga de datasets:
-    debe incluirse la URL de descarga dentro de la sección <code>links</code> de la response a <code>GET /datasets</code>, y dentro de la response a <code>OPTIONS /datasets</code>.</li>
+<li>Resolver la cuestión de las carpetas que deben existir para poder levantar la aplicación</li>
+<li>Solucionar las stats con IP 127.0.0.1</li>
+<li>Poner los seeds de UpdateFrequency en español</li>
+<li>Agregar el campo 'active' (boolean) a Category</li>
+<li>Actualizar los seeds de Category incorporando el campo 'active'</li>
+<li>Agregar los campos 'gatheringDate' (date), 'updateDate' (timestamp) y 'updated' (booleano) a File</li>
+<li>Implementar la lógica de links / geojson en Maps</li>
+<li>Fix upload files en Category y Files</li>
+<li>Resolver creación de zip de dataset</li>
 </ol>
 <h2 id="admin">Admin</h2>
 <ol>
-<li>UI de subida de archivos (funcional):
-    debe chequear el mimetype (no la extensión) del archivo que se sube, y sólo permitir la subida de los siguientes tipos de archivos:<ul>
-<li>csv</li>
-<li>html</li>
-<li>ics</li>
-<li>pdf</li>
-<li>rar</li>
-<li>shp</li>
-<li>xls</li>
-<li>xlsx</li>
-<li>xml</li>
-<li>zip</li>
-</ul>
-</li>
-<li>CRUD de UpdateFrequencies (funcional)</li>
-<li>CRUD de Tags (funcional)</li>
-<li>CRUD de Filetypes (funcional)</li>
+<li>Implementar el CSS del Admin</li>
+<li>Agregar al CRUD de File los campos 'gatheringDate' y 'updated'</li>
+<li>Agregar al CRUD de Category el campo 'active'</li>
+<li>Agregar el botón-dropdown 'Crear recurso asociado' con las opciones 'Gráfico' y 'Mapa' (si aplica) en la vista individual de un File y cuando se ha terminado de subirlo</li>
 </ol>
 <h2 id="frontend">Frontend</h2>
 <ol>
-<li>Landing page (funcional)</li>
-<li>Listado datasets (funcional)</li>
-<li>Ver dataset (funcional)</li>
-<li>Ver recursos asociados (UI + funcional)</li>
+<li>Maquetar el home (marca blanca)</li>
 </ol>
 <h1 id="prioridades">Prioridades</h1>
 <ol>
-<li>Parseo y guardado de datos</li>
-<li>UI de subida de archivos (funcional)</li>
-<li>Validación de archivos subidos</li>
-<li>Listado de response codes y messages</li>
+<li>Maquetar el home (marca blanca)</li>
+<li>Resolver la cuestión de las carpetas que deben existir para poder levantar la aplicación</li>
+<li>Fix upload files en Category y Files</li>
+<li>Resolver creación de zip de dataset</li>
+<li>Implementar el CSS del Admin</li>
 </ol>
-<h1 id="endpoints">Endpoints</h1>
-<h2 id="datasets">Datasets</h2>
-<pre><code>GET  /datasets/:id/download
-</code></pre>
+<h1 id="campos">Campos</h1>
+<h2 id="categories">Categories</h2>
+<ul>
+<li>
+<p><strong>active</strong></p>
+<p><em>Tipo:</em> boolean</p>
+<p><em>Requerido:</em> sí</p>
+</li>
+</ul>
+<h2 id="file">File</h2>
+<ul>
+<li>
+<p><strong>gatheringDate</strong></p>
+<p><em>Tipo:</em> date</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updateDate</strong></p>
+<p><em>Tipo:</em> timestamp</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>update</strong></p>
+<p><em>Tipo:</em> boolean</p>
+<p><em>Requerido:</em> sí</p>
+</li>
+</ul>
               
             </div>
           </div>
@@ -339,10 +354,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../sprint-4/" class="btn btn-neutral float-right" title="Sprint 4">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../references/status-codes/" class="btn btn-neutral float-right" title="HTTP Status Codes">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../sprint-2/" class="btn btn-neutral" title="Sprint 2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sprint-8/" class="btn btn-neutral" title="Sprint 8"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -370,10 +385,10 @@
           <a href="https://github.com/gcba-odin/odin-tech-docs" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../sprint-2/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../sprint-8/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../sprint-4/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../references/status-codes/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
