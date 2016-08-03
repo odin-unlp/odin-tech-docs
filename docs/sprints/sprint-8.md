@@ -6,7 +6,6 @@ Sprint de Admin y statistics.
 ## Objetivo
 Continuar desarrollando y corregir errores del Admin, desarrollar el módulo de stats de la API y agregar color e image a las categorías.
 
-
 # Tareas
 
 ## API

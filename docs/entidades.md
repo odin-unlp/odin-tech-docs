@@ -1105,6 +1105,28 @@ OPTIONS  /charts/:id
 
 ---
 
+- **data**
+
+    *Tipo:* json
+
+    *Max:* 5000 carácteres
+
+---
+
+- **dataType**
+
+    *Tipo:* enum
+
+    *Valores posibles:* 'qualitative', 'cuantitative'
+
+---
+
+- **dataSeries**
+
+    *Tipo:* array
+
+---
+
 - **url**
 
     *Tipo:* string
