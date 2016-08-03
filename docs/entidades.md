@@ -1242,6 +1242,14 @@ OPTIONS  /maps/:id
 
 ---
 
+- **link**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+---
+
 - **embedCode**
 
     *Tipo:* text
