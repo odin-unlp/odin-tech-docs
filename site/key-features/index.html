@@ -425,7 +425,8 @@
 <h1 id="5-seguridad">5. Seguridad</h1>
 <h2 id="autenticacion">Autenticación</h2>
 <p>La API de ODIN será una API privada, es decir que no será posible usarla sin estar autenticado.</p>
-<p>Se delegará la autenticación en <a href="https://getkong.org/">Kong</a>, que admite varios tipos de autenticación por medio de plugins. La instalación por defecto de ODIN utilizará OAuth2 para la autenticación, que a su vez requiere el uso de SSL.</p>
+<p>Se delegará la autenticación de los usuarios externos en <a href="https://getkong.org/">Kong</a>, que admite varios tipos de autenticación por medio de plugins. La instalación por defecto de ODIN utilizará el plugin de autenticación por JWT.
+La autenticación de los usuarios internos se hará por un sistema convencional de user/password con la librería <a href="http://passportjs.org/">Passport</a>.</p>
 <h2 id="listas-de-control-de-acceso">Listas de control de acceso</h2>
 <p>Delegado en <a href="https://getkong.org/">Kong</a>.</p>
 <h2 id="control-de-trafico">Control de tráfico</h2>

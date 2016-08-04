@@ -185,7 +185,8 @@ TBD
 
 La API de ODIN será una API privada, es decir que no será posible usarla sin estar autenticado.
 
-Se delegará la autenticación en [Kong](https://getkong.org/), que admite varios tipos de autenticación por medio de plugins. La instalación por defecto de ODIN utilizará OAuth2 para la autenticación, que a su vez requiere el uso de SSL.
+Se delegará la autenticación de los usuarios externos en [Kong](https://getkong.org/), que admite varios tipos de autenticación por medio de plugins. La instalación por defecto de ODIN utilizará el plugin de autenticación por JWT.
+La autenticación de los usuarios internos se hará por un sistema convencional de user/password con la librería [Passport](http://passportjs.org/).
 
 ## Listas de control de acceso
 
