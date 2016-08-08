@@ -1162,7 +1162,56 @@ OPTIONS  /charts/:id
 
     *Max:* 15 carácteres
 
-# 11. Map
+# 11. Basemap
+## Endpoints
+```
+GET      /basemaps
+OPTIONS  /basemaps
+
+GET      /basemaps/first
+OPTIONS  /basemaps/first
+
+GET      /basemaps/last
+OPTIONS  /basemaps/last
+
+GET      /basemaps/count
+OPTIONS  /basemaps/count
+
+GET      /basemaps/:id
+HEAD     /basemaps/:id
+OPTIONS  /basemaps/:id
+```
+
+# Campos
+- **id**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Único:* sí
+
+    *Max:* 15 carácteres
+
+---
+
+- **name**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 100 carácteres
+
+---
+
+- **url**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+# 12. Map
 ## Endpoints
 ```
 GET      /maps
@@ -1224,16 +1273,6 @@ OPTIONS  /maps/:id
 
 ---
 
-- **basemap**
-
-    *Tipo:* enum
-
-    *Requerido:* sí
-
-    *Valores posibles:* 'roadmap', 'satellite', 'hybrid', 'terrain'
-
----
-
 - **url**
 
     *Tipo:* string
@@ -1274,6 +1313,18 @@ OPTIONS  /maps/:id
 
 ### Claves Foráneas
 
+- **basemap**
+
+    El ID del basemap.
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 15 carácteres
+
+---
+
 - **createdBy**
 
     El ID del usuario que creó el map.
@@ -1284,7 +1335,8 @@ OPTIONS  /maps/:id
 
     *Max:* 15 carácteres
 
-# 12. View
+
+# 13. View
 ## Endpoints
 ```
 GET      /views
@@ -1379,7 +1431,7 @@ OPTIONS  /views/:id
 
     *Max:* 15 carácteres
 
-# 13. Config
+# 14. Config
 ## Endpoints
 ```
 GET      /configs
@@ -1462,7 +1514,7 @@ OPTIONS  /configs/:id
 
     *Max:* 15 carácteres
 
-# 14. Log
+# 15. Log
 ## Endpoints
 ```
 GET      /logs
@@ -1535,7 +1587,7 @@ OPTIONS  /logs/:id
 
     *Max:* 15 carácteres
 
-# 15. Statistic
+# 16. Statistic
 ## Endpoints
 ```
 GET      /statistics

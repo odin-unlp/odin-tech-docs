@@ -165,40 +165,48 @@
                     <li><a class="toctree-l4" href="#campos_9">Campos</a></li>
                 
             
-                <li class="toctree-l3"><a href="#11-map">11. Map</a></li>
+                <li class="toctree-l3"><a href="#11-basemap">11. Basemap</a></li>
                 
                     <li><a class="toctree-l4" href="#endpoints_10">Endpoints</a></li>
                 
-                    <li><a class="toctree-l4" href="#campos_10">Campos</a></li>
+            
+                <li class="toctree-l3"><a href="#campos_10">Campos</a></li>
                 
             
-                <li class="toctree-l3"><a href="#12-view">12. View</a></li>
+                <li class="toctree-l3"><a href="#12-map">12. Map</a></li>
                 
                     <li><a class="toctree-l4" href="#endpoints_11">Endpoints</a></li>
                 
                     <li><a class="toctree-l4" href="#campos_11">Campos</a></li>
                 
             
-                <li class="toctree-l3"><a href="#13-config">13. Config</a></li>
+                <li class="toctree-l3"><a href="#13-view">13. View</a></li>
                 
                     <li><a class="toctree-l4" href="#endpoints_12">Endpoints</a></li>
                 
                     <li><a class="toctree-l4" href="#campos_12">Campos</a></li>
                 
             
-                <li class="toctree-l3"><a href="#14-log">14. Log</a></li>
+                <li class="toctree-l3"><a href="#14-config">14. Config</a></li>
                 
                     <li><a class="toctree-l4" href="#endpoints_13">Endpoints</a></li>
                 
                     <li><a class="toctree-l4" href="#campos_13">Campos</a></li>
                 
             
-                <li class="toctree-l3"><a href="#15-statistic">15. Statistic</a></li>
+                <li class="toctree-l3"><a href="#15-log">15. Log</a></li>
                 
                     <li><a class="toctree-l4" href="#endpoints_14">Endpoints</a></li>
                 
+                    <li><a class="toctree-l4" href="#campos_14">Campos</a></li>
+                
             
-                <li class="toctree-l3"><a href="#campos_14">Campos</a></li>
+                <li class="toctree-l3"><a href="#16-statistic">16. Statistic</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints_15">Endpoints</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#campos_15">Campos</a></li>
                 
             
             </ul>
@@ -1459,8 +1467,54 @@ OPTIONS  /charts/:id
 <p><em>Max:</em> 15 carácteres</p>
 </li>
 </ul>
-<h1 id="11-map">11. Map</h1>
+<h1 id="11-basemap">11. Basemap</h1>
 <h2 id="endpoints_10">Endpoints</h2>
+<pre><code>GET      /basemaps
+OPTIONS  /basemaps
+
+GET      /basemaps/first
+OPTIONS  /basemaps/first
+
+GET      /basemaps/last
+OPTIONS  /basemaps/last
+
+GET      /basemaps/count
+OPTIONS  /basemaps/count
+
+GET      /basemaps/:id
+HEAD     /basemaps/:id
+OPTIONS  /basemaps/:id
+</code></pre>
+
+<h1 id="campos_10">Campos</h1>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 100 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>url</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<h1 id="12-map">12. Map</h1>
+<h2 id="endpoints_11">Endpoints</h2>
 <pre><code>GET      /maps
 POST     /maps
 OPTIONS  /maps
@@ -1481,7 +1535,7 @@ HEAD     /maps/:id
 OPTIONS  /maps/:id
 </code></pre>
 
-<h2 id="campos_10">Campos</h2>
+<h2 id="campos_11">Campos</h2>
 <ul>
 <li>
 <p><strong>id</strong></p>
@@ -1514,15 +1568,6 @@ OPTIONS  /maps/:id
 <p><strong>notes</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 500 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>basemap</strong></p>
-<p><em>Tipo:</em> enum</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Valores posibles:</em> 'roadmap', 'satellite', 'hybrid', 'terrain'</p>
 </li>
 </ul>
 <hr />
@@ -1568,6 +1613,16 @@ OPTIONS  /maps/:id
 <h3 id="claves-foraneas_7">Claves Foráneas</h3>
 <ul>
 <li>
+<p><strong>basemap</strong></p>
+<p>El ID del basemap.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
 <p><strong>createdBy</strong></p>
 <p>El ID del usuario que creó el map.</p>
 <p><em>Tipo:</em> string</p>
@@ -1575,8 +1630,8 @@ OPTIONS  /maps/:id
 <p><em>Max:</em> 15 carácteres</p>
 </li>
 </ul>
-<h1 id="12-view">12. View</h1>
-<h2 id="endpoints_11">Endpoints</h2>
+<h1 id="13-view">13. View</h1>
+<h2 id="endpoints_12">Endpoints</h2>
 <pre><code>GET      /views
 POST     /views
 OPTIONS  /views
@@ -1597,7 +1652,7 @@ HEAD     /views/:id
 OPTIONS  /views/:id
 </code></pre>
 
-<h2 id="campos_11">Campos</h2>
+<h2 id="campos_12">Campos</h2>
 <ul>
 <li>
 <p><strong>id</strong></p>
@@ -1665,8 +1720,8 @@ OPTIONS  /views/:id
 <p><em>Max:</em> 15 carácteres</p>
 </li>
 </ul>
-<h1 id="13-config">13. Config</h1>
-<h2 id="endpoints_12">Endpoints</h2>
+<h1 id="14-config">14. Config</h1>
+<h2 id="endpoints_13">Endpoints</h2>
 <pre><code>GET      /configs
 POST     /configs
 OPTIONS  /configs
@@ -1687,7 +1742,7 @@ HEAD     /configs/:id
 OPTIONS  /configs/:id
 </code></pre>
 
-<h2 id="campos_12">Campos</h2>
+<h2 id="campos_13">Campos</h2>
 <ul>
 <li>
 <p><strong>id</strong></p>
@@ -1741,8 +1796,8 @@ OPTIONS  /configs/:id
 <p><em>Max:</em> 15 carácteres</p>
 </li>
 </ul>
-<h1 id="14-log">14. Log</h1>
-<h2 id="endpoints_13">Endpoints</h2>
+<h1 id="15-log">15. Log</h1>
+<h2 id="endpoints_14">Endpoints</h2>
 <pre><code>GET      /logs
 POST     /logs
 OPTIONS  /logs
@@ -1763,7 +1818,7 @@ HEAD     /logs/:id
 OPTIONS  /logs/:id
 </code></pre>
 
-<h2 id="campos_13">Campos</h2>
+<h2 id="campos_14">Campos</h2>
 <ul>
 <li>
 <p><strong>id</strong></p>
@@ -1808,8 +1863,8 @@ OPTIONS  /logs/:id
 <p><em>Max:</em> 15 carácteres</p>
 </li>
 </ul>
-<h1 id="15-statistic">15. Statistic</h1>
-<h2 id="endpoints_14">Endpoints</h2>
+<h1 id="16-statistic">16. Statistic</h1>
+<h2 id="endpoints_15">Endpoints</h2>
 <pre><code>GET      /statistics
 OPTIONS  /statistics
 
@@ -1827,7 +1882,7 @@ HEAD     /statistics/:id
 OPTIONS  /statistics/:id
 </code></pre>
 
-<h1 id="campos_14">Campos</h1>
+<h1 id="campos_15">Campos</h1>
 <ul>
 <li>
 <p><strong>id</strong></p>
