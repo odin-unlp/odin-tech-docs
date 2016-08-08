@@ -8,7 +8,7 @@
   
   
   
-  <title>Sprint 4 - ODIN</title>
+  <title>Sprint 10 - ODIN</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Sprint 4";
-    var mkdocs_page_input_path = "sprints/sprint-4.md";
-    var mkdocs_page_url = "/sprints/sprint-4/";
+    var mkdocs_page_name = "Sprint 10";
+    var mkdocs_page_input_path = "sprints/sprint-10.md";
+    var mkdocs_page_url = "/sprints/sprint-10/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -130,37 +130,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Sprint 4</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#alcance">Alcance</a></li>
-                
-                    <li><a class="toctree-l4" href="#objetivo">Objetivo</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#tareas">Tareas</a></li>
-                
-                    <li><a class="toctree-l4" href="#api">API</a></li>
-                
-                    <li><a class="toctree-l4" href="#admin">Admin</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#prioridades">Prioridades</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#endpoints">Endpoints</a></li>
-                
-                    <li><a class="toctree-l4" href="#logs">Logs</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#modelos">Modelos</a></li>
-                
-                    <li><a class="toctree-l4" href="#logs_1">Logs</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../sprint-4/">Sprint 4</a>
         
     </li>
 
@@ -201,8 +172,36 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../sprint-10/">Sprint 10</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Sprint 10</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#alcance">Alcance</a></li>
+                
+                    <li><a class="toctree-l4" href="#objetivo">Objetivo</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#tareas">Tareas</a></li>
+                
+                    <li><a class="toctree-l4" href="#api">API</a></li>
+                
+                    <li><a class="toctree-l4" href="#admin">Admin</a></li>
+                
+                    <li><a class="toctree-l4" href="#frontend">Frontend</a></li>
+                
+                    <li><a class="toctree-l4" href="#otros">Otros</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#prioridades">Prioridades</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#campos">Campos</a></li>
+                
+                    <li><a class="toctree-l4" href="#charts">Charts</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -273,7 +272,7 @@
         
       
     
-    <li>Sprint 4</li>
+    <li>Sprint 10</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -287,117 +286,65 @@
           <div role="main">
             <div class="section">
               
-                <p><strong>Duración:</strong> Miercoles 8/06/16 - Martes 14/06/16</p>
+                <p><strong>Duración:</strong> Lunes 01/08/16 - Viernes 05/08/16</p>
 <h1 id="alcance">Alcance</h1>
-<p>Sprint de refactoring + cleanup + polishing.</p>
+<p>Sprint de gráficos y Frontend.</p>
 <h2 id="objetivo">Objetivo</h2>
-<p>Hacer el log de acciones, refactorear el código y arreglar los errores y detalles de la UI.</p>
+<p>Desarrollar el CRUD de gráficos y continuar maquetando el Frontend.</p>
 <h1 id="tareas">Tareas</h1>
 <h2 id="api">API</h2>
 <ol>
-<li>Hacer el modelo, seeds y controller del log de acciones.</li>
-<li>Hacer async la creación del zip de descarga de dataset.</li>
-<li>Hacer los borrados lógicos.</li>
-<li>Desarrollar includes granulares (ej. include=tags.name).</li>
-<li>Refactorear <code>.negotiate</code> para dar soporte a todos los tipos de error definidos en <code>config/errors.js</code>, y cambiarlo a <code>.error</code>.</li>
-<li>Implementar la recepción de múltiples valores para un parámetro, separados por coma:
-    siempre y cuando se el modelo lo admita (es decir, haya una relacion de uno a muchos o de muchos a muchos).</li>
-<li>Extractar a un servicio y comentar la lógica de la subida de archivos.</li>
-<li>Separar la lógica del constructor de <code>ResponseGET</code> en métodos y comentarlos.</li>
-<li>Refactorear la búsqueda para que no busque en todos los campos por defecto, sino sólo los que estén en una whitelist.</li>
-<li>Poner el campo fullName en la response de <code>GET /users</code> y <code>GET /users/:id</code>.</li>
-<li>En las responses GET de un ítem en particular, agregar en <code>links</code> las relaciones de primer grado:
-    por ejemplo, <code>/datasets/ag56fdf/tags</code>.</li>
-<li>Separar las responses correctas (2xx) definidas en <code>config/errors.js</code> a otro archivo.</li>
-<li>Refactorear <code>appUrl</code>.</li>
-<li>Implementar <code>206 Partial Content</code> para el contenido paginado.</li>
-<li>Implementar <code>204 No Content</code> para las responses sin contenido.</li>
-<li>Implementar un chequeo más robusto de objetos vacíos.</li>
+<li>Creación de gráficos en la API</li>
 </ol>
 <h2 id="admin">Admin</h2>
 <ol>
-<li>Solucionar los ítems marcados como "Crítico" en el Trello de testing.</li>
-<li>Solucionar los ítems marcados como "Error" en el Trello de testing.</li>
-<li>Solucionar los ítems marcados como "Mejora" en el Trello de testing.</li>
-<li>Adecuar la interfaz del CRUD de Archivos a lo especificado por los documentos funcionales.</li>
-<li>Agregar al dashboard el contenido del log de acciones, las más recientes primero (funcional):
-    mostrar las últimas 500 acciones, paginadas de a 20.</li>
-<li>Quitar el CRUD de Databases del Admin (no es necesario que esté expuesto en el Admin).</li>
+<li>CRUD de gráficos</li>
+<li>Agregar botones "Editar" y "Eliminar" al listado de recursos asociados a un File</li>
+<li>Crear CRUD de Configs</li>
+</ol>
+<h2 id="frontend">Frontend</h2>
+<ol>
+<li>Maquetar el listado de datasets (marca blanca)</li>
+<li>Hacer funcionales los links de Ver datasets/visualizaciones</li>
+<li>Implementar la vista de gráficos</li>
+<li>Implementar la vista de mapas</li>
+<li>Hacer funcionales los links de descarga</li>
+<li>Hacer funcionales los links al home</li>
+<li>Limitar la tabla a los campos Optional (si tienen algún valor)</li>
+</ol>
+<h2 id="otros">Otros</h2>
+<ol>
+<li>Agregar campo "link" en mapa a documentación técnica</li>
+<li>Documentar los nuevos campos en Chart : 'data', 'dataSeries, 'dataType'</li>
 </ol>
 <h1 id="prioridades">Prioridades</h1>
 <ol>
-<li>Async zips</li>
-<li>Borrados lógicos</li>
-<li>Includes parciales</li>
-<li>Resolución de problemas de UI</li>
-<li>Adecuar CRUD de Archivos</li>
+<li>Creación de gráficos en la API</li>
+<li>CRUD de gráficos</li>
+<li>Maquetar el listado de datasets (marca blanca)</li>
 </ol>
-<h1 id="endpoints">Endpoints</h1>
-<h2 id="logs">Logs</h2>
-<pre><code>GET      /logs
-POST     /logs
-OPTIONS  /logs
-
-GET      /logs/first
-OPTIONS  /logs/first
-
-GET      /logs/last
-OPTIONS  /logs/last
-
-GET      /logs/count
-OPTIONS  /logs/count
-
-GET      /logs/:id
-PATCH    /logs/:id
-DELETE   /logs/:id
-HEAD     /logs/:id
-OPTIONS  /logs/:id
-</code></pre>
-
-<h1 id="modelos">Modelos</h1>
-<h2 id="logs_1">Logs</h2>
+<h1 id="campos">Campos</h1>
+<h2 id="charts">Charts</h2>
 <ul>
 <li>
-<p><strong>id</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Único:</em> sí</p>
-<p><em>Max:</em> 15 carácteres</p>
+<p><strong>data</strong></p>
+<p><em>Tipo:</em> json</p>
+<p><em>Max:</em> 5000 carácteres</p>
 </li>
 </ul>
 <hr />
 <ul>
 <li>
-<p><strong>action</strong></p>
+<p><strong>dataType</strong></p>
 <p><em>Tipo:</em> enum</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Valores posibles:</em> 'create', 'update', 'delete'</p>
+<p><em>Valores posibles:</em> 'qualitative', 'cuantitative'</p>
 </li>
 </ul>
 <hr />
 <ul>
 <li>
-<p><strong>target</strong></p>
-<p><em>Tipo:</em> enum</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Valores posibles:</em> 'category', 'dataset', 'fileType', 'file', 'organization', 'status', 'tag', 'updateFrequency', 'user'</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>createdAt</strong></p>
-<p><em>Tipo:</em> datetime</p>
-<p><em>Default:</em> fecha y hora actuales</p>
-</li>
-</ul>
-<h3 id="claves-foraneas">Claves Foráneas</h3>
-<ul>
-<li>
-<p><strong>user</strong></p>
-<p>El ID del usuario que actualizó realizó la acción.</p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 15 carácteres</p>
+<p><strong>dataSeries</strong></p>
+<p><em>Tipo:</em> array</p>
 </li>
 </ul>
               
@@ -407,10 +354,10 @@ OPTIONS  /logs/:id
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../sprint-5/" class="btn btn-neutral float-right" title="Sprint 5">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../references/status-codes/" class="btn btn-neutral float-right" title="HTTP Status Codes">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../sprint-3/" class="btn btn-neutral" title="Sprint 3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sprint-9/" class="btn btn-neutral" title="Sprint 9"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -438,10 +385,10 @@ OPTIONS  /logs/:id
           <a href="https://github.com/gcba-odin/odin-tech-docs" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../sprint-3/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../sprint-9/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../sprint-5/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../references/status-codes/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
