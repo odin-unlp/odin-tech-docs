@@ -177,12 +177,12 @@
         }, 
         {
             "location": "/codigo-fuente/", 
-            "text": "Repositorio\n\n\nEl c\u00f3digo deber\u00e1 alojarse en un repositorio GitHub perteneciente a la organizaci\u00f3n \ngcba-odin\n.\n\n\nBranches\n\n\n\n\n\n\nmaster:\n la rama de producci\u00f3n.\n\n\n\n\n\n\nstaging:\n la rama de pre-producci\u00f3n, donde se pueden revisar y aprobar/rechazar cambios antes de que vayan a producci\u00f3n.\n\n\n\n\n\n\ntesting:\n para testeo e integraci\u00f3n continua (ej. con Travis CI).\n\n\n\n\n\n\ndev\n: la rama de desarrollo.\n\n\n\n\n\n\nCommits\n\n\nLos commits deben encapsular cambios relacionados, prefiri\u00e9ndose una multiplicidad de commits at\u00f3micos y claramente diferenciados a unos pocos que sean acumulativos.\n\n\nLos mensajes de los commits deben hacerse en ingl\u00e9s y ser descriptivos de su contenido, breves y concisos.", 
+            "text": "Repositorio\n\n\nEl c\u00f3digo deber\u00e1 alojarse en repositorios GitHub perteneciente a la organizaci\u00f3n \ngcba-odin\n.\n\n\nBranches\n\n\n\n\n\n\nmaster:\n la rama de producci\u00f3n.\n\n\n\n\n\n\nstaging:\n la rama de pre-producci\u00f3n, donde se pueden revisar y aprobar/rechazar cambios antes de que vayan a producci\u00f3n.\n\n\n\n\n\n\ntesting:\n para testeo e integraci\u00f3n continua (ej. con Travis CI).\n\n\n\n\n\n\ndev\n: la rama de desarrollo.\n\n\n\n\n\n\nCommits\n\n\nLos commits deben encapsular cambios relacionados, prefiri\u00e9ndose una multiplicidad de commits at\u00f3micos y claramente diferenciados a unos pocos que sean acumulativos.\n\n\nLos mensajes de los commits deben hacerse en ingl\u00e9s y ser descriptivos de su contenido, breves y concisos.", 
             "title": "Codigo Fuente"
         }, 
         {
             "location": "/codigo-fuente/#repositorio", 
-            "text": "El c\u00f3digo deber\u00e1 alojarse en un repositorio GitHub perteneciente a la organizaci\u00f3n  gcba-odin .", 
+            "text": "El c\u00f3digo deber\u00e1 alojarse en repositorios GitHub perteneciente a la organizaci\u00f3n  gcba-odin .", 
             "title": "Repositorio"
         }, 
         {
