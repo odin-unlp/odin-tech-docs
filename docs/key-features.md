@@ -52,6 +52,8 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
 
     *Mal:* `GET /datasets/5f86r.json`
 
+    *Bien:* `GET /datasets/5f86r`
+
 
 # 2. Verbos HTTP
 

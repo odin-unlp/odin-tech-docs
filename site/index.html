@@ -294,11 +294,11 @@
 <h2 id="3-consistencia">3. Consistencia</h2>
 <p>Las normas aquí descriptas deben aplicarse de manera uniforme y exhaustiva al desarrollar la API.</p>
 <h2 id="4-abstraccion">4. Abstracción</h2>
-<p>No necesariamente debe haber un endpoint por cada tabla de la base de datos, ni cada parámetro debe equivaler a un campo de una tabla, ni mucho menos el resultado de una query a la base de datos ser serializado y despachado sin más. </p>
+<p>No necesariamente debe haber un endpoint por cada tabla de la base de datos, ni cada parámetro debe equivaler a un campo de una tabla, ni mucho menos el resultado de una query a la base de datos ser serializado y despachado sin más.</p>
 <p>Por un lado es preciso limitar los datos que se envían en la response, y por otro hay que tener en cuenta los casos de uso y las necesidades de datos de los clientes, por ejemplo proveyendo campos calculados o construidos a partir de otros. Todo ello contribuye a mantener bajo control el tamaño de las responses, a reforzar la seguridad de la API y a minimizar el número de requests.</p>
 <p>La API debe ser una capa de abstracción sobre los detalles de implementación de ODIN, limitando y estandarizando lo que se expone a través de ella. En otras palabras, la API debe implementar el patrón Façade.</p>
 <h2 id="5-autodescriptividad">5. Autodescriptividad</h2>
-<p>La API debe poder navegarse sin necesidad de acudir a la documentación, y a la vez documentarse a sí misma. Esto es posible a través de la implementación de Hypermedia con el método OPTION, que además tiene la ventaja de que ya no es necesario tener que versionar la API. Implementar OPTION posibilita incluso la generación automática de la UI de los clientes.</p>
+<p>La API debe poder navegarse sin necesidad de acudir a la documentación, y a la vez documentarse a sí misma. Esto es posible a través de la implementación de Hypermedia con el método OPTIONS, que además tiene la ventaja de que ya no es necesario tener que versionar la API. Implementar OPTIONS posibilita incluso la generación automática de la UI de los clientes.</p>
 <h2 id="6-modularidad">6. Modularidad</h2>
 <p>El núcleo de funcionalidad más elemental de la API debe implementarse en una serie de módulos funcional y lógicamente distintos, que sea posible desarrollar por separado. Estos módulos no necesariamente serán desacoplables. La funcionalidad restante se desarrollará como plugins, que sí deben ser desacoplables.</p>
 <p>Una de las ventajas de la modularidad y el empleo de la estructura core/plugins es que la aplicación es fácilmente actualizable, y en el caso de ODIN esta cualidad es muy deseable.</p>
@@ -307,7 +307,7 @@
 <h1 id="convenciones">Convenciones</h1>
 <p>TBD</p>
 <h1 id="licencia">Licencia</h1>
-<p>La API de ODIN será un proyecto de código abierto y se ofrecerá bajo la licencia MIT.</p>
+<p>La API de ODIN será un proyecto de código abierto y se ofrecerá bajo la licencia <a href="https://opensource.org/licenses/MIT">MIT</a>.</p>
               
             </div>
           </div>
@@ -355,5 +355,5 @@
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2016-08-08 12:38:17.140878
+Build Date UTC : 2016-08-08 13:23:15.065996
 -->

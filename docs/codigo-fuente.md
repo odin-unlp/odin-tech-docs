@@ -1,6 +1,6 @@
 # Repositorio
 
-El código deberá alojarse en un repositorio GitHub perteneciente a la organización [gcba-odin](https://github.com/gcba-odin).
+El código deberá alojarse en repositorios GitHub perteneciente a la organización [gcba-odin](https://github.com/gcba-odin).
 
 ## Branches
 

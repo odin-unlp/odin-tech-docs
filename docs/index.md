@@ -17,7 +17,7 @@ Las normas aquí descriptas deben aplicarse de manera uniforme y exhaustiva al d
 
 ## 4. Abstracción
 
-No necesariamente debe haber un endpoint por cada tabla de la base de datos, ni cada parámetro debe equivaler a un campo de una tabla, ni mucho menos el resultado de una query a la base de datos ser serializado y despachado sin más. 
+No necesariamente debe haber un endpoint por cada tabla de la base de datos, ni cada parámetro debe equivaler a un campo de una tabla, ni mucho menos el resultado de una query a la base de datos ser serializado y despachado sin más.
 
 Por un lado es preciso limitar los datos que se envían en la response, y por otro hay que tener en cuenta los casos de uso y las necesidades de datos de los clientes, por ejemplo proveyendo campos calculados o construidos a partir de otros. Todo ello contribuye a mantener bajo control el tamaño de las responses, a reforzar la seguridad de la API y a minimizar el número de requests.
 
@@ -25,7 +25,7 @@ La API debe ser una capa de abstracción sobre los detalles de implementación d
 
 ## 5. Autodescriptividad
 
-La API debe poder navegarse sin necesidad de acudir a la documentación, y a la vez documentarse a sí misma. Esto es posible a través de la implementación de Hypermedia con el método OPTION, que además tiene la ventaja de que ya no es necesario tener que versionar la API. Implementar OPTION posibilita incluso la generación automática de la UI de los clientes.
+La API debe poder navegarse sin necesidad de acudir a la documentación, y a la vez documentarse a sí misma. Esto es posible a través de la implementación de Hypermedia con el método OPTIONS, que además tiene la ventaja de que ya no es necesario tener que versionar la API. Implementar OPTIONS posibilita incluso la generación automática de la UI de los clientes.
 
 ## 6. Modularidad
 
@@ -43,4 +43,4 @@ TBD
 
 # Licencia
 
-La API de ODIN será un proyecto de código abierto y se ofrecerá bajo la licencia MIT.
+La API de ODIN será un proyecto de código abierto y se ofrecerá bajo la licencia [MIT](https://opensource.org/licenses/MIT).
