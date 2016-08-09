@@ -85,21 +85,21 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
 
     Es posible controlar cómo se hace la búsqueda mediante los parámetros *condition* y *match*. *condition* permite que, dado más de un término de búsqueda, determinar si todos ellos deben estar presentes o cualquiera indistintamente:
 
-    **Todos**: datasets/search?query=1,2,3 (por defecto)
+    **Todos**: `datasets/search?query=1,2,3 (por defecto)`
 
-    **Indistinto**: datasets/search?query=1,2,3&condition=AND
+    **Indistinto**: ``datasets/search?query=1,2,3&condition=AND
 
     Los términos deben ir separados por coma. *match* permite determinar en qué parte debe estar presente el término de búsqueda:
 
-    **En cualquier lado**: datasets/search?query=1,2,3 (por defecto)
+    **En cualquier lado**: `datasets/search?query=1,2,3 (por defecto)`
 
-    **Al comienzo**: datasets/search?query=1,2,3&match=BEGINS
+    **Al comienzo**: `datasets/search?query=1,2,3&match=BEGINS`
 
-    **Al final**: datasets/search?query=1,2,3&match=ENDS
+    **Al final**: `datasets/search?query=1,2,3&match=ENDS`
 
     *condition* y *match* puden combinarse:
 
-    *Ejemplo*: datasets/search?query=1,2,3&condition=AND&match=ENDS
+    *Ejemplo*: `datasets/search?query=1,2,3&condition=AND&match=ENDS`
 
 
 - **Fitrado:** a través de parámetros.
@@ -114,21 +114,21 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
 
     Es posible controlar cómo se hace el filtrado mediante los parámetros *condition* y *match*. *condition* permite que, dado más de un valor de filtrado, determinar si todos ellos deben estar presentes o cualquiera indistintamente:
 
-    **Todos**: datasets?name=1,2,3 (por defecto)
+    **Todos**: `datasets?name=1,2,3 (por defecto)`
 
-    **Indistinto**: datasets?name=1,2,3&condition=AND
+    **Indistinto**: `datasets?name=1,2,3&condition=AND`
 
     Los valores deben ir separados por coma. *match* permite determinar en qué parte debe estar presente el valor de filtrado:
 
-    **En cualquier lado**: datasets?name=1,2,3 (por defecto)
+    **En cualquier lado**: `datasets?name=1,2,3 (por defecto)`
 
-    **Al comienzo**: datasets?name=1,2,3&match=BEGINS
+    **Al comienzo**: `datasets?name=1,2,3&match=BEGINS`
 
-    **Al final**: datasets?name=1,2,3&match=ENDS
+    **Al final**: `datasets?name=1,2,3&match=ENDS`
 
     *condition* y *match* pueden combinarse:
 
-    *Ejemplo*:datasets?name=1,2,3&condition=AND&match=ENDS
+    *Ejemplo*: `datasets?name=1,2,3&condition=AND&match=ENDS`
 
 
 - **Ordenado:** a través de los parámetros *orderBy* y *sort*. Este último admite ASC o DESC como valores, para ordenar en forma ascendiente o descendiente respectivamente.
@@ -157,7 +157,9 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
 - **Respuestas parciales:** permite a los clientes elegir qué información necesitan en lugar de obtener la respuesta completa, lo que es especialmente útil para las aplicaciones móviles (por el ancho de banda limitado). Los datos requeridos van en el campo *fields*, separados por coma para campos completos, y por puntos para atributos en particular.
 
     *Ejemplo*: `GET /datasets?fields=name`
+
     *Ejemplo*: `GET /datasets?fields=name,description`
+
     *Ejemplo*: `GET /datasets?fields=name,description,category.name`
 
 
