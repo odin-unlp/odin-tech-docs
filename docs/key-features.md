@@ -87,7 +87,7 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
 
     **Todos**: `datasets/search?query=1,2,3 (por defecto)`
 
-    **Indistinto**: ``datasets/search?query=1,2,3&condition=AND
+    **Indistinto**: `datasets/search?query=1,2,3&condition=AND`
 
     Los términos deben ir separados por coma. *match* permite determinar en qué parte debe estar presente el término de búsqueda:
 
