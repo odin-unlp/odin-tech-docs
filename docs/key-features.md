@@ -75,11 +75,11 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
 
 - **Búsqueda:** se hará por medio del endpoint *search*, con el parámetro *query*. Se admitirán dos clases de búsqueda:
 
-    *Global:*  `GET /search?query=calidad aire`
+    **Global:**  `GET /search?query=calidad aire`
 
     Busca en todos los recursos.
 
-    *Particular:*  `GET /datasets/search?query=calidad aire`
+    **Particular:**  `GET /datasets/search?query=calidad aire`
 
     Busca en los datasets.
 
@@ -163,15 +163,15 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
 
 - **Palabras reservadas:** *first*, *last* y *count*. Pueden reservarse otras, según el tipo de dato (por ejemplo: *average*, *max*, *min*).
 
-    *First:*  `GET /datasets/first`
+    **First:**  `GET /datasets/first`
 
     Devuelve el primer dataset.
 
-    *Last:*  `GET /datasets/last`
+    **Last:**  `GET /datasets/last`
 
     Devuelve el último dataset.
 
-    *Count:*  `GET /datasets/count`
+    **Count:**  `GET /datasets/count`
 
     Devuelve la cantidad de datasets.
 
