@@ -81,7 +81,7 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
 
     **Particular:**  `GET /datasets/search?query=calidad aire`
 
-    Busca en los datasets.
+    Busca en un recurso en particular, en este caso los datasets.
 
     Es posible controlar cómo se hace la búsqueda mediante los parámetros *condition* y *match*. *condition* permite que, dado más de un término de búsqueda, determinar si todos ellos deben estar presentes o cualquiera indistintamente:
 
