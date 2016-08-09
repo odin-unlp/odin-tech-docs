@@ -48,7 +48,7 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
     *Bien:* `GET /datasets/5f86r`
 
 
-- No se deben incluir extensiones de archivo en los endpoints. El tipo de contenido a devolver al cliente estará determinado por el header `Accepts` de la request.
+- No se deben incluir extensiones de archivo en los endpoints. El tipo de contenido a devolver al cliente estará determinado por el header `Accept` de la request.
 
     *Mal:* `GET /datasets/5f86r.json`
 
