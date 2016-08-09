@@ -24,7 +24,7 @@
 ## API Gateway
 
 - **Sistema operativo:** Ubuntu 16.04 Xenial Xerus
-- **Aplicación:** Kong 0.8.2
+- **Aplicación:** Kong 0.8.3
 - **Servidor:** NGINX 1.10.0
 
 ## Frontends
