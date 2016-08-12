@@ -1366,6 +1366,51 @@
             "title": "Charts"
         }, 
         {
+            "location": "/sprints/sprint-11/", 
+            "text": "Duraci\u00f3n:\n Lunes 08/08/16 - Viernes 12/08/16\n\n\nAlcance\n\n\nSprint de frontend y correcci\u00f3n de errores.\n\n\nObjetivo\n\n\nDesarrollar la funcionalidad del Frontend y realizar las correcciones necesarias en la API y el Admin.\n\n\nTareas\n\n\nAPI\n\n\n\n\nDesarrollar la descarga de archivos en m\u00e1s de un formato\n\n\nComprobar los archivos permitidos para subir desde el modelo filetypes\n\n\nVerificar que latitud y longitud no est\u00e9n vac\u00edas\n\n\nNormalizar basemaps\n\n\nActualizar archivos, reemplazando el archivo\n\n\nUsar el slug del nombre del archivo para guardarlo en disco\n\n\nActualizar archivos, con borrrado f\u00edsico del archivo antiguo\n\n\nCarpeta de dataset guardada con nombre en vez de id\n\n\nCrear endpoint para refrescar token\n\n\nAgregar endpoint /:resource/statistics, con los hits a cada endpoint del recurso y sus \u00edtems\n\n\n\n\nAdmin\n\n\n\n\nAgregar el campo \"mimetype\" al CRUD de file types\n\n\nTomar los tipos de archivos permitidos desde la API\n\n\nAgregar al CRUD de File los campos 'gatheringDate' y 'updated'\n\n\nActualizar archivos, reemplazando el archivo\n\n\nAvisar al usuario los errores en la creaci\u00f3n de mapa\n\n\nAgregar el campo Estado a la edici\u00f3n de datasets\n\n\n\n\nFrontend\n\n\n\n\nHacer funcionales las categor\u00edas\n\n\nAgregar cantidad de datasets al filtrar\n\n\nQuitar la cantidad de vistas de cada dataset en el listado de datasets\n\n\nColocar las categor\u00edas en 3 filas de 3 \u00edtems\n\n\nHacer funcionales los breadcrumbs\n\n\nAlinear correctamente el separador \"|\" entre los \u00edtems del breadcrumb\n\n\nLinkear \"Especificaciones\", \"T\u00e9rminos y condiciones\" y \"Contacto\" al Home\n\n\nLinkear \"Ver conjunto de visualizaciones\" al Home\n\n\nCambiar \"M\u00e1s Visitados\" por \"M\u00e1s Descargados\"\n\n\nEliminar el link del label de formato\n\n\nHacer funcionales los filtros por etiquetas al clickearlas\n\n\nHacer el dropdown de previsualizaci\u00f3n de archivo\n\n\nLinkear el bot\u00f3n de Twitter del footer a la cuenta @LABgcba\n\n\nImplementar la vista de tabla\n\n\nHacer funcionales los filtros\n\n\nLimitar a 100 car\u00e1cteres la descripci\u00f3n de los datasets en el Home\n\n\nHacer el dropdown de descarga de archivo\n\n\nHacer funcional la b\u00fasqueda\n\n\nMaquetar los comentarios\n\n\nIntegrar Disqus\n\n\nTomar las im\u00e1genes de las categor\u00edas desde la API\n\n\nImplementar el CSS de Marca BA\n\n\nAgregar filtro de \"publicado\" en datasets y archivos\n\n\n\n\nOtros\n\n\n\n\nEscribir el CHANGELOG\n\n\n\n\nPrioridades\n\n\n\n\nHacer funcionales las categor\u00edas\n\n\nResolver Authorization frontend\n\n\nImplementar la vista de tabla\n\n\nColocar las categor\u00edas en 3 filas de 3 \u00edtems\n\n\nHacer funcionales los filtros\n\n\nImplementar el CSS de Marca BA\n\n\nHacer funcional la b\u00fasqueda\n\n\nDesarrollar la descarga de archivos en m\u00e1s de un formato\n\n\nActualizar archivos, reemplazando el archivo\n\n\nAgregar endpoint /:resource/statistics, con los hits a cada endpoint del recurso y sus \u00edtems", 
+            "title": "Sprint 11"
+        }, 
+        {
+            "location": "/sprints/sprint-11/#alcance", 
+            "text": "Sprint de frontend y correcci\u00f3n de errores.", 
+            "title": "Alcance"
+        }, 
+        {
+            "location": "/sprints/sprint-11/#objetivo", 
+            "text": "Desarrollar la funcionalidad del Frontend y realizar las correcciones necesarias en la API y el Admin.", 
+            "title": "Objetivo"
+        }, 
+        {
+            "location": "/sprints/sprint-11/#tareas", 
+            "text": "", 
+            "title": "Tareas"
+        }, 
+        {
+            "location": "/sprints/sprint-11/#api", 
+            "text": "Desarrollar la descarga de archivos en m\u00e1s de un formato  Comprobar los archivos permitidos para subir desde el modelo filetypes  Verificar que latitud y longitud no est\u00e9n vac\u00edas  Normalizar basemaps  Actualizar archivos, reemplazando el archivo  Usar el slug del nombre del archivo para guardarlo en disco  Actualizar archivos, con borrrado f\u00edsico del archivo antiguo  Carpeta de dataset guardada con nombre en vez de id  Crear endpoint para refrescar token  Agregar endpoint /:resource/statistics, con los hits a cada endpoint del recurso y sus \u00edtems", 
+            "title": "API"
+        }, 
+        {
+            "location": "/sprints/sprint-11/#admin", 
+            "text": "Agregar el campo \"mimetype\" al CRUD de file types  Tomar los tipos de archivos permitidos desde la API  Agregar al CRUD de File los campos 'gatheringDate' y 'updated'  Actualizar archivos, reemplazando el archivo  Avisar al usuario los errores en la creaci\u00f3n de mapa  Agregar el campo Estado a la edici\u00f3n de datasets", 
+            "title": "Admin"
+        }, 
+        {
+            "location": "/sprints/sprint-11/#frontend", 
+            "text": "Hacer funcionales las categor\u00edas  Agregar cantidad de datasets al filtrar  Quitar la cantidad de vistas de cada dataset en el listado de datasets  Colocar las categor\u00edas en 3 filas de 3 \u00edtems  Hacer funcionales los breadcrumbs  Alinear correctamente el separador \"|\" entre los \u00edtems del breadcrumb  Linkear \"Especificaciones\", \"T\u00e9rminos y condiciones\" y \"Contacto\" al Home  Linkear \"Ver conjunto de visualizaciones\" al Home  Cambiar \"M\u00e1s Visitados\" por \"M\u00e1s Descargados\"  Eliminar el link del label de formato  Hacer funcionales los filtros por etiquetas al clickearlas  Hacer el dropdown de previsualizaci\u00f3n de archivo  Linkear el bot\u00f3n de Twitter del footer a la cuenta @LABgcba  Implementar la vista de tabla  Hacer funcionales los filtros  Limitar a 100 car\u00e1cteres la descripci\u00f3n de los datasets en el Home  Hacer el dropdown de descarga de archivo  Hacer funcional la b\u00fasqueda  Maquetar los comentarios  Integrar Disqus  Tomar las im\u00e1genes de las categor\u00edas desde la API  Implementar el CSS de Marca BA  Agregar filtro de \"publicado\" en datasets y archivos", 
+            "title": "Frontend"
+        }, 
+        {
+            "location": "/sprints/sprint-11/#otros", 
+            "text": "Escribir el CHANGELOG", 
+            "title": "Otros"
+        }, 
+        {
+            "location": "/sprints/sprint-11/#prioridades", 
+            "text": "Hacer funcionales las categor\u00edas  Resolver Authorization frontend  Implementar la vista de tabla  Colocar las categor\u00edas en 3 filas de 3 \u00edtems  Hacer funcionales los filtros  Implementar el CSS de Marca BA  Hacer funcional la b\u00fasqueda  Desarrollar la descarga de archivos en m\u00e1s de un formato  Actualizar archivos, reemplazando el archivo  Agregar endpoint /:resource/statistics, con los hits a cada endpoint del recurso y sus \u00edtems", 
+            "title": "Prioridades"
+        }, 
+        {
             "location": "/references/status-codes/", 
             "text": "\u00c9xito\n\n\n\n\n\n\n\n\nSuccess\n\n\n\n\n\n\n\n\n\n\n\n\n200 OK\n\n\nC\u00f3digo gen\u00e9rico de \u00e9xito.\n\n\n\n\n\n\n201 Created\n\n\nIndica que el recurso fue creado exitosamente.\n\n\n\n\n\n\n202 Accepted\n\n\nSe acept\u00f3 la request, pero todav\u00eda no fue procesada. \u00datil para requests as\u00edncronas.\n\n\n\n\n\n\n204 No Content\n\n\nLa request fue procesada con \u00e9xito, pero no hay nada que mostrar. Por ejemplo, despu\u00e9s de un DELETE exitoso.\n\n\n\n\n\n\n206 Partial Content\n\n\nEl recurso devuelto est\u00e1 incompleto. Se lo suele usar para contenido que ha sido paginado. Por ejemplo, se devuelve la p\u00e1gina 5 de 20.\n\n\n\n\n\n\n\n\nError del cliente\n\n\n\n\n\n\n\n\nClient Error\n\n\n\n\n\n\n\n\n\n\n\n\n400 Bad Request\n\n\nError gen\u00e9rico para una request que no puede ser procesada por el servidor.\n\n\n\n\n\n\n401 Unauthorized\n\n\nEl cliente es desconocido para la API y necesita autenticarse primero.\n\n\n\n\n\n\n403 Forbidden\n\n\nLos permisos del cliente no son suficientes para acceder a este recurso. Es decir, el recurso es un recurso protegido (desde la perspectiva del usuario que hizo la request).\n\n\n\n\n\n\n404 Not Found\n\n\nNo existe el recurso pedido por el cliente.\n\n\n\n\n\n\n405 Method Not Allowed\n\n\nEl usuario no tiene permiso para usar ese m\u00e9todo HTTP en particular.\n\n\n\n\n\n\n406 Not Acceptable\n\n\nEl contenido no est\u00e1 disponible en la forma espec\u00edfica en que lo pidi\u00f3 el cliente (por medio de las cabeceras \"Accept-*\"). Por ejemplo, el cliente pidi\u00f3 un recurso en XML pero s\u00f3lo est\u00e1 disponible en JSON.\n\n\n\n\n\n\n410 Gone\n\n\nIndica que el recurso estaba disponible pero ya no m\u00e1s (de manera permanente).\n\n\n\n\n\n\n415 Unsupported Media Type\n\n\nLa request tiene un media type que no est\u00e1 admitido por el servidor. Por ejemplo, el cliente ha subido una imagen en SVG pero el servidor s\u00f3lo recibe JPG o PNG.\n\n\n\n\n\n\n422 Unprocessable Entity\n\n\nLa request en s\u00ed es v\u00e1lida, pero alguno de los par\u00e1metros enviados no es correcto.\n\n\n\n\n\n\n\n\nError del servidor\n\n\n\n\n\n\n\n\nServer Error\n\n\n\n\n\n\n\n\n\n\n\n\n500 Internal Server Error\n\n\nLa request parece estar bien, pero hubo un problema en el servidor. El cliente no tiene nada que ver, y tampoco puede hacer nada al respecto.\n\n\n\n\n\n\n501 Not Implemented\n\n\nLa API no ha implementado el m\u00e9todo usado para hacer la request. Por ejemplo, el m\u00e9todo PUT.", 
             "title": "HTTP Status Codes"
