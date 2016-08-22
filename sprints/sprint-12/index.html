@@ -210,6 +210,17 @@
                 <li class="toctree-l3"><a href="#prioridades">Prioridades</a></li>
                 
             
+                <li class="toctree-l3"><a href="#endpoints">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#datasets">Datasets</a></li>
+                
+                    <li><a class="toctree-l4" href="#charts">Charts</a></li>
+                
+                    <li><a class="toctree-l4" href="#maps">Maps</a></li>
+                
+                    <li><a class="toctree-l4" href="#files">Files</a></li>
+                
+            
             </ul>
         
     </li>
@@ -295,7 +306,7 @@
           <div role="main">
             <div class="section">
               
-                <p><strong>Duración:</strong> Martes 16/08/16 - Viernes 19/08/16</p>
+                <p><strong>Duración:</strong> Martes 16/08/16 - Martes 23/08/16</p>
 <h1 id="alcance">Alcance</h1>
 <p>Sprint de corrección de bugs.</p>
 <h2 id="objetivo">Objetivo</h2>
@@ -307,6 +318,8 @@
 <li>Eliminar en cascada mapas y gráficos asociados a archivo</li>
 <li>Agregar relación estado en mapas y gráficos</li>
 <li>Resolver bugs</li>
+<li>Agregar parámetro groupBy al endpoint <code>:model/statistics?groupBy=:relation</code>, obteniendo las estadísticas ordenadas por el modelo requerido</li>
+<li>Crear endpoint <code>:model/:id/publish</code> y <code>:model/:id/unpublish</code> para publicar y despublicar recursos</li>
 </ol>
 <h2 id="admin">Admin</h2>
 <ol>
@@ -345,6 +358,26 @@
 <li>Agregar relación estado en mapas y gráficos</li>
 <li>Agregar estado en crud de mapa y gráfico</li>
 </ol>
+<h1 id="endpoints">Endpoints</h1>
+<h2 id="datasets">Datasets</h2>
+<pre><code>PATCH    /datasets/:id/publish
+PATCH    /datasets/:id/unpublish
+</code></pre>
+
+<h2 id="charts">Charts</h2>
+<pre><code>PATCH    /charts/:id/publish
+PATCH    /charts/:id/unpublish
+</code></pre>
+
+<h2 id="maps">Maps</h2>
+<pre><code>PATCH    /maps/:id/publish
+PATCH    /maps/:id/unpublish
+</code></pre>
+
+<h2 id="files">Files</h2>
+<pre><code>PATCH    /files/:id/publish
+PATCH    /files/:id/unpublish
+</code></pre>
               
             </div>
           </div>
