@@ -1411,6 +1411,51 @@
             "title": "Prioridades"
         }, 
         {
+            "location": "/sprints/sprint-12/", 
+            "text": "Duraci\u00f3n:\n Martes 16/08/16 - Viernes 19/08/16\n\n\nAlcance\n\n\nSprint de correcci\u00f3n de bugs.\n\n\nObjetivo\n\n\nContinuar el desarrollo de la funcionalidad del Frontend y realizar las correcciones necesarias en la API y el Admin.\n\n\nTareas\n\n\nAPI\n\n\n\n\nResolver diferentes autenticaciones (frontend-admin)\n\n\nEliminar en cascada mapas y gr\u00e1ficos asociados a archivo\n\n\nAgregar relaci\u00f3n estado en mapas y gr\u00e1ficos\n\n\nResolver bugs\n\n\n\n\nAdmin\n\n\n\n\nSolucionar problema al mostrar im\u00e1gen de categor\u00eda\n\n\nAclarar campos obligatorios en los formularios\n\n\nAlerta al ingresar nombre de usuario y/o contrase\u00f1a\n\n\nCorregir el listado de mimetypes al crear un filetype\n\n\nAgregar estado en crud de mapa y gr\u00e1fico\n\n\nMinificacion/concatenacion de los archivos para optimizar tiempos de carga, utilizando Gulp. Reducir el n\u00famero de request al m\u00ednimo\n\n\nModificar mimetype crud para que sea un autocomplete\n\n\nAgregar unidad a tooltip de gr\u00e1fico\n\n\nImplementar CSS\n\n\nResolver bugs\n\n\n\n\nFrontend\n\n\n\n\nAgregar m\u00f3dulo \ncompartir\n\n\nHacer funcional m\u00f3dulo compartir\n\n\nHacer descrptivas las URL (Dataset,categorias,etiquetas)\n\n\nDisminuir el espacio en blanco entre la descripci\u00f3n del dataset y su borde inferior cuando no se muestra \"Info adicional\".\n\n\nDisminuir el espacio en blanco entre la descripci\u00f3n del archivo y su borde inferior cuando no se muestra \"Info adicional\".\n\n\nMinificacion/concatenacion de los archivos para optimizar tiempos de carga, utilizando Gulp. Reducir el n\u00famero de request al m\u00ednimo\n\n\nIntegrar Twitter\n\n\nActivar el \u00edcono de previsualizaci\u00f3n\n\n\nImplementar los tabs para seleccionar que gr\u00e1fico/mapa ver\n\n\nImplementar vista previa de archivos pdf\n\n\n\n\nOtros\n\n\n\n\nEscribir documentaci\u00f3n de los archivos de configuraci\u00f3n (odin.js)\n\n\n\n\nPrioridades\n\n\n\n\nResolver Authorization\n\n\nAl eliminar archivos, eliminiar mapas y gr\u00e1ficos asociados\n\n\nAgregar relaci\u00f3n estado en mapas y gr\u00e1ficos\n\n\nAgregar estado en crud de mapa y gr\u00e1fico", 
+            "title": "Sprint 12"
+        }, 
+        {
+            "location": "/sprints/sprint-12/#alcance", 
+            "text": "Sprint de correcci\u00f3n de bugs.", 
+            "title": "Alcance"
+        }, 
+        {
+            "location": "/sprints/sprint-12/#objetivo", 
+            "text": "Continuar el desarrollo de la funcionalidad del Frontend y realizar las correcciones necesarias en la API y el Admin.", 
+            "title": "Objetivo"
+        }, 
+        {
+            "location": "/sprints/sprint-12/#tareas", 
+            "text": "", 
+            "title": "Tareas"
+        }, 
+        {
+            "location": "/sprints/sprint-12/#api", 
+            "text": "Resolver diferentes autenticaciones (frontend-admin)  Eliminar en cascada mapas y gr\u00e1ficos asociados a archivo  Agregar relaci\u00f3n estado en mapas y gr\u00e1ficos  Resolver bugs", 
+            "title": "API"
+        }, 
+        {
+            "location": "/sprints/sprint-12/#admin", 
+            "text": "Solucionar problema al mostrar im\u00e1gen de categor\u00eda  Aclarar campos obligatorios en los formularios  Alerta al ingresar nombre de usuario y/o contrase\u00f1a  Corregir el listado de mimetypes al crear un filetype  Agregar estado en crud de mapa y gr\u00e1fico  Minificacion/concatenacion de los archivos para optimizar tiempos de carga, utilizando Gulp. Reducir el n\u00famero de request al m\u00ednimo  Modificar mimetype crud para que sea un autocomplete  Agregar unidad a tooltip de gr\u00e1fico  Implementar CSS  Resolver bugs", 
+            "title": "Admin"
+        }, 
+        {
+            "location": "/sprints/sprint-12/#frontend", 
+            "text": "Agregar m\u00f3dulo  compartir  Hacer funcional m\u00f3dulo compartir  Hacer descrptivas las URL (Dataset,categorias,etiquetas)  Disminuir el espacio en blanco entre la descripci\u00f3n del dataset y su borde inferior cuando no se muestra \"Info adicional\".  Disminuir el espacio en blanco entre la descripci\u00f3n del archivo y su borde inferior cuando no se muestra \"Info adicional\".  Minificacion/concatenacion de los archivos para optimizar tiempos de carga, utilizando Gulp. Reducir el n\u00famero de request al m\u00ednimo  Integrar Twitter  Activar el \u00edcono de previsualizaci\u00f3n  Implementar los tabs para seleccionar que gr\u00e1fico/mapa ver  Implementar vista previa de archivos pdf", 
+            "title": "Frontend"
+        }, 
+        {
+            "location": "/sprints/sprint-12/#otros", 
+            "text": "Escribir documentaci\u00f3n de los archivos de configuraci\u00f3n (odin.js)", 
+            "title": "Otros"
+        }, 
+        {
+            "location": "/sprints/sprint-12/#prioridades", 
+            "text": "Resolver Authorization  Al eliminar archivos, eliminiar mapas y gr\u00e1ficos asociados  Agregar relaci\u00f3n estado en mapas y gr\u00e1ficos  Agregar estado en crud de mapa y gr\u00e1fico", 
+            "title": "Prioridades"
+        }, 
+        {
             "location": "/references/status-codes/", 
             "text": "\u00c9xito\n\n\n\n\n\n\n\n\nSuccess\n\n\n\n\n\n\n\n\n\n\n\n\n200 OK\n\n\nC\u00f3digo gen\u00e9rico de \u00e9xito.\n\n\n\n\n\n\n201 Created\n\n\nIndica que el recurso fue creado exitosamente.\n\n\n\n\n\n\n202 Accepted\n\n\nSe acept\u00f3 la request, pero todav\u00eda no fue procesada. \u00datil para requests as\u00edncronas.\n\n\n\n\n\n\n204 No Content\n\n\nLa request fue procesada con \u00e9xito, pero no hay nada que mostrar. Por ejemplo, despu\u00e9s de un DELETE exitoso.\n\n\n\n\n\n\n206 Partial Content\n\n\nEl recurso devuelto est\u00e1 incompleto. Se lo suele usar para contenido que ha sido paginado. Por ejemplo, se devuelve la p\u00e1gina 5 de 20.\n\n\n\n\n\n\n\n\nError del cliente\n\n\n\n\n\n\n\n\nClient Error\n\n\n\n\n\n\n\n\n\n\n\n\n400 Bad Request\n\n\nError gen\u00e9rico para una request que no puede ser procesada por el servidor.\n\n\n\n\n\n\n401 Unauthorized\n\n\nEl cliente es desconocido para la API y necesita autenticarse primero.\n\n\n\n\n\n\n403 Forbidden\n\n\nLos permisos del cliente no son suficientes para acceder a este recurso. Es decir, el recurso es un recurso protegido (desde la perspectiva del usuario que hizo la request).\n\n\n\n\n\n\n404 Not Found\n\n\nNo existe el recurso pedido por el cliente.\n\n\n\n\n\n\n405 Method Not Allowed\n\n\nEl usuario no tiene permiso para usar ese m\u00e9todo HTTP en particular.\n\n\n\n\n\n\n406 Not Acceptable\n\n\nEl contenido no est\u00e1 disponible en la forma espec\u00edfica en que lo pidi\u00f3 el cliente (por medio de las cabeceras \"Accept-*\"). Por ejemplo, el cliente pidi\u00f3 un recurso en XML pero s\u00f3lo est\u00e1 disponible en JSON.\n\n\n\n\n\n\n410 Gone\n\n\nIndica que el recurso estaba disponible pero ya no m\u00e1s (de manera permanente).\n\n\n\n\n\n\n415 Unsupported Media Type\n\n\nLa request tiene un media type que no est\u00e1 admitido por el servidor. Por ejemplo, el cliente ha subido una imagen en SVG pero el servidor s\u00f3lo recibe JPG o PNG.\n\n\n\n\n\n\n422 Unprocessable Entity\n\n\nLa request en s\u00ed es v\u00e1lida, pero alguno de los par\u00e1metros enviados no es correcto.\n\n\n\n\n\n\n\n\nError del servidor\n\n\n\n\n\n\n\n\nServer Error\n\n\n\n\n\n\n\n\n\n\n\n\n500 Internal Server Error\n\n\nLa request parece estar bien, pero hubo un problema en el servidor. El cliente no tiene nada que ver, y tampoco puede hacer nada al respecto.\n\n\n\n\n\n\n501 Not Implemented\n\n\nLa API no ha implementado el m\u00e9todo usado para hacer la request. Por ejemplo, el m\u00e9todo PUT.", 
             "title": "HTTP Status Codes"
