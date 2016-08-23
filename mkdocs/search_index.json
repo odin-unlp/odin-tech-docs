@@ -1481,6 +1481,51 @@
             "title": "Files"
         }, 
         {
+            "location": "/sprints/sprint-13/", 
+            "text": "Duraci\u00f3n:\n Mi\u00e9rcoles 24/08/16 - Martes 30/08/16\n\n\nAlcance\n\n\nCreaci\u00f3n de importador desde CKAN\n\n\nObjetivo\n\n\nCrear el importador de datos de CKAN, vinculando las tablas existentes con las tablas de ODIN, mediante el uso de la api de CKAN\n\n\nTareas\n\n\nAPI\n\n\n\n\nCambiar de obligatorio a opcional los campos \ndescription\n y \naddress\n de Organization\n\n\nCrear filtro para los campos que se devuelven al frontend, y cualquier aplicaci\u00f3n que no sea el admin. Filtrar segun corresponda:\n\n\nowner\n\n\ncreatedBy\n\n\nmodelos con estado despublicado\n\n\n\n\nAdmin\n\n\n\n\nAgregar tab \nimportar\n al sidebar\n\n\nCrear pantalla principal del importador, donde se seleccionen los campos por defecto (dropdowns)\n\n\nUsuario responsable\n\n\nEstado\n\n\nFrequencia de actualizaci\u00f3n\n\n\nGenerar la importaci\u00f3n de datos\n\n\nCategor\u00edas: http://data.buenosaires.gob.ar/api/3/action/group_list?q=\n\n\nEtiquetas: http://data.buenosaires.gob.ar/api/3/action/tag_list?q=\n\n\nDatasets:\n\n\nTodos: http://data.buenosaires.gob.ar/api/3/action/package_list?q=\n\n\nIndividuales: http://data.buenosaires.gob.ar/api/3/action/package_show?id=nombredeldataset\n\n\n\n\n\n\nRecursos: http://data.buenosaires.gob.ar/api/3/action/resource_search?query=nombredeldataset\n\n\nDentro de cada recurso hay un campo llamado \nurl\n, desde donde se puede descargar el archivo relacionado\n\n\n\n\n\n\nNotificar cantidad de datos importados\n\n\nCategor\u00edas\n\n\nEtiquetas\n\n\nOrganizaciones\n\n\nDatasets\n\n\nRecursos\n\n\n\n\nFrontend\n\n\nOtros\n\n\n\n\nCompletar la documentaci\u00f3n de instalaci\u00f3n\n\n\nActualizar test de unidad (mocha)\n\n\n\n\nPrioridades\n\n\n\n\nCambiar de obligatorio a opcional los campos \ndescription\n y \naddress\n de Organization\n\n\nGenerar la importaci\u00f3n de datos", 
+            "title": "Sprint 13"
+        }, 
+        {
+            "location": "/sprints/sprint-13/#alcance", 
+            "text": "Creaci\u00f3n de importador desde CKAN", 
+            "title": "Alcance"
+        }, 
+        {
+            "location": "/sprints/sprint-13/#objetivo", 
+            "text": "Crear el importador de datos de CKAN, vinculando las tablas existentes con las tablas de ODIN, mediante el uso de la api de CKAN", 
+            "title": "Objetivo"
+        }, 
+        {
+            "location": "/sprints/sprint-13/#tareas", 
+            "text": "", 
+            "title": "Tareas"
+        }, 
+        {
+            "location": "/sprints/sprint-13/#api", 
+            "text": "Cambiar de obligatorio a opcional los campos  description  y  address  de Organization  Crear filtro para los campos que se devuelven al frontend, y cualquier aplicaci\u00f3n que no sea el admin. Filtrar segun corresponda:  owner  createdBy  modelos con estado despublicado", 
+            "title": "API"
+        }, 
+        {
+            "location": "/sprints/sprint-13/#admin", 
+            "text": "Agregar tab  importar  al sidebar  Crear pantalla principal del importador, donde se seleccionen los campos por defecto (dropdowns)  Usuario responsable  Estado  Frequencia de actualizaci\u00f3n  Generar la importaci\u00f3n de datos  Categor\u00edas: http://data.buenosaires.gob.ar/api/3/action/group_list?q=  Etiquetas: http://data.buenosaires.gob.ar/api/3/action/tag_list?q=  Datasets:  Todos: http://data.buenosaires.gob.ar/api/3/action/package_list?q=  Individuales: http://data.buenosaires.gob.ar/api/3/action/package_show?id=nombredeldataset    Recursos: http://data.buenosaires.gob.ar/api/3/action/resource_search?query=nombredeldataset  Dentro de cada recurso hay un campo llamado  url , desde donde se puede descargar el archivo relacionado    Notificar cantidad de datos importados  Categor\u00edas  Etiquetas  Organizaciones  Datasets  Recursos", 
+            "title": "Admin"
+        }, 
+        {
+            "location": "/sprints/sprint-13/#frontend", 
+            "text": "", 
+            "title": "Frontend"
+        }, 
+        {
+            "location": "/sprints/sprint-13/#otros", 
+            "text": "Completar la documentaci\u00f3n de instalaci\u00f3n  Actualizar test de unidad (mocha)", 
+            "title": "Otros"
+        }, 
+        {
+            "location": "/sprints/sprint-13/#prioridades", 
+            "text": "Cambiar de obligatorio a opcional los campos  description  y  address  de Organization  Generar la importaci\u00f3n de datos", 
+            "title": "Prioridades"
+        }, 
+        {
             "location": "/references/status-codes/", 
             "text": "\u00c9xito\n\n\n\n\n\n\n\n\nSuccess\n\n\n\n\n\n\n\n\n\n\n\n\n200 OK\n\n\nC\u00f3digo gen\u00e9rico de \u00e9xito.\n\n\n\n\n\n\n201 Created\n\n\nIndica que el recurso fue creado exitosamente.\n\n\n\n\n\n\n202 Accepted\n\n\nSe acept\u00f3 la request, pero todav\u00eda no fue procesada. \u00datil para requests as\u00edncronas.\n\n\n\n\n\n\n204 No Content\n\n\nLa request fue procesada con \u00e9xito, pero no hay nada que mostrar. Por ejemplo, despu\u00e9s de un DELETE exitoso.\n\n\n\n\n\n\n206 Partial Content\n\n\nEl recurso devuelto est\u00e1 incompleto. Se lo suele usar para contenido que ha sido paginado. Por ejemplo, se devuelve la p\u00e1gina 5 de 20.\n\n\n\n\n\n\n\n\nError del cliente\n\n\n\n\n\n\n\n\nClient Error\n\n\n\n\n\n\n\n\n\n\n\n\n400 Bad Request\n\n\nError gen\u00e9rico para una request que no puede ser procesada por el servidor.\n\n\n\n\n\n\n401 Unauthorized\n\n\nEl cliente es desconocido para la API y necesita autenticarse primero.\n\n\n\n\n\n\n403 Forbidden\n\n\nLos permisos del cliente no son suficientes para acceder a este recurso. Es decir, el recurso es un recurso protegido (desde la perspectiva del usuario que hizo la request).\n\n\n\n\n\n\n404 Not Found\n\n\nNo existe el recurso pedido por el cliente.\n\n\n\n\n\n\n405 Method Not Allowed\n\n\nEl usuario no tiene permiso para usar ese m\u00e9todo HTTP en particular.\n\n\n\n\n\n\n406 Not Acceptable\n\n\nEl contenido no est\u00e1 disponible en la forma espec\u00edfica en que lo pidi\u00f3 el cliente (por medio de las cabeceras \"Accept-*\"). Por ejemplo, el cliente pidi\u00f3 un recurso en XML pero s\u00f3lo est\u00e1 disponible en JSON.\n\n\n\n\n\n\n410 Gone\n\n\nIndica que el recurso estaba disponible pero ya no m\u00e1s (de manera permanente).\n\n\n\n\n\n\n415 Unsupported Media Type\n\n\nLa request tiene un media type que no est\u00e1 admitido por el servidor. Por ejemplo, el cliente ha subido una imagen en SVG pero el servidor s\u00f3lo recibe JPG o PNG.\n\n\n\n\n\n\n422 Unprocessable Entity\n\n\nLa request en s\u00ed es v\u00e1lida, pero alguno de los par\u00e1metros enviados no es correcto.\n\n\n\n\n\n\n\n\nError del servidor\n\n\n\n\n\n\n\n\nServer Error\n\n\n\n\n\n\n\n\n\n\n\n\n500 Internal Server Error\n\n\nLa request parece estar bien, pero hubo un problema en el servidor. El cliente no tiene nada que ver, y tampoco puede hacer nada al respecto.\n\n\n\n\n\n\n501 Not Implemented\n\n\nLa API no ha implementado el m\u00e9todo usado para hacer la request. Por ejemplo, el m\u00e9todo PUT.", 
             "title": "HTTP Status Codes"
