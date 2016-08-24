@@ -43,12 +43,15 @@ Corregir los bugs, priorizando los errores bloqueantes levantados por el equipo 
 
 ## Frontend
 1. Agregar skip y limit para paginación a la vista de tabla (bugzilla)
-
+2. Hacer el frontend responsive para celular
+3. Hacer el frontend responsive para tablet
 ## Otros
 1. Completar la documentación de instalación
 2. Actualizar tests de unidad (mocha)
 
 # Prioridades
-1. Cambiar de obligatorio a opcional los campos `description` y `address` de Organization
-2. Generar la importación de datos
+1. Hacer el frontend responsive para celular
+2. Hacer el frontend responsive para tablet
+3. Cambiar de obligatorio a opcional los campos `description` y `address` de Organization
+4. Generar la importación de datos
 
