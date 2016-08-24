@@ -40,11 +40,14 @@ Corregir los bugs, priorizando los errores bloqueantes levantados por el equipo 
 5. Agregar unidad de tooltip en los gráficos
 6. Unificar respuestas Bad Request de la api + i18n
 7. Permitir borrado físico en modelos que no tengan relaciones populadas
+8. Implementar CSS del login en el Admin
+9. Modificar home del Admin
 
 ## Frontend
 1. Agregar skip y limit para paginación a la vista de tabla (bugzilla)
 2. Hacer el frontend responsive para celular
 3. Hacer el frontend responsive para tablet
+
 ## Otros
 1. Completar la documentación de instalación
 2. Actualizar tests de unidad (mocha)
