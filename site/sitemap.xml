@@ -4,7 +4,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>None/key-features/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,7 +20,7 @@
     
     <url>
      <loc>None/arquitectura/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -28,7 +28,7 @@
     
     <url>
      <loc>None/codigo-fuente/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -36,7 +36,7 @@
     
     <url>
      <loc>None/metodologia/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -44,7 +44,7 @@
     
     <url>
      <loc>None/entidades/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -52,7 +52,7 @@
     
     <url>
      <loc>None/responses/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -61,73 +61,79 @@
         
     <url>
      <loc>None/sprints/sprint-1/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/sprints/sprint-2/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/sprints/sprint-3/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/sprints/sprint-4/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/sprints/sprint-5/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/sprints/sprint-6/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/sprints/sprint-7/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/sprints/sprint-8/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/sprints/sprint-9/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/sprints/sprint-10/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/sprints/sprint-11/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/sprints/sprint-12/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/sprints/sprint-13/</loc>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -137,7 +143,7 @@
         
     <url>
      <loc>None/references/status-codes/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -147,13 +153,13 @@
         
     <url>
      <loc>None/links/backend/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/links/frontend/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <lastmod>2016-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

@@ -1,4 +1,4 @@
-**Duración:** Martes 16/08/16 - Viernes 19/08/16
+**Duración:** Martes 16/08/16 - Martes 23/08/16
 
 # Alcance
 Sprint de corrección de bugs.
@@ -14,6 +14,8 @@ Continuar el desarrollo de la funcionalidad del Frontend y realizar las correcci
 2. Eliminar en cascada mapas y gráficos asociados a archivo
 3. Agregar relación estado en mapas y gráficos
 4. Resolver bugs
+5. Agregar parámetro groupBy al endpoint `:model/statistics?groupBy=:relation`, obteniendo las estadísticas ordenadas por el modelo requerido
+6. Crear endpoint `:model/:id/publish` y `:model/:id/unpublish` para publicar y despublicar recursos
 
 ## Admin
 1. Solucionar problema al mostrar imágen de categoría
@@ -47,3 +49,26 @@ Continuar el desarrollo de la funcionalidad del Frontend y realizar las correcci
 2. Al eliminar archivos, eliminiar mapas y gráficos asociados
 3. Agregar relación estado en mapas y gráficos
 4. Agregar estado en crud de mapa y gráfico
+
+# Endpoints
+
+## Datasets
+```
+PATCH    /datasets/:id/publish
+PATCH    /datasets/:id/unpublish
+```
+## Charts
+```
+PATCH    /charts/:id/publish
+PATCH    /charts/:id/unpublish
+```
+## Maps
+```
+PATCH    /maps/:id/publish
+PATCH    /maps/:id/unpublish
+```
+## Files
+```
+PATCH    /files/:id/publish
+PATCH    /files/:id/unpublish
+```

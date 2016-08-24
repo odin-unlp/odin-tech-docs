@@ -1412,7 +1412,7 @@
         }, 
         {
             "location": "/sprints/sprint-12/", 
-            "text": "Duraci\u00f3n:\n Martes 16/08/16 - Viernes 19/08/16\n\n\nAlcance\n\n\nSprint de correcci\u00f3n de bugs.\n\n\nObjetivo\n\n\nContinuar el desarrollo de la funcionalidad del Frontend y realizar las correcciones necesarias en la API y el Admin.\n\n\nTareas\n\n\nAPI\n\n\n\n\nResolver diferentes autenticaciones (frontend-admin)\n\n\nEliminar en cascada mapas y gr\u00e1ficos asociados a archivo\n\n\nAgregar relaci\u00f3n estado en mapas y gr\u00e1ficos\n\n\nResolver bugs\n\n\n\n\nAdmin\n\n\n\n\nSolucionar problema al mostrar im\u00e1gen de categor\u00eda\n\n\nAclarar campos obligatorios en los formularios\n\n\nAlerta al ingresar nombre de usuario y/o contrase\u00f1a\n\n\nCorregir el listado de mimetypes al crear un filetype\n\n\nAgregar estado en crud de mapa y gr\u00e1fico\n\n\nMinificacion/concatenacion de los archivos para optimizar tiempos de carga, utilizando Gulp. Reducir el n\u00famero de request al m\u00ednimo\n\n\nModificar mimetype crud para que sea un autocomplete\n\n\nAgregar unidad a tooltip de gr\u00e1fico\n\n\nImplementar CSS\n\n\nResolver bugs\n\n\n\n\nFrontend\n\n\n\n\nAgregar m\u00f3dulo \ncompartir\n\n\nHacer funcional m\u00f3dulo compartir\n\n\nHacer descrptivas las URL (Dataset,categorias,etiquetas)\n\n\nDisminuir el espacio en blanco entre la descripci\u00f3n del dataset y su borde inferior cuando no se muestra \"Info adicional\".\n\n\nDisminuir el espacio en blanco entre la descripci\u00f3n del archivo y su borde inferior cuando no se muestra \"Info adicional\".\n\n\nMinificacion/concatenacion de los archivos para optimizar tiempos de carga, utilizando Gulp. Reducir el n\u00famero de request al m\u00ednimo\n\n\nIntegrar Twitter\n\n\nActivar el \u00edcono de previsualizaci\u00f3n\n\n\nImplementar los tabs para seleccionar que gr\u00e1fico/mapa ver\n\n\nImplementar vista previa de archivos pdf\n\n\n\n\nOtros\n\n\n\n\nEscribir documentaci\u00f3n de los archivos de configuraci\u00f3n (odin.js)\n\n\n\n\nPrioridades\n\n\n\n\nResolver Authorization\n\n\nAl eliminar archivos, eliminiar mapas y gr\u00e1ficos asociados\n\n\nAgregar relaci\u00f3n estado en mapas y gr\u00e1ficos\n\n\nAgregar estado en crud de mapa y gr\u00e1fico", 
+            "text": "Duraci\u00f3n:\n Martes 16/08/16 - Martes 23/08/16\n\n\nAlcance\n\n\nSprint de correcci\u00f3n de bugs.\n\n\nObjetivo\n\n\nContinuar el desarrollo de la funcionalidad del Frontend y realizar las correcciones necesarias en la API y el Admin.\n\n\nTareas\n\n\nAPI\n\n\n\n\nResolver diferentes autenticaciones (frontend-admin)\n\n\nEliminar en cascada mapas y gr\u00e1ficos asociados a archivo\n\n\nAgregar relaci\u00f3n estado en mapas y gr\u00e1ficos\n\n\nResolver bugs\n\n\nAgregar par\u00e1metro groupBy al endpoint \n:model/statistics?groupBy=:relation\n, obteniendo las estad\u00edsticas ordenadas por el modelo requerido\n\n\nCrear endpoint \n:model/:id/publish\n y \n:model/:id/unpublish\n para publicar y despublicar recursos\n\n\n\n\nAdmin\n\n\n\n\nSolucionar problema al mostrar im\u00e1gen de categor\u00eda\n\n\nAclarar campos obligatorios en los formularios\n\n\nAlerta al ingresar nombre de usuario y/o contrase\u00f1a\n\n\nCorregir el listado de mimetypes al crear un filetype\n\n\nAgregar estado en crud de mapa y gr\u00e1fico\n\n\nMinificacion/concatenacion de los archivos para optimizar tiempos de carga, utilizando Gulp. Reducir el n\u00famero de request al m\u00ednimo\n\n\nModificar mimetype crud para que sea un autocomplete\n\n\nAgregar unidad a tooltip de gr\u00e1fico\n\n\nImplementar CSS\n\n\nResolver bugs\n\n\n\n\nFrontend\n\n\n\n\nAgregar m\u00f3dulo \ncompartir\n\n\nHacer funcional m\u00f3dulo compartir\n\n\nHacer descrptivas las URL (Dataset,categorias,etiquetas)\n\n\nDisminuir el espacio en blanco entre la descripci\u00f3n del dataset y su borde inferior cuando no se muestra \"Info adicional\".\n\n\nDisminuir el espacio en blanco entre la descripci\u00f3n del archivo y su borde inferior cuando no se muestra \"Info adicional\".\n\n\nMinificacion/concatenacion de los archivos para optimizar tiempos de carga, utilizando Gulp. Reducir el n\u00famero de request al m\u00ednimo\n\n\nIntegrar Twitter\n\n\nActivar el \u00edcono de previsualizaci\u00f3n\n\n\nImplementar los tabs para seleccionar que gr\u00e1fico/mapa ver\n\n\nImplementar vista previa de archivos pdf\n\n\n\n\nOtros\n\n\n\n\nEscribir documentaci\u00f3n de los archivos de configuraci\u00f3n (odin.js)\n\n\n\n\nPrioridades\n\n\n\n\nResolver Authorization\n\n\nAl eliminar archivos, eliminiar mapas y gr\u00e1ficos asociados\n\n\nAgregar relaci\u00f3n estado en mapas y gr\u00e1ficos\n\n\nAgregar estado en crud de mapa y gr\u00e1fico\n\n\n\n\nEndpoints\n\n\nDatasets\n\n\nPATCH    /datasets/:id/publish\nPATCH    /datasets/:id/unpublish\n\n\n\n\nCharts\n\n\nPATCH    /charts/:id/publish\nPATCH    /charts/:id/unpublish\n\n\n\n\nMaps\n\n\nPATCH    /maps/:id/publish\nPATCH    /maps/:id/unpublish\n\n\n\n\nFiles\n\n\nPATCH    /files/:id/publish\nPATCH    /files/:id/unpublish", 
             "title": "Sprint 12"
         }, 
         {
@@ -1432,7 +1432,7 @@
         }, 
         {
             "location": "/sprints/sprint-12/#api", 
-            "text": "Resolver diferentes autenticaciones (frontend-admin)  Eliminar en cascada mapas y gr\u00e1ficos asociados a archivo  Agregar relaci\u00f3n estado en mapas y gr\u00e1ficos  Resolver bugs", 
+            "text": "Resolver diferentes autenticaciones (frontend-admin)  Eliminar en cascada mapas y gr\u00e1ficos asociados a archivo  Agregar relaci\u00f3n estado en mapas y gr\u00e1ficos  Resolver bugs  Agregar par\u00e1metro groupBy al endpoint  :model/statistics?groupBy=:relation , obteniendo las estad\u00edsticas ordenadas por el modelo requerido  Crear endpoint  :model/:id/publish  y  :model/:id/unpublish  para publicar y despublicar recursos", 
             "title": "API"
         }, 
         {
@@ -1453,6 +1453,76 @@
         {
             "location": "/sprints/sprint-12/#prioridades", 
             "text": "Resolver Authorization  Al eliminar archivos, eliminiar mapas y gr\u00e1ficos asociados  Agregar relaci\u00f3n estado en mapas y gr\u00e1ficos  Agregar estado en crud de mapa y gr\u00e1fico", 
+            "title": "Prioridades"
+        }, 
+        {
+            "location": "/sprints/sprint-12/#endpoints", 
+            "text": "", 
+            "title": "Endpoints"
+        }, 
+        {
+            "location": "/sprints/sprint-12/#datasets", 
+            "text": "PATCH    /datasets/:id/publish\nPATCH    /datasets/:id/unpublish", 
+            "title": "Datasets"
+        }, 
+        {
+            "location": "/sprints/sprint-12/#charts", 
+            "text": "PATCH    /charts/:id/publish\nPATCH    /charts/:id/unpublish", 
+            "title": "Charts"
+        }, 
+        {
+            "location": "/sprints/sprint-12/#maps", 
+            "text": "PATCH    /maps/:id/publish\nPATCH    /maps/:id/unpublish", 
+            "title": "Maps"
+        }, 
+        {
+            "location": "/sprints/sprint-12/#files", 
+            "text": "PATCH    /files/:id/publish\nPATCH    /files/:id/unpublish", 
+            "title": "Files"
+        }, 
+        {
+            "location": "/sprints/sprint-13/", 
+            "text": "Duraci\u00f3n:\n Mi\u00e9rcoles 24/08/16 - Martes 30/08/16\n\n\nAlcance\n\n\nSprint de importador de CKAN\n\n\nObjetivo\n\n\nCrear el importador de datos de CKAN, vinculando las tablas existentes con las tablas de ODIN, mediante el uso de la api de CKAN, y correcci\u00f3n de errores.\n\n\nTareas\n\n\nAPI\n\n\n\n\nCambiar de obligatorio a opcional los campos \ndescription\n y \naddress\n de Organization\n\n\nCrear filtro para los campos que se devuelven al frontend, y cualquier aplicaci\u00f3n que no sea el admin. Filtrar segun corresponda:\n\n\nowner\n\n\ncreatedBy\n\n\nmodelos con estado despublicado\n\n\nmodelos borrados l\u00f3gicamente\n\n\n\n\n\n\n\n\nAdmin\n\n\n\n\nAgregar tab \nimportar\n al sidebar\n\n\nCrear pantalla principal del importador, donde se seleccionen los campos por defecto (dropdowns)\n\n\nUsuario responsable\n\n\nEstado\n\n\nFrequencia de actualizaci\u00f3n\n\n\n\n\n\n\nGenerar la importaci\u00f3n de datos\n\n\nCategor\u00edas: \nhttp://data.buenosaires.gob.ar/api/3/action/group_list?q=\n\n\nEtiquetas: \nhttp://data.buenosaires.gob.ar/api/3/action/tag_list?q=\n\n\nDatasets:\n\n\nTodos: \nhttp://data.buenosaires.gob.ar/api/3/action/package_list?q=\n\n\nIndividuales: \nhttp://data.buenosaires.gob.ar/api/3/action/package_show?id=nombredeldataset\n\n\n\n\n\n\nRecursos: \nhttp://data.buenosaires.gob.ar/api/3/action/resource_search?query=nombredeldataset\n\n\nDentro de cada recurso hay un campo llamado \nurl\n, desde donde se puede descargar el archivo relacionado\n\n\n\n\n\n\n\n\n\n\nNotificar cantidad de datos importados\n\n\nCategor\u00edas\n\n\nEtiquetas\n\n\nOrganizaciones\n\n\nDatasets\n\n\nRecursos\n\n\n\n\n\n\nAgregar unidad de tooltip en los gr\u00e1ficos\n\n\nUnificar respuestas Bad Request de la api + i18n\n\n\nPermitir borrado f\u00edsico en modelos que no tengan relaciones populadas\n\n\n\n\nFrontend\n\n\n\n\nAgregar skip y limit para paginaci\u00f3n a la vista de tabla (bugzilla)\n\n\n\n\nOtros\n\n\n\n\nCompletar la documentaci\u00f3n de instalaci\u00f3n\n\n\nActualizar tests de unidad (mocha)\n\n\n\n\nPrioridades\n\n\n\n\nCambiar de obligatorio a opcional los campos \ndescription\n y \naddress\n de Organization\n\n\nGenerar la importaci\u00f3n de datos", 
+            "title": "Sprint 13"
+        }, 
+        {
+            "location": "/sprints/sprint-13/#alcance", 
+            "text": "Sprint de importador de CKAN", 
+            "title": "Alcance"
+        }, 
+        {
+            "location": "/sprints/sprint-13/#objetivo", 
+            "text": "Crear el importador de datos de CKAN, vinculando las tablas existentes con las tablas de ODIN, mediante el uso de la api de CKAN, y correcci\u00f3n de errores.", 
+            "title": "Objetivo"
+        }, 
+        {
+            "location": "/sprints/sprint-13/#tareas", 
+            "text": "", 
+            "title": "Tareas"
+        }, 
+        {
+            "location": "/sprints/sprint-13/#api", 
+            "text": "Cambiar de obligatorio a opcional los campos  description  y  address  de Organization  Crear filtro para los campos que se devuelven al frontend, y cualquier aplicaci\u00f3n que no sea el admin. Filtrar segun corresponda:  owner  createdBy  modelos con estado despublicado  modelos borrados l\u00f3gicamente", 
+            "title": "API"
+        }, 
+        {
+            "location": "/sprints/sprint-13/#admin", 
+            "text": "Agregar tab  importar  al sidebar  Crear pantalla principal del importador, donde se seleccionen los campos por defecto (dropdowns)  Usuario responsable  Estado  Frequencia de actualizaci\u00f3n    Generar la importaci\u00f3n de datos  Categor\u00edas:  http://data.buenosaires.gob.ar/api/3/action/group_list?q=  Etiquetas:  http://data.buenosaires.gob.ar/api/3/action/tag_list?q=  Datasets:  Todos:  http://data.buenosaires.gob.ar/api/3/action/package_list?q=  Individuales:  http://data.buenosaires.gob.ar/api/3/action/package_show?id=nombredeldataset    Recursos:  http://data.buenosaires.gob.ar/api/3/action/resource_search?query=nombredeldataset  Dentro de cada recurso hay un campo llamado  url , desde donde se puede descargar el archivo relacionado      Notificar cantidad de datos importados  Categor\u00edas  Etiquetas  Organizaciones  Datasets  Recursos    Agregar unidad de tooltip en los gr\u00e1ficos  Unificar respuestas Bad Request de la api + i18n  Permitir borrado f\u00edsico en modelos que no tengan relaciones populadas", 
+            "title": "Admin"
+        }, 
+        {
+            "location": "/sprints/sprint-13/#frontend", 
+            "text": "Agregar skip y limit para paginaci\u00f3n a la vista de tabla (bugzilla)", 
+            "title": "Frontend"
+        }, 
+        {
+            "location": "/sprints/sprint-13/#otros", 
+            "text": "Completar la documentaci\u00f3n de instalaci\u00f3n  Actualizar tests de unidad (mocha)", 
+            "title": "Otros"
+        }, 
+        {
+            "location": "/sprints/sprint-13/#prioridades", 
+            "text": "Cambiar de obligatorio a opcional los campos  description  y  address  de Organization  Generar la importaci\u00f3n de datos", 
             "title": "Prioridades"
         }, 
         {
