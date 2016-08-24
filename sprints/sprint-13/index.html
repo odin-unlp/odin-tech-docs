@@ -306,7 +306,8 @@
 <h1 id="alcance">Alcance</h1>
 <p>Sprint de importador de CKAN</p>
 <h2 id="objetivo">Objetivo</h2>
-<p>Crear el importador de datos de CKAN, vinculando las tablas existentes con las tablas de ODIN, mediante el uso de la api de CKAN, y corrección de errores.</p>
+<p>Crear el importador de datos de CKAN, vinculando las tablas existentes con las tablas de ODIN, mediante el uso de la api de CKAN.
+Corregir los bugs, priorizando los errores bloqueantes levantados por el equipo de datos.</p>
 <h1 id="tareas">Tareas</h1>
 <h2 id="api">API</h2>
 <ol>
@@ -329,14 +330,14 @@
 </ul>
 </li>
 <li>Generar la importación de datos<ol>
-<li>Categorías: <a href="http://data.buenosaires.gob.ar/api/3/action/group_list?q=">http://data.buenosaires.gob.ar/api/3/action/group_list?q=</a></li>
-<li>Etiquetas: <a href="http://data.buenosaires.gob.ar/api/3/action/tag_list?q=">http://data.buenosaires.gob.ar/api/3/action/tag_list?q=</a></li>
-<li>Datasets:<ul>
+<li><strong>Categorías</strong>: <a href="http://data.buenosaires.gob.ar/api/3/action/group_list?q=">http://data.buenosaires.gob.ar/api/3/action/group_list?q=</a></li>
+<li><strong>Etiquetas</strong>: <a href="http://data.buenosaires.gob.ar/api/3/action/tag_list?q=">http://data.buenosaires.gob.ar/api/3/action/tag_list?q=</a></li>
+<li><strong>Datasets</strong>:<ul>
 <li>Todos: <a href="http://data.buenosaires.gob.ar/api/3/action/package_list?q=">http://data.buenosaires.gob.ar/api/3/action/package_list?q=</a></li>
 <li>Individuales: <a href="http://data.buenosaires.gob.ar/api/3/action/package_show?id=nombredeldataset">http://data.buenosaires.gob.ar/api/3/action/package_show?id=nombredeldataset</a></li>
 </ul>
 </li>
-<li>Recursos: <a href="http://data.buenosaires.gob.ar/api/3/action/resource_search?query=nombredeldataset">http://data.buenosaires.gob.ar/api/3/action/resource_search?query=nombredeldataset</a><ul>
+<li><strong>Recursos</strong>: <a href="http://data.buenosaires.gob.ar/api/3/action/resource_search?query=nombredeldataset">http://data.buenosaires.gob.ar/api/3/action/resource_search?query=nombredeldataset</a><ul>
 <li>Dentro de cada recurso hay un campo llamado <code>url</code>, desde donde se puede descargar el archivo relacionado</li>
 </ul>
 </li>
@@ -357,6 +358,8 @@
 <h2 id="frontend">Frontend</h2>
 <ol>
 <li>Agregar skip y limit para paginación a la vista de tabla (bugzilla)</li>
+<li>Hacer el frontend responsive para celular</li>
+<li>Hacer el frontend responsive para tablet</li>
 </ol>
 <h2 id="otros">Otros</h2>
 <ol>
@@ -365,6 +368,8 @@
 </ol>
 <h1 id="prioridades">Prioridades</h1>
 <ol>
+<li>Hacer el frontend responsive para celular</li>
+<li>Hacer el frontend responsive para tablet</li>
 <li>Cambiar de obligatorio a opcional los campos <code>description</code> y <code>address</code> de Organization</li>
 <li>Generar la importación de datos</li>
 </ol>
