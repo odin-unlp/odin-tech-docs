@@ -4,7 +4,8 @@
 Sprint de importador de CKAN
 
 ## Objetivo
-Crear el importador de datos de CKAN, vinculando las tablas existentes con las tablas de ODIN, mediante el uso de la api de CKAN, y corrección de errores.
+Crear el importador de datos de CKAN, vinculando las tablas existentes con las tablas de ODIN, mediante el uso de la api de CKAN.
+Corregir los bugs, priorizando los errores bloqueantes levantados por el equipo de datos.
 
 # Tareas
 
@@ -23,12 +24,12 @@ Crear el importador de datos de CKAN, vinculando las tablas existentes con las t
     - Estado
     - Frequencia de actualización
 3. Generar la importación de datos
-    1. Categorías: [http://data.buenosaires.gob.ar/api/3/action/group_list?q=](http://data.buenosaires.gob.ar/api/3/action/group_list?q=)
-    2. Etiquetas: [http://data.buenosaires.gob.ar/api/3/action/tag_list?q=](http://data.buenosaires.gob.ar/api/3/action/tag_list?q=)
-    3. Datasets:
+    1. **Categorías**: [http://data.buenosaires.gob.ar/api/3/action/group_list?q=](http://data.buenosaires.gob.ar/api/3/action/group_list?q=)
+    2. **Etiquetas**: [http://data.buenosaires.gob.ar/api/3/action/tag_list?q=](http://data.buenosaires.gob.ar/api/3/action/tag_list?q=)
+    3. **Datasets**:
         - Todos: [http://data.buenosaires.gob.ar/api/3/action/package_list?q=](http://data.buenosaires.gob.ar/api/3/action/package_list?q=)
         - Individuales: [http://data.buenosaires.gob.ar/api/3/action/package_show?id=nombredeldataset](http://data.buenosaires.gob.ar/api/3/action/package_show?id=nombredeldataset)
-    4. Recursos: [http://data.buenosaires.gob.ar/api/3/action/resource_search?query=nombredeldataset](http://data.buenosaires.gob.ar/api/3/action/resource_search?query=nombredeldataset)
+    4. **Recursos**: [http://data.buenosaires.gob.ar/api/3/action/resource_search?query=nombredeldataset](http://data.buenosaires.gob.ar/api/3/action/resource_search?query=nombredeldataset)
         - Dentro de cada recurso hay un campo llamado `url`, desde donde se puede descargar el archivo relacionado
 4. Notificar cantidad de datos importados
     - Categorías
