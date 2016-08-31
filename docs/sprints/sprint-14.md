@@ -17,11 +17,11 @@ Continuar con la corrección de bugs, priorizando los errores bloqueantes levant
     - SuperAdmin
     - Admin
     - Guest
-5. Implementar permisos para cada rol
-6. Completar seeds de config
+4. Implementar permisos para cada rol
+5. Completar seeds de config
     - Estado revisión
     - Estado rechazado
-7. Agregar seeds de subcategorías
+6. Agregar seeds de subcategorías
 
 ## Admin
 1. Agregar sección "Mi Perfil"
@@ -34,6 +34,8 @@ Continuar con la corrección de bugs, priorizando los errores bloqueantes levant
 8. Completar filtros y búsquedas en pantallas que no lo tengan
 9. Refactorizar pantalla de configuraciones
 10. Agregar pantalla "Ver datasets destacados"
+11. Agregar botón "rechazar" en recursos (files, maps, charts) con estado "en revisión"
+12. Editar los formularios de los modelos que tengan categorías relacionadas
 
 ## Frontend
 1. Agregar filtros por subcategorías (si la categoría no tiene subcategorías no mostrar filtro)
