@@ -312,13 +312,14 @@
 <p>Sprint de subcategorías y roles</p>
 <h2 id="objetivo">Objetivo</h2>
 <p>Generar subcategorías dentro de categorías, y desarrollar roles planteados.
+Finalizar las tareas en backlog del sprint anterior
 Continuar con la corrección de bugs, priorizando los errores bloqueantes levantados por el equipo de datos.</p>
 <h1 id="tareas">Tareas</h1>
 <h2 id="api">API</h2>
 <ol>
 <li>Agregar campo <code>parent</code> en <code>Category</code>, el cual es una relación recursiva</li>
 <li>Agregar campo <code>subcategories</code> en <code>Category</code>, el cual es una relación recursiva</li>
-<li>Instalar, configurar e integrar sails-permissions en <strong>odin</strong></li>
+<li>Instalar, configurar e integrar sails-permissions</li>
 <li>Generar roles:<ul>
 <li>SuperAdmin</li>
 <li>Admin</li>
@@ -326,35 +327,33 @@ Continuar con la corrección de bugs, priorizando los errores bloqueantes levant
 </ul>
 </li>
 <li>Implementar permisos para cada rol</li>
-<li>Agregar seeds de subcategorías</li>
 <li>Completar seeds de config<ul>
 <li>Estado revisión</li>
 <li>Estado rechazado</li>
 </ul>
 </li>
+<li>Agregar seeds de subcategorías</li>
 </ol>
 <h2 id="admin">Admin</h2>
 <ol>
 <li>Agregar sección "Mi Perfil"</li>
 <li>Instalar y configurar angular-permission</li>
-<li>Generar roles en el admin:<ul>
-<li>SuperAdmin</li>
-<li>Admin</li>
-<li>Guest</li>
-</ul>
-</li>
-<li>Implementar permisos para cada rol en el admin</li>
+<li>Mapear permisos de la api</li>
+<li>Validar permisos para cada acción en el admin</li>
 <li>Agregar dropdown <code>role</code> en el formulario de <code>User</code>, incorporandole un tooltip (globo de diálogo) que muestre un link. Dicho link informará los permisos de cada rol</li>
 <li>Agregar pantalla <strong>"En revisión"</strong>, que liste los recursos (files, maps, charts) que tengan dicho estado</li>
-<li>Agregar botón "Crear subcategoría" dentro de categoría</li>
-<li>Agregar pantalla con formulario nueva subcategoría dentro</li>
+<li>Agregar modulo "Crear subcategoría" dentro de categoría</li>
 <li>Completar filtros y búsquedas en pantallas que no lo tengan</li>
 <li>Refactorizar pantalla de configuraciones</li>
+<li>Agregar pantalla "Ver datasets destacados"</li>
 </ol>
 <h2 id="frontend">Frontend</h2>
+<ol>
+<li>Agregar filtros por subcategorías (si la categoría no tiene subcategorías no mostrar filtro)</li>
+</ol>
 <h1 id="prioridades">Prioridades</h1>
 <ol>
-<li>Instalar, configurar e integrar sails-permissions en <strong>odin</strong></li>
+<li>Instalar, configurar e integrar sails-permissions</li>
 <li>Generar roles:<ul>
 <li>SuperAdmin</li>
 <li>Admin</li>
@@ -363,13 +362,7 @@ Continuar con la corrección de bugs, priorizando los errores bloqueantes levant
 </li>
 <li>Implementar permisos para cada rol</li>
 <li>Instalar y configurar angular-permission</li>
-<li>Generar roles en el admin:<ul>
-<li>SuperAdmin</li>
-<li>Admin</li>
-<li>Guest</li>
-</ul>
-</li>
-<li>Implementar permisos para cada rol en el admin</li>
+<li>Validar permisos para cada acción en el admin</li>
 </ol>
               
             </div>
