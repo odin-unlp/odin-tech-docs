@@ -1527,7 +1527,7 @@
         }, 
         {
             "location": "/sprints/sprint-14/", 
-            "text": "Duraci\u00f3n:\n Mi\u00e9rcoles 31/08/16 - Martes 07/09/16\n\n\nAlcance\n\n\nSprint de subcategor\u00edas y roles\n\n\nObjetivo\n\n\nGenerar subcategor\u00edas dentro de categor\u00edas, y desarrollar roles planteados.\nContinuar con la correcci\u00f3n de bugs, priorizando los errores bloqueantes levantados por el equipo de datos.\n\n\nTareas\n\n\nAPI\n\n\n\n\nAgregar campo \nparent\n en \nCategory\n, el cual es una relaci\u00f3n recursiva\n\n\nAgregar campo \nsubcategories\n en \nCategory\n, el cual es una relaci\u00f3n recursiva\n\n\nInstalar, configurar e integrar sails-permissions en \nodin\n\n\nGenerar roles:\n\n\nSuperAdmin\n\n\nAdmin\n\n\nGuest\n\n\n\n\n\n\nImplementar permisos para cada rol\n\n\nAgregar seeds de subcategor\u00edas\n\n\nCompletar seeds de config\n\n\nEstado revisi\u00f3n\n\n\nEstado rechazado\n\n\n\n\n\n\n\n\nAdmin\n\n\n\n\nAgregar secci\u00f3n \"Mi Perfil\"\n\n\nInstalar y configurar angular-permission\n\n\nGenerar roles en el admin:\n\n\nSuperAdmin\n\n\nAdmin\n\n\nGuest\n\n\n\n\n\n\nImplementar permisos para cada rol en el admin\n\n\nAgregar dropdown \nrole\n en el formulario de \nUser\n, incorporandole un tooltip (globo de di\u00e1logo) que muestre un link. Dicho link informar\u00e1 los permisos de cada rol\n\n\nAgregar pantalla \n\"En revisi\u00f3n\"\n, que liste los recursos (files, maps, charts) que tengan dicho estado\n\n\nAgregar bot\u00f3n \"Crear subcategor\u00eda\" dentro de categor\u00eda\n\n\nAgregar pantalla con formulario nueva subcategor\u00eda dentro\n\n\nCompletar filtros y b\u00fasquedas en pantallas que no lo tengan\n\n\nRefactorizar pantalla de configuraciones\n\n\n\n\nFrontend\n\n\nPrioridades\n\n\n\n\nInstalar, configurar e integrar sails-permissions en \nodin\n\n\nGenerar roles:\n\n\nSuperAdmin\n\n\nAdmin\n\n\nGuest\n\n\n\n\n\n\nImplementar permisos para cada rol\n\n\nInstalar y configurar angular-permission\n\n\nGenerar roles en el admin:\n\n\nSuperAdmin\n\n\nAdmin\n\n\nGuest\n\n\n\n\n\n\nImplementar permisos para cada rol en el admin", 
+            "text": "Duraci\u00f3n:\n Mi\u00e9rcoles 31/08/16 - Martes 07/09/16\n\n\nAlcance\n\n\nSprint de subcategor\u00edas y roles\n\n\nObjetivo\n\n\nGenerar subcategor\u00edas dentro de categor\u00edas, y desarrollar roles planteados.\nFinalizar las tareas en backlog del sprint anterior\nContinuar con la correcci\u00f3n de bugs, priorizando los errores bloqueantes levantados por el equipo de datos.\n\n\nTareas\n\n\nAPI\n\n\n\n\nAgregar campo \nparent\n en \nCategory\n, el cual es una relaci\u00f3n recursiva\n\n\nAgregar campo \nsubcategories\n en \nCategory\n, el cual es una relaci\u00f3n recursiva\n\n\nInstalar, configurar e integrar sails-permissions\n\n\nGenerar roles:\n\n\nSuperAdmin\n\n\nAdmin\n\n\nGuest\n\n\n\n\n\n\nImplementar permisos para cada rol\n\n\nCompletar seeds de config\n\n\nEstado revisi\u00f3n\n\n\nEstado rechazado\n\n\n\n\n\n\nAgregar seeds de subcategor\u00edas\n\n\n\n\nAdmin\n\n\n\n\nAgregar secci\u00f3n \"Mi Perfil\"\n\n\nInstalar y configurar angular-permission\n\n\nMapear permisos de la api\n\n\nValidar permisos para cada acci\u00f3n en el admin\n\n\nAgregar dropdown \nrole\n en el formulario de \nUser\n, incorporandole un tooltip (globo de di\u00e1logo) que muestre un link. Dicho link informar\u00e1 los permisos de cada rol\n\n\nAgregar pantalla \n\"En revisi\u00f3n\"\n, que liste los recursos (files, maps, charts) que tengan dicho estado\n\n\nAgregar modulo \"Crear subcategor\u00eda\" dentro de categor\u00eda\n\n\nCompletar filtros y b\u00fasquedas en pantallas que no lo tengan\n\n\nRefactorizar pantalla de configuraciones\n\n\nAgregar pantalla \"Ver datasets destacados\"\n\n\n\n\nFrontend\n\n\n\n\nAgregar filtros por subcategor\u00edas (si la categor\u00eda no tiene subcategor\u00edas no mostrar filtro)\n\n\n\n\nPrioridades\n\n\n\n\nInstalar, configurar e integrar sails-permissions\n\n\nGenerar roles:\n\n\nSuperAdmin\n\n\nAdmin\n\n\nGuest\n\n\n\n\n\n\nImplementar permisos para cada rol\n\n\nInstalar y configurar angular-permission\n\n\nValidar permisos para cada acci\u00f3n en el admin", 
             "title": "Sprint 14"
         }, 
         {
@@ -1537,7 +1537,7 @@
         }, 
         {
             "location": "/sprints/sprint-14/#objetivo", 
-            "text": "Generar subcategor\u00edas dentro de categor\u00edas, y desarrollar roles planteados.\nContinuar con la correcci\u00f3n de bugs, priorizando los errores bloqueantes levantados por el equipo de datos.", 
+            "text": "Generar subcategor\u00edas dentro de categor\u00edas, y desarrollar roles planteados.\nFinalizar las tareas en backlog del sprint anterior\nContinuar con la correcci\u00f3n de bugs, priorizando los errores bloqueantes levantados por el equipo de datos.", 
             "title": "Objetivo"
         }, 
         {
@@ -1547,22 +1547,22 @@
         }, 
         {
             "location": "/sprints/sprint-14/#api", 
-            "text": "Agregar campo  parent  en  Category , el cual es una relaci\u00f3n recursiva  Agregar campo  subcategories  en  Category , el cual es una relaci\u00f3n recursiva  Instalar, configurar e integrar sails-permissions en  odin  Generar roles:  SuperAdmin  Admin  Guest    Implementar permisos para cada rol  Agregar seeds de subcategor\u00edas  Completar seeds de config  Estado revisi\u00f3n  Estado rechazado", 
+            "text": "Agregar campo  parent  en  Category , el cual es una relaci\u00f3n recursiva  Agregar campo  subcategories  en  Category , el cual es una relaci\u00f3n recursiva  Instalar, configurar e integrar sails-permissions  Generar roles:  SuperAdmin  Admin  Guest    Implementar permisos para cada rol  Completar seeds de config  Estado revisi\u00f3n  Estado rechazado    Agregar seeds de subcategor\u00edas", 
             "title": "API"
         }, 
         {
             "location": "/sprints/sprint-14/#admin", 
-            "text": "Agregar secci\u00f3n \"Mi Perfil\"  Instalar y configurar angular-permission  Generar roles en el admin:  SuperAdmin  Admin  Guest    Implementar permisos para cada rol en el admin  Agregar dropdown  role  en el formulario de  User , incorporandole un tooltip (globo de di\u00e1logo) que muestre un link. Dicho link informar\u00e1 los permisos de cada rol  Agregar pantalla  \"En revisi\u00f3n\" , que liste los recursos (files, maps, charts) que tengan dicho estado  Agregar bot\u00f3n \"Crear subcategor\u00eda\" dentro de categor\u00eda  Agregar pantalla con formulario nueva subcategor\u00eda dentro  Completar filtros y b\u00fasquedas en pantallas que no lo tengan  Refactorizar pantalla de configuraciones", 
+            "text": "Agregar secci\u00f3n \"Mi Perfil\"  Instalar y configurar angular-permission  Mapear permisos de la api  Validar permisos para cada acci\u00f3n en el admin  Agregar dropdown  role  en el formulario de  User , incorporandole un tooltip (globo de di\u00e1logo) que muestre un link. Dicho link informar\u00e1 los permisos de cada rol  Agregar pantalla  \"En revisi\u00f3n\" , que liste los recursos (files, maps, charts) que tengan dicho estado  Agregar modulo \"Crear subcategor\u00eda\" dentro de categor\u00eda  Completar filtros y b\u00fasquedas en pantallas que no lo tengan  Refactorizar pantalla de configuraciones  Agregar pantalla \"Ver datasets destacados\"", 
             "title": "Admin"
         }, 
         {
             "location": "/sprints/sprint-14/#frontend", 
-            "text": "", 
+            "text": "Agregar filtros por subcategor\u00edas (si la categor\u00eda no tiene subcategor\u00edas no mostrar filtro)", 
             "title": "Frontend"
         }, 
         {
             "location": "/sprints/sprint-14/#prioridades", 
-            "text": "Instalar, configurar e integrar sails-permissions en  odin  Generar roles:  SuperAdmin  Admin  Guest    Implementar permisos para cada rol  Instalar y configurar angular-permission  Generar roles en el admin:  SuperAdmin  Admin  Guest    Implementar permisos para cada rol en el admin", 
+            "text": "Instalar, configurar e integrar sails-permissions  Generar roles:  SuperAdmin  Admin  Guest    Implementar permisos para cada rol  Instalar y configurar angular-permission  Validar permisos para cada acci\u00f3n en el admin", 
             "title": "Prioridades"
         }, 
         {
