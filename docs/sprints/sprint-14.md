@@ -1,18 +1,17 @@
-**Duración:** Miércoles 31/08/16 - Martes 07/09/16
+**Duración:** Miércoles 31/08/16 - Viernes 09/09/16
 
 # Alcance
 Sprint de subcategorías y roles
 
 ## Objetivo
 Generar subcategorías dentro de categorías, y desarrollar roles planteados.
-Finalizar las tareas en backlog del sprint anterior
+Finalizar las tareas en backlog del sprint anterior.
 Continuar con la corrección de bugs, priorizando los errores bloqueantes levantados por el equipo de datos.
 
 # Tareas
 
 ## API
-1. Agregar campo `parent` en `Category`, el cual es una relación recursiva
-1. Agregar campo `subcategories` en `Category`, el cual es una relación recursiva
+1. Agregar campos `parent` y `subcategories` en `Category`, el cual es una relación recursiva
 2. Instalar, configurar e integrar sails-permissions
 3. Generar roles:
     - SuperAdmin
