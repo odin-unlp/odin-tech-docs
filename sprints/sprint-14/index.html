@@ -226,11 +226,11 @@
             
                 <li class="toctree-l3"><a href="#modelos">Modelos</a></li>
                 
-                    <li><a class="toctree-l4" href="#webservicesmodel">WebServicesModel</a></li>
+                    <li><a class="toctree-l4" href="#webservicesmodel-archivo">WebServicesModel (archivo)</a></li>
                 
-                    <li><a class="toctree-l4" href="#rest">Rest</a></li>
+                    <li><a class="toctree-l4" href="#rest-webservicesmodel">Rest &lt; WebServicesModel</a></li>
                 
-                    <li><a class="toctree-l4" href="#soap">Soap</a></li>
+                    <li><a class="toctree-l4" href="#soap-webservicesmodel">Soap &lt; WebServicesModel</a></li>
                 
             
             </ul>
@@ -333,8 +333,8 @@
 <h1 id="tareas">Tareas</h1>
 <h2 id="api">API</h2>
 <ol>
-<li>Hacer el modelo, routes y controller de <code>Soap</code>.</li>
-<li>Hacer el modelo, routes y controller de <code>Rest</code>.</li>
+<li>Crear el modelo <code>Soap</code>.</li>
+<li>Crear el modelo <code>Rest</code>.</li>
 <li>Crear la relacion entre <code>File</code> y <code>Soap</code> / <code>Rest</code></li>
 <li>Crear el archivo <code>WebServicesModel.js</code> que contenga los atributos en común entre ambos modelos.</li>
 <li>Crear un servicio para obtener los datos desde un WS <a href="https://github.com/vpulim/node-soap">Soap</a></li>
@@ -345,12 +345,12 @@
  manteniendo una <a href="https://github.com/ptarjan/node-cache">caché</a> para no cargar demasiado al servidor</li>
 <li>Actualizar las visualizaciones (mapas y gráficos) cuando los datos de un archivo son actualizados (62)</li>
 <li>Agregar el campo <code>dataGuide</code> en el modelo <code>File</code></li>
-<li>Agregar slug en <code>tags</code>,<code>fromatos</code> y <code>organizacion</code></li>
+<li>Agregar campo slug en <code>tags</code>,<code>fromatos</code> y <code>organizacion</code></li>
 </ol>
 <h2 id="admin">Admin</h2>
 <ol>
-<li>Finalizar de implemetar el css propuesto</li>
-<li>Agregar caché para el login</li>
+<li>Finalizar de implemetar el css</li>
+<li>Agregar <a href="https://www.google.com/recaptcha/intro/index.html">captcha</a> para el login</li>
 <li>Generar submenúes dentro de crear archivo <code>A partir de un archivo</code> y <code>A partir de un servicio web</code></li>
 <li>Generar el módulo de WS (crear/editar)</li>
 <li>Agregar un link de descarga al manual de usuario (184)</li>
@@ -359,7 +359,6 @@
 </ol>
 <h2 id="frontend">Frontend</h2>
 <ol>
-<li>Agregar filtros por subcategorías (si la categoría no tiene subcategorías no mostrar filtro)</li>
 <li>Url friendly en categorías (181)</li>
 <li>Agregar link a guía de datos en la vista de los datasets, en caso de no tener no mostrar link (169)</li>
 <li>Tomar las visitas desde analytics (185)</li>
@@ -370,19 +369,15 @@
 </ol>
 <h1 id="prioridades">Prioridades</h1>
 <ol>
-<li>Instalar, configurar e integrar sails-permissions</li>
-<li>Generar roles:<ul>
-<li>SuperAdmin</li>
-<li>Admin</li>
-<li>Guest</li>
-</ul>
-</li>
-<li>Implementar permisos para cada rol</li>
-<li>Instalar y configurar angular-permission</li>
-<li>Validar permisos para cada acción en el admin</li>
+<li>Crear un servicio para obtener los datos desde un WS <a href="https://github.com/vpulim/node-soap">Soap</a></li>
+<li>Crear un servicio para obtener los datos desde un WS Rest</li>
+<li>Al crear un WS que no sea real time, crear un cron con la periocidad indicada para obtener nuevos datos
+ en caso de que los haya <code>(if-modified-since)</code> y persistirlos</li>
+<li>Agregar slug en <code>tags</code>,<code>fromatos</code> y <code>organizacion</code></li>
+<li>Generar el módulo de WS (crear/editar)</li>
 </ol>
 <h1 id="modelos">Modelos</h1>
-<h2 id="webservicesmodel">WebServicesModel</h2>
+<h2 id="webservicesmodel-archivo">WebServicesModel (archivo)</h2>
 <ul>
 <li>
 <p><strong>id</strong></p>
@@ -414,17 +409,11 @@
 <li>
 <p><strong>parameters</strong></p>
 <p><em>Tipo:</em> json</p>
+<p><em>Descripcion:</em> Parametros clave-valor.</p>
 </li>
 </ul>
 <hr />
-<ul>
-<li>
-<p><strong>createdAt</strong></p>
-<p><em>Tipo:</em> datetime</p>
-<p><em>Default:</em> fecha y hora actuales</p>
-</li>
-</ul>
-<h2 id="rest">Rest</h2>
+<h2 id="rest-webservicesmodel">Rest &lt; WebServicesModel</h2>
 <ul>
 <li>
 <p><strong>datapath</strong></p>
@@ -485,7 +474,7 @@
 <p><em>Max:</em> 500 carácteres</p>
 </li>
 </ul>
-<h2 id="soap">Soap</h2>
+<h2 id="soap-webservicesmodel">Soap &lt; WebServicesModel</h2>
 <ul>
 <li>
 <p><strong>method</strong></p>
@@ -505,16 +494,6 @@
 <p><em>Descripcion:</em> define el Namespace para la operación</p>
 </li>
 </ul>
-<hr />
-<ul>
-<li>
-<p><strong>token</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 500 carácteres</p>
-<p><em>Descripcion:</em> Define el token para firmar la consulta.</p>
-</li>
-</ul>
-<hr />
               
             </div>
           </div>
