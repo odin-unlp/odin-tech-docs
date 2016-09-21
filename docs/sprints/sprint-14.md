@@ -9,8 +9,8 @@ Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualiza
 # Tareas
 
 ## API
-1. Hacer el modelo, routes y controller de `Soap`.
-2. Hacer el modelo, routes y controller de `Rest`.
+1. Crear el modelo `Soap`.
+2. Crear el modelo `Rest`.
 3. Crear la relacion entre `File` y `Soap` / `Rest`
 4. Crear el archivo `WebServicesModel.js` que contenga los atributos en común entre ambos modelos.
 5. Crear un servicio para obtener los datos desde un WS [Soap](https://github.com/vpulim/node-soap)
@@ -21,11 +21,11 @@ Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualiza
  manteniendo una [caché](https://github.com/ptarjan/node-cache) para no cargar demasiado al servidor
 9. Actualizar las visualizaciones (mapas y gráficos) cuando los datos de un archivo son actualizados (62)
 10. Agregar el campo `dataGuide` en el modelo `File`
-11. Agregar slug en `tags`,`fromatos` y `organizacion`
+11. Agregar campo slug en `tags`,`fromatos` y `organizacion`
 
 ## Admin
-1. Finalizar de implemetar el css propuesto
-2. Agregar caché para el login
+1. Finalizar de implemetar el css
+2. Agregar [captcha](https://www.google.com/recaptcha/intro/index.html) para el login
 3. Generar submenúes dentro de crear archivo `A partir de un archivo` y `A partir de un servicio web`
 4. Generar el módulo de WS (crear/editar)
 5. Agregar un link de descarga al manual de usuario (184)
@@ -33,28 +33,24 @@ Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualiza
 7. Agregar campo `Guía de datos` en la creación / edición de un archivo (169)
 
 ## Frontend
-1. Agregar filtros por subcategorías (si la categoría no tiene subcategorías no mostrar filtro)
-2. Url friendly en categorías (181)
-3. Agregar link a guía de datos en la vista de los datasets, en caso de no tener no mostrar link (169)
-4. Tomar las visitas desde analytics (185)
+1. Url friendly en categorías (181)
+2. Agregar link a guía de datos en la vista de los datasets, en caso de no tener no mostrar link (169)
+3. Tomar las visitas desde analytics (185)
 
 ## Otros
 1. Implementar google analytics (146)
 
 # Prioridades
-1. Instalar, configurar e integrar sails-permissions
-2. Generar roles:
-    - SuperAdmin
-    - Admin
-    - Guest
-3. Implementar permisos para cada rol
-4. Instalar y configurar angular-permission
-5. Validar permisos para cada acción en el admin
-
+1. Crear un servicio para obtener los datos desde un WS [Soap](https://github.com/vpulim/node-soap)
+2. Crear un servicio para obtener los datos desde un WS Rest
+3. Al crear un WS que no sea real time, crear un cron con la periocidad indicada para obtener nuevos datos
+ en caso de que los haya `(if-modified-since)` y persistirlos
+4. Agregar slug en `tags`,`fromatos` y `organizacion`
+5. Generar el módulo de WS (crear/editar)
 
 # Modelos
 
-## WebServicesModel
+## WebServicesModel (archivo)
 
 - **id**
 
@@ -90,16 +86,11 @@ Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualiza
 
     *Tipo:* json
 
+    *Descripcion:* Parametros clave-valor.
+
 ---
 
-- **createdAt**
-
-    *Tipo:* datetime
-
-    *Default:* fecha y hora actuales
-
-
-## Rest
+## Rest < WebServicesModel
 
 - **datapath**
 
@@ -166,7 +157,7 @@ Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualiza
     *Max:* 500 carácteres
 
 
-## Soap
+## Soap < WebServicesModel
 
 - **method**
 
@@ -189,15 +180,3 @@ Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualiza
     *Requerido:* sí
 
     *Descripcion:* define el Namespace para la operación
-
----
-
-- **token**
-
-    *Tipo:* string
-
-    *Max:* 500 carácteres
-
-    *Descripcion:* Define el token para firmar la consulta.
-
----
