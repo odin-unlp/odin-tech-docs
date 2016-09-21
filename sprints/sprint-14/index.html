@@ -227,6 +227,13 @@
     </li>
 
         
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sprint-15/">Sprint 15</a>
+        
+    </li>
+
+        
     </ul>
 <li>
           
@@ -307,50 +314,43 @@
           <div role="main">
             <div class="section">
               
-                <p><strong>Duración:</strong> Miércoles 31/08/16 - Viernes 09/09/16</p>
+                <p><strong>Duración:</strong> Viernes 23/09/16 - Lunes 03/10/16</p>
 <h1 id="alcance">Alcance</h1>
-<p>Sprint de subcategorías y roles</p>
+<p>Sprint de Web Services</p>
 <h2 id="objetivo">Objetivo</h2>
-<p>Generar subcategorías dentro de categorías, y desarrollar roles planteados.
-Finalizar las tareas en backlog del sprint anterior.
-Continuar con la corrección de bugs, priorizando los errores bloqueantes levantados por el equipo de datos.</p>
+<p>Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualización con mayor periodicidad</p>
 <h1 id="tareas">Tareas</h1>
 <h2 id="api">API</h2>
 <ol>
-<li>Agregar campos <code>parent</code> y <code>subcategories</code> en <code>Category</code>, el cual es una relación recursiva</li>
-<li>Instalar, configurar e integrar sails-permissions</li>
-<li>Generar roles:<ul>
-<li>SuperAdmin</li>
-<li>Admin</li>
-<li>Guest</li>
-</ul>
-</li>
-<li>Implementar permisos para cada rol</li>
-<li>Completar seeds de config<ul>
-<li>Estado revisión</li>
-<li>Estado rechazado</li>
-</ul>
-</li>
-<li>Agregar seeds de subcategorías</li>
+<li>Hacer el modelo, routes y controller de <code>Soap</code>.</li>
+<li>Hacer el modelo, routes y controller de <code>Rest</code>.</li>
+<li>Crear la relacion entre <code>File</code> y <code>Soap</code> / <code>Rest</code></li>
+<li>Crear el archivo <code>WebServicesModel.js</code> que contenga los atributos en común entre ambos modelos.</li>
+<li>Crear un servicio para obtener los datos desde un WS <a href="https://github.com/vpulim/node-soap">Soap</a></li>
+<li>Crear un servicio para obtener los datos desde un WS Rest</li>
+<li>Al crear un WS que no sea real time, crear un cron con la periocidad indicada para obtener nuevos datos
+ en caso de que los haya <code>(if-modified-since)</code> y persistirlos</li>
+<li>Al crear un WS real time, las consultas se pasan directamente al WS,
+ manteniendo una <a href="https://github.com/ptarjan/node-cache">caché</a> para no cargar demasiado al servidor</li>
+<li>Actualizar las visualizaciones (mapas y gráficos) cuando los datos de un archivo son actualizados (62)</li>
+<li>Agregar el campo <code>dataGuide</code> en el modelo <code>File</code>
+tags-fromatos-organizacion</li>
 </ol>
 <h2 id="admin">Admin</h2>
 <ol>
-<li>Agregar sección "Mi Perfil"</li>
-<li>Instalar y configurar angular-permission</li>
-<li>Mapear permisos de la api</li>
-<li>Validar permisos para cada acción en el admin</li>
-<li>Agregar dropdown <code>role</code> en el formulario de <code>User</code>, incorporandole un tooltip (globo de diálogo) que muestre un link. Dicho link informará los permisos de cada rol</li>
-<li>Agregar pantalla <strong>"En revisión"</strong>, que liste los recursos (files, maps, charts) que tengan dicho estado</li>
-<li>Agregar modulo "Crear subcategoría" dentro de categoría</li>
-<li>Completar filtros y búsquedas en pantallas que no lo tengan</li>
-<li>Refactorizar pantalla de configuraciones</li>
-<li>Agregar pantalla "Ver datasets destacados"</li>
-<li>Agregar botón "rechazar" en recursos (files, maps, charts) con estado "en revisión"</li>
-<li>Editar los formularios de los modelos que tengan categorías relacionadas</li>
+<li>Finalizar de implemetar el css propuesto</li>
+<li>Agregar caché para el login</li>
+<li>Generar submenúes dentro de crear archivo <code>A partir de un archivo</code> y <code>A partir de un servicio web</code></li>
+<li>Generar el módulo de WS (crear/editar)</li>
+<li>Agregar un link de descarga al manual de usuario (184)</li>
+<li>Seleccionar que modelos importar desde el importador</li>
+<li>Agregar campo <code>Guía de datos</code> en la creación / edición de un archivo</li>
 </ol>
 <h2 id="frontend">Frontend</h2>
 <ol>
 <li>Agregar filtros por subcategorías (si la categoría no tiene subcategorías no mostrar filtro)</li>
+<li>Url friendly en categorías (181)</li>
+<li>Agregar link a guía de datos en la vista de los datasets, en caso de no tener no mostrar link</li>
 </ol>
 <h1 id="prioridades">Prioridades</h1>
 <ol>
@@ -372,7 +372,7 @@ Continuar con la corrección de bugs, priorizando los errores bloqueantes levant
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../references/status-codes/" class="btn btn-neutral float-right" title="HTTP Status Codes">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../sprint-15/" class="btn btn-neutral float-right" title="Sprint 15">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../sprint-13/" class="btn btn-neutral" title="Sprint 13"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -406,7 +406,7 @@ Continuar con la corrección de bugs, priorizando los errores bloqueantes levant
         <span><a href="../sprint-13/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../references/status-codes/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../sprint-15/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
