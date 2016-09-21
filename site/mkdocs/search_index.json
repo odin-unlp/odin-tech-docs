@@ -1527,17 +1527,17 @@
         }, 
         {
             "location": "/sprints/sprint-14/", 
-            "text": "Duraci\u00f3n:\n Mi\u00e9rcoles 31/08/16 - Viernes 09/09/16\n\n\nAlcance\n\n\nSprint de subcategor\u00edas y roles\n\n\nObjetivo\n\n\nGenerar subcategor\u00edas dentro de categor\u00edas, y desarrollar roles planteados.\nFinalizar las tareas en backlog del sprint anterior.\nContinuar con la correcci\u00f3n de bugs, priorizando los errores bloqueantes levantados por el equipo de datos.\n\n\nTareas\n\n\nAPI\n\n\n\n\nAgregar campos \nparent\n y \nsubcategories\n en \nCategory\n, el cual es una relaci\u00f3n recursiva\n\n\nInstalar, configurar e integrar sails-permissions\n\n\nGenerar roles:\n\n\nSuperAdmin\n\n\nAdmin\n\n\nGuest\n\n\n\n\n\n\nImplementar permisos para cada rol\n\n\nCompletar seeds de config\n\n\nEstado revisi\u00f3n\n\n\nEstado rechazado\n\n\n\n\n\n\nAgregar seeds de subcategor\u00edas\n\n\n\n\nAdmin\n\n\n\n\nAgregar secci\u00f3n \"Mi Perfil\"\n\n\nInstalar y configurar angular-permission\n\n\nMapear permisos de la api\n\n\nValidar permisos para cada acci\u00f3n en el admin\n\n\nAgregar dropdown \nrole\n en el formulario de \nUser\n, incorporandole un tooltip (globo de di\u00e1logo) que muestre un link. Dicho link informar\u00e1 los permisos de cada rol\n\n\nAgregar pantalla \n\"En revisi\u00f3n\"\n, que liste los recursos (files, maps, charts) que tengan dicho estado\n\n\nAgregar modulo \"Crear subcategor\u00eda\" dentro de categor\u00eda\n\n\nCompletar filtros y b\u00fasquedas en pantallas que no lo tengan\n\n\nRefactorizar pantalla de configuraciones\n\n\nAgregar pantalla \"Ver datasets destacados\"\n\n\nAgregar bot\u00f3n \"rechazar\" en recursos (files, maps, charts) con estado \"en revisi\u00f3n\"\n\n\nEditar los formularios de los modelos que tengan categor\u00edas relacionadas\n\n\n\n\nFrontend\n\n\n\n\nAgregar filtros por subcategor\u00edas (si la categor\u00eda no tiene subcategor\u00edas no mostrar filtro)\n\n\n\n\nPrioridades\n\n\n\n\nInstalar, configurar e integrar sails-permissions\n\n\nGenerar roles:\n\n\nSuperAdmin\n\n\nAdmin\n\n\nGuest\n\n\n\n\n\n\nImplementar permisos para cada rol\n\n\nInstalar y configurar angular-permission\n\n\nValidar permisos para cada acci\u00f3n en el admin", 
+            "text": "Duraci\u00f3n:\n Viernes 23/09/16 - Lunes 03/10/16\n\n\nAlcance\n\n\nSprint de Web Services\n\n\nObjetivo\n\n\nPermitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualizaci\u00f3n con mayor periodicidad\n\n\nTareas\n\n\nAPI\n\n\n\n\nHacer el modelo, routes y controller de \nSoap\n.\n\n\nHacer el modelo, routes y controller de \nRest\n.\n\n\nCrear la relacion entre \nFile\n y \nSoap\n / \nRest\n\n\nCrear el archivo \nWebServicesModel.js\n que contenga los atributos en com\u00fan entre ambos modelos.\n\n\nCrear un servicio para obtener los datos desde un WS \nSoap\n\n\nCrear un servicio para obtener los datos desde un WS Rest\n\n\nAl crear un WS que no sea real time, crear un cron con la periocidad indicada para obtener nuevos datos\n en caso de que los haya \n(if-modified-since)\n y persistirlos\n\n\nAl crear un WS real time, las consultas se pasan directamente al WS,\n manteniendo una \ncach\u00e9\n para no cargar demasiado al servidor\n\n\nActualizar las visualizaciones (mapas y gr\u00e1ficos) cuando los datos de un archivo son actualizados (62)\n\n\nAgregar el campo \ndataGuide\n en el modelo \nFile\n\ntags-fromatos-organizacion\n\n\n\n\nAdmin\n\n\n\n\nFinalizar de implemetar el css propuesto\n\n\nAgregar cach\u00e9 para el login\n\n\nGenerar submen\u00faes dentro de crear archivo \nA partir de un archivo\n y \nA partir de un servicio web\n\n\nGenerar el m\u00f3dulo de WS (crear/editar)\n\n\nAgregar un link de descarga al manual de usuario (184)\n\n\nSeleccionar que modelos importar desde el importador\n\n\nAgregar campo \nGu\u00eda de datos\n en la creaci\u00f3n / edici\u00f3n de un archivo\n\n\n\n\nFrontend\n\n\n\n\nAgregar filtros por subcategor\u00edas (si la categor\u00eda no tiene subcategor\u00edas no mostrar filtro)\n\n\nUrl friendly en categor\u00edas (181)\n\n\nAgregar link a gu\u00eda de datos en la vista de los datasets, en caso de no tener no mostrar link\n\n\n\n\nPrioridades\n\n\n\n\nInstalar, configurar e integrar sails-permissions\n\n\nGenerar roles:\n\n\nSuperAdmin\n\n\nAdmin\n\n\nGuest\n\n\n\n\n\n\nImplementar permisos para cada rol\n\n\nInstalar y configurar angular-permission\n\n\nValidar permisos para cada acci\u00f3n en el admin", 
             "title": "Sprint 14"
         }, 
         {
             "location": "/sprints/sprint-14/#alcance", 
-            "text": "Sprint de subcategor\u00edas y roles", 
+            "text": "Sprint de Web Services", 
             "title": "Alcance"
         }, 
         {
             "location": "/sprints/sprint-14/#objetivo", 
-            "text": "Generar subcategor\u00edas dentro de categor\u00edas, y desarrollar roles planteados.\nFinalizar las tareas en backlog del sprint anterior.\nContinuar con la correcci\u00f3n de bugs, priorizando los errores bloqueantes levantados por el equipo de datos.", 
+            "text": "Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualizaci\u00f3n con mayor periodicidad", 
             "title": "Objetivo"
         }, 
         {
@@ -1547,21 +1547,61 @@
         }, 
         {
             "location": "/sprints/sprint-14/#api", 
-            "text": "Agregar campos  parent  y  subcategories  en  Category , el cual es una relaci\u00f3n recursiva  Instalar, configurar e integrar sails-permissions  Generar roles:  SuperAdmin  Admin  Guest    Implementar permisos para cada rol  Completar seeds de config  Estado revisi\u00f3n  Estado rechazado    Agregar seeds de subcategor\u00edas", 
+            "text": "Hacer el modelo, routes y controller de  Soap .  Hacer el modelo, routes y controller de  Rest .  Crear la relacion entre  File  y  Soap  /  Rest  Crear el archivo  WebServicesModel.js  que contenga los atributos en com\u00fan entre ambos modelos.  Crear un servicio para obtener los datos desde un WS  Soap  Crear un servicio para obtener los datos desde un WS Rest  Al crear un WS que no sea real time, crear un cron con la periocidad indicada para obtener nuevos datos\n en caso de que los haya  (if-modified-since)  y persistirlos  Al crear un WS real time, las consultas se pasan directamente al WS,\n manteniendo una  cach\u00e9  para no cargar demasiado al servidor  Actualizar las visualizaciones (mapas y gr\u00e1ficos) cuando los datos de un archivo son actualizados (62)  Agregar el campo  dataGuide  en el modelo  File \ntags-fromatos-organizacion", 
             "title": "API"
         }, 
         {
             "location": "/sprints/sprint-14/#admin", 
-            "text": "Agregar secci\u00f3n \"Mi Perfil\"  Instalar y configurar angular-permission  Mapear permisos de la api  Validar permisos para cada acci\u00f3n en el admin  Agregar dropdown  role  en el formulario de  User , incorporandole un tooltip (globo de di\u00e1logo) que muestre un link. Dicho link informar\u00e1 los permisos de cada rol  Agregar pantalla  \"En revisi\u00f3n\" , que liste los recursos (files, maps, charts) que tengan dicho estado  Agregar modulo \"Crear subcategor\u00eda\" dentro de categor\u00eda  Completar filtros y b\u00fasquedas en pantallas que no lo tengan  Refactorizar pantalla de configuraciones  Agregar pantalla \"Ver datasets destacados\"  Agregar bot\u00f3n \"rechazar\" en recursos (files, maps, charts) con estado \"en revisi\u00f3n\"  Editar los formularios de los modelos que tengan categor\u00edas relacionadas", 
+            "text": "Finalizar de implemetar el css propuesto  Agregar cach\u00e9 para el login  Generar submen\u00faes dentro de crear archivo  A partir de un archivo  y  A partir de un servicio web  Generar el m\u00f3dulo de WS (crear/editar)  Agregar un link de descarga al manual de usuario (184)  Seleccionar que modelos importar desde el importador  Agregar campo  Gu\u00eda de datos  en la creaci\u00f3n / edici\u00f3n de un archivo", 
             "title": "Admin"
         }, 
         {
             "location": "/sprints/sprint-14/#frontend", 
-            "text": "Agregar filtros por subcategor\u00edas (si la categor\u00eda no tiene subcategor\u00edas no mostrar filtro)", 
+            "text": "Agregar filtros por subcategor\u00edas (si la categor\u00eda no tiene subcategor\u00edas no mostrar filtro)  Url friendly en categor\u00edas (181)  Agregar link a gu\u00eda de datos en la vista de los datasets, en caso de no tener no mostrar link", 
             "title": "Frontend"
         }, 
         {
             "location": "/sprints/sprint-14/#prioridades", 
+            "text": "Instalar, configurar e integrar sails-permissions  Generar roles:  SuperAdmin  Admin  Guest    Implementar permisos para cada rol  Instalar y configurar angular-permission  Validar permisos para cada acci\u00f3n en el admin", 
+            "title": "Prioridades"
+        }, 
+        {
+            "location": "/sprints/sprint-15/", 
+            "text": "Duraci\u00f3n:\n Mi\u00e9rcoles 31/08/16 - Viernes 09/09/16\n\n\nAlcance\n\n\nSprint de subcategor\u00edas y roles\n\n\nObjetivo\n\n\nGenerar subcategor\u00edas dentro de categor\u00edas, y desarrollar roles planteados.\nFinalizar las tareas en backlog del sprint anterior.\nContinuar con la correcci\u00f3n de bugs, priorizando los errores bloqueantes levantados por el equipo de datos.\n\n\nTareas\n\n\nAPI\n\n\n\n\nAgregar campos \nparent\n y \nsubcategories\n en \nCategory\n, el cual es una relaci\u00f3n recursiva\n\n\nInstalar, configurar e integrar sails-permissions\n\n\nGenerar roles:\n\n\nSuperAdmin\n\n\nAdmin\n\n\nGuest\n\n\n\n\n\n\nImplementar permisos para cada rol\n\n\nCompletar seeds de config\n\n\nEstado revisi\u00f3n\n\n\nEstado rechazado\n\n\n\n\n\n\nAgregar seeds de subcategor\u00edas\n\n\n\n\nAdmin\n\n\n\n\nAgregar secci\u00f3n \"Mi Perfil\"\n\n\nInstalar y configurar angular-permission\n\n\nMapear permisos de la api\n\n\nValidar permisos para cada acci\u00f3n en el admin\n\n\nAgregar dropdown \nrole\n en el formulario de \nUser\n, incorporandole un tooltip (globo de di\u00e1logo) que muestre un link. Dicho link informar\u00e1 los permisos de cada rol\n\n\nAgregar pantalla \n\"En revisi\u00f3n\"\n, que liste los recursos (files, maps, charts) que tengan dicho estado\n\n\nAgregar modulo \"Crear subcategor\u00eda\" dentro de categor\u00eda\n\n\nCompletar filtros y b\u00fasquedas en pantallas que no lo tengan\n\n\nRefactorizar pantalla de configuraciones\n\n\nAgregar pantalla \"Ver datasets destacados\"\n\n\nAgregar bot\u00f3n \"rechazar\" en recursos (files, maps, charts) con estado \"en revisi\u00f3n\"\n\n\nEditar los formularios de los modelos que tengan categor\u00edas relacionadas\n\n\n\n\nFrontend\n\n\n\n\nAgregar filtros por subcategor\u00edas (si la categor\u00eda no tiene subcategor\u00edas no mostrar filtro)\n\n\n\n\nPrioridades\n\n\n\n\nInstalar, configurar e integrar sails-permissions\n\n\nGenerar roles:\n\n\nSuperAdmin\n\n\nAdmin\n\n\nGuest\n\n\n\n\n\n\nImplementar permisos para cada rol\n\n\nInstalar y configurar angular-permission\n\n\nValidar permisos para cada acci\u00f3n en el admin", 
+            "title": "Sprint 15"
+        }, 
+        {
+            "location": "/sprints/sprint-15/#alcance", 
+            "text": "Sprint de subcategor\u00edas y roles", 
+            "title": "Alcance"
+        }, 
+        {
+            "location": "/sprints/sprint-15/#objetivo", 
+            "text": "Generar subcategor\u00edas dentro de categor\u00edas, y desarrollar roles planteados.\nFinalizar las tareas en backlog del sprint anterior.\nContinuar con la correcci\u00f3n de bugs, priorizando los errores bloqueantes levantados por el equipo de datos.", 
+            "title": "Objetivo"
+        }, 
+        {
+            "location": "/sprints/sprint-15/#tareas", 
+            "text": "", 
+            "title": "Tareas"
+        }, 
+        {
+            "location": "/sprints/sprint-15/#api", 
+            "text": "Agregar campos  parent  y  subcategories  en  Category , el cual es una relaci\u00f3n recursiva  Instalar, configurar e integrar sails-permissions  Generar roles:  SuperAdmin  Admin  Guest    Implementar permisos para cada rol  Completar seeds de config  Estado revisi\u00f3n  Estado rechazado    Agregar seeds de subcategor\u00edas", 
+            "title": "API"
+        }, 
+        {
+            "location": "/sprints/sprint-15/#admin", 
+            "text": "Agregar secci\u00f3n \"Mi Perfil\"  Instalar y configurar angular-permission  Mapear permisos de la api  Validar permisos para cada acci\u00f3n en el admin  Agregar dropdown  role  en el formulario de  User , incorporandole un tooltip (globo de di\u00e1logo) que muestre un link. Dicho link informar\u00e1 los permisos de cada rol  Agregar pantalla  \"En revisi\u00f3n\" , que liste los recursos (files, maps, charts) que tengan dicho estado  Agregar modulo \"Crear subcategor\u00eda\" dentro de categor\u00eda  Completar filtros y b\u00fasquedas en pantallas que no lo tengan  Refactorizar pantalla de configuraciones  Agregar pantalla \"Ver datasets destacados\"  Agregar bot\u00f3n \"rechazar\" en recursos (files, maps, charts) con estado \"en revisi\u00f3n\"  Editar los formularios de los modelos que tengan categor\u00edas relacionadas", 
+            "title": "Admin"
+        }, 
+        {
+            "location": "/sprints/sprint-15/#frontend", 
+            "text": "Agregar filtros por subcategor\u00edas (si la categor\u00eda no tiene subcategor\u00edas no mostrar filtro)", 
+            "title": "Frontend"
+        }, 
+        {
+            "location": "/sprints/sprint-15/#prioridades", 
             "text": "Instalar, configurar e integrar sails-permissions  Generar roles:  SuperAdmin  Admin  Guest    Implementar permisos para cada rol  Instalar y configurar angular-permission  Validar permisos para cada acci\u00f3n en el admin", 
             "title": "Prioridades"
         }, 

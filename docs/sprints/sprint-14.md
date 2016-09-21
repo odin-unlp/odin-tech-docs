@@ -21,7 +21,7 @@ Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualiza
  manteniendo una [caché](https://github.com/ptarjan/node-cache) para no cargar demasiado al servidor
 9. Actualizar las visualizaciones (mapas y gráficos) cuando los datos de un archivo son actualizados (62)
 10. Agregar el campo `dataGuide` en el modelo `File`
-tags-fromatos-organizacion
+11. Agregar slug en `tags`,`fromatos` y `organizacion`
 
 ## Admin
 1. Finalizar de implemetar el css propuesto
@@ -29,13 +29,17 @@ tags-fromatos-organizacion
 3. Generar submenúes dentro de crear archivo `A partir de un archivo` y `A partir de un servicio web`
 4. Generar el módulo de WS (crear/editar)
 5. Agregar un link de descarga al manual de usuario (184)
-6. Seleccionar que modelos importar desde el importador
-7. Agregar campo `Guía de datos` en la creación / edición de un archivo
+6. Seleccionar que modelos importar desde el importador (218)
+7. Agregar campo `Guía de datos` en la creación / edición de un archivo (169)
 
 ## Frontend
 1. Agregar filtros por subcategorías (si la categoría no tiene subcategorías no mostrar filtro)
 2. Url friendly en categorías (181)
-3. Agregar link a guía de datos en la vista de los datasets, en caso de no tener no mostrar link
+3. Agregar link a guía de datos en la vista de los datasets, en caso de no tener no mostrar link (169)
+4. Tomar las visitas desde analytics (185)
+
+## Otros
+1. Implementar google analytics (146)
 
 # Prioridades
 1. Instalar, configurar e integrar sails-permissions
@@ -46,5 +50,4 @@ tags-fromatos-organizacion
 3. Implementar permisos para cada rol
 4. Instalar y configurar angular-permission
 5. Validar permisos para cada acción en el admin
-
 

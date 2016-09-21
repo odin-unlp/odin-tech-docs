@@ -8,7 +8,7 @@
   
   
   
-  <title>Sprint 11 - ODIN</title>
+  <title>Sprint 15 - ODIN</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Sprint 11";
-    var mkdocs_page_input_path = "sprints/sprint-11.md";
-    var mkdocs_page_url = "/sprints/sprint-11/";
+    var mkdocs_page_name = "Sprint 15";
+    var mkdocs_page_input_path = "sprints/sprint-15.md";
+    var mkdocs_page_url = "/sprints/sprint-15/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -179,31 +179,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Sprint 11</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#alcance">Alcance</a></li>
-                
-                    <li><a class="toctree-l4" href="#objetivo">Objetivo</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#tareas">Tareas</a></li>
-                
-                    <li><a class="toctree-l4" href="#api">API</a></li>
-                
-                    <li><a class="toctree-l4" href="#admin">Admin</a></li>
-                
-                    <li><a class="toctree-l4" href="#frontend">Frontend</a></li>
-                
-                    <li><a class="toctree-l4" href="#otros">Otros</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#prioridades">Prioridades</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../sprint-11/">Sprint 11</a>
         
     </li>
 
@@ -230,8 +207,29 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../sprint-15/">Sprint 15</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Sprint 15</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#alcance">Alcance</a></li>
+                
+                    <li><a class="toctree-l4" href="#objetivo">Objetivo</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#tareas">Tareas</a></li>
+                
+                    <li><a class="toctree-l4" href="#api">API</a></li>
+                
+                    <li><a class="toctree-l4" href="#admin">Admin</a></li>
+                
+                    <li><a class="toctree-l4" href="#frontend">Frontend</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#prioridades">Prioridades</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -302,7 +300,7 @@
         
       
     
-    <li>Sprint 11</li>
+    <li>Sprint 15</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -316,76 +314,63 @@
           <div role="main">
             <div class="section">
               
-                <p><strong>Duración:</strong> Lunes 08/08/16 - Viernes 12/08/16</p>
+                <p><strong>Duración:</strong> Miércoles 31/08/16 - Viernes 09/09/16</p>
 <h1 id="alcance">Alcance</h1>
-<p>Sprint de frontend y corrección de errores.</p>
+<p>Sprint de subcategorías y roles</p>
 <h2 id="objetivo">Objetivo</h2>
-<p>Desarrollar la funcionalidad del Frontend y realizar las correcciones necesarias en la API y el Admin.</p>
+<p>Generar subcategorías dentro de categorías, y desarrollar roles planteados.
+Finalizar las tareas en backlog del sprint anterior.
+Continuar con la corrección de bugs, priorizando los errores bloqueantes levantados por el equipo de datos.</p>
 <h1 id="tareas">Tareas</h1>
 <h2 id="api">API</h2>
 <ol>
-<li>Desarrollar la descarga de archivos en más de un formato</li>
-<li>Comprobar los archivos permitidos para subir desde el modelo filetypes</li>
-<li>Verificar que latitud y longitud no estén vacías</li>
-<li>Normalizar basemaps</li>
-<li>Actualizar archivos, reemplazando el archivo</li>
-<li>Usar el slug del nombre del archivo para guardarlo en disco</li>
-<li>Actualizar archivos, con borrrado físico del archivo antiguo</li>
-<li>Carpeta de dataset guardada con nombre en vez de id</li>
-<li>Crear endpoint para refrescar token</li>
-<li>Agregar endpoint <code>/:resource/statistics</code>, con los hits a cada endpoint del recurso y sus ítems</li>
+<li>Agregar campos <code>parent</code> y <code>subcategories</code> en <code>Category</code>, el cual es una relación recursiva</li>
+<li>Instalar, configurar e integrar sails-permissions</li>
+<li>Generar roles:<ul>
+<li>SuperAdmin</li>
+<li>Admin</li>
+<li>Guest</li>
+</ul>
+</li>
+<li>Implementar permisos para cada rol</li>
+<li>Completar seeds de config<ul>
+<li>Estado revisión</li>
+<li>Estado rechazado</li>
+</ul>
+</li>
+<li>Agregar seeds de subcategorías</li>
 </ol>
 <h2 id="admin">Admin</h2>
 <ol>
-<li>Agregar el campo <code>mimetype</code> al CRUD de file types</li>
-<li>Tomar los tipos de archivos permitidos desde la API</li>
-<li>Agregar al CRUD de File los campos <code>gatheringDate</code> y <code>updated</code></li>
-<li>Actualizar archivos, reemplazando el archivo</li>
-<li>Avisar al usuario los errores en la creación de mapa</li>
-<li>Agregar el campo Estado a la edición de datasets</li>
+<li>Agregar sección "Mi Perfil"</li>
+<li>Instalar y configurar angular-permission</li>
+<li>Mapear permisos de la api</li>
+<li>Validar permisos para cada acción en el admin</li>
+<li>Agregar dropdown <code>role</code> en el formulario de <code>User</code>, incorporandole un tooltip (globo de diálogo) que muestre un link. Dicho link informará los permisos de cada rol</li>
+<li>Agregar pantalla <strong>"En revisión"</strong>, que liste los recursos (files, maps, charts) que tengan dicho estado</li>
+<li>Agregar modulo "Crear subcategoría" dentro de categoría</li>
+<li>Completar filtros y búsquedas en pantallas que no lo tengan</li>
+<li>Refactorizar pantalla de configuraciones</li>
+<li>Agregar pantalla "Ver datasets destacados"</li>
+<li>Agregar botón "rechazar" en recursos (files, maps, charts) con estado "en revisión"</li>
+<li>Editar los formularios de los modelos que tengan categorías relacionadas</li>
 </ol>
 <h2 id="frontend">Frontend</h2>
 <ol>
-<li>Hacer funcionales las categorías</li>
-<li>Agregar cantidad de datasets al filtrar</li>
-<li>Quitar la cantidad de vistas de cada dataset en el listado de datasets</li>
-<li>Colocar las categorías en 3 filas de 3 ítems</li>
-<li>Hacer funcionales los breadcrumbs</li>
-<li>Alinear correctamente el separador <code>|</code> entre los ítems del breadcrumb</li>
-<li>Linkear <strong>Especificaciones</strong>, <strong>Términos y condiciones</strong> y <strong>Contacto</strong> al Home</li>
-<li>Linkear <strong>Ver conjunto de visualizaciones</strong> al Home</li>
-<li>Cambiar <strong>Más Visitados</strong> por <strong>Más Descargados</strong></li>
-<li>Eliminar el link del label de formato</li>
-<li>Hacer funcionales los filtros por etiquetas al clickearlas</li>
-<li>Hacer el dropdown de previsualización de archivo</li>
-<li>Linkear el botón de Twitter del footer a la cuenta <strong>@LABgcba</strong></li>
-<li>Implementar la vista de tabla</li>
-<li>Hacer funcionales los filtros</li>
-<li>Limitar a 100 carácteres la descripción de los datasets en el Home</li>
-<li>Hacer el dropdown de descarga de archivo</li>
-<li>Hacer funcional la búsqueda</li>
-<li>Maquetar los comentarios</li>
-<li>Integrar Disqus</li>
-<li>Tomar las imágenes de las categorías desde la API</li>
-<li>Implementar el CSS de <strong>Marca BA</strong></li>
-<li>Agregar filtro de <strong>Publicado</strong> en datasets y archivos</li>
-</ol>
-<h2 id="otros">Otros</h2>
-<ol>
-<li>Escribir el CHANGELOG</li>
+<li>Agregar filtros por subcategorías (si la categoría no tiene subcategorías no mostrar filtro)</li>
 </ol>
 <h1 id="prioridades">Prioridades</h1>
 <ol>
-<li>Hacer funcionales las categorías</li>
-<li>Resolver Authorization frontend</li>
-<li>Implementar la vista de tabla</li>
-<li>Colocar las categorías en 3 filas de 3 ítems</li>
-<li>Hacer funcionales los filtros</li>
-<li>Implementar el CSS de <strong>Marca BA</strong></li>
-<li>Hacer funcional la búsqueda</li>
-<li>Desarrollar la descarga de archivos en más de un formato</li>
-<li>Actualizar archivos, reemplazando el archivo</li>
-<li>Agregar endpoint <code>/:resource/statistics</code>, con los hits a cada endpoint del recurso y sus ítems</li>
+<li>Instalar, configurar e integrar sails-permissions</li>
+<li>Generar roles:<ul>
+<li>SuperAdmin</li>
+<li>Admin</li>
+<li>Guest</li>
+</ul>
+</li>
+<li>Implementar permisos para cada rol</li>
+<li>Instalar y configurar angular-permission</li>
+<li>Validar permisos para cada acción en el admin</li>
 </ol>
               
             </div>
@@ -394,10 +379,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../sprint-12/" class="btn btn-neutral float-right" title="Sprint 12">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../references/status-codes/" class="btn btn-neutral float-right" title="HTTP Status Codes">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../sprint-10/" class="btn btn-neutral" title="Sprint 10"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sprint-14/" class="btn btn-neutral" title="Sprint 14"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -425,10 +410,10 @@
           <a href="https://github.com/gcba-odin/odin-tech-docs" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../sprint-10/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../sprint-14/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../sprint-12/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../references/status-codes/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
