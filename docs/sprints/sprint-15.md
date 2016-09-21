@@ -1,37 +1,44 @@
-**Duración:** Viernes 23/09/16 - Lunes 03/10/16
+**Duración:** Miércoles 31/08/16 - Viernes 09/09/16
 
 # Alcance
-Sprint de Web Services
+Sprint de subcategorías y roles
 
 ## Objetivo
-Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualización con mayor periodicidad
+Generar subcategorías dentro de categorías, y desarrollar roles planteados.
+Finalizar las tareas en backlog del sprint anterior.
+Continuar con la corrección de bugs, priorizando los errores bloqueantes levantados por el equipo de datos.
 
 # Tareas
 
 ## API
-1. Hacer el modelo, routes y controller de `Soap`.
-2. Hacer el modelo, routes y controller de `Rest`.
-3. Crear la relacion entre `File` y `Soap` / `Rest`
-4. Crear el archivo `WebServicesModel.js` que contenga los atributos en común entre ambos modelos.
-5. Crear tarea para obtener los datos desde un WS [Soap](https://github.com/vpulim/node-soap)
-6. Crear tarea para obtener los datos desde un WS Rest
-7. Al crear un WS que no sea real time, crear un cron con la periocidad indicada para obtener nuevos datos
- en caso de que los haya `(if-modified-since)` y persistirlos
-8. Al crear un WS real time, las consultas se pasan directamente al WS,
- manteniendo una [caché](https://github.com/ptarjan/node-cache) para no cargar demasiado al servidor
-9. Actualizar las visualizaciones (mapas y gráficos) cuando los datos de un archivo son actualizados (62)
+1. Agregar campos `parent` y `subcategories` en `Category`, el cual es una relación recursiva
+2. Instalar, configurar e integrar sails-permissions
+3. Generar roles:
+    - SuperAdmin
+    - Admin
+    - Guest
+4. Implementar permisos para cada rol
+5. Completar seeds de config
+    - Estado revisión
+    - Estado rechazado
+6. Agregar seeds de subcategorías
 
 ## Admin
-1. Finalizar de implemetar el css propuesto
-2. Agregar caché para el login
-3. Generar submenúes dentro de crear archivo `A partir de un archivo` y `A partir de un servicio web`
-4. Generar el módulo de WS (crear/editar)
-5. Agregar un link de descarga al manual de usuario (184)
-6. Seleccionar que modelos importar desde el importador
+1. Agregar sección "Mi Perfil"
+2. Instalar y configurar angular-permission
+3. Mapear permisos de la api
+4. Validar permisos para cada acción en el admin
+5. Agregar dropdown `role` en el formulario de `User`, incorporandole un tooltip (globo de diálogo) que muestre un link. Dicho link informará los permisos de cada rol
+6. Agregar pantalla **"En revisión"**, que liste los recursos (files, maps, charts) que tengan dicho estado
+7. Agregar modulo "Crear subcategoría" dentro de categoría
+8. Completar filtros y búsquedas en pantallas que no lo tengan
+9. Refactorizar pantalla de configuraciones
+10. Agregar pantalla "Ver datasets destacados"
+11. Agregar botón "rechazar" en recursos (files, maps, charts) con estado "en revisión"
+12. Editar los formularios de los modelos que tengan categorías relacionadas
 
 ## Frontend
 1. Agregar filtros por subcategorías (si la categoría no tiene subcategorías no mostrar filtro)
-2. Url friendly en categorías (181)
 
 # Prioridades
 1. Instalar, configurar e integrar sails-permissions
