@@ -224,6 +224,15 @@
                 <li class="toctree-l3"><a href="#prioridades">Prioridades</a></li>
                 
             
+                <li class="toctree-l3"><a href="#modelos">Modelos</a></li>
+                
+                    <li><a class="toctree-l4" href="#webservicesmodel">WebServicesModel</a></li>
+                
+                    <li><a class="toctree-l4" href="#rest">Rest</a></li>
+                
+                    <li><a class="toctree-l4" href="#soap">Soap</a></li>
+                
+            
             </ul>
         
     </li>
@@ -372,6 +381,140 @@
 <li>Instalar y configurar angular-permission</li>
 <li>Validar permisos para cada acción en el admin</li>
 </ol>
+<h1 id="modelos">Modelos</h1>
+<h2 id="webservicesmodel">WebServicesModel</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>url</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>attributesAsHeaders</strong></p>
+<p><em>Tipo:</em> boolean</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>parameters</strong></p>
+<p><em>Tipo:</em> json</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h2 id="rest">Rest</h2>
+<ul>
+<li>
+<p><strong>datapath</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+<p><em>Descripcion:</em> Define la ruta(xpath o json-path) a los títulos de la tabla.</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>titlepath</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+<p><em>Descripcion:</em> Define la ruta(xpath o json-path) a los datos de la tabla.</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>token</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+<p><em>Descripcion:</em> Define el token para firmar la consulta.</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>tokenSignature</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+<p><em>Descripcion:</em> Nombre del argumento que contendrá la firma.</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>tokenAlgorithm</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+<p><em>Descripcion:</em> Identifica el algoritmo a utilizar para la firma.</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>username</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>password</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<h2 id="soap">Soap</h2>
+<ul>
+<li>
+<p><strong>method</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Descripcion:</em> Define el nombre de la operación a invocar</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>namespace</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Descripcion:</em> define el Namespace para la operación</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>token</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 500 carácteres</p>
+<p><em>Descripcion:</em> Define el token para firmar la consulta.</p>
+</li>
+</ul>
+<hr />
               
             </div>
           </div>
