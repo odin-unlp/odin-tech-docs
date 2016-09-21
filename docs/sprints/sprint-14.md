@@ -20,7 +20,7 @@ Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualiza
 8. Al crear un WS real time, las consultas se pasan directamente al WS,
  manteniendo una [caché](https://github.com/ptarjan/node-cache) para no sobrecargar el servidor
 9. Actualizar las visualizaciones (mapas y gráficos) cuando los datos de un archivo son actualizados (62)
-10. Agregar el campo `dataGuide` en el modelo `File`
+10. Agregar el campo `layout` en el modelo `File`
 11. Agregar campo slug en `Tags`,`FileType` y `Organization`
 
 ## Admin
