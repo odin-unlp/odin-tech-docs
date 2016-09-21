@@ -51,3 +51,153 @@ Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualiza
 4. Instalar y configurar angular-permission
 5. Validar permisos para cada acción en el admin
 
+
+# Modelos
+
+## WebServicesModel
+
+- **id**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Único:* sí
+
+    *Max:* 15 carácteres
+
+---
+
+- **url**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Max:* 500 carácteres
+
+---
+
+- **attributesAsHeaders**
+
+    *Tipo:* boolean
+
+    *Max:* 500 carácteres
+
+---
+
+- **parameters**
+
+    *Tipo:* json
+
+---
+
+- **createdAt**
+
+    *Tipo:* datetime
+
+    *Default:* fecha y hora actuales
+
+
+## Rest
+
+- **datapath**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+    *Descripcion:* Define la ruta(xpath o json-path) a los títulos de la tabla.
+
+---
+
+- **titlepath**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+    *Descripcion:* Define la ruta(xpath o json-path) a los datos de la tabla.
+
+---
+
+- **token**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+    *Descripcion:* Define el token para firmar la consulta.
+
+---
+
+- **tokenSignature**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+    *Descripcion:* Nombre del argumento que contendrá la firma.
+
+---
+
+- **tokenAlgorithm**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+    *Descripcion:* Identifica el algoritmo a utilizar para la firma.
+
+---
+
+- **username**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+---
+
+- **password**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+
+## Soap
+
+- **method**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+    *Requerido:* sí
+
+    *Descripcion:* Define el nombre de la operación a invocar
+
+---
+
+- **namespace**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+    *Requerido:* sí
+
+    *Descripcion:* define el Namespace para la operación
+
+---
+
+- **token**
+
+    *Tipo:* string
+
+    *Max:* 500 carácteres
+
+    *Descripcion:* Define el token para firmar la consulta.
+
+---
