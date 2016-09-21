@@ -339,17 +339,17 @@
 <li>Crear el archivo <code>WebServicesModel.js</code> que contenga los atributos en común entre ambos modelos.</li>
 <li>Crear un servicio para obtener los datos desde un WS <a href="https://github.com/vpulim/node-soap">Soap</a></li>
 <li>Crear un servicio para obtener los datos desde un WS Rest</li>
-<li>Al crear un WS que no sea real time, crear un cron con la periocidad indicada para obtener nuevos datos
+<li>Al crear un WS que no sea real time, crear un cron con la periodicidad indicada para obtener nuevos datos
  en caso de que los haya <code>(if-modified-since)</code> y persistirlos</li>
 <li>Al crear un WS real time, las consultas se pasan directamente al WS,
- manteniendo una <a href="https://github.com/ptarjan/node-cache">caché</a> para no cargar demasiado al servidor</li>
+ manteniendo una <a href="https://github.com/ptarjan/node-cache">caché</a> para no sobrecargar el servidor</li>
 <li>Actualizar las visualizaciones (mapas y gráficos) cuando los datos de un archivo son actualizados (62)</li>
 <li>Agregar el campo <code>dataGuide</code> en el modelo <code>File</code></li>
-<li>Agregar campo slug en <code>tags</code>,<code>fromatos</code> y <code>organizacion</code></li>
+<li>Agregar campo slug en <code>Tags</code>,<code>FileType</code> y <code>Organization</code></li>
 </ol>
 <h2 id="admin">Admin</h2>
 <ol>
-<li>Finalizar de implemetar el css</li>
+<li>Finalizar implementación de diseño</li>
 <li>Agregar <a href="https://www.google.com/recaptcha/intro/index.html">captcha</a> para el login</li>
 <li>Generar submenúes dentro de crear archivo <code>A partir de un archivo</code> y <code>A partir de un servicio web</code></li>
 <li>Generar el módulo de WS (crear/editar)</li>
@@ -371,9 +371,9 @@
 <ol>
 <li>Crear un servicio para obtener los datos desde un WS <a href="https://github.com/vpulim/node-soap">Soap</a></li>
 <li>Crear un servicio para obtener los datos desde un WS Rest</li>
-<li>Al crear un WS que no sea real time, crear un cron con la periocidad indicada para obtener nuevos datos
+<li>Al crear un WS que no sea real time, crear un cron con la periodicidad indicada para obtener nuevos datos
  en caso de que los haya <code>(if-modified-since)</code> y persistirlos</li>
-<li>Agregar slug en <code>tags</code>,<code>fromatos</code> y <code>organizacion</code></li>
+<li>Agregar campo slug en <code>Tags</code>,<code>FileType</code> y <code>Organization</code></li>
 <li>Generar el módulo de WS (crear/editar)</li>
 </ol>
 <h1 id="modelos">Modelos</h1>

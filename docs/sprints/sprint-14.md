@@ -15,16 +15,16 @@ Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualiza
 4. Crear el archivo `WebServicesModel.js` que contenga los atributos en común entre ambos modelos.
 5. Crear un servicio para obtener los datos desde un WS [Soap](https://github.com/vpulim/node-soap)
 6. Crear un servicio para obtener los datos desde un WS Rest
-7. Al crear un WS que no sea real time, crear un cron con la periocidad indicada para obtener nuevos datos
+7. Al crear un WS que no sea real time, crear un cron con la periodicidad indicada para obtener nuevos datos
  en caso de que los haya `(if-modified-since)` y persistirlos
 8. Al crear un WS real time, las consultas se pasan directamente al WS,
- manteniendo una [caché](https://github.com/ptarjan/node-cache) para no cargar demasiado al servidor
+ manteniendo una [caché](https://github.com/ptarjan/node-cache) para no sobrecargar el servidor
 9. Actualizar las visualizaciones (mapas y gráficos) cuando los datos de un archivo son actualizados (62)
 10. Agregar el campo `dataGuide` en el modelo `File`
-11. Agregar campo slug en `tags`,`fromatos` y `organizacion`
+11. Agregar campo slug en `Tags`,`FileType` y `Organization`
 
 ## Admin
-1. Finalizar de implemetar el css
+1. Finalizar implementación de diseño
 2. Agregar [captcha](https://www.google.com/recaptcha/intro/index.html) para el login
 3. Generar submenúes dentro de crear archivo `A partir de un archivo` y `A partir de un servicio web`
 4. Generar el módulo de WS (crear/editar)
@@ -43,9 +43,9 @@ Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualiza
 # Prioridades
 1. Crear un servicio para obtener los datos desde un WS [Soap](https://github.com/vpulim/node-soap)
 2. Crear un servicio para obtener los datos desde un WS Rest
-3. Al crear un WS que no sea real time, crear un cron con la periocidad indicada para obtener nuevos datos
+3. Al crear un WS que no sea real time, crear un cron con la periodicidad indicada para obtener nuevos datos
  en caso de que los haya `(if-modified-since)` y persistirlos
-4. Agregar slug en `tags`,`fromatos` y `organizacion`
+4. Agregar campo slug en `Tags`,`FileType` y `Organization`
 5. Generar el módulo de WS (crear/editar)
 
 # Modelos
