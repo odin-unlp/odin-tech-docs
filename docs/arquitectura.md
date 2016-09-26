@@ -2,7 +2,7 @@
 
  ![arquitectura](http://i.imgur.com/N3qRwIW.png?1)
 
-- En la **base de datos No SQL** se deben almacenar los datasets propiamente dichos, que son datos no relacionales.
+- En la **base de datos No SQL** se deben almacenar los datos de los archivos, que son datos no relacionales.
 - En la **base de datos SQL** se deben almacenar los datos relacionales del sistema, como ser: usuarios, permisos, roles, organizaciones, metadatos, etc.
 - El **almacenamiento de estáticos** es para almacenar los recursos asociados a los datasets: archivos csv, pdf, shp, etc.
 - El **API Gateway** es una aplicación third party que oficia de proxy entre los clientes y la API, añadiendo una capa de administración extensible con plugins.
@@ -14,12 +14,12 @@
 ## API
 
 - **Sistema operativo:** Ubuntu 16.04 Xenial Xerus
-- **Servidor:** NodeJS 5.11.1
+- **Servidor:** NodeJS 4.5.0
 - **Lenguaje:** JavaScript 5
-- **Framework:** Sails 0.12
-- **BBDD no relacional:** DocumentDB con interfaz de MongoDB (Azure Managed)
-- **BDD relacional:** SQLServer (Azure Managed)
-- **Almacenamiento de archivos:** Azure DataStorage
+- **Framework:** Sails 0.12.3
+- **BBDD no relacional:** MongoDB
+- **BDD relacional:** PostgreSQL
+- **Almacenamiento de archivos:** FileSystem
 
 ## API Gateway
 
