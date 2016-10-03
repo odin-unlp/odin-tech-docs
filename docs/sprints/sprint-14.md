@@ -1,4 +1,4 @@
-**Duración:** Viernes 23/09/16 - Lunes 03/10/16
+**Duración:** Viernes 23/09/16 - Miercoles 05/10/16
 
 # Alcance
 Sprint de Web Services
@@ -9,9 +9,9 @@ Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualiza
 # Tareas
 
 ## API
-1. Crear el modelo `Soap`.
-2. Crear el modelo `Rest`.
-3. Crear la relacion entre `File` y `Soap` / `Rest`
+1. Crear el modelo `SoapService`.
+2. Crear el modelo `RestService`.
+3. Crear la relacion entre `File` y `SoapService` / `RestService`
 4. Crear el archivo `WebServicesModel.js` que contenga los atributos en común entre ambos modelos.
 5. Crear un servicio para obtener los datos desde un WS [Soap](https://github.com/vpulim/node-soap)
 6. Crear un servicio para obtener los datos desde un WS Rest
@@ -78,8 +78,6 @@ Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualiza
 
     *Tipo:* boolean
 
-    *Max:* 500 carácteres
-
 ---
 
 - **parameters**
@@ -90,7 +88,7 @@ Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualiza
 
 ---
 
-## Rest < WebServicesModel
+## RestService < WebServicesModel
 
 - **datapath**
 
@@ -98,7 +96,7 @@ Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualiza
 
     *Max:* 500 carácteres
 
-    *Descripcion:* Define la ruta(xpath o json-path) a los títulos de la tabla.
+    *Descripcion:* Define la ruta(xpath o json-path) a los datos de la tabla.
 
 ---
 
@@ -108,7 +106,7 @@ Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualiza
 
     *Max:* 500 carácteres
 
-    *Descripcion:* Define la ruta(xpath o json-path) a los datos de la tabla.
+    *Descripcion:* Define la ruta(xpath o json-path) a los títulos de la tabla.
 
 ---
 
@@ -157,7 +155,7 @@ Permitir crear archivos desde WS Rest y Soap, ya sean real time, o con actualiza
     *Max:* 500 carácteres
 
 
-## Soap < WebServicesModel
+## SoapService < WebServicesModel
 
 - **method**
 

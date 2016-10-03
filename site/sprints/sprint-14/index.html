@@ -228,9 +228,9 @@
                 
                     <li><a class="toctree-l4" href="#webservicesmodel-archivo">WebServicesModel (archivo)</a></li>
                 
-                    <li><a class="toctree-l4" href="#rest-webservicesmodel">Rest &lt; WebServicesModel</a></li>
+                    <li><a class="toctree-l4" href="#restservice-webservicesmodel">RestService &lt; WebServicesModel</a></li>
                 
-                    <li><a class="toctree-l4" href="#soap-webservicesmodel">Soap &lt; WebServicesModel</a></li>
+                    <li><a class="toctree-l4" href="#soapservice-webservicesmodel">SoapService &lt; WebServicesModel</a></li>
                 
             
             </ul>
@@ -325,7 +325,7 @@
           <div role="main">
             <div class="section">
               
-                <p><strong>Duración:</strong> Viernes 23/09/16 - Lunes 03/10/16</p>
+                <p><strong>Duración:</strong> Viernes 23/09/16 - Miercoles 05/10/16</p>
 <h1 id="alcance">Alcance</h1>
 <p>Sprint de Web Services</p>
 <h2 id="objetivo">Objetivo</h2>
@@ -333,9 +333,9 @@
 <h1 id="tareas">Tareas</h1>
 <h2 id="api">API</h2>
 <ol>
-<li>Crear el modelo <code>Soap</code>.</li>
-<li>Crear el modelo <code>Rest</code>.</li>
-<li>Crear la relacion entre <code>File</code> y <code>Soap</code> / <code>Rest</code></li>
+<li>Crear el modelo <code>SoapService</code>.</li>
+<li>Crear el modelo <code>RestService</code>.</li>
+<li>Crear la relacion entre <code>File</code> y <code>SoapService</code> / <code>RestService</code></li>
 <li>Crear el archivo <code>WebServicesModel.js</code> que contenga los atributos en común entre ambos modelos.</li>
 <li>Crear un servicio para obtener los datos desde un WS <a href="https://github.com/vpulim/node-soap">Soap</a></li>
 <li>Crear un servicio para obtener los datos desde un WS Rest</li>
@@ -401,7 +401,6 @@
 <li>
 <p><strong>attributesAsHeaders</strong></p>
 <p><em>Tipo:</em> boolean</p>
-<p><em>Max:</em> 500 carácteres</p>
 </li>
 </ul>
 <hr />
@@ -413,13 +412,13 @@
 </li>
 </ul>
 <hr />
-<h2 id="rest-webservicesmodel">Rest &lt; WebServicesModel</h2>
+<h2 id="restservice-webservicesmodel">RestService &lt; WebServicesModel</h2>
 <ul>
 <li>
 <p><strong>datapath</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 500 carácteres</p>
-<p><em>Descripcion:</em> Define la ruta(xpath o json-path) a los títulos de la tabla.</p>
+<p><em>Descripcion:</em> Define la ruta(xpath o json-path) a los datos de la tabla.</p>
 </li>
 </ul>
 <hr />
@@ -428,7 +427,7 @@
 <p><strong>titlepath</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 500 carácteres</p>
-<p><em>Descripcion:</em> Define la ruta(xpath o json-path) a los datos de la tabla.</p>
+<p><em>Descripcion:</em> Define la ruta(xpath o json-path) a los títulos de la tabla.</p>
 </li>
 </ul>
 <hr />
@@ -474,7 +473,7 @@
 <p><em>Max:</em> 500 carácteres</p>
 </li>
 </ul>
-<h2 id="soap-webservicesmodel">Soap &lt; WebServicesModel</h2>
+<h2 id="soapservice-webservicesmodel">SoapService &lt; WebServicesModel</h2>
 <ul>
 <li>
 <p><strong>method</strong></p>
