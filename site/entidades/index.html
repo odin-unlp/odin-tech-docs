@@ -179,33 +179,40 @@
                     <li><a class="toctree-l4" href="#campos_11">Campos</a></li>
                 
             
-                <li class="toctree-l3"><a href="#13-view">13. View</a></li>
+                <li class="toctree-l3"><a href="#13-config">13. Config</a></li>
                 
                     <li><a class="toctree-l4" href="#endpoints_12">Endpoints</a></li>
                 
                     <li><a class="toctree-l4" href="#campos_12">Campos</a></li>
                 
             
-                <li class="toctree-l3"><a href="#14-config">14. Config</a></li>
+                <li class="toctree-l3"><a href="#14-log">14. Log</a></li>
                 
                     <li><a class="toctree-l4" href="#endpoints_13">Endpoints</a></li>
                 
                     <li><a class="toctree-l4" href="#campos_13">Campos</a></li>
                 
             
-                <li class="toctree-l3"><a href="#15-log">15. Log</a></li>
+                <li class="toctree-l3"><a href="#15-statistic">15. Statistic</a></li>
                 
                     <li><a class="toctree-l4" href="#endpoints_14">Endpoints</a></li>
                 
-                    <li><a class="toctree-l4" href="#campos_14">Campos</a></li>
+            
+                <li class="toctree-l3"><a href="#campos_14">Campos</a></li>
                 
             
-                <li class="toctree-l3"><a href="#16-statistic">16. Statistic</a></li>
+                <li class="toctree-l3"><a href="#16-soapservice">16. SoapService</a></li>
                 
                     <li><a class="toctree-l4" href="#endpoints_15">Endpoints</a></li>
                 
+                    <li><a class="toctree-l4" href="#campos_15">Campos</a></li>
+                
             
-                <li class="toctree-l3"><a href="#campos_15">Campos</a></li>
+                <li class="toctree-l3"><a href="#17-restservice">17. RestService</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints_16">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#campos_16">Campos</a></li>
                 
             
             </ul>
@@ -422,7 +429,7 @@ GET      /organizations/count
 OPTIONS  /organizations/count
 
 GET      /organizations/:id
-PATCH    /organizations/:id
+PUT    /organizations/:id
 DELETE   /organizations/:id
 HEAD     /organizations/:id
 OPTIONS  /organizations/:id
@@ -450,6 +457,14 @@ OPTIONS  /organizations/:id
 <hr />
 <ul>
 <li>
+<p><strong>slug</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
 <p><strong>description</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 350 carácteres</p>
@@ -461,13 +476,6 @@ OPTIONS  /organizations/:id
 <p><strong>address</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 150 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>active</strong></p>
-<p><em>Tipo:</em> boolean</p>
 </li>
 </ul>
 <hr />
@@ -521,7 +529,7 @@ GET      /users/count
 OPTIONS  /users/count
 
 GET      /users/:id
-PATCH    /users/:id
+PUT    /users/:id
 DELETE   /users/:id
 HEAD     /users/:id
 OPTIONS  /users/:id
@@ -600,13 +608,6 @@ OPTIONS  /users/login
 <hr />
 <ul>
 <li>
-<p><strong>active</strong></p>
-<p><em>Tipo:</em> boolean</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
 <p><strong>createdAt</strong></p>
 <p><em>Tipo:</em> datetime</p>
 <p><em>Default:</em> fecha y hora actuales</p>
@@ -665,7 +666,7 @@ GET      /categories/count
 OPTIONS  /categories/count
 
 GET      /categories/:id
-PATCH    /categories/:id
+PUT    /categories/:id
 DELETE   /categories/:id
 HEAD     /categories/:id
 OPTIONS  /categories/:id
@@ -695,6 +696,22 @@ GET      /categories/:id/image
 <hr />
 <ul>
 <li>
+<p><strong>slug</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>fileName</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
 <p><strong>description</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 350 carácteres</p>
@@ -708,17 +725,6 @@ GET      /categories/:id/image
 <p><em>Requerido:</em> sí</p>
 <p><em>Max:</em> 6 carácteres</p>
 </li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>image</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 500 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
 <li>
 <p><strong>active:</strong></p>
 <p>Si la categoría está activa o no.</p>
@@ -769,7 +775,7 @@ GET      /statuses/count
 OPTIONS  /statuses/count
 
 GET      /statuses/:id
-PATCH    /statuses/:id
+PUT    /statuses/:id
 DELETE   /statuses/:id
 HEAD     /statuses/:id
 OPTIONS  /statuses/:id
@@ -813,11 +819,11 @@ OPTIONS  /statuses/:id
 <hr />
 <p><strong>Nota:</strong> a los fines del seedeo, los estados por recurso son:</p>
 <ul>
-<li>Draft</li>
-<li>Under Review</li>
-<li>Rejected</li>
-<li>Published</li>
-<li>Unpublished</li>
+<li>Borradow</li>
+<li>En revision</li>
+<li>Rechazado</li>
+<li>Publicado</li>
+<li>Despublicado</li>
 </ul>
 <h1 id="5-filetype">5. FileType</h1>
 <h2 id="endpoints_4">Endpoints</h2>
@@ -835,7 +841,7 @@ GET      /filetypes/count
 OPTIONS  /filetypes/count
 
 GET      /filetypes/:id
-PATCH    /filetypes/:id
+PUT    /filetypes/:id
 DELETE   /filetypes/:id
 HEAD     /filetypes/:id
 OPTIONS  /filetypes/:id
@@ -863,9 +869,23 @@ OPTIONS  /filetypes/:id
 <hr />
 <ul>
 <li>
+<p><strong>api</strong></p>
+<p>Indica si el tipo de archivo es parseable en la api</p>
+<p><em>Tipo:</em> boolean</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
 <p><strong>mimetype</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 200 carácteres</p>
+<p><em>Tipo:</em> array</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>editable</strong></p>
+<p><em>Tipo:</em> boolean</p>
 </li>
 </ul>
 <hr />
@@ -914,7 +934,7 @@ GET      /updatefrequencies/count
 OPTIONS  /updatefrequencies/count
 
 GET      /updatefrequencies/:id
-PATCH    /updatefrequencies/:id
+PUT    /updatefrequencies/:id
 DELETE   /updatefrequencies/:id
 HEAD     /updatefrequencies/:id
 OPTIONS  /updatefrequencies/:id
@@ -938,6 +958,11 @@ OPTIONS  /updatefrequencies/:id
 <p><em>Requerido:</em> sí</p>
 <p><em>Max:</em> 100 carácteres</p>
 </li>
+<li>
+<p><strong>timePattern</strong></p>
+<p>Indica la frequencia en la que se correrá el cron</p>
+<p><em>Tipo:</em> string</p>
+</li>
 </ul>
 <h1 id="7-tag">7. Tag</h1>
 <h2 id="endpoints_6">Endpoints</h2>
@@ -955,7 +980,7 @@ GET      /tags/count
 OPTIONS  /tags/count
 
 GET      /tags/:id
-PATCH    /tags/:id
+PUT    /tags/:id
 DELETE   /tags/:id
 HEAD     /tags/:id
 OPTIONS  /tags/:id
@@ -979,7 +1004,13 @@ OPTIONS  /tags/:id
 <p><em>Requerido:</em> sí</p>
 <p><em>Max:</em> 100 carácteres</p>
 </li>
+<li>
+<p><strong>slug</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
 </ul>
+<hr />
 <h3 id="claves-foraneas_3">Claves Foráneas</h3>
 <ul>
 <li>
@@ -1006,7 +1037,7 @@ GET      /datasets/count
 OPTIONS  /datasets/count
 
 GET      /datasets/:id
-PATCH    /datasets/:id
+PUT    /datasets/:id
 DELETE   /datasets/:id
 HEAD     /datasets/:id
 OPTIONS  /datasets/:id
@@ -1030,6 +1061,14 @@ GET  /datasets/:id/download
 <p><strong>name</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>slug</strong></p>
+<p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 150 carácteres</p>
 </li>
 </ul>
@@ -1066,81 +1105,8 @@ GET  /datasets/:id/download
 <hr />
 <ul>
 <li>
-<p><strong>optional1</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 500 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>optional2</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 500 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>optional3</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 500 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>optional4</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 500 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>optional5</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 500 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>optional6</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 500 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>optional7</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 500 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>optional8</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 500 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>optional9</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 500 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>optional10</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 500 carácteres</p>
+<p><strong>optionals</strong></p>
+<p><em>Tipo:</em> json</p>
 </li>
 </ul>
 <hr />
@@ -1220,7 +1186,7 @@ GET      /files/count
 OPTIONS  /files/count
 
 GET      /files/:id
-PATCH    /files/:id
+PUT    /files/:id
 DELETE   /files/:id
 HEAD     /files/:id
 OPTIONS  /files/:id
@@ -1244,6 +1210,14 @@ GET      /files/:id/resources
 <p><strong>name</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 150 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>fileName</strong></p>
+<p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 150 carácteres</p>
 </li>
 </ul>
@@ -1274,7 +1248,7 @@ GET      /files/:id/resources
 <hr />
 <ul>
 <li>
-<p><strong>visibility</strong></p>
+<p><strong>visible</strong></p>
 <p><em>Tipo:</em> boolean</p>
 </li>
 </ul>
@@ -1288,20 +1262,31 @@ GET      /files/:id/resources
 <hr />
 <ul>
 <li>
-<p><strong>updateDate</strong></p>
-<p><em>Tipo:</em> timestamp</p>
+<p><strong>layout</strong></p>
+<p>Indica si el archivo es guia de datos</p>
+<p><em>Tipo:</em> boolean</p>
 </li>
 </ul>
 <hr />
 <ul>
 <li>
-<p><strong>update</strong></p>
+<p><strong>updated</strong></p>
+<p>Indica si el archivo debería mostrarse en el frontend</p>
 <p><em>Tipo:</em> boolean</p>
-<p><em>Requerido:</em> sí</p>
 </li>
+</ul>
+<hr />
+<ul>
 <li>
 <p><strong>publishedAt</strong></p>
 <p><em>Tipo:</em> datetime</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optionals</strong></p>
+<p><em>Tipo:</em> json</p>
 </li>
 </ul>
 <hr />
@@ -1387,6 +1372,25 @@ GET      /files/:id/resources
 <p><em>Max:</em> 15 carácteres</p>
 </li>
 </ul>
+<hr />
+<ul>
+<li>
+<p><strong>soapService:</strong></p>
+<p>Servicio soap asociado.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>restService:</strong></p>
+<p>Servicio rest asociado.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
 <h1 id="10-chart">10. Chart</h1>
 <h2 id="endpoints_9">Endpoints</h2>
 <pre><code>GET      /charts
@@ -1403,7 +1407,7 @@ GET      /charts/count
 OPTIONS  /charts/count
 
 GET      /charts/:id
-PATCH    /charts/:id
+PUT    /charts/:id
 DELETE   /charts/:id
 HEAD     /charts/:id
 OPTIONS  /charts/:id
@@ -1434,6 +1438,14 @@ OPTIONS  /charts/:id
 <p><strong>description</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 350 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>type</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Valores posibles:</em> 'bar', 'pie', 'line', 'stackedbar','heatmap'</p>
 </li>
 </ul>
 <hr />
@@ -1478,9 +1490,17 @@ OPTIONS  /charts/:id
 <hr />
 <ul>
 <li>
-<p><strong>embedCode</strong></p>
-<p><em>Tipo:</em> text</p>
+<p><strong>link</strong></p>
+<p>Grafico embebido</p>
+<p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>publishedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
 </li>
 </ul>
 <hr />
@@ -1491,12 +1511,38 @@ OPTIONS  /charts/:id
 <p><em>Default:</em> fecha y hora actuales</p>
 </li>
 </ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
 <h3 id="claves-foraneas_6">Claves Foráneas</h3>
 <ul>
 <li>
 <p><strong>createdBy</strong></p>
 <p>El ID del usuario que creó el gráfico.</p>
 <p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>status</strong></p>
+<p>El ID del status que posee el grafico.</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>file</strong></p>
+<p>El ID del del archivo relacionado archivo.</p>
 <p><em>Requerido:</em> sí</p>
 <p><em>Max:</em> 15 carácteres</p>
 </li>
@@ -1542,9 +1588,60 @@ OPTIONS  /basemaps/:id
 <hr />
 <ul>
 <li>
+<p><strong>attribution</strong></p>
+<p><em>Tipo:</em> string</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>tms</strong></p>
+<p><em>Tipo:</em> boolean</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>maxZoom</strong></p>
+<p><em>Tipo:</em> integer</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>minZoom</strong></p>
+<p><em>Tipo:</em> integer</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>optionals</strong></p>
+<p><em>Tipo:</em> json</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
 <p><strong>url</strong></p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 500 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
 </li>
 </ul>
 <h1 id="12-map">12. Map</h1>
@@ -1563,7 +1660,7 @@ GET      /maps/count
 OPTIONS  /maps/count
 
 GET      /maps/:id
-PATCH    /maps/:id
+PUT    /maps/:id
 DELETE   /maps/:id
 HEAD     /maps/:id
 OPTIONS  /maps/:id
@@ -1631,6 +1728,29 @@ OPTIONS  /maps/:id
 <hr />
 <ul>
 <li>
+<p><strong>properties</strong></p>
+<p><em>Tipo:</em> array</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>latitudeKey</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 100 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>longitudeKey</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 100carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
 <p><strong>geojson</strong></p>
 <p><em>Tipo:</em> json</p>
 <p><em>Max:</em> 5000 carácteres</p>
@@ -1639,7 +1759,22 @@ OPTIONS  /maps/:id
 <hr />
 <ul>
 <li>
+<p><strong>publishedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
 <p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
 <p><em>Tipo:</em> datetime</p>
 <p><em>Default:</em> fecha y hora actuales</p>
 </li>
@@ -1664,98 +1799,17 @@ OPTIONS  /maps/:id
 <p><em>Max:</em> 15 carácteres</p>
 </li>
 </ul>
-<h1 id="13-view">13. View</h1>
+<hr />
+<ul>
+<li>
+<p><strong>status</strong></p>
+<p>El ID del status que posee el mapa.</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<h1 id="13-config">13. Config</h1>
 <h2 id="endpoints_12">Endpoints</h2>
-<pre><code>GET      /views
-POST     /views
-OPTIONS  /views
-
-GET      /views/first
-OPTIONS  /views/first
-
-GET      /views/last
-OPTIONS  /views/last
-
-GET      /views/count
-OPTIONS  /views/count
-
-GET      /views/:id
-PATCH    /views/:id
-DELETE   /views/:id
-HEAD     /views/:id
-OPTIONS  /views/:id
-</code></pre>
-
-<h2 id="campos_12">Campos</h2>
-<ul>
-<li>
-<p><strong>id</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Único:</em> sí</p>
-<p><em>Max:</em> 15 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>name</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Max:</em> 150 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>description</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 350 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>notes</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 500 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>tags</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 500 carácteres</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>createdAt</strong></p>
-<p><em>Tipo:</em> datetime</p>
-<p><em>Default:</em> fecha y hora actuales</p>
-</li>
-</ul>
-<h3 id="claves-foraneas_8">Claves Foráneas</h3>
-<ul>
-<li>
-<p><strong>tags</strong></p>
-<p>Referencia a la relación muchos a muchos tags-views.</p>
-</li>
-</ul>
-<hr />
-<ul>
-<li>
-<p><strong>createdBy</strong></p>
-<p>El ID del usuario que creó el gráfico.</p>
-<p><em>Tipo:</em> string</p>
-<p><em>Requerido:</em> sí</p>
-<p><em>Max:</em> 15 carácteres</p>
-</li>
-</ul>
-<h1 id="14-config">14. Config</h1>
-<h2 id="endpoints_13">Endpoints</h2>
 <pre><code>GET      /configs
 POST     /configs
 OPTIONS  /configs
@@ -1770,13 +1824,13 @@ GET      /configs/count
 OPTIONS  /configs/count
 
 GET      /configs/:id
-PATCH    /configs/:id
+PUT    /configs/:id
 DELETE   /configs/:id
 HEAD     /configs/:id
 OPTIONS  /configs/:id
 </code></pre>
 
-<h2 id="campos_13">Campos</h2>
+<h2 id="campos_12">Campos</h2>
 <ul>
 <li>
 <p><strong>id</strong></p>
@@ -1801,7 +1855,7 @@ OPTIONS  /configs/:id
 <p><strong>type</strong></p>
 <p><em>Tipo:</em> enum</p>
 <p><em>Requerido:</em> sí</p>
-<p><em>Valores posibles:</em> 'bool', 'string', 'int', 'float'</p>
+<p><em>Valores posibles:</em> 'bool', 'string', 'int', 'float', 'model'</p>
 </li>
 </ul>
 <hr />
@@ -1821,7 +1875,37 @@ OPTIONS  /configs/:id
 <p><em>Max:</em> 250 carácteres</p>
 </li>
 </ul>
-<h3 id="claves-foraneas_9">Claves Foráneas</h3>
+<hr />
+<ul>
+<li>
+<p><strong>multiple</strong></p>
+<p><em>Tipo:</em> boolean</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>model</strong></p>
+<p><em>Tipo:</em> string</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_8">Claves Foráneas</h3>
 <ul>
 <li>
 <p><strong>updatedBy</strong></p>
@@ -1830,8 +1914,8 @@ OPTIONS  /configs/:id
 <p><em>Max:</em> 15 carácteres</p>
 </li>
 </ul>
-<h1 id="15-log">15. Log</h1>
-<h2 id="endpoints_14">Endpoints</h2>
+<h1 id="14-log">14. Log</h1>
+<h2 id="endpoints_13">Endpoints</h2>
 <pre><code>GET      /logs
 POST     /logs
 OPTIONS  /logs
@@ -1846,13 +1930,13 @@ GET      /logs/count
 OPTIONS  /logs/count
 
 GET      /logs/:id
-PATCH    /logs/:id
+PUT    /logs/:id
 DELETE   /logs/:id
 HEAD     /logs/:id
 OPTIONS  /logs/:id
 </code></pre>
 
-<h2 id="campos_14">Campos</h2>
+<h2 id="campos_13">Campos</h2>
 <ul>
 <li>
 <p><strong>id</strong></p>
@@ -1875,9 +1959,16 @@ OPTIONS  /logs/:id
 <ul>
 <li>
 <p><strong>target</strong></p>
-<p><em>Tipo:</em> enum</p>
+<p><em>Tipo:</em> string</p>
 <p><em>Requerido:</em> sí</p>
-<p><em>Valores posibles:</em> 'category', 'dataset', 'fileType', 'file', 'organization', 'status', 'tag', 'updateFrequency', 'user'</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>resource</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
 </li>
 </ul>
 <hr />
@@ -1888,7 +1979,15 @@ OPTIONS  /logs/:id
 <p><em>Default:</em> fecha y hora actuales</p>
 </li>
 </ul>
-<h3 id="claves-foraneas_10">Claves Foráneas</h3>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_9">Claves Foráneas</h3>
 <ul>
 <li>
 <p><strong>user</strong></p>
@@ -1897,8 +1996,8 @@ OPTIONS  /logs/:id
 <p><em>Max:</em> 15 carácteres</p>
 </li>
 </ul>
-<h1 id="16-statistic">16. Statistic</h1>
-<h2 id="endpoints_15">Endpoints</h2>
+<h1 id="15-statistic">15. Statistic</h1>
+<h2 id="endpoints_14">Endpoints</h2>
 <pre><code>GET      /statistics
 OPTIONS  /statistics
 
@@ -1916,7 +2015,7 @@ HEAD     /statistics/:id
 OPTIONS  /statistics/:id
 </code></pre>
 
-<h1 id="campos_15">Campos</h1>
+<h1 id="campos_14">Campos</h1>
 <ul>
 <li>
 <p><strong>id</strong></p>
@@ -1958,7 +2057,7 @@ OPTIONS  /statistics/:id
 <p><strong>method</strong></p>
 <p><em>Tipo:</em> enum</p>
 <p><em>Requerido:</em> sí</p>
-<p><em>Valores posibles:</em> 'GET', 'POST', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'</p>
+<p><em>Valores posibles:</em> 'GET', 'POST', 'PUT', 'DELETE', 'HEAD', 'OPTIONS'</p>
 </li>
 </ul>
 <hr />
@@ -1986,6 +2085,231 @@ OPTIONS  /statistics/:id
 <p><em>Tipo:</em> string</p>
 <p><em>Requerido:</em> sí</p>
 <p><em>Max:</em> 46 carácteres</p>
+</li>
+</ul>
+<h1 id="16-soapservice">16. SoapService</h1>
+<h2 id="endpoints_15">Endpoints</h2>
+<pre><code>GET      /soapservices
+POST     /soapservices
+OPTIONS  /soapservices
+
+GET      /soapservices/first
+OPTIONS  /soapservices/first
+
+GET      /soapservices/last
+OPTIONS  /soapservices/last
+
+GET      /soapservices/count
+OPTIONS  /soapservices/count
+
+GET      /soapservices/:id
+PUT    /soapservices/:id
+DELETE   /soapservices/:id
+HEAD     /soapservices/:id
+OPTIONS  /soapservices/:id
+</code></pre>
+
+<h2 id="campos_15">Campos</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>method</strong></p>
+<p><em>Tipo:</em> sting</p>
+<p><em>Requerido:</em> sí</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>namespace</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>url</strong></p>
+<p><em>Tipo:</em> sting</p>
+<p><em>Requerido:</em> sí</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>attributesAsHeaders</strong></p>
+<p><em>Tipo:</em> boolean</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>parameters</strong></p>
+<p><em>Tipo:</em> json</p>
+<p><em>Requerido:</em> sí</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_10">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>file</strong></p>
+<p>El ID del archivo asociado al soap.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<h1 id="17-restservice">17. RestService</h1>
+<h2 id="endpoints_16">Endpoints</h2>
+<pre><code>GET      /restservices
+POST     /restservices
+OPTIONS  /restservices
+
+GET      /restservices/first
+OPTIONS  /restservices/first
+
+GET      /restservices/last
+OPTIONS  /restservices/last
+
+GET      /restservices/count
+OPTIONS  /restservices/count
+
+GET      /restservices/:id
+PUT    /restservices/:id
+DELETE   /restservices/:id
+HEAD     /restservices/:id
+OPTIONS  /restservices/:id
+</code></pre>
+
+<h2 id="campos_16">Campos</h2>
+<ul>
+<li>
+<p><strong>id</strong></p>
+<p><em>Tipo:</em> string</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Único:</em> sí</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>dataPath</strong></p>
+<p><em>Tipo:</em> sting</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>titlePath</strong></p>
+<p><em>Tipo:</em> string</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>token</strong></p>
+<p><em>Tipo:</em> sting</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>tokenSignature</strong></p>
+<p><em>Tipo:</em> string</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>tokenAlgorithm</strong></p>
+<p><em>Tipo:</em> sting</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>username</strong></p>
+<p><em>Tipo:</em> string</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>password</strong></p>
+<p><em>Tipo:</em> sting</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>url</strong></p>
+<p><em>Tipo:</em> sting</p>
+<p><em>Requerido:</em> sí</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>attributesAsHeaders</strong></p>
+<p><em>Tipo:</em> boolean</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>parameters</strong></p>
+<p><em>Tipo:</em> json</p>
+<p><em>Requerido:</em> sí</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>updatedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>createdAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+<p><em>Default:</em> fecha y hora actuales</p>
+</li>
+</ul>
+<h3 id="claves-foraneas_11">Claves Foráneas</h3>
+<ul>
+<li>
+<p><strong>file</strong></p>
+<p>El ID del archivo asociado al soap.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 15 carácteres</p>
 </li>
 </ul>
               

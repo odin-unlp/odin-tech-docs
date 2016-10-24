@@ -15,7 +15,7 @@ GET      /organizations/count
 OPTIONS  /organizations/count
 
 GET      /organizations/:id
-PATCH    /organizations/:id
+PUT    /organizations/:id
 DELETE   /organizations/:id
 HEAD     /organizations/:id
 OPTIONS  /organizations/:id
@@ -44,6 +44,14 @@ OPTIONS  /organizations/:id
 
 ---
 
+- **slug**
+
+    *Tipo:* string
+
+    *Max:* 150 carácteres
+
+---
+
 - **description**
 
     *Tipo:* string
@@ -57,12 +65,6 @@ OPTIONS  /organizations/:id
     *Tipo:* string
 
     *Max:* 150 carácteres
-
----
-
-- **active**
-
-    *Tipo:* boolean
 
 ---
 
@@ -120,7 +122,7 @@ GET      /users/count
 OPTIONS  /users/count
 
 GET      /users/:id
-PATCH    /users/:id
+PUT    /users/:id
 DELETE   /users/:id
 HEAD     /users/:id
 OPTIONS  /users/:id
@@ -205,12 +207,6 @@ OPTIONS  /users/login
 
 ---
 
-- **active**
-
-    *Tipo:* boolean
-
----
-
 - **createdAt**
 
     *Tipo:* datetime
@@ -277,7 +273,7 @@ GET      /categories/count
 OPTIONS  /categories/count
 
 GET      /categories/:id
-PATCH    /categories/:id
+PUT    /categories/:id
 DELETE   /categories/:id
 HEAD     /categories/:id
 OPTIONS  /categories/:id
@@ -308,6 +304,22 @@ GET      /categories/:id/image
 
 ---
 
+- **slug**
+
+    *Tipo:* string
+
+    *Max:* 150 carácteres
+
+---
+
+- **fileName**
+
+    *Tipo:* string
+
+    *Max:* 150 carácteres
+
+---
+
 - **description**
 
     *Tipo:* string
@@ -324,15 +336,6 @@ GET      /categories/:id/image
 
     *Max:* 6 carácteres
 
----
-
-- **image**
-
-    *Tipo:* string
-
-    *Max:* 500 carácteres
-
----
 
 - **active:**
 
@@ -390,7 +393,7 @@ GET      /statuses/count
 OPTIONS  /statuses/count
 
 GET      /statuses/:id
-PATCH    /statuses/:id
+PUT    /statuses/:id
 DELETE   /statuses/:id
 HEAD     /statuses/:id
 OPTIONS  /statuses/:id
@@ -437,11 +440,11 @@ OPTIONS  /statuses/:id
 
 **Nota:** a los fines del seedeo, los estados por recurso son:
 
-- Draft
-- Under Review
-- Rejected
-- Published
-- Unpublished
+- Borradow
+- En revision
+- Rechazado
+- Publicado
+- Despublicado
 
 # 5. FileType
 ## Endpoints
@@ -460,7 +463,7 @@ GET      /filetypes/count
 OPTIONS  /filetypes/count
 
 GET      /filetypes/:id
-PATCH    /filetypes/:id
+PUT    /filetypes/:id
 DELETE   /filetypes/:id
 HEAD     /filetypes/:id
 OPTIONS  /filetypes/:id
@@ -489,11 +492,23 @@ OPTIONS  /filetypes/:id
 
 ---
 
+- **api**
+
+    Indica si el tipo de archivo es parseable en la api
+
+    *Tipo:* boolean
+
+---
+
 - **mimetype**
 
-    *Tipo:* string
+    *Tipo:* array
 
-    *Max:* 200 carácteres
+---
+
+- **editable**
+
+    *Tipo:* boolean
 
 ---
 
@@ -543,7 +558,7 @@ GET      /updatefrequencies/count
 OPTIONS  /updatefrequencies/count
 
 GET      /updatefrequencies/:id
-PATCH    /updatefrequencies/:id
+PUT    /updatefrequencies/:id
 DELETE   /updatefrequencies/:id
 HEAD     /updatefrequencies/:id
 OPTIONS  /updatefrequencies/:id
@@ -570,6 +585,13 @@ OPTIONS  /updatefrequencies/:id
 
     *Max:* 100 carácteres
 
+- **timePattern**
+
+    Indica la frequencia en la que se correrá el cron
+
+    *Tipo:* string
+
+
 # 7. Tag
 ## Endpoints
 ```
@@ -587,7 +609,7 @@ GET      /tags/count
 OPTIONS  /tags/count
 
 GET      /tags/:id
-PATCH    /tags/:id
+PUT    /tags/:id
 DELETE   /tags/:id
 HEAD     /tags/:id
 OPTIONS  /tags/:id
@@ -613,6 +635,15 @@ OPTIONS  /tags/:id
     *Requerido:* sí
 
     *Max:* 100 carácteres
+
+
+- **slug**
+
+    *Tipo:* string
+
+    *Max:* 150 carácteres
+
+---
 
 
 ### Claves Foráneas
@@ -644,7 +675,7 @@ GET      /datasets/count
 OPTIONS  /datasets/count
 
 GET      /datasets/:id
-PATCH    /datasets/:id
+PUT    /datasets/:id
 DELETE   /datasets/:id
 HEAD     /datasets/:id
 OPTIONS  /datasets/:id
@@ -670,6 +701,14 @@ GET  /datasets/:id/download
     *Tipo:* string
 
     *Requerido:* sí
+
+    *Max:* 150 carácteres
+
+---
+
+- **slug**
+
+    *Tipo:* string
 
     *Max:* 150 carácteres
 
@@ -703,83 +742,9 @@ GET  /datasets/:id/download
 
 ---
 
-- **optional1**
+- **optionals**
 
-    *Tipo:* string
-
-    *Max:* 500 carácteres
-
----
-
-- **optional2**
-
-    *Tipo:* string
-
-    *Max:* 500 carácteres
-
----
-
-- **optional3**
-
-    *Tipo:* string
-
-    *Max:* 500 carácteres
-
----
-
-- **optional4**
-
-    *Tipo:* string
-
-    *Max:* 500 carácteres
-
----
-
-- **optional5**
-
-    *Tipo:* string
-
-    *Max:* 500 carácteres
-
----
-
-- **optional6**
-
-    *Tipo:* string
-
-    *Max:* 500 carácteres
-
----
-
-- **optional7**
-
-    *Tipo:* string
-
-    *Max:* 500 carácteres
-
----
-
-- **optional8**
-
-    *Tipo:* string
-
-    *Max:* 500 carácteres
-
----
-
-- **optional9**
-
-    *Tipo:* string
-
-    *Max:* 500 carácteres
-
----
-
-- **optional10**
-
-    *Tipo:* string
-
-    *Max:* 500 carácteres
+    *Tipo:* json
 
 ---
 
@@ -865,7 +830,7 @@ GET      /files/count
 OPTIONS  /files/count
 
 GET      /files/:id
-PATCH    /files/:id
+PUT    /files/:id
 DELETE   /files/:id
 HEAD     /files/:id
 OPTIONS  /files/:id
@@ -896,6 +861,14 @@ GET      /files/:id/resources
 
 ---
 
+- **fileName**
+
+    *Tipo:* string
+
+    *Max:* 150 carácteres
+
+---
+
 - **description**
 
     *Tipo:* string
@@ -920,7 +893,7 @@ GET      /files/:id/resources
 
 ---
 
-- **visibility**
+- **visible**
 
     *Tipo:* boolean
 
@@ -932,21 +905,31 @@ GET      /files/:id/resources
 
 ---
 
-- **updateDate**
+- **layout**
 
-    *Tipo:* timestamp
-
----
-
-- **update**
+    Indica si el archivo es guia de datos
 
     *Tipo:* boolean
 
-    *Requerido:* sí
+---
+
+- **updated**
+
+    Indica si el archivo debería mostrarse en el frontend
+
+    *Tipo:* boolean
+
+---
 
 - **publishedAt**
 
     *Tipo:* datetime
+
+---
+
+- **optionals**
+
+    *Tipo:* json
 
 ---
 
@@ -1043,6 +1026,28 @@ GET      /files/:id/resources
 
     *Max:* 15 carácteres
 
+---
+
+- **soapService:**
+
+    Servicio soap asociado.
+
+    *Tipo:* string
+
+    *Max:* 15 carácteres
+
+---
+
+- **restService:**
+
+    Servicio rest asociado.
+
+    *Tipo:* string
+
+    *Max:* 15 carácteres
+
+---
+
 # 10. Chart
 ## Endpoints
 ```
@@ -1060,7 +1065,7 @@ GET      /charts/count
 OPTIONS  /charts/count
 
 GET      /charts/:id
-PATCH    /charts/:id
+PUT    /charts/:id
 DELETE   /charts/:id
 HEAD     /charts/:id
 OPTIONS  /charts/:id
@@ -1094,6 +1099,14 @@ OPTIONS  /charts/:id
     *Tipo:* string
 
     *Max:* 350 carácteres
+
+---
+
+- **type**
+
+    *Tipo:* string
+
+    *Valores posibles:* 'bar', 'pie', 'line', 'stackedbar','heatmap'
 
 ---
 
@@ -1135,15 +1148,31 @@ OPTIONS  /charts/:id
 
 ---
 
-- **embedCode**
+- **link**
 
-    *Tipo:* text
+    Grafico embebido
+
+    *Tipo:* string
 
     *Max:* 500 carácteres
 
 ---
 
+- **publishedAt**
+
+    *Tipo:* datetime
+
+---
+
 - **createdAt**
+
+    *Tipo:* datetime
+
+    *Default:* fecha y hora actuales
+
+---
+
+- **updatedAt**
 
     *Tipo:* datetime
 
@@ -1161,6 +1190,27 @@ OPTIONS  /charts/:id
     *Requerido:* sí
 
     *Max:* 15 carácteres
+
+---
+
+- **status**
+
+    El ID del status que posee el grafico.
+
+    *Requerido:* sí
+
+    *Max:* 15 carácteres
+
+---
+
+- **file**
+
+    El ID del del archivo relacionado archivo.
+
+    *Requerido:* sí
+
+    *Max:* 15 carácteres
+
 
 # 11. Basemap
 ## Endpoints
@@ -1205,11 +1255,58 @@ OPTIONS  /basemaps/:id
 
 ---
 
+
+- **attribution**
+
+    *Tipo:* string
+
+---
+
+- **tms**
+
+    *Tipo:* boolean
+
+---
+
+- **maxZoom**
+
+    *Tipo:* integer
+
+---
+
+- **minZoom**
+
+    *Tipo:* integer
+
+---
+
+- **optionals**
+
+    *Tipo:* json
+
+---
+
 - **url**
 
     *Tipo:* string
 
     *Max:* 500 carácteres
+
+---
+
+- **createdAt**
+
+    *Tipo:* datetime
+
+    *Default:* fecha y hora actuales
+
+---
+
+- **updatedAt**
+
+    *Tipo:* datetime
+
+    *Default:* fecha y hora actuales
 
 # 12. Map
 ## Endpoints
@@ -1228,7 +1325,7 @@ GET      /maps/count
 OPTIONS  /maps/count
 
 GET      /maps/:id
-PATCH    /maps/:id
+PUT    /maps/:id
 DELETE   /maps/:id
 HEAD     /maps/:id
 OPTIONS  /maps/:id
@@ -1297,6 +1394,29 @@ OPTIONS  /maps/:id
 
 ---
 
+- **properties**
+
+    *Tipo:* array
+
+---
+
+- **latitudeKey**
+
+    *Tipo:* string
+
+    *Max:* 100 carácteres
+
+---
+
+- **longitudeKey**
+
+    *Tipo:* string
+
+    *Max:* 100carácteres
+
+---
+
+
 - **geojson**
 
     *Tipo:* json
@@ -1305,7 +1425,21 @@ OPTIONS  /maps/:id
 
 ---
 
+- **publishedAt**
+
+    *Tipo:* datetime
+
+---
+
 - **createdAt**
+
+    *Tipo:* datetime
+
+    *Default:* fecha y hora actuales
+
+---
+
+- **updatedAt**
 
     *Tipo:* datetime
 
@@ -1335,103 +1469,18 @@ OPTIONS  /maps/:id
 
     *Max:* 15 carácteres
 
-
-# 13. View
-## Endpoints
-```
-GET      /views
-POST     /views
-OPTIONS  /views
-
-GET      /views/first
-OPTIONS  /views/first
-
-GET      /views/last
-OPTIONS  /views/last
-
-GET      /views/count
-OPTIONS  /views/count
-
-GET      /views/:id
-PATCH    /views/:id
-DELETE   /views/:id
-HEAD     /views/:id
-OPTIONS  /views/:id
-```
-
-## Campos
-- **id**
-
-    *Tipo:* string
-
-    *Requerido:* sí
-
-    *Único:* sí
-
-    *Max:* 15 carácteres
-
 ---
 
-- **name**
+- **status**
 
-    *Tipo:* string
-
-    *Requerido:* sí
-
-    *Max:* 150 carácteres
-
----
-
-- **description**
-
-    *Tipo:* string
-
-    *Max:* 350 carácteres
-
----
-
-- **notes**
-
-    *Tipo:* string
-
-    *Max:* 500 carácteres
-
----
-
-- **tags**
-
-    *Tipo:* string
-
-    *Max:* 500 carácteres
-
----
-
-- **createdAt**
-
-    *Tipo:* datetime
-
-    *Default:* fecha y hora actuales
-
-
-### Claves Foráneas
-
-- **tags**
-
-    Referencia a la relación muchos a muchos tags-views.
-
----
-
-- **createdBy**
-
-    El ID del usuario que creó el gráfico.
-
-    *Tipo:* string
+    El ID del status que posee el mapa.
 
     *Requerido:* sí
 
     *Max:* 15 carácteres
 
-# 14. Config
+
+# 13. Config
 ## Endpoints
 ```
 GET      /configs
@@ -1448,7 +1497,7 @@ GET      /configs/count
 OPTIONS  /configs/count
 
 GET      /configs/:id
-PATCH    /configs/:id
+PUT    /configs/:id
 DELETE   /configs/:id
 HEAD     /configs/:id
 OPTIONS  /configs/:id
@@ -1483,7 +1532,7 @@ OPTIONS  /configs/:id
 
     *Requerido:* sí
 
-    *Valores posibles:* 'bool', 'string', 'int', 'float'
+    *Valores posibles:* 'bool', 'string', 'int', 'float', 'model'
 
 ---
 
@@ -1503,6 +1552,33 @@ OPTIONS  /configs/:id
 
     *Max:* 250 carácteres
 
+---
+
+- **multiple**
+
+    *Tipo:* boolean
+
+---
+
+- **model**
+
+    *Tipo:* string
+
+---
+
+- **createdAt**
+
+    *Tipo:* datetime
+
+    *Default:* fecha y hora actuales
+
+---
+
+- **updatedAt**
+
+    *Tipo:* datetime
+
+    *Default:* fecha y hora actuales
 
 ### Claves Foráneas
 
@@ -1514,7 +1590,7 @@ OPTIONS  /configs/:id
 
     *Max:* 15 carácteres
 
-# 15. Log
+# 14. Log
 ## Endpoints
 ```
 GET      /logs
@@ -1531,7 +1607,7 @@ GET      /logs/count
 OPTIONS  /logs/count
 
 GET      /logs/:id
-PATCH    /logs/:id
+PUT    /logs/:id
 DELETE   /logs/:id
 HEAD     /logs/:id
 OPTIONS  /logs/:id
@@ -1562,11 +1638,17 @@ OPTIONS  /logs/:id
 
 - **target**
 
-    *Tipo:* enum
+    *Tipo:* string
 
     *Requerido:* sí
 
-    *Valores posibles:* 'category', 'dataset', 'fileType', 'file', 'organization', 'status', 'tag', 'updateFrequency', 'user'
+---
+
+- **resource**
+
+    *Tipo:* string
+
+    *Requerido:* sí
 
 ---
 
@@ -1576,6 +1658,13 @@ OPTIONS  /logs/:id
 
     *Default:* fecha y hora actuales
 
+---
+
+- **updatedAt**
+
+    *Tipo:* datetime
+
+    *Default:* fecha y hora actuales
 
 ### Claves Foráneas
 
@@ -1587,7 +1676,7 @@ OPTIONS  /logs/:id
 
     *Max:* 15 carácteres
 
-# 16. Statistic
+# 15. Statistic
 ## Endpoints
 ```
 GET      /statistics
@@ -1654,7 +1743,7 @@ OPTIONS  /statistics/:id
 
     *Requerido:* sí
 
-    *Valores posibles:* 'GET', 'POST', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'
+    *Valores posibles:* 'GET', 'POST', 'PUT', 'DELETE', 'HEAD', 'OPTIONS'
 
 ---
 
@@ -1685,3 +1774,226 @@ OPTIONS  /statistics/:id
     *Requerido:* sí
 
     *Max:* 46 carácteres
+
+# 16. SoapService
+## Endpoints
+```
+GET      /soapservices
+POST     /soapservices
+OPTIONS  /soapservices
+
+GET      /soapservices/first
+OPTIONS  /soapservices/first
+
+GET      /soapservices/last
+OPTIONS  /soapservices/last
+
+GET      /soapservices/count
+OPTIONS  /soapservices/count
+
+GET      /soapservices/:id
+PUT    /soapservices/:id
+DELETE   /soapservices/:id
+HEAD     /soapservices/:id
+OPTIONS  /soapservices/:id
+```
+
+## Campos
+- **id**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Único:* sí
+
+    *Max:* 15 carácteres
+
+---
+
+- **method**
+
+    *Tipo:* sting
+
+    *Requerido:* sí
+
+---
+
+- **namespace**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+---
+
+- **url**
+
+    *Tipo:* sting
+
+    *Requerido:* sí
+
+---
+
+- **attributesAsHeaders**
+
+    *Tipo:* boolean
+
+---
+
+- **parameters**
+
+    *Tipo:* json
+
+    *Requerido:* sí
+
+---
+
+- **updatedAt**
+
+    *Tipo:* datetime
+
+    *Default:* fecha y hora actuales
+
+---
+
+- **createdAt**
+
+    *Tipo:* datetime
+
+    *Default:* fecha y hora actuales
+
+### Claves Foráneas
+
+- **file**
+
+    El ID del archivo asociado al soap.
+
+    *Tipo:* string
+
+    *Max:* 15 carácteres
+
+# 17. RestService
+## Endpoints
+```
+GET      /restservices
+POST     /restservices
+OPTIONS  /restservices
+
+GET      /restservices/first
+OPTIONS  /restservices/first
+
+GET      /restservices/last
+OPTIONS  /restservices/last
+
+GET      /restservices/count
+OPTIONS  /restservices/count
+
+GET      /restservices/:id
+PUT    /restservices/:id
+DELETE   /restservices/:id
+HEAD     /restservices/:id
+OPTIONS  /restservices/:id
+```
+
+## Campos
+- **id**
+
+    *Tipo:* string
+
+    *Requerido:* sí
+
+    *Único:* sí
+
+    *Max:* 15 carácteres
+
+---
+
+- **dataPath**
+
+    *Tipo:* sting
+
+---
+
+- **titlePath**
+
+    *Tipo:* string
+
+---
+
+- **token**
+
+    *Tipo:* sting
+
+---
+
+- **tokenSignature**
+
+    *Tipo:* string
+
+---
+
+- **tokenAlgorithm**
+
+    *Tipo:* sting
+
+---
+
+- **username**
+
+    *Tipo:* string
+
+---
+
+
+- **password**
+
+    *Tipo:* sting
+
+---
+
+- **url**
+
+    *Tipo:* sting
+
+    *Requerido:* sí
+
+---
+
+- **attributesAsHeaders**
+
+    *Tipo:* boolean
+
+---
+
+- **parameters**
+
+    *Tipo:* json
+
+    *Requerido:* sí
+
+---
+
+- **updatedAt**
+
+    *Tipo:* datetime
+
+    *Default:* fecha y hora actuales
+
+---
+
+- **createdAt**
+
+    *Tipo:* datetime
+
+    *Default:* fecha y hora actuales
+
+### Claves Foráneas
+
+- **file**
+
+    El ID del archivo asociado al soap.
+
+    *Tipo:* string
+
+    *Max:* 15 carácteres
