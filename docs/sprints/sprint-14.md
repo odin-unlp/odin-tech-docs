@@ -1,4 +1,4 @@
-**Duración:** Viernes 23/09/16 - Miercoles 05/10/16
+**Duración:** Viernes 23/09/16 - Lunes 17/10/16
 
 # Alcance
 Sprint de Web Services
