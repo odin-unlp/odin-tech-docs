@@ -8,7 +8,7 @@
   
   
   
-  <title>Sprint 7 - ODIN</title>
+  <title>Sprint 16 - ODIN</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Sprint 7";
-    var mkdocs_page_input_path = "sprints/sprint-7.md";
-    var mkdocs_page_url = "/sprints/sprint-7/";
+    var mkdocs_page_name = "Sprint 16";
+    var mkdocs_page_input_path = "sprints/sprint-16.md";
+    var mkdocs_page_url = "/sprints/sprint-16/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -151,30 +151,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Sprint 7</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#alcance">Alcance</a></li>
-                
-                    <li><a class="toctree-l4" href="#objetivo">Objetivo</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#tareas">Tareas</a></li>
-                
-                    <li><a class="toctree-l4" href="#api">API</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#prioridades">Prioridades</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#campos">Campos</a></li>
-                
-                    <li><a class="toctree-l4" href="#filetype">FileType</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../sprint-7/">Sprint 7</a>
         
     </li>
 
@@ -236,8 +214,31 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../sprint-16/">Sprint 16</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Sprint 16</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#alcance">Alcance</a></li>
+                
+                    <li><a class="toctree-l4" href="#objetivo">Objetivo</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#tareas">Tareas</a></li>
+                
+                    <li><a class="toctree-l4" href="#api">API</a></li>
+                
+                    <li><a class="toctree-l4" href="#admin">Admin</a></li>
+                
+                    <li><a class="toctree-l4" href="#frontend">Frontend</a></li>
+                
+                    <li><a class="toctree-l4" href="#otros">Otros</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#prioridades">Prioridades</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -308,7 +309,7 @@
         
       
     
-    <li>Sprint 7</li>
+    <li>Sprint 16</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -322,47 +323,51 @@
           <div role="main">
             <div class="section">
               
-                <p><strong>Duración:</strong> Lunes 11/07/16 - Martes 19/07/16</p>
+                <p><strong>Duración:</strong> Martes 29/11/16 -</p>
 <h1 id="alcance">Alcance</h1>
-<p>Sprint de refactorización y testeo.</p>
+<p>Sprint de mejoras y corrección de bugs</p>
 <h2 id="objetivo">Objetivo</h2>
-<p>Solucionar los errores de los tests y poner algunas configuraciones en la base de datos.</p>
+<p>Continuar con las mejoras planteadas, y realizar la corrección de bugs anunciados en bugzilla</p>
 <h1 id="tareas">Tareas</h1>
 <h2 id="api">API</h2>
 <ol>
-<li>Solucionar los errores de los tests de mocha (<a href="https://travis-ci.org/gcba-odin/odin">Travis</a> debe dar <strong>build passing</strong>)</li>
-<li>Sacar logWhiteList de <code>/config/odin.js</code> y ponerlo en la base de datos (como un seed de Config)</li>
-<li>Agregar el campo <strong>mimetype</strong> a File y poner en los seeds de FileType su mimetype (sacarlos de <code>/config/odin.js</code>)</li>
-<li>Solucionar las issues encontradas por <a href="https://www.codacy.com/app/ODIN/odin/issues">Codacy</a> (las que sea posible resolver)</li>
-<li>
-<p>Implementar el error 522 Unprocessable Entity para los siguientes casos:</p>
-<ul>
-<li>Se envía el parámetro <strong>sort</strong> con un valor que no sea <code>ASC</code> o <code>DESC</code></li>
-<li>Se envía el parámetro <strong>condition</strong> con un valor que no sea <code>AND</code></li>
-<li>Se envía el parámetro <strong>match</strong> con un valor que no sea <code>BEGINS</code> o <code>ENDS</code></li>
-</ul>
-</li>
-<li>
-<p>Implementar la despublicación automática de una View cuando se despublica su File</p>
-</li>
-<li>Implementar la despublicación automática de un Chart cuando se despublica su File</li>
-<li>Implementar la despublicación automática de un Map cuando se despublica su File</li>
+<li>Agregar campos <code>parent</code> y <code>subcategories</code> en <code>Category</code>, el cual es una relación recursiva</li>
+<li>Agregar configuración para tener o no reCaptcha</li>
+<li>Agregar configuración para Captcha y Analytics</li>
+<li>Hacer script para modificar las url de descargas de los archivos (#285)</li>
+<li>Hacer endpoint para envío de mail</li>
+<li>Crear Geojson desde un archivo KML (#241)</li>
+</ol>
+<h2 id="admin">Admin</h2>
+<ol>
+<li>Agregar configuración para Captcha y Analytics</li>
+<li>Solucionar descarga de manual de usuario (#280)</li>
+<li>Tooltips responsive (#303)</li>
+<li>Mostrar rol en la lista de usuarios (#325)</li>
+<li>Sacar min-height fijo en el div de los logs (#293)</li>
+<li>En configuraciones, mostrar el valor del parámetro a modificar (si es posible) (#295)</li>
+<li>En configuraciones, No mostrar el botón editar en los campos no configurables (#296)</li>
+<li>Agregar Autor y categoría al listado de datasets</li>
+<li>Agregar form para permitir crear mapa desde un archivo KML (#241)</li>
+<li>Acomodar nuevo diseño marca BA del admin, para que se agregue al diseño base (marca blanca) simplemente agregando un css (como en el frontend)</li>
+<li>Agregar popup en eliminar etiqueta para avisar las relaciones y que permita ir a detalle</li>
+</ol>
+<h2 id="frontend">Frontend</h2>
+<ol>
+<li>Previsualizar guía de datos en el front (#289)</li>
+<li>Mantener la búsqueda realizada en la barra de búsqueda</li>
+<li>Informar que no se encontraron registros al hacer una búsqueda que traiga 0 resultados</li>
+<li>Nuevo diseño cards</li>
+</ol>
+<h2 id="otros">Otros</h2>
+<ol>
+<li>Adaptar diseño de website ODIN</li>
 </ol>
 <h1 id="prioridades">Prioridades</h1>
 <ol>
-<li>Solucionar los errores de los tests</li>
-<li>Error 522</li>
-<li>Despublicaciones automáticas</li>
+<li>Agregar popup en eliminar etiqueta para avisar las relaciones y que permita ir a detalle</li>
+<li>Previsualizar guía de datos en el front (#289)</li>
 </ol>
-<h1 id="campos">Campos</h1>
-<h2 id="filetype">FileType</h2>
-<ul>
-<li>
-<p><strong>mimetype</strong></p>
-<p><em>Tipo:</em> string</p>
-<p><em>Max:</em> 200 carácteres</p>
-</li>
-</ul>
               
             </div>
           </div>
@@ -370,10 +375,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../sprint-8/" class="btn btn-neutral float-right" title="Sprint 8">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../references/status-codes/" class="btn btn-neutral float-right" title="HTTP Status Codes">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../sprint-6/" class="btn btn-neutral" title="Sprint 6"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sprint-15/" class="btn btn-neutral" title="Sprint 15"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -401,10 +406,10 @@
           <a href="https://github.com/gcba-odin/odin-tech-docs" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../sprint-6/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../sprint-15/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../sprint-8/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../references/status-codes/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
