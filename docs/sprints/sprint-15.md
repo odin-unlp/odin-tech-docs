@@ -1,4 +1,4 @@
-**Duración:** Lunes 17/10/16 - Miercoles 09/11/16
+**Duración:** Lunes 17/10/16 - Martes 29/11/16
 
 # Alcance
 Sprint de subcategorías, roles, correción de bugs y mejoras
@@ -12,7 +12,7 @@ Continuar con la corrección de bugs, priorizando los errores bloqueantes levant
 
 ## API
 1. Agregar campos `parent` y `subcategories` en `Category`, el cual es una relación recursiva
-2. Instalar, configurar e integrar sails-permissions
+2. Despublicar en cadena (#207)
 3. Generar roles:
     - SuperAdmin
     - Admin
@@ -24,13 +24,11 @@ Continuar con la corrección de bugs, priorizando los errores bloqueantes levant
 6. Agregar seeds de subcategorías
 7. Archivo .txt junto al zip de dataset (#26)
 8. Límite de registros en un archivo para la creación de mapa (#159)
-9. Crear Geojson desde un archivo KML (#241)
+9. Agregar los campos necesarios al modelo Basemap
 10. Cron para backup (#149)
 11. Agregar seed de config para campos adicionales (#248)
 12. Implemetar sails-migrations
 13. FileType multiple Mimetypes
-14. Despublicar en cadena (#207)
-15. Agregar los campos necesarios al modelo Basemap
 
 ## Admin
 1. Agregar sección "Mi Perfil"
@@ -46,7 +44,7 @@ Continuar con la corrección de bugs, priorizando los errores bloqueantes levant
 11. Agregar botón "rechazar" en recursos (files, maps, charts) con estado "en revisión"
 12. Editar los formularios de los modelos que tengan categorías relacionadas
 13. No permitir caracteres especiales en etiquetas (#227)
-14. Agregar form para permitir crear mapa desde un archivo KML (#241)
+15. Agregar spinner en todas las pantallas
 15. Agregar configuración para Captcha y Analytics
 16. Agregar config para campos adicionales (additionalFields) (#248)
 17. Cambiar los títulos a singular (#255)
@@ -59,7 +57,6 @@ Continuar con la corrección de bugs, priorizando los errores bloqueantes levant
 23. Previsualizar el archivo como tipo PDF en el admin (#252)
 24. Permitir múltiples mimetypes en un FileType
 25. Campos por defecto (organización y usuario) (#245)
-26. Agregar spinner en todas las pantallas
 
 ## Frontend
 1. Agregar filtros por subcategorías (si la categoría no tiene subcategorías no mostrar filtro)
@@ -71,16 +68,13 @@ Continuar con la corrección de bugs, priorizando los errores bloqueantes levant
 7. El límite del listado del frontend lo tome desde las configs
 
 ## Otros
-1. Analizar gráficos PowerBi
+1. Analizar gráficos
 
 # Prioridades
-1. Instalar, configurar e integrar sails-permissions
-2. Generar roles:
+1. Generar roles:
     - SuperAdmin
     - Admin
     - Guest
-3. Implementar permisos para cada rol
-4. Instalar y configurar angular-permission
-5. Validar permisos para cada acción en el admin
-
-
+2. Implementar permisos para cada rol
+3. Instalar y configurar angular-permission
+4. Validar permisos para cada acción en el admin

@@ -43,4 +43,4 @@ TBD
 
 # Licencia
 
-La API de ODIN será un proyecto de código abierto y se ofrecerá bajo la licencia [MIT](https://opensource.org/licenses/MIT).
+La API de ODIN será un proyecto de código abierto y se ofrecerá bajo la licencia [GPL-3](https://opensource.org/licenses/GPL-3.0).
