@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Sprint 16 - ODIN</title>
+  <title>Sprint 17 - ODIN</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Sprint 16";
-    var mkdocs_page_input_path = "sprints/sprint-16.md";
-    var mkdocs_page_url = "/sprints/sprint-16/";
+    var mkdocs_page_name = "Sprint 17";
+    var mkdocs_page_input_path = "sprints/sprint-17.md";
+    var mkdocs_page_url = "/sprints/sprint-17/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -206,8 +206,15 @@
 
         
             
+    <li class="toctree-l1 ">
+        <a class="" href="../sprint-16/">Sprint 16</a>
+        
+    </li>
+
+        
+            
     <li class="toctree-l1 current">
-        <a class="current" href="./">Sprint 16</a>
+        <a class="current" href="./">Sprint 17</a>
         
             <ul>
             
@@ -231,13 +238,6 @@
                 
             
             </ul>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../sprint-17/">Sprint 17</a>
         
     </li>
 
@@ -308,10 +308,10 @@
         
       
     
-    <li>Sprint 16</li>
+    <li>Sprint 17</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/gcba-odin/odin-tech-docs/edit/master/docs/sprints/sprint-16.md"
+        <a href="https://github.com/gcba-odin/odin-tech-docs/edit/master/docs/sprints/sprint-17.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -321,47 +321,67 @@
           <div role="main">
             <div class="section">
               
-                <p><strong>Duración:</strong> Martes 29/11/16 - Viernes 13/01/17</p>
+                <p><strong>Duración:</strong> Martes 29/11/16 -</p>
 <h1 id="alcance">Alcance</h1>
-<p>Sprint de mejoras y corrección de bugs ; Creación de mapas a partir de un archivo KML</p>
+<p>Sprint de mejoras y corrección de bugs</p>
 <h2 id="objetivo">Objetivo</h2>
 <p>Continuar con las mejoras planteadas, y realizar la corrección de bugs anunciados en bugzilla</p>
 <h1 id="tareas">Tareas</h1>
 <h2 id="api">API</h2>
 <ol>
-<li>Agregar campos <code>parent</code> y <code>subcategories</code> en <code>Category</code>, el cual es una relación recursiva</li>
-<li>Hacer script para modificar las url de descargas de los archivos (#285)</li>
-<li>Hacer endpoint para envío de mail</li>
-<li>Crear Geojson desde un archivo KML (#241)</li>
-<li>Crear endpoint para cada uno de los estados</li>
-<li>Agregar fechas de cada estado en recursos y visualizaciones</li>
-<li>Si el usuario que crea un recurso/visualización es guest; ignorar el estado por defecto y ponerlo en borrador</li>
+<li>Crear migración con nuevas configuraciones</li>
+<li>Agregar campo tooltip en configuraciónes</li>
+<li>Hacer partials includes</li>
+<li>Agregar fecha de despublicación en datasets</li>
+<li>Agregar campo "Parent" en configs</li>
+<li>Agregar campo "Category" (site,visualizations, integrations) en configs</li>
+<li>Crear policy para editar configs (basado en el campo "editable")</li>
+<li>Agregar type "group" en configs</li>
+<li>Permitir dejar la categoría sin imágen</li>
+<li>Agregar fecha de despublicación en datasets</li>
 </ol>
 <h2 id="admin">Admin</h2>
 <ol>
-<li>Solucionar descarga de manual de usuario (#280)</li>
-<li>Tooltips responsive (#303)</li>
-<li>Mostrar rol en la lista de usuarios (#325)</li>
-<li>Sacar min-height fijo en el div de los logs (#293)</li>
-<li>En configuraciones, mostrar el valor del parámetro a modificar (si es posible) (#295)</li>
-<li>En configuraciones, No mostrar el botón editar en los campos no configurables (#296)</li>
-<li>Agregar Autor y categoría al listado de datasets</li>
-<li>Agregar form para permitir crear mapa desde un archivo KML (#241)</li>
-<li>Agregar popup en eliminar etiqueta para avisar las relaciones y que permita ir a detalle</li>
-<li>Ordenar configs por orden alfabético</li>
-<li>Indicar el tipo de archivo asociado al listar los archivos desde un dataset</li>
-<li>Sacar ngf-resize en ng-fileUplad para no romper las imágenes subidas</li>
-<li>Si el usuario es invitado sacar los links Creado Por y Responsables desde los detalles de recurso/visualización.</li>
-<li>Añadir filtro por tipo de archivo en recursos</li>
-<li>No permitir crear/borrar estados</li>
-<li>Acomodar los flujos de estados; utilizando siempre los endpoints correspondientes</li>
+<li>Generar tabs en las configuraciones y listarlas dependiendo su categoría</li>
+<li>No mostrar botón editar en caso de ser administrador y la confugración no tenga el campo "editable" en true</li>
+<li>En caso de que la configuración sea tipo "group", listar todas las configuraciones asociadas</li>
+<li>Separar el versionado de la url de la api, para que no salte un conflicto cada vez que se hace un pull con una versión nueva en un entorno distinto</li>
+<li>Mostrar tooltip en las configuraciones que correspondan</li>
+<li>Revisar el css del administrado</li>
+<li>Resolver borrado automatico de categoria</li>
+<li>Permitir desactivar subcategorías</li>
+<li>Filtro en Organizaciones</li>
+<li>Agregar tooltip en la creación de gráficos en el campo URL</li>
+<li>Eliminar el campo "autor" en el listado de Estados</li>
+<li>Ordenar alfabeticamente la lista de estados</li>
+<li>Eliminar filtros en el listado de Estados</li>
+<li>Permitir dejar la categoría sin imágen</li>
+<li>Submenú en Recursos, gráficos y mapas con estado "En revisión"</li>
+<li>Cambiar fecha de publicación y actualización en dataset</li>
+<li>Modificar nombres de roles de usuario</li>
+<li>Crear subcategorías desde un menú aparte</li>
+<li>Botón borrar en el detalle de entidades</li>
+<li>Solucionar error al borrar gráfico/mapa</li>
+<li>Sacar filtro "Autor" para usuario Invitado</li>
+<li>Ordenar alfabeticamente los Recursos asociados desde la vista del dataset</li>
+<li>Inhabilitar URL si se selecciona Tipo de gráfico y vicebersa; en la creación de gráficos</li>
 </ol>
 <h2 id="frontend">Frontend</h2>
 <ol>
-<li>Previsualizar guía de datos en el front (#289)</li>
-<li>Mantener la búsqueda realizada en la barra de búsqueda</li>
-<li>Informar que no se encontraron registros al hacer una búsqueda que traiga 0 resultados</li>
-<li>Nuevo diseño cards</li>
+<li>Mover filtros seleccionados arriba de todo para que se vean</li>
+<li>Cuando entras a un dataset desde “Ultimos..” o “Destacados” queda vacío el “historial” ya que no tiene categoria</li>
+<li>En la vista de dataset, cuando clickeas un tag esto genera una consulta en /datasets?tag=X y no limpia currentCategory, habria que hacer lo mismo que hace el boton del Home “Ver catalogo”</li>
+<li>Al paginar los datasets, el contenedor de arriba se limpie y el spinner ocupe ese lugar hasta que cargue la info</li>
+<li>En la vista de dataset, el paginador de recursos deberia cumplir la misma funcionalidad que se pide arriba en categorias (spinner)</li>
+<li>En la vista de dataset, el paginador de la vista tipo tabla de un recurso, deberia levantar un spinner cuando se cambia de pagina</li>
+<li>Si se ingresa a “Ver catalogo completo de datasets” y despues entras a una categoria, no se deberia mostrar en la navegacion el nombre de la categoria a la que pertenece el DS</li>
+<li>Agregar autocomplete en los filtros de organización y etiquetas</li>
+<li>Ordenar formatos por cantidad de archivos asociados</li>
+<li>No mostrar formatos con (0)</li>
+<li>Filtros se desplieguen haciendo click en cualquier parte del rectángulo</li>
+<li>Al entrar a listados de dataset (ya se por categorías o por otro lado), mantener el spinner hasta que esté todo completo ( al menos el color en las cajitas de filtros y la cantidad de datasets)</li>
+<li>Filtro por subcategorías</li>
+<li>Separar el versionado de la url de la api, para que no salte un conflicto cada vez que se hace un pull con una versión nueva en un entorno distinto</li>
 </ol>
 <h2 id="otros">Otros</h2>
 <ol>
@@ -379,10 +399,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../sprint-17/" class="btn btn-neutral float-right" title="Sprint 17">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../references/status-codes/" class="btn btn-neutral float-right" title="HTTP Status Codes">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../sprint-15/" class="btn btn-neutral" title="Sprint 15"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sprint-16/" class="btn btn-neutral" title="Sprint 16"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -410,10 +430,10 @@
           <a href="https://github.com/gcba-odin/odin-tech-docs" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../sprint-15/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../sprint-16/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../sprint-17/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../references/status-codes/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
