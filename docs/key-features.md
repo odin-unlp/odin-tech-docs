@@ -97,6 +97,8 @@ La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el c
 
     **Al final**: `GET /datasets/search?query=1,2,3&match=ENDS`
 
+    **Exacto**: `GET /datasets/search?query=1,2,3&match=EXACT`
+
     *condition* y *match* puden combinarse:
 
     *Ejemplo*: `GET /datasets/search?query=1,2,3&condition=AND&match=ENDS`

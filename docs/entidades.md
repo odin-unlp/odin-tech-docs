@@ -440,7 +440,7 @@ OPTIONS  /statuses/:id
 
 **Nota:** a los fines del seedeo, los estados por recurso son:
 
-- Borradow
+- Borrador
 - En revision
 - Rechazado
 - Publicado
@@ -680,6 +680,9 @@ DELETE   /datasets/:id
 HEAD     /datasets/:id
 OPTIONS  /datasets/:id
 
+PATCH /datasets/:id/unpublish
+PATCH /datasets/:id/publish
+
 GET  /datasets/:id/download
 ```
 
@@ -754,6 +757,12 @@ GET  /datasets/:id/download
 
 ---
 
+- **unPublishedAt**
+
+    *Tipo:* datetime
+
+---
+
 - **createdAt**
 
     *Tipo:* datetime
@@ -771,13 +780,19 @@ GET  /datasets/:id/download
 
 ### Claves Foráneas
 
-- **category**
+- **categories**
 
-    El ID de la categoría del dataset.
+    Los ID de las categorías del dataset.
 
     *Requerido:* sí
 
-    *Max:* 15 carácteres
+---
+
+- **subcategories**
+
+    Los ID de las subcategorías del dataset.
+
+    *Requerido:* sí
 
 ---
 
@@ -834,6 +849,16 @@ PUT    /files/:id
 DELETE   /files/:id
 HEAD     /files/:id
 OPTIONS  /files/:id
+
+GET   /files/:id/contents
+GET   /files/(:slug|:id)/download
+GET   /files/(:slug|:id)/download/:format
+
+PATCH   /files/:id/publish
+PATCH   /files/:id/unpublish
+PATCH   /files/:id/reject
+PATCH   /files/:id/cancel
+PATCH   /files/:id/review
 
 GET      /files/:id/resources
 ```
@@ -1069,6 +1094,12 @@ PUT    /charts/:id
 DELETE   /charts/:id
 HEAD     /charts/:id
 OPTIONS  /charts/:id
+
+PATCH   /charts/:id/publish
+PATCH   /charts/:id/unpublish
+PATCH   /charts/:id/reject
+PATCH   /charts/:id/cancel
+PATCH   /charts/:id/review
 ```
 
 ## Campos
@@ -1159,6 +1190,30 @@ OPTIONS  /charts/:id
 ---
 
 - **publishedAt**
+
+    *Tipo:* datetime
+
+---
+
+- **unPublishedAt**
+
+    *Tipo:* datetime
+
+---
+
+- **rejectedAt**
+
+    *Tipo:* datetime
+
+---
+
+- **cancelledAt**
+
+    *Tipo:* datetime
+
+---
+
+- **reviewedAt**
 
     *Tipo:* datetime
 
@@ -1294,6 +1349,36 @@ OPTIONS  /basemaps/:id
 
 ---
 
+- **unPublishedAt**
+
+    *Tipo:* datetime
+
+---
+
+- **publishedAt**
+
+    *Tipo:* datetime
+
+---
+
+- **rejectedAt**
+
+    *Tipo:* datetime
+
+---
+
+- **cancelledAt**
+
+    *Tipo:* datetime
+
+---
+
+- **reviewedAt**
+
+    *Tipo:* datetime
+
+---
+
 - **createdAt**
 
     *Tipo:* datetime
@@ -1329,6 +1414,12 @@ PUT    /maps/:id
 DELETE   /maps/:id
 HEAD     /maps/:id
 OPTIONS  /maps/:id
+
+PATCH   /maps/:id/publish
+PATCH   /maps/:id/unpublish
+PATCH   /maps/:id/reject
+PATCH   /maps/:id/cancel
+PATCH   /maps/:id/review
 ```
 
 ## Campos
@@ -1532,7 +1623,17 @@ OPTIONS  /configs/:id
 
     *Requerido:* sí
 
-    *Valores posibles:* 'bool', 'string', 'int', 'float', 'model'
+    *Valores posibles:* 'bool', 'string', 'int', 'float', 'model', 'group'
+
+---
+
+- **category**
+
+    *Tipo:* enum
+
+    *Requerido:* sí
+
+    *Valores posibles:* 'site', 'visualizations', 'integrations'
 
 ---
 
@@ -1555,6 +1656,18 @@ OPTIONS  /configs/:id
 ---
 
 - **multiple**
+
+    *Tipo:* boolean
+
+---
+
+- **editable**
+
+    *Tipo:* boolean
+
+---
+
+- **required**
 
     *Tipo:* boolean
 
@@ -1585,6 +1698,16 @@ OPTIONS  /configs/:id
 - **updatedBy**
 
     El ID del usuario que actualizó por última vez el `value` de la configuración.
+
+    *Tipo:* string
+
+    *Max:* 15 carácteres
+
+---
+
+- **parent**
+
+    El ID de la configuración padre en caso de que corresponda.
 
     *Tipo:* string
 
