@@ -771,6 +771,12 @@ GET  /datasets/:id/download
 
 ---
 
+- **deletedAt**
+
+    *Tipo:* datetime
+
+---
+
 - **updatedAt**
 
     *Tipo:* datetime

@@ -1,6 +1,14 @@
 site_name: ODIN
-theme: readthedocs
-repo_url: https://github.com/gcba-odin/odin-tech-docs
+theme: material
+repo_url: https://github.com/gcba-odin/odin
+extra:
+  logo: 'images/logo.png'
+  social:
+    - type: 'github'
+      link: 'https://github.com/gcba-odin'
+  palette:
+    primary: 'blue grey'
+    accent: 'light blue'
 pages:
     - 'Home': 'index.md'
     - 'Key Features': 'key-features.md'
