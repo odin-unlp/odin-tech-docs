@@ -7,19 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  
-  <title>Entidades - ODIN</title>
-  
-
   <link rel="shortcut icon" href="../img/favicon.ico">
-
-  
+  <title>Entidades - ODIN</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../css/highlight.css">
-
   
   <script>
     // Current page data
@@ -30,9 +24,7 @@
   
   <script src="../js/jquery-2.1.1.min.js"></script>
   <script src="../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../js/highlight.pack.js"></script>
-  <script src="../js/theme.js"></script> 
-
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
   
 </head>
 
@@ -52,7 +44,7 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
           
             <li>
     <li class="toctree-l1 ">
@@ -409,9 +401,8 @@
     <li>Entidades</li>
     <li class="wy-breadcrumbs-aside">
       
-        
-          <a href="https://github.com/gcba-odin/odin-tech-docs" class="icon icon-github"> Edit on GitHub</a>
-        
+        <a href="https://github.com/gcba-odin/odin-tech-docs/edit/master/docs/entidades.md"
+          class="icon icon-github"> Edit on GitHub</a>
       
     </li>
   </ul>
@@ -826,7 +817,7 @@ OPTIONS  /statuses/:id
 <hr />
 <p><strong>Nota:</strong> a los fines del seedeo, los estados por recurso son:</p>
 <ul>
-<li>Borradow</li>
+<li>Borrador</li>
 <li>En revision</li>
 <li>Rechazado</li>
 <li>Publicado</li>
@@ -1049,6 +1040,9 @@ DELETE   /datasets/:id
 HEAD     /datasets/:id
 OPTIONS  /datasets/:id
 
+PATCH /datasets/:id/unpublish
+PATCH /datasets/:id/publish
+
 GET  /datasets/:id/download
 </code></pre>
 
@@ -1126,6 +1120,13 @@ GET  /datasets/:id/download
 <hr />
 <ul>
 <li>
+<p><strong>unPublishedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
 <p><strong>createdAt</strong></p>
 <p><em>Tipo:</em> datetime</p>
 <p><em>Default:</em> fecha y hora actuales</p>
@@ -1142,10 +1143,17 @@ GET  /datasets/:id/download
 <h3 id="claves-foraneas_4">Claves Foráneas</h3>
 <ul>
 <li>
-<p><strong>category</strong></p>
-<p>El ID de la categoría del dataset.</p>
+<p><strong>categories</strong></p>
+<p>Los ID de las categorías del dataset.</p>
 <p><em>Requerido:</em> sí</p>
-<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>subcategories</strong></p>
+<p>Los ID de las subcategorías del dataset.</p>
+<p><em>Requerido:</em> sí</p>
 </li>
 </ul>
 <hr />
@@ -1197,6 +1205,16 @@ PUT    /files/:id
 DELETE   /files/:id
 HEAD     /files/:id
 OPTIONS  /files/:id
+
+GET   /files/:id/contents
+GET   /files/(:slug|:id)/download
+GET   /files/(:slug|:id)/download/:format
+
+PATCH   /files/:id/publish
+PATCH   /files/:id/unpublish
+PATCH   /files/:id/reject
+PATCH   /files/:id/cancel
+PATCH   /files/:id/review
 
 GET      /files/:id/resources
 </code></pre>
@@ -1418,6 +1436,12 @@ PUT    /charts/:id
 DELETE   /charts/:id
 HEAD     /charts/:id
 OPTIONS  /charts/:id
+
+PATCH   /charts/:id/publish
+PATCH   /charts/:id/unpublish
+PATCH   /charts/:id/reject
+PATCH   /charts/:id/cancel
+PATCH   /charts/:id/review
 </code></pre>
 
 <h2 id="campos_9">Campos</h2>
@@ -1507,6 +1531,34 @@ OPTIONS  /charts/:id
 <ul>
 <li>
 <p><strong>publishedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>unPublishedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>rejectedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>cancelledAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>reviewedAt</strong></p>
 <p><em>Tipo:</em> datetime</p>
 </li>
 </ul>
@@ -1638,6 +1690,41 @@ OPTIONS  /basemaps/:id
 <hr />
 <ul>
 <li>
+<p><strong>unPublishedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>publishedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>rejectedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>cancelledAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>reviewedAt</strong></p>
+<p><em>Tipo:</em> datetime</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
 <p><strong>createdAt</strong></p>
 <p><em>Tipo:</em> datetime</p>
 <p><em>Default:</em> fecha y hora actuales</p>
@@ -1671,6 +1758,12 @@ PUT    /maps/:id
 DELETE   /maps/:id
 HEAD     /maps/:id
 OPTIONS  /maps/:id
+
+PATCH   /maps/:id/publish
+PATCH   /maps/:id/unpublish
+PATCH   /maps/:id/reject
+PATCH   /maps/:id/cancel
+PATCH   /maps/:id/review
 </code></pre>
 
 <h2 id="campos_11">Campos</h2>
@@ -1862,7 +1955,16 @@ OPTIONS  /configs/:id
 <p><strong>type</strong></p>
 <p><em>Tipo:</em> enum</p>
 <p><em>Requerido:</em> sí</p>
-<p><em>Valores posibles:</em> 'bool', 'string', 'int', 'float', 'model'</p>
+<p><em>Valores posibles:</em> 'bool', 'string', 'int', 'float', 'model', 'group'</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>category</strong></p>
+<p><em>Tipo:</em> enum</p>
+<p><em>Requerido:</em> sí</p>
+<p><em>Valores posibles:</em> 'site', 'visualizations', 'integrations'</p>
 </li>
 </ul>
 <hr />
@@ -1886,6 +1988,20 @@ OPTIONS  /configs/:id
 <ul>
 <li>
 <p><strong>multiple</strong></p>
+<p><em>Tipo:</em> boolean</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>editable</strong></p>
+<p><em>Tipo:</em> boolean</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>required</strong></p>
 <p><em>Tipo:</em> boolean</p>
 </li>
 </ul>
@@ -1917,6 +2033,15 @@ OPTIONS  /configs/:id
 <li>
 <p><strong>updatedBy</strong></p>
 <p>El ID del usuario que actualizó por última vez el <code>value</code> de la configuración.</p>
+<p><em>Tipo:</em> string</p>
+<p><em>Max:</em> 15 carácteres</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>parent</strong></p>
+<p>El ID de la configuración padre en caso de que corresponda.</p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 15 carácteres</p>
 </li>
@@ -2348,10 +2473,10 @@ OPTIONS  /restservices/:id
       </div>
 
     </section>
-
+    
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
           <a href="https://github.com/gcba-odin/odin-tech-docs" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
@@ -2364,6 +2489,7 @@ OPTIONS  /restservices/:id
       
     </span>
 </div>
+    <script src="../js/theme.js"></script>
 
 </body>
 </html>

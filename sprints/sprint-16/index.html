@@ -7,19 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  
-  <title>Sprint 16 - ODIN</title>
-  
-
   <link rel="shortcut icon" href="../../img/favicon.ico">
-
-  
+  <title>Sprint 16 - ODIN</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../../css/highlight.css">
-
   
   <script>
     // Current page data
@@ -30,9 +24,7 @@
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
   <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
-  <script src="../../js/theme.js"></script> 
-
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
   
 </head>
 
@@ -52,7 +44,7 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
           
             <li>
     <li class="toctree-l1 ">
@@ -312,9 +304,8 @@
     <li>Sprint 16</li>
     <li class="wy-breadcrumbs-aside">
       
-        
-          <a href="https://github.com/gcba-odin/odin-tech-docs" class="icon icon-github"> Edit on GitHub</a>
-        
+        <a href="https://github.com/gcba-odin/odin-tech-docs/edit/master/docs/sprints/sprint-16.md"
+          class="icon icon-github"> Edit on GitHub</a>
       
     </li>
   </ul>
@@ -323,24 +314,24 @@
           <div role="main">
             <div class="section">
               
-                <p><strong>Duración:</strong> Martes 29/11/16 -</p>
+                <p><strong>Duración:</strong> Martes 29/11/16 - Viernes 13/01/17</p>
 <h1 id="alcance">Alcance</h1>
-<p>Sprint de mejoras y corrección de bugs</p>
+<p>Sprint de mejoras y corrección de bugs ; Creación de mapas a partir de un archivo KML</p>
 <h2 id="objetivo">Objetivo</h2>
 <p>Continuar con las mejoras planteadas, y realizar la corrección de bugs anunciados en bugzilla</p>
 <h1 id="tareas">Tareas</h1>
 <h2 id="api">API</h2>
 <ol>
 <li>Agregar campos <code>parent</code> y <code>subcategories</code> en <code>Category</code>, el cual es una relación recursiva</li>
-<li>Agregar configuración para tener o no reCaptcha</li>
-<li>Agregar configuración para Captcha y Analytics</li>
 <li>Hacer script para modificar las url de descargas de los archivos (#285)</li>
 <li>Hacer endpoint para envío de mail</li>
 <li>Crear Geojson desde un archivo KML (#241)</li>
+<li>Crear endpoint para cada uno de los estados</li>
+<li>Agregar fechas de cada estado en recursos y visualizaciones</li>
+<li>Si el usuario que crea un recurso/visualización es guest; ignorar el estado por defecto y ponerlo en borrador</li>
 </ol>
 <h2 id="admin">Admin</h2>
 <ol>
-<li>Agregar configuración para Captcha y Analytics</li>
 <li>Solucionar descarga de manual de usuario (#280)</li>
 <li>Tooltips responsive (#303)</li>
 <li>Mostrar rol en la lista de usuarios (#325)</li>
@@ -349,8 +340,14 @@
 <li>En configuraciones, No mostrar el botón editar en los campos no configurables (#296)</li>
 <li>Agregar Autor y categoría al listado de datasets</li>
 <li>Agregar form para permitir crear mapa desde un archivo KML (#241)</li>
-<li>Acomodar nuevo diseño marca BA del admin, para que se agregue al diseño base (marca blanca) simplemente agregando un css (como en el frontend)</li>
 <li>Agregar popup en eliminar etiqueta para avisar las relaciones y que permita ir a detalle</li>
+<li>Ordenar configs por orden alfabético</li>
+<li>Indicar el tipo de archivo asociado al listar los archivos desde un dataset</li>
+<li>Sacar ngf-resize en ng-fileUplad para no romper las imágenes subidas</li>
+<li>Si el usuario es invitado sacar los links Creado Por y Responsables desde los detalles de recurso/visualización.</li>
+<li>Añadir filtro por tipo de archivo en recursos</li>
+<li>No permitir crear/borrar estados</li>
+<li>Acomodar los flujos de estados; utilizando siempre los endpoints correspondientes</li>
 </ol>
 <h2 id="frontend">Frontend</h2>
 <ol>
@@ -397,10 +394,10 @@
       </div>
 
     </section>
-
+    
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
           <a href="https://github.com/gcba-odin/odin-tech-docs" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
@@ -413,6 +410,7 @@
       
     </span>
 </div>
+    <script src="../../js/theme.js"></script>
 
 </body>
 </html>
