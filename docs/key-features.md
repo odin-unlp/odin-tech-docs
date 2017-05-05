@@ -1,3 +1,5 @@
+**Importante:** Para poder utilizar la api, momentaneamente se deberá solicitar una API Key al mail `labgcba@gmail.com`
+
 # 1. URLs
 
 La API de ODIN es una API Hypermedia. Las URLs no deben ser construidas por el cliente, sino que éste debe seguir las URLs provistas por la propia API.
