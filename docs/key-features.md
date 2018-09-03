@@ -1,4 +1,4 @@
-**Importante:** Para poder utilizar la api, momentaneamente se deberá solicitar una API Key al mail `labgcba@gmail.com`
+**Importante:** Para poder utilizar la api, momentaneamente se deberá solicitar una API Key al mail `datos_abiertos@produccion.gob.ar`
 
 # 1. URLs
 

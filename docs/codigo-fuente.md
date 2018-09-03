@@ -1,6 +1,6 @@
 # Repositorio
 
-El código deberá alojarse en repositorios GitHub perteneciente a la organización [gcba-odin](https://github.com/gcba-odin).
+El código se aloja en el github del [Ministerio de Producción](https://github.com/ministerio-produccion). Como workflow de Git se utiliza [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
 ## Branches
 
@@ -11,9 +11,3 @@ El código deberá alojarse en repositorios GitHub perteneciente a la organizaci
 - **testing:** para testeo e integración continua (ej. con Travis CI).
 
 - **dev**: la rama de desarrollo.
-
-## Commits
-
-Los commits deben encapsular cambios relacionados, prefiriéndose una multiplicidad de commits atómicos y claramente diferenciados a unos pocos que sean acumulativos.
-
-Los mensajes de los commits deben hacerse en inglés y ser descriptivos de su contenido, breves y concisos.

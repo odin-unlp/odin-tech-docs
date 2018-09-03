@@ -1,7 +1,5 @@
 # Arquitectura
 
- ![arquitectura](http://i.imgur.com/N3qRwIW.png?1)
-
 - En la **base de datos No SQL** se deben almacenar los datos de los archivos, que son datos no relacionales.
 - En la **base de datos SQL** se deben almacenar los datos relacionales del sistema, como ser: usuarios, permisos, roles, organizaciones, metadatos, etc.
 - El **almacenamiento de estáticos** es para almacenar los recursos asociados a los datasets: archivos csv, pdf, shp, etc.
@@ -14,8 +12,8 @@
 ## API
 
 - **Sistema operativo:** Ubuntu 16.04 Xenial Xerus
-- **Servidor:** NodeJS 4.5.0
-- **Lenguaje:** JavaScript 5
+- **Servidor:** NodeJS 8.11.3
+- **ECMAScript:** ECMAScript 6
 - **Framework:** Sails 0.12.3
 - **BBDD no relacional:** MongoDB
 - **BDD relacional:** PostgreSQL
@@ -30,7 +28,7 @@
 ## Frontends
 
 - **Admin:** aplicación AngularJS 1.5.
-- **data.buenosaires.gob.ar:** aplicación AngularJS 1.5.
+- **datos.produccion.gob.ar:** aplicación AngularJS 1.5.
 
 # Lógica
 

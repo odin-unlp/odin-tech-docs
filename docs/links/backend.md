@@ -1,16 +1,10 @@
 # Utils
 
-- [sails-hook-autoreload](https://github.com/sgress454/sails-hook-autoreload)
-> Sails JS hook to autoreload controllers, models, services and locales when changed.
-> This hook is to help with situations where you are rapidly prototyping/tinkering with app code and don't want to have to keep quitting/restarting Sails to see your changes. It is not intended to be used in a production environment.
+- [nodemon](https://github.com/remy/nodemon)
+> Tool to autoreload controllers, models, services and locales when changed.
+> This tool is to help with situations where you are rapidly prototyping/tinkering with app code and don't want to have to keep quitting/restarting Sails to see your changes. It is not intended to be used in a production environment.
 
 # API
-
-- [API Blueprint](https://apiblueprint.org/)
-> API Blueprint. A powerful high-level API description language for web APIs.
-
-- [Apiary Editor](https://apiary.io/)
-> The Apiary Editor is the foundation of your API design. Apiary Editor supports API Blueprint and Swagger API Description languages.
 
 - [generator-sails-rest-api](https://github.com/ghaiklor/generator-sails-rest-api)
 > Yeoman generator for scaffolding Sails REST API with predefined features.
@@ -79,3 +73,5 @@ softDelete(criteria, callback)
 
 - [sails-hook-apianalytics](https://github.com/mikermcneil/sails-hook-apianalytics)
 > A Sails hook for logging detailed request metadata and monitoring your API.
+
+For more info about used packages lookup the package.json file inside project

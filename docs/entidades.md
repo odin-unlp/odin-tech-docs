@@ -40,7 +40,11 @@ OPTIONS  /organizations/:id
 
     *Requerido:* sí
 
+    *Único:* sí
+
     *Max:* 150 carácteres
+
+    *Min:* 1 carácteres
 
 ---
 
@@ -48,7 +52,11 @@ OPTIONS  /organizations/:id
 
     *Tipo:* string
 
+    *Único:* sí
+
     *Max:* 150 carácteres
+
+    *Min:* 1 carácteres
 
 ---
 
@@ -67,6 +75,7 @@ OPTIONS  /organizations/:id
     *Max:* 150 carácteres
 
 ---
+
 
 - **createdAt**
 
@@ -100,6 +109,8 @@ OPTIONS  /organizations/:id
     El ID del usuario que creó la organización.
 
     *Tipo:* string
+
+    *Model:*  user
 
     *Requerido:* sí
 
@@ -144,6 +155,8 @@ OPTIONS  /users/login
     *Único:* sí
 
     *Max:* 15 carácteres
+
+
 
 ---
 
@@ -205,6 +218,8 @@ OPTIONS  /users/login
 
     *Max:* 500 carácteres
 
+    *url:* true
+
 ---
 
 - **createdAt**
@@ -244,6 +259,8 @@ OPTIONS  /users/login
     *Requerido:* sí
 
     *Max:* 15 carácteres
+
+    *Model:* user
 
 
 ### Calculados
@@ -300,13 +317,21 @@ GET      /categories/:id/image
 
     *Requerido:* sí
 
+    *Único:* sí
+
     *Max:* 150 carácteres
+
+    *Min:* 1 carácteres
+
+    *Único:* sí
 
 ---
 
 - **slug**
 
     *Tipo:* string
+
+    *Único:* sí
 
     *Max:* 150 carácteres
 
@@ -323,6 +348,8 @@ GET      /categories/:id/image
 - **description**
 
     *Tipo:* string
+
+    *Requerido:* sí
 
     *Max:* 350 carácteres
 
@@ -345,9 +372,50 @@ GET      /categories/:id/image
 
     *Requerido:* sí
 
-    *Default:* false
+    *Default:* true
 
 ---
+
+- **datasets**
+
+    *Collection:* dataset
+
+    *Via:* categories
+---
+
+- **datasetsSubcategories**
+
+    *Collection:* dataset
+
+    *Via:* subcategories
+
+---
+
+- **parent**
+
+    *model:* category
+
+---    
+
+- **subcategories**
+
+    *Collection:* category
+
+    *Via:* parent
+
+---
+
+- **requests**
+  
+  *Collection:* datasetreques
+
+    *Via:* categories
+
+- **deletedAt**
+
+    *type:* datetime
+
+--
 
 - **createdAt**
 
@@ -363,6 +431,7 @@ GET      /categories/:id/image
 
     *Default:* fecha y hora actuales
 
+---
 
 ### Claves Foráneas
 
@@ -375,6 +444,10 @@ GET      /categories/:id/image
     *Requerido:* sí
 
     *Max:* 15 carácteres
+
+    *Model:*  user
+
+---
 
 # 4. Status
 ## Endpoints
@@ -418,7 +491,18 @@ OPTIONS  /statuses/:id
 
     *Requerido:* sí
 
+    *Único:* sí
+
     *Max:* 150 carácteres
+
+    *Min:* 1 carácteres
+---
+
+- **files**
+
+    *collection:* file
+
+    *via:* status
 
 ---
 
@@ -429,6 +513,20 @@ OPTIONS  /statuses/:id
     *Default:* fecha y hora actuales
 
 ---
+
+- **createdBy**
+
+    *model:* user
+
+---
+
+- **datasets**
+
+    *collection:* dataset
+
+    *via:* status
+
+--- 
 
 - **updatedAt**
 
@@ -488,7 +586,17 @@ OPTIONS  /filetypes/:id
 
     *Requerido:* sí
 
+    *Único:* sí
+
     *Max:* 150 carácteres
+
+---
+
+- **slug**
+
+    *Tipo:* string
+
+    *Requerido:* sí
 
 ---
 
@@ -510,7 +618,21 @@ OPTIONS  /filetypes/:id
 
     *Tipo:* boolean
 
+    *defaultsTo:* true
+
 ---
+
+- **createdBy**
+
+    *model:* user
+
+---
+
+- **deletedAt**
+
+    *type:* datetime
+
+---    
 
 - **createdAt**
 
@@ -527,6 +649,13 @@ OPTIONS  /filetypes/:id
     *Default:* fecha y hora actuales
 
 ---
+
+- **files** 
+ 
+    *collection:* file
+    *via:* type
+
+---    
 
 **Nota:** a los fines del seedeo, los tipos de archivo son:
 
@@ -583,14 +712,24 @@ OPTIONS  /updatefrequencies/:id
 
     *Requerido:* sí
 
+    *Único:* sí
+
     *Max:* 100 carácteres
+
+---
 
 - **timePattern**
 
     Indica la frequencia en la que se correrá el cron
 
     *Tipo:* string
+---
 
+- **createdBy**
+
+    *model:* user
+
+---
 
 # 7. Tag
 ## Endpoints
@@ -634,17 +773,36 @@ OPTIONS  /tags/:id
 
     *Requerido:* sí
 
+    *Único:* sí
+
     *Max:* 100 carácteres
 
+---
 
 - **slug**
 
     *Tipo:* string
 
+    *Único:* sí
+
     *Max:* 150 carácteres
 
 ---
 
+- **files**
+
+    *collection:* file
+
+    *via:* tags
+
+---
+
+- **datasets** 
+ 
+    *collection:* dataset
+    *via:* tags
+
+---    
 
 ### Claves Foráneas
 
@@ -657,6 +815,10 @@ OPTIONS  /tags/:id
     *Requerido:* sí
 
     *Max:* 15 carácteres
+
+    *Model:* user
+
+---    
 
 # 8. Dataset
 ## Endpoints
@@ -705,13 +867,19 @@ GET  /datasets/:id/download
 
     *Requerido:* sí
 
+    *Único:* sí
+
     *Max:* 150 carácteres
+
+    *Min:* 1 carácteres
 
 ---
 
 - **slug**
 
     *Tipo:* string
+
+    *Único:* sí
 
     *Max:* 150 carácteres
 
@@ -720,6 +888,8 @@ GET  /datasets/:id/download
 - **description**
 
     *Tipo:* string
+
+    *Requerido:* sí
 
     *Max:* 350 carácteres
 
@@ -792,6 +962,12 @@ GET  /datasets/:id/download
 
     *Requerido:* sí
 
+    *Collection:* category
+
+    *Via:* datasets
+
+    *Dominant:* true
+
 ---
 
 - **subcategories**
@@ -799,6 +975,12 @@ GET  /datasets/:id/download
     Los ID de las subcategorías del dataset.
 
     *Requerido:* sí
+
+    *Collection:* category
+
+    *Via:* datasetsSubcategories
+    
+    *Dominant:* true
 
 ---
 
@@ -810,6 +992,8 @@ GET  /datasets/:id/download
 
     *Max:* 15 carácteres
 
+    *Model:* status
+
 ---
 
 - **owner:**
@@ -819,8 +1003,20 @@ GET  /datasets/:id/download
     *Tipo:* string
 
     *Requerido:* sí
+    
+    *Model:* user
 
     *Max:* 15 carácteres
+
+---
+
+- **tags**
+
+    *Collection:* tag
+
+    *Via:* datasets
+           
+    *Dominant:* true
 
 ---
 
@@ -834,6 +1030,48 @@ GET  /datasets/:id/download
 
     *Max:* 15 carácteres
 
+    *Model:* user
+
+---
+
+- **organization**
+
+    *Model:* organization
+
+---    
+
+- **hasMap**
+
+    *Type:* boolean
+
+    *DefaultsTo:* false
+
+---
+
+- **hasChart**
+
+    *Type:* boolean
+
+    *DefaultsTo:* false
+
+---
+
+- **hasTable**
+
+    *Type:* boolean
+
+    *DefaultsTo:* false
+
+---
+
+- **newestGatheringDate**
+
+    *type:* date
+
+---
+
+          
+           
 # 9. File
 ## Endpoints
 ```
@@ -888,6 +1126,8 @@ GET      /files/:id/resources
 
     *Requerido:* sí
 
+    *Único:* sí
+
     *Max:* 150 carácteres
 
 ---
@@ -896,6 +1136,8 @@ GET      /files/:id/resources
 
     *Tipo:* string
 
+    *Requerido:* sí
+
     *Max:* 150 carácteres
 
 ---
@@ -903,6 +1145,8 @@ GET      /files/:id/resources
 - **description**
 
     *Tipo:* string
+
+    *Requerido:* sí
 
     *Max:* 350 carácteres
 
@@ -922,11 +1166,15 @@ GET      /files/:id/resources
 
     *Max:* 500 carácteres
 
+    *defaultsTo:* false
+
 ---
 
 - **visible**
 
     *Tipo:* boolean
+
+    *defaultsTo:* false
 
 ---
 
@@ -942,6 +1190,8 @@ GET      /files/:id/resources
 
     *Tipo:* boolean
 
+    *defaultsTo:* false
+
 ---
 
 - **updated**
@@ -949,6 +1199,8 @@ GET      /files/:id/resources
     Indica si el archivo debería mostrarse en el frontend
 
     *Tipo:* boolean
+
+    *defaultsTo:* false
 
 ---
 
@@ -978,6 +1230,7 @@ GET      /files/:id/resources
 
     *Default:* fecha y hora actuales
 
+---
 
 ### Claves Foráneas
 
@@ -989,6 +1242,8 @@ GET      /files/:id/resources
 
     *Max:* 15 carácteres
 
+    *Model:* filetype
+
 ---
 
 - **status**
@@ -999,6 +1254,8 @@ GET      /files/:id/resources
 
     *Max:* 15 carácteres
 
+    *Model:* status
+
 ---
 
 - **organization**
@@ -1008,6 +1265,8 @@ GET      /files/:id/resources
     *Requerido:* sí
 
     *Max:* 15 carácteres
+    
+    *Model:* organization
 
 ---
 
@@ -1021,6 +1280,8 @@ GET      /files/:id/resources
 
     *Max:* 15 carácteres
 
+    *Model:* dataset
+
 ---
 
 - **owner:**
@@ -1032,6 +1293,8 @@ GET      /files/:id/resources
     *Requerido:* sí
 
     *Max:* 15 carácteres
+
+    *Model:* user
 
 ---
 
@@ -1045,6 +1308,8 @@ GET      /files/:id/resources
 
     *Max:* 15 carácteres
 
+    *Model:* updatefrequency
+
 ---
 
 - **createdBy**
@@ -1057,6 +1322,8 @@ GET      /files/:id/resources
 
     *Max:* 15 carácteres
 
+    *Model:* user
+
 ---
 
 - **soapService:**
@@ -1066,6 +1333,8 @@ GET      /files/:id/resources
     *Tipo:* string
 
     *Max:* 15 carácteres
+
+    *Model:* soapservice
 
 ---
 
@@ -1077,7 +1346,20 @@ GET      /files/:id/resources
 
     *Max:* 15 carácteres
 
+    *Model:* restservice
+
 ---
+
+
+- **tags**
+
+    *collection:* tag
+
+    *via:* files
+
+    *dominant:* true
+
+---    
 
 # 10. Chart
 ## Endpoints
@@ -1127,13 +1409,19 @@ PATCH   /charts/:id/review
 
     *Requerido:* sí
 
+    *Único:* sí
+
     *Max:* 150 carácteres
 
+    *Min:* 1 carácter
+ 
 ---
 
 - **description**
 
     *Tipo:* string
+    
+    *Requerido:* sí
 
     *Max:* 350 carácteres
 
@@ -1252,6 +1540,8 @@ PATCH   /charts/:id/review
 
     *Max:* 15 carácteres
 
+    *Model:* user
+
 ---
 
 - **status**
@@ -1259,6 +1549,8 @@ PATCH   /charts/:id/review
     El ID del status que posee el grafico.
 
     *Requerido:* sí
+
+    *Model:* status
 
     *Max:* 15 carácteres
 
@@ -1271,6 +1563,8 @@ PATCH   /charts/:id/review
     *Requerido:* sí
 
     *Max:* 15 carácteres
+
+    *Model:* file
 
 
 # 11. Basemap
@@ -1311,6 +1605,8 @@ OPTIONS  /basemaps/:id
     *Tipo:* string
 
     *Requerido:* sí
+    
+    *Único:* sí
 
     *Max:* 100 carácteres
 
@@ -1327,17 +1623,23 @@ OPTIONS  /basemaps/:id
 
     *Tipo:* boolean
 
+    *defaultsTo:* false
+
 ---
 
 - **maxZoom**
 
     *Tipo:* integer
 
+    *defaultsTo:* 18
+
 ---
 
 - **minZoom**
 
     *Tipo:* integer
+
+    *defaultsTo:* 0
 
 ---
 
@@ -1350,6 +1652,8 @@ OPTIONS  /basemaps/:id
 - **url**
 
     *Tipo:* string
+
+    *Requerido:* sí
 
     *Max:* 500 carácteres
 
@@ -1399,6 +1703,8 @@ OPTIONS  /basemaps/:id
 
     *Default:* fecha y hora actuales
 
+---    
+
 # 12. Map
 ## Endpoints
 ```
@@ -1447,13 +1753,19 @@ PATCH   /maps/:id/review
 
     *Requerido:* sí
 
+    *Único:* sí
+
     *Max:* 150 carácteres
+
+    *Min:* 1 carácter
 
 ---
 
 - **description**
 
     *Tipo:* string
+
+    *Requerido:* sí
 
     *Max:* 350 carácteres
 
@@ -1542,6 +1854,8 @@ PATCH   /maps/:id/review
 
     *Default:* fecha y hora actuales
 
+---    
+
 ### Claves Foráneas
 
 - **basemap**
@@ -1576,6 +1890,16 @@ PATCH   /maps/:id/review
 
     *Max:* 15 carácteres
 
+---
+
+- **kml**
+
+    *Type:* boolean
+
+
+    *DefaultsTo:* false
+
+---   
 
 # 13. Config
 ## Endpoints
@@ -1618,6 +1942,8 @@ OPTIONS  /configs/:id
     *Tipo:* string
 
     *Requerido:* sí
+
+    *Único:* sí
 
     *Max:* 250 carácteres
 
@@ -1664,6 +1990,8 @@ OPTIONS  /configs/:id
 - **multiple**
 
     *Tipo:* boolean
+    
+    *Boolean:* true
 
 ---
 
@@ -1671,17 +1999,23 @@ OPTIONS  /configs/:id
 
     *Tipo:* boolean
 
+    *Boolean:* true
+
 ---
 
 - **required**
 
     *Tipo:* boolean
 
+    *Boolean:* true
+
 ---
 
 - **model**
 
     *Tipo:* string
+
+    *Max:* 50
 
 ---
 
@@ -1693,12 +2027,20 @@ OPTIONS  /configs/:id
 
 ---
 
+
+- **tooltip**
+
+    *type:* string
+
+---    
+
 - **updatedAt**
 
     *Tipo:* datetime
 
     *Default:* fecha y hora actuales
 
+---
 ### Claves Foráneas
 
 - **updatedBy**
@@ -1718,6 +2060,10 @@ OPTIONS  /configs/:id
     *Tipo:* string
 
     *Max:* 15 carácteres
+
+    *Model:* config
+
+---    
 
 # 14. Log
 ## Endpoints
@@ -1778,7 +2124,8 @@ OPTIONS  /logs/:id
     *Tipo:* string
 
     *Requerido:* sí
-
+    
+    *Max:* 15
 ---
 
 - **createdAt**
@@ -1795,6 +2142,8 @@ OPTIONS  /logs/:id
 
     *Default:* fecha y hora actuales
 
+---    
+
 ### Claves Foráneas
 
 - **user**
@@ -1804,6 +2153,10 @@ OPTIONS  /logs/:id
     *Tipo:* string
 
     *Max:* 15 carácteres
+
+    *Model:* user
+
+---    
 
 # 15. Statistic
 ## Endpoints
@@ -1842,8 +2195,6 @@ OPTIONS  /statistics/:id
 
     *Tipo:* string
 
-    *Requerido:* sí
-
     *Max:* 50 carácteres
 
 ---
@@ -1880,7 +2231,6 @@ OPTIONS  /statistics/:id
 
     *Tipo:* string
 
-    *Requerido:* sí
 
     *Max:* 100 carácteres
 
@@ -1954,6 +2304,10 @@ OPTIONS  /soapservices/:id
 
     *Requerido:* sí
 
+    *Max:* 500 carácteres
+
+    *Min:* 1 carácter
+
 ---
 
 - **url**
@@ -1967,6 +2321,8 @@ OPTIONS  /soapservices/:id
 - **attributesAsHeaders**
 
     *Tipo:* boolean
+
+    *DefaultsTo:* false
 
 ---
 
@@ -1992,6 +2348,7 @@ OPTIONS  /soapservices/:id
 
     *Default:* fecha y hora actuales
 
+---
 ### Claves Foráneas
 
 - **file**
@@ -2001,6 +2358,8 @@ OPTIONS  /soapservices/:id
     *Tipo:* string
 
     *Max:* 15 carácteres
+
+    *Model:* file
 
 # 17. RestService
 ## Endpoints
@@ -2042,11 +2401,14 @@ OPTIONS  /restservices/:id
 
     *Tipo:* sting
 
+    *Max:* 500 carácteres
 ---
 
 - **titlePath**
 
     *Tipo:* string
+
+    *Max:* 500 carácteres
 
 ---
 
@@ -2054,11 +2416,15 @@ OPTIONS  /restservices/:id
 
     *Tipo:* sting
 
+    *Max:* 500 carácteres
+
 ---
 
 - **tokenSignature**
 
     *Tipo:* string
+
+    *Max:* 500 carácteres
 
 ---
 
@@ -2066,18 +2432,23 @@ OPTIONS  /restservices/:id
 
     *Tipo:* sting
 
+    *Max:* 500 carácteres
+
 ---
 
 - **username**
 
     *Tipo:* string
 
+    *Max:* 500 carácteres
 ---
 
 
 - **password**
 
     *Tipo:* sting
+
+    *Max:* 500 carácteres
 
 ---
 
@@ -2092,6 +2463,8 @@ OPTIONS  /restservices/:id
 - **attributesAsHeaders**
 
     *Tipo:* boolean
+
+    *DefaulsTo:* false
 
 ---
 
@@ -2117,6 +2490,8 @@ OPTIONS  /restservices/:id
 
     *Default:* fecha y hora actuales
 
+---    
+
 ### Claves Foráneas
 
 - **file**
@@ -2126,3 +2501,7 @@ OPTIONS  /restservices/:id
     *Tipo:* string
 
     *Max:* 15 carácteres
+
+    *Model* file
+
+---    
