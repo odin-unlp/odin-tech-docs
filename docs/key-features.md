@@ -1,4 +1,4 @@
-**Importante:** Para poder utilizar la api, momentaneamente se deberá solicitar una API Key al mail `datos_abiertos@produccion.gob.ar`
+**Importante:** Para poder utilizar la api, momentaneamente se deberá solicitar una API Key al mail `odin.unlp@gmail.com`
 
 # 1. URLs
 

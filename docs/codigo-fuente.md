@@ -1,6 +1,6 @@
 # Repositorio
 
-El código se aloja en el github del [Ministerio de Producción](https://github.com/ministerio-produccion). Como workflow de Git se utiliza [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+El código se aloja en el github de odin de la [UNLP](https://github.com/odin-unlp). 
 
 ## Branches
 
